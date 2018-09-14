@@ -1,0 +1,17 @@
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\bin\Debug\Tax Calculator.exe.config
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\bin\Debug\Tax Calculator.exe.manifest
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\bin\Debug\Tax Calculator.application
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\bin\Debug\Tax Calculator.exe
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\bin\Debug\Tax Calculator.pdb
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form1.resources
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form2.resources
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form3.resources
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax_Calculator.Properties.Resources.resources
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.csproj.GenerateResource.cache
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.exe.manifest
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.application
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.exe
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.pdb
+C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form4.resources
