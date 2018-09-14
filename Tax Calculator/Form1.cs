@@ -73,7 +73,7 @@ namespace Tax_Calculator
 
             // make result of tax calculation transparent over background image
             label3.Parent = this.panel1;
-            label3.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;            
             label3.BringToFront();
 
             
@@ -117,6 +117,7 @@ namespace Tax_Calculator
                         taxPercents[i] = double.Parse(sr.ReadLine());
                     }
 
+                    // file reader closed
                     sr.Close();
                     label3.Text = "0.0  ৳";
                 }
@@ -126,6 +127,8 @@ namespace Tax_Calculator
             //if tax configuration file not found
             else
             {
+                // make red warning if file not exits
+                label3.ForeColor = Color.Red;
                 label3.Text = "Update settings !";
                 button1.Enabled = false;
             }
@@ -175,8 +178,11 @@ namespace Tax_Calculator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // if data exits only then this will showed, otherwise update setting will be shown
+            if (dataExist)
+                label3.Text = "0.0  ৳";
+
             textBox1.Text = "";
-            label3.Text = "0.0  ৳";
             comboBox1.SelectedIndex = 0;
             label3.ForeColor = Color.Black;
         }
