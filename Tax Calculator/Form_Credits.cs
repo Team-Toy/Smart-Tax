@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form3 : Form
+    public partial class Form_Credits : Form
     {
-        public Form3()
+        public Form_Credits()
         {
             InitializeComponent();
         }

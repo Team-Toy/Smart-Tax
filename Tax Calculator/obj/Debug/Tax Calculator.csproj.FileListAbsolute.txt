@@ -14,3 +14,25 @@ C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug
 C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.exe
 C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.pdb
 C:\Users\Nayeem\Documents\Tax Calculator\Tax Calculator\Tax Calculator\obj\Debug\Tax Calculator.csprojResolveAssemblyReference.cache
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\bin\Debug\Tax Calculator.exe.config
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\bin\Debug\Tax Calculator.exe.manifest
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\bin\Debug\Tax Calculator.application
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\bin\Debug\Tax Calculator.exe
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\bin\Debug\Tax Calculator.pdb
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.csprojResolveAssemblyReference.cache
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form1.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form9.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Properties.Resources.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.csproj.GenerateResource.cache
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.csproj.CoreCompileInputs.cache
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.exe.manifest
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.application
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.exe
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax Calculator.pdb
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form_Settings.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form_Credits.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form3_SatementOfSalary.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form1_Salaries.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form2_InvestmentTaxCredit.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form5_AssentAndLiabilities.resources
+C:\Users\ACM-Bimal\Desktop Projects\tax-calculator\Tax Calculator\obj\Debug\Tax_Calculator.Form4_Expenses.resources

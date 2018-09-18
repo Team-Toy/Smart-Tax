@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form2 : Form
+    public partial class Form_Settings : Form
     {
         // tax configuration file path variable
         private string filepath = Application.StartupPath + "temp.txt";
         private string emptyString = "";
         
 
-        public Form2()
+        public Form_Settings()
         {
             InitializeComponent();           
         }

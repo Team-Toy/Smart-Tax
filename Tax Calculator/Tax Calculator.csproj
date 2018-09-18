@@ -86,34 +86,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Form_Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Form_Credits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Form_Credits.Designer.cs">
+      <DependentUpon>Form_Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4_SatementOfSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4_SatementOfSalary.Designer.cs">
+      <DependentUpon>Form4_SatementOfSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2_Salaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2_Salaries.Designer.cs">
+      <DependentUpon>Form2_Salaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3_InvestmentTaxCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3_InvestmentTaxCredit.Designer.cs">
+      <DependentUpon>Form3_InvestmentTaxCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6_AssentAndLiabilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_AssentAndLiabilities.Designer.cs">
+      <DependentUpon>Form6_AssentAndLiabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5_Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_Expenses.Designer.cs">
+      <DependentUpon>Form5_Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1_Personal_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1_Personal_info.Designer.cs">
+      <DependentUpon>Form1_Personal_info.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Credits.resx">
+      <DependentUpon>Form_Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4_SatementOfSalary.resx">
+      <DependentUpon>Form4_SatementOfSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2_Salaries.resx">
+      <DependentUpon>Form2_Salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3_InvestmentTaxCredit.resx">
+      <DependentUpon>Form3_InvestmentTaxCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_AssentAndLiabilities.resx">
+      <DependentUpon>Form6_AssentAndLiabilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_Expenses.resx">
+      <DependentUpon>Form5_Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1_Personal_info.resx">
+      <DependentUpon>Form1_Personal_info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

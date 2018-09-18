@@ -151,7 +151,7 @@ namespace Tax_Calculator
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Form_Settings f2 = new Form_Settings();
             //sending parent form to hide parent form by form2
             f2.ShowDialog(this);
         }
@@ -244,7 +244,7 @@ namespace Tax_Calculator
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
+            Form_Credits f3 = new Form_Credits();
             //sending parent form to hide parent form by form2
             f3.ShowDialog(this);
         }
@@ -297,6 +297,12 @@ namespace Tax_Calculator
             {
                 VerifyAndTaxCal();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form6_AssentAndLiabilities f = new Form6_AssentAndLiabilities();
+            f.Show();
         }
     }
 }

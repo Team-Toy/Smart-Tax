@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tax Calculator.exe" size="1024488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tax Calculator.exe" size="1115136">
       <assemblyIdentity name="Tax Calculator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zdMBe8GIoexSx0W8HILjX3skPOi9kWn2W+o5pvCYpHM=</dsig:DigestValue>
+        <dsig:DigestValue>7VSD87AHQuNNDMe8RvSrDeyXJ715McWlaKtyZudmpT0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
