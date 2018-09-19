@@ -304,5 +304,10 @@ namespace Tax_Calculator
             Form1_Personal_info f = new Form1_Personal_info();
             f.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

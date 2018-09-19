@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -81,9 +84,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,6 +148,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(742, 570);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(563, 104);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 257;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(298, 423);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(197, 20);
+            this.textBox17.TabIndex = 256;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(299, 610);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(267, 20);
+            this.textBox13.TabIndex = 255;
             // 
             // textBox16
             // 
@@ -686,30 +710,7 @@
             this.button1.TabIndex = 253;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(299, 610);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(267, 20);
-            this.textBox13.TabIndex = 255;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(298, 423);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(197, 20);
-            this.textBox17.TabIndex = 256;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(563, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 257;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1_Personal_info
             // 

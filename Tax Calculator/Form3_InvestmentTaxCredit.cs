@@ -21,7 +21,16 @@ namespace Tax_Calculator
 
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            textBox1.Text = "0.0";
+            textBox2.Text = "0.0";
+            textBox3.Text = "0.0";
+            textBox4.Text = "0.0";
+            textBox5.Text = "0.0";
+            textBox6.Text = "0.0";
+            textBox7.Text = "0.0";
+            textBox8.Text = "0.0";
+            textBox9.Text="0.0";
+            textBox10.Text = "0.0";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,5 +55,96 @@ namespace Tax_Calculator
             sum = tempTotal;
             return sum;
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox2.Focus();
+            }
+            
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox3.Focus();
+            }
+        }
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox4.Focus();
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox5.Focus();
+            }
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox6.Focus();
+            }
+        }
+
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox7.Focus();
+            }
+        }
+
+        private void textBox7_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox8.Focus();
+            }
+        }
+
+        private void textBox8_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox9.Focus();
+            }
+        }
+
+        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+                textBox10.Focus();
+            }
+        }
+
+        private void textBox10_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                label12.Text = (InvestmentTaxCalculate()).ToString();
+            }
+        }
+
+        
     }
 }

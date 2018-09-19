@@ -63,7 +63,7 @@ namespace Tax_Calculator
         {
             //go to investment Tax Credit form
             Form3_InvestmentTaxCredit f = new Form3_InvestmentTaxCredit();
-
+            f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
