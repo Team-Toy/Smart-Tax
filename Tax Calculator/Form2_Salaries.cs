@@ -13,7 +13,6 @@ namespace Tax_Calculator
 
     public partial class Form2_Salaries : Form
     {
-
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
         private string[] data = {"false","true","0","0",
                                "false","true","0","0",
