@@ -51,7 +51,6 @@ namespace Tax_Calculator
                 {
                     maxNonTaxable.Add(double.Parse(data[i + 2]));
                     i += 2;
-
                 }
 
                 SalaryConditionals salaryType = new SalaryConditionals(fullIncomeNonTaxable, fullIncomeTaxable, maxPercentOfNonTaxable, maxNonTaxable);
@@ -62,13 +61,22 @@ namespace Tax_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //go to investment Tax Credit form
             Form3_InvestmentTaxCredit f = new Form3_InvestmentTaxCredit();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label57.Text = ""+list[0].TaxableIncome(double.Parse(textBox1.Text.ToString()),0);
+           double basicPay= double.Parse(textBox1.Text.ToString());
+           double taxableIncome=list[0].TaxableIncome(basicPay, 0);
+
+            lable40.Text
+            label57.Text = "" + taxableIncome;
+        }
+        private double TaxExemptCal(double income, double taxableIncome)
+        {
+            return (income - taxableIncome);
         }
     }
 }
