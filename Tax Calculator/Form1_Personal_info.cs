@@ -31,7 +31,7 @@ namespace Tax_Calculator
                                  "false","true","0","0"
                                 };
 
-        public static List<SalaryObject> list = new List<SalaryObject>();
+        public static List<SalaryConditionals> list = new List<SalaryConditionals>();
         public Form1_Personal_info()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace Tax_Calculator
                    
                 }
 
-                SalaryObject salaryType = new SalaryObject(fullIncomeNonTaxable, fullIncomeTaxable, maxPercentOfNonTaxable, maxNonTaxable);
+                SalaryConditionals salaryType = new SalaryConditionals(fullIncomeNonTaxable, fullIncomeTaxable, maxPercentOfNonTaxable, maxNonTaxable);
                 list.Add(salaryType);
             }
             

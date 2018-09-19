@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace Tax_Calculator
 {
 
-    public class SalaryObject
+    public class SalaryConditionals
     {
         //private string salaryType = "";
         private bool fullIncomeNonTaxable = false;
         private bool fullIncomeTaxable = false;
-        private List<double> maxNonTaxable ;
+        private List<double> maxNonTaxable = null;
         private double maxPercentOfNonTaxable = 0.0;
-       public SalaryObject( bool fullIncomeNonTaxable, bool fullIncomeTaxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
+       public SalaryConditionals( bool fullIncomeNonTaxable, bool fullIncomeTaxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
         {
            // this.salaryType = salaryType;
             this.fullIncomeNonTaxable = fullIncomeNonTaxable;
@@ -26,6 +26,10 @@ namespace Tax_Calculator
         public double getMaxPercentOfNonTaxable()
         {
             return maxPercentOfNonTaxable;
+        }
+        public void setmaxNonTaxable(List<double> maxNonTaxable)
+        {
+            this.maxNonTaxable = maxNonTaxable;
         }
         public double TaxableIncome(double income, int index)
         {

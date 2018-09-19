@@ -25,7 +25,7 @@ namespace Tax_Calculator
         private void button1_Click(object sender, EventArgs e)
         {
 
-            List<SalaryObject> l = Form1_Personal_info.list;
+            List<SalaryConditionals> l = Form1_Personal_info.list;
         }
 
         private void button2_Click(object sender, EventArgs e)
