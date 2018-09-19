@@ -23,7 +23,7 @@ namespace Tax_Calculator
         private string[] data = {"false","true","0","0",
                                "false","true","0","0",
                                "false","true","0","0",
-                                "false","false","0.05","30000",
+                                "false","false","0.05","300000",
                                 "false","false","0.5","25000",
                                  "false","false","0.1","120000",";","1000000",
                                 "false","true","0","0",
