@@ -43,7 +43,7 @@ namespace Tax_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //calling calculation method to show investment result by label
+            //calling calculation method to show total investment result by label
             label12.Text=(InvestmentTaxCalculate()).ToString();
         }
     }
