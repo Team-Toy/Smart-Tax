@@ -68,10 +68,11 @@ namespace Tax_Calculator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //this will go into enter key even function
            double basicPay= double.Parse(textBox1.Text.ToString());
            double taxableIncome=list[0].TaxableIncome(basicPay, 0);
 
-            lable40.Text
+            label40.Text = "" + TaxExemptCal(basicPay, taxableIncome);
             label57.Text = "" + taxableIncome;
         }
         private double TaxExemptCal(double income, double taxableIncome)
