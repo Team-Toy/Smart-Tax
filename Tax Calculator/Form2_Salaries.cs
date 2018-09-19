@@ -18,7 +18,7 @@ namespace Tax_Calculator
         public static double totalAmountOfIncome = 0.0;
         public static double totalTaxableIncome = 0.0;
         public static double totalTaxExtempted = 0.0;
-
+        public double basicPay = 0.0;
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
         private string[] data = {"false","true","0","0",
                                "false","true","0","0",
@@ -138,8 +138,8 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                double basicPay = double.Parse(textBox1.Text.ToString());
-                double taxableIncome = list[0].TaxableIncome(basicPay, 0);
+                basicPay = double.Parse(textBox1.Text.ToString());
+                double taxableIncome = list[0].TaxableIncome(basicPay,basicPay,0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
                 label40.Text = "" + taxExtempted;
@@ -157,7 +157,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double specialPay = double.Parse(textBox2.Text.ToString());
-                double taxableIncome = list[1].TaxableIncome(specialPay, 0);
+                double taxableIncome = list[1].TaxableIncome(basicPay,specialPay, 0);
                 double taxExtempted = TaxExemptCal(specialPay, taxableIncome);
 
                 label41.Text = "" + taxExtempted;
@@ -175,7 +175,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double dearnessAllowance = double.Parse(textBox3.Text.ToString());
-                double taxableIncome = list[2].TaxableIncome(dearnessAllowance, 0);
+                double taxableIncome = list[2].TaxableIncome(basicPay,dearnessAllowance, 0);
                 double taxExtempted = TaxExemptCal(dearnessAllowance, taxableIncome);
 
                 label42.Text = "" + taxExtempted;
@@ -193,7 +193,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double conveyanceAllowance = double.Parse(textBox4.Text.ToString());
-                double taxableIncome = list[3].TaxableIncome(conveyanceAllowance, 0);
+                double taxableIncome = list[3].TaxableIncome(basicPay,conveyanceAllowance, 0);
                 double taxExtempted = TaxExemptCal(conveyanceAllowance, taxableIncome);
 
                 label43.Text = "" + taxExtempted;
@@ -211,7 +211,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double houseRentAllowance = double.Parse(textBox5.Text.ToString());
-                double taxableIncome = list[4].TaxableIncome(houseRentAllowance, 0);
+                double taxableIncome = list[4].TaxableIncome(basicPay,houseRentAllowance, 0);
                 double taxExtempted = TaxExemptCal(houseRentAllowance, taxableIncome);
 
                 label44.Text = "" + taxExtempted;
@@ -234,13 +234,12 @@ namespace Tax_Calculator
 
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    label74.Text = list[5].getMaxNonTaxable(0).ToString();
-                    taxableIncome = list[5].TaxableIncome(medicalAllowance, 0);
+                    taxableIncome = list[5].TaxableIncome(basicPay,medicalAllowance, 0);
                 }
                 else
                 {
-                    label74.Text = (list[5].getMaxNonTaxable(1)).ToString();
-                    taxableIncome = list[5].TaxableIncome(medicalAllowance, 1);
+
+                    taxableIncome = list[5].TaxableIncome(basicPay,medicalAllowance, 1);
                 }
 
                 double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
@@ -260,7 +259,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double serventAllowance = double.Parse(textBox7.Text.ToString());
-                double taxableIncome = list[6].TaxableIncome(serventAllowance, 0);
+                double taxableIncome = list[6].TaxableIncome(basicPay,serventAllowance, 0);
                 double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
 
                 label46.Text = "" + taxExtempted;
@@ -278,7 +277,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double rewardSalary = double.Parse(textBox8.Text.ToString());
-                double taxableIncome = list[7].TaxableIncome(rewardSalary, 0);
+                double taxableIncome = list[7].TaxableIncome(basicPay,rewardSalary, 0);
                 double taxExtempted = TaxExemptCal(rewardSalary, taxableIncome);
 
                 label47.Text = "" + taxExtempted;
@@ -296,7 +295,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double overtimeAllowance = double.Parse(textBox9.Text.ToString());
-                double taxableIncome = list[8].TaxableIncome(overtimeAllowance, 0);
+                double taxableIncome = list[8].TaxableIncome(basicPay,overtimeAllowance, 0);
                 double taxExtempted = TaxExemptCal(overtimeAllowance, taxableIncome);
 
                 label48.Text = "" + taxExtempted;
@@ -314,7 +313,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double bonusOrGratia = double.Parse(textBox10.Text.ToString());
-                double taxableIncome = list[9].TaxableIncome(bonusOrGratia, 0);
+                double taxableIncome = list[9].TaxableIncome(basicPay,bonusOrGratia, 0);
                 double taxExtempted = TaxExemptCal(bonusOrGratia, taxableIncome);
 
                 label49.Text = "" + taxExtempted;
@@ -332,7 +331,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double otherAllowance = double.Parse(textBox11.Text.ToString());
-                double taxableIncome = list[10].TaxableIncome(otherAllowance, 0);
+                double taxableIncome = list[10].TaxableIncome(basicPay,otherAllowance, 0);
                 double taxExtempted = TaxExemptCal(otherAllowance, taxableIncome);
 
                 label50.Text = "" + taxExtempted;
@@ -350,7 +349,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double providentFund = double.Parse(textBox12.Text.ToString());
-                double taxableIncome = list[11].TaxableIncome(providentFund, 0);
+                double taxableIncome = list[11].TaxableIncome(basicPay,providentFund, 0);
                 double taxExtempted = TaxExemptCal(providentFund, taxableIncome);
 
                 label51.Text = "" + taxExtempted;
@@ -368,7 +367,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double InterestOnprovidentFund = double.Parse(textBox13.Text.ToString());
-                double taxableIncome = list[12].TaxableIncome(InterestOnprovidentFund, 0);
+                double taxableIncome = list[12].TaxableIncome(basicPay,InterestOnprovidentFund, 0);
                 double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
 
                 label52.Text = "" + taxExtempted;
@@ -386,7 +385,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double transportFacility = double.Parse(textBox14.Text.ToString());
-                double taxableIncome = list[13].TaxableIncome(transportFacility, 0);
+                double taxableIncome = list[13].TaxableIncome(basicPay,transportFacility, 0);
                 double taxExtempted = TaxExemptCal(transportFacility, taxableIncome);
 
                 label53.Text = "" + taxExtempted;
@@ -410,7 +409,7 @@ namespace Tax_Calculator
                 // combobox value 0 handled, need to implement for value 1
                 if (comboBox2.SelectedIndex == 0)
                 {
-                    taxableIncome = list[14].TaxableIncome(accomodation, 0);
+                    taxableIncome = list[14].TaxableIncome(basicPay,accomodation, 0);
                 }
                 else
                 {
@@ -435,7 +434,7 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double other = double.Parse(textBox16.Text.ToString());
-                double taxableIncome = list[15].TaxableIncome(other, 0);
+                double taxableIncome = list[15].TaxableIncome(basicPay,other, 0);
                 double taxExtempted = TaxExemptCal(other, taxableIncome);
 
                 label55.Text = "" + taxExtempted;
