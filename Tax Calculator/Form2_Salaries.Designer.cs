@@ -119,10 +119,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label74 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1029,11 +1027,9 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label74);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label73);
             this.panel1.Controls.Add(this.label72);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox13);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label62);
@@ -1158,16 +1154,6 @@
             this.label72.TabIndex = 257;
             this.label72.Text = "0.0";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(490, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 256;
-            this.button2.Text = "calculate";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(276, 460);
@@ -1186,15 +1172,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 253;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(382, 240);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(41, 13);
-            this.label74.TabIndex = 260;
-            this.label74.Text = "label74";
             // 
             // Form2_Salaries
             // 
@@ -1304,10 +1281,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label74;
     }
 }

@@ -600,6 +600,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(183, 23);
             this.textBox10.TabIndex = 46;
+            this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
             // 
             // textBox12
             // 
@@ -839,7 +840,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.ClientSize = new System.Drawing.Size(817, 507);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.label50);

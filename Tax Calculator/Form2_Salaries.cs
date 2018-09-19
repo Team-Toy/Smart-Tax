@@ -20,22 +20,22 @@ namespace Tax_Calculator
         public static double totalTaxExtempted = 0.0;
         public double basicPay = 0.0;
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
-        private string[] data = {"false","true","0","0",
-                               "false","true","0","0",
-                               "false","true","0","0",
-                                "false","false","0","30000",
-                                "false","false","0.5","300000",
-                                 "false","false","0.1","120000",";","1000000",
-                                "false","true","0","0",
-                                "false","true","0","0",
-                                 "false","true","0","0",
-                                 "false","true","0","0",
-                                 "false","true","0","0",
-                                 "false","true","0","0",
-                                 "false","false","0.145","0",
-                                 "false","false","0.05","60000",
-                                 "false","false","0.25","0",
-                                 "false","true","0","0"
+        private string[] data = {"false","true","0","0",        //BasicPay 
+                               "false","true","0","0",          //SpecialPay
+                               "false","true","0","0",          //Dearness_allowance
+                                "false","false","0","30000",    //Conveyance_allowance 
+                                "false","false","0.5","300000", //HouseRent_allowance  
+                                 "false","false","0.1","120000",";","1000000",  //Medical_allowance
+                                "false","true","0","0",      //Leave_allowance
+                                "false","true","0","0",     //Honorarium/Reward/Fee	
+                                 "false","true","0","0",    //Overtime_allowance
+                                 "false","true","0","0",    //Bonus/Ex-gratia
+                                 "false","true","0","0",    //Other_allowance
+                                 "false","true","0","0",    //Employer's_contribution_to_recognized_provident_fund 
+                                 "false","false","0.145","0",   //interest_accrued_on_Recognized_provident_fund 
+                                 "false","false","0.05","60000",    //Deemed_income_for_transport_facility 
+                                 "false","false","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
+                                 "false","true","0","0"         //Other,if_any
                                 };
         public Form2_Salaries()
         {
@@ -98,16 +98,6 @@ namespace Tax_Calculator
             f.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //this will go into enter key even function
-           //double basicPay= double.Parse(textBox1.Text.ToString());
-           //double taxableIncome=list[0].TaxableIncome(basicPay, 0);
-           //double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
-
-            //label40.Text = "" + taxExtempted;
-            //label57.Text = "" + taxableIncome;
-        }
         private double TaxExemptCal(double income, double taxableIncome)
         {
             return (income - taxableIncome);
