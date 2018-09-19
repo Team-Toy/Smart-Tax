@@ -116,12 +116,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -289,6 +289,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(197, 20);
             this.textBox16.TabIndex = 235;
+            this.textBox16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox16_KeyDown);
             // 
             // textBox15
             // 
@@ -296,6 +297,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(197, 20);
             this.textBox15.TabIndex = 234;
+            this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
             // 
             // textBox14
             // 
@@ -303,6 +305,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(197, 20);
             this.textBox14.TabIndex = 233;
+            this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
             // 
             // textBox12
             // 
@@ -310,6 +313,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(197, 20);
             this.textBox12.TabIndex = 232;
+            this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
             // 
             // label36
             // 
@@ -571,6 +575,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(197, 20);
             this.textBox7.TabIndex = 206;
+            this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
             // 
             // textBox8
             // 
@@ -578,6 +583,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(197, 20);
             this.textBox8.TabIndex = 205;
+            this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
             // 
             // textBox9
             // 
@@ -585,6 +591,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(197, 20);
             this.textBox9.TabIndex = 204;
+            this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             // 
             // textBox10
             // 
@@ -592,6 +599,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(197, 20);
             this.textBox10.TabIndex = 203;
+            this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
             // 
             // textBox11
             // 
@@ -599,6 +607,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(197, 20);
             this.textBox11.TabIndex = 202;
+            this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
             // 
             // textBox6
             // 
@@ -606,6 +615,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(197, 20);
             this.textBox6.TabIndex = 201;
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // textBox5
             // 
@@ -613,6 +623,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(197, 20);
             this.textBox5.TabIndex = 200;
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
             // 
             // textBox4
             // 
@@ -620,6 +631,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(197, 20);
             this.textBox4.TabIndex = 199;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             // 
             // textBox3
             // 
@@ -627,6 +639,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(197, 20);
             this.textBox3.TabIndex = 198;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // textBox2
             // 
@@ -634,6 +647,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 20);
             this.textBox2.TabIndex = 197;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
@@ -641,6 +655,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 196;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label34
             // 
@@ -1000,10 +1015,11 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(819, 603);
+            this.button1.Location = new System.Drawing.Point(803, 620);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 255;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -1109,6 +1125,17 @@
             this.panel1.Size = new System.Drawing.Size(900, 571);
             this.panel1.TabIndex = 254;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Original Rent",
+            "Reduced Rent"});
+            this.comboBox2.Location = new System.Drawing.Point(62, 586);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(181, 21);
+            this.comboBox2.TabIndex = 259;
+            // 
             // label73
             // 
             this.label73.AutoSize = true;
@@ -1145,6 +1172,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(197, 20);
             this.textBox13.TabIndex = 254;
+            this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
             // 
             // comboBox1
             // 
@@ -1157,23 +1185,12 @@
             this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 253;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Original Rent",
-            "Reduced Rent"});
-            this.comboBox2.Location = new System.Drawing.Point(62, 586);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(181, 21);
-            this.comboBox2.TabIndex = 259;
-            // 
             // Form2_Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(906, 637);
+            this.ClientSize = new System.Drawing.Size(908, 671);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Form2_Salaries";

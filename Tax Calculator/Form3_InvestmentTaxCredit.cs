@@ -21,6 +21,10 @@ namespace Tax_Calculator
 
         private void Form6_Load(object sender, EventArgs e)
         {
+            madeAllTextBoxZero();
+        }
+        public void madeAllTextBoxZero()
+        {
             textBox1.Text = "0.0";
             textBox2.Text = "0.0";
             textBox3.Text = "0.0";
@@ -29,10 +33,9 @@ namespace Tax_Calculator
             textBox6.Text = "0.0";
             textBox7.Text = "0.0";
             textBox8.Text = "0.0";
-            textBox9.Text="0.0";
+            textBox9.Text = "0.0";
             textBox10.Text = "0.0";
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //calling calculation method to show total investment result by label
@@ -41,18 +44,17 @@ namespace Tax_Calculator
 
         private double InvestmentTaxCalculate()
         {
-            double tempTotal = 0.0;
-            tempTotal = double.Parse(textBox1.Text.ToString()) +
-                        double.Parse(textBox2.Text.ToString()) +
-                        double.Parse(textBox3.Text.ToString()) +
-                        double.Parse(textBox4.Text.ToString()) +
-                        double.Parse(textBox5.Text.ToString()) +
-                        double.Parse(textBox6.Text.ToString()) +
-                        double.Parse(textBox7.Text.ToString()) +
-                        double.Parse(textBox8.Text.ToString()) +
-                        double.Parse(textBox9.Text.ToString()) +
-                        double.Parse(textBox10.Text.ToString());
-            sum = tempTotal;
+            sum =   double.Parse(textBox1.Text.ToString()) +
+                    double.Parse(textBox2.Text.ToString()) +
+                    double.Parse(textBox3.Text.ToString()) +
+                    double.Parse(textBox4.Text.ToString()) +
+                    double.Parse(textBox5.Text.ToString()) +
+                    double.Parse(textBox6.Text.ToString()) +
+                    double.Parse(textBox7.Text.ToString()) +
+                    double.Parse(textBox8.Text.ToString()) +
+                    double.Parse(textBox9.Text.ToString()) +
+                    double.Parse(textBox10.Text.ToString());
+           
             return sum;
         }
 
