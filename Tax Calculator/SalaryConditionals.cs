@@ -31,7 +31,7 @@ namespace Tax_Calculator
         {
             this.maxNonTaxable = maxNonTaxable;
         }
-        public double TaxableIncome(double income, int index)
+        public double TaxableIncome(double income,double salaryType, int index)
         {
             double result = 0.0;
             //Base case
@@ -41,21 +41,21 @@ namespace Tax_Calculator
             }           
             else if (fullIncomeNonTaxable == false && fullIncomeTaxable == true)
             {
-                result = income;
+                result = salaryType;
             }
                 
             else if (fullIncomeNonTaxable == false && fullIncomeTaxable == false)
             {
-                result = ConditionalTaxableIncome(income, index);
+                result = ConditionalTaxableIncome(income, salaryType,index);
             }
 
             // if you dont use return statement at the last of a non-void function it will show error
             return result;           
         }
-        private double ConditionalTaxableIncome(double income, int index)
+        private double ConditionalTaxableIncome(double income,double salaryType, int index)
         {
             //look at percentage formula
-            double t = (income * maxPercentOfNonTaxable)/100.0;
+            double t = (income * maxPercentOfNonTaxable);
             double result = 0.0;
 
             //base case
@@ -66,17 +66,17 @@ namespace Tax_Calculator
             else if (t != 0 && maxNonTaxable[index] != 0)
             {
                 if (maxNonTaxable[index] < t)
-                    result = (income - maxNonTaxable[index]);
+                    result = (salaryType - maxNonTaxable[index]);
                 else if (t <= maxNonTaxable[index])
-                    result = (income - t);
+                    result = (salaryType - t);
             }
             else if (t == 0)
             {
-                result = (income - maxNonTaxable[index]);
+                result = (salaryType - maxNonTaxable[index]);
             }
             //if maxNontaxable = 0
             else
-                result = (income - t);
+                result = (salaryType - t);
 
             // if you dont use return statement at the last of a non-void function it will show error
             return result;
