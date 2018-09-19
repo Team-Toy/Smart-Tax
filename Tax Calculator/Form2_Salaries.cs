@@ -233,9 +233,15 @@ namespace Tax_Calculator
                 double taxableIncome;
 
                 if (comboBox1.SelectedIndex == 0)
+                {
+                    label74.Text = list[5].getMaxNonTaxable(0).ToString();
                     taxableIncome = list[5].TaxableIncome(medicalAllowance, 0);
+                }
                 else
+                {
+                    label74.Text = (list[5].getMaxNonTaxable(1)).ToString();
                     taxableIncome = list[5].TaxableIncome(medicalAllowance, 1);
+                }
 
                 double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
 
