@@ -301,7 +301,7 @@ namespace Tax_Calculator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form6_AssentAndLiabilities f = new Form6_AssentAndLiabilities();
+            Form1_Personal_info f = new Form1_Personal_info();
             f.Show();
         }
     }
