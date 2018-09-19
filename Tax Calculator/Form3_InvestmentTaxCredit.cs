@@ -145,6 +145,13 @@ namespace Tax_Calculator
             }
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //hiding investment tex credit form
+            this.Hide();
+            Form4_SatementOfSalary f = new Form4_SatementOfSalary();
+            //showing "Satement Of Salary" form
+            f.Show();        
+        }
     }
 }
