@@ -94,7 +94,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -807,14 +806,6 @@
             this.label50.TabIndex = 87;
             this.label50.Text = "0.0";
             // 
-            // textBox16
-            // 
-            this.textBox16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(388, 943);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(183, 23);
-            this.textBox16.TabIndex = 85;
-            // 
             // label51
             // 
             this.label51.AutoSize = true;
@@ -845,7 +836,6 @@
             this.Controls.Add(this.label51);
             this.Controls.Add(this.label50);
             this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label47);
@@ -986,7 +976,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
     }

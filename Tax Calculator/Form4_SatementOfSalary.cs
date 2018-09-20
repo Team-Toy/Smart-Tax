@@ -31,7 +31,8 @@ namespace Tax_Calculator
 
         private void Form4_SatementOfSalary_Load(object sender, EventArgs e)
         {
-            
+            // make all text boxt zero
+            madeAllTextBoxZero();
             //taking total taxable income and showing in label51
             label51.Text = Form2_Salaries.totalTaxableIncome.ToString();
             //taking total taxable exempted income and showing in label51
@@ -39,6 +40,25 @@ namespace Tax_Calculator
             total += Form2_Salaries.totalTaxableIncome;
             label39.Text = total.ToString();
             label40.Text= total.ToString();
+        }
+        public void madeAllTextBoxZero()
+        {
+            
+            textBox2.Text = "0.0";
+            textBox3.Text = "0.0";
+            textBox4.Text = "0.0";
+            textBox5.Text = "0.0";
+            textBox6.Text = "0.0";
+            textBox7.Text = "0.0";
+            textBox8.Text = "0.0";
+            textBox9.Text = "0.0";
+            textBox10.Text = "0.0";
+            textBox11.Text = "0.0";
+            textBox12.Text = "0.0";
+            textBox13.Text = "0.0";
+            textBox14.Text = "0.0";
+            textBox17.Text = "0.0";
+
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
