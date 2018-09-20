@@ -10,66 +10,47 @@ namespace Tax_Calculator
     public class SalaryConditionals
     {
         //private string salaryType = "";
-        private bool fullIncomeNonTaxable = false;
-        private bool fullIncomeTaxable = false;
-        public List<double> maxNonTaxable = null;
+        private bool taxable = false;
         private double maxPercentOfNonTaxable = 0.0;
-       public SalaryConditionals( bool fullIncomeNonTaxable, bool fullIncomeTaxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
+        public List<double> maxNonTaxable = null;
+        
+       public SalaryConditionals( bool taxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
         {
-           // this.salaryType = salaryType;
-            this.fullIncomeNonTaxable = fullIncomeNonTaxable;
-            this.fullIncomeTaxable = fullIncomeTaxable;
-            this.maxNonTaxable = maxNonTaxable;
+            this.taxable = taxable;
             this.maxPercentOfNonTaxable = maxPercentOfNonTaxable;
+            this.maxNonTaxable = maxNonTaxable;    
 
         }
-        public double getMaxPercentOfNonTaxable()
-        {
-            return maxPercentOfNonTaxable;
-        }
+ 
         public void setmaxNonTaxable(double newMaxNonTaxable)
         {
-            //delete previous maxNonTaxable data
-           // this.maxNonTaxable = null;
-            maxNonTaxable[0] = newMaxNonTaxable;
-           
+            maxNonTaxable[0] = newMaxNonTaxable;         
         }
-        //testing purpose
-        public double getMaxNonTaxable()
-        {
-            return maxNonTaxable[0];
-        }
+
         public double TaxableIncome(double income,double salaryType, int index)
         {
             double result = 0.0;
             //Base case
-            if (fullIncomeNonTaxable == true)
+            if (taxable == true)
             {
-                return 0.0; // exit point
-            }           
-            else if (fullIncomeNonTaxable == false && fullIncomeTaxable == true)
-            {
-                result = salaryType;
+                result = AnyTaxableIncome(income, salaryType, index);
             }
-                
-            else if (fullIncomeNonTaxable == false && fullIncomeTaxable == false)
-            {
-                result = ConditionalTaxableIncome(income, salaryType,index);
-            }
+            else
+                result = 0.0;
 
             // if you dont use return statement at the last of a non-void function it will show error
             return result;           
         }
-        private double ConditionalTaxableIncome(double income,double salaryType, int index)
+        private double AnyTaxableIncome(double income,double salaryType, int index)
         {
+            double result = 0.0;
             //look at percentage formula
             double t = (income * maxPercentOfNonTaxable);
-            double result = 0.0;
 
             //base case
             if (t == 0 && maxNonTaxable[index] == 0)
             {
-                return 0.0; // exit point
+                return salaryType; // condition of full taxable income
             }                
             else if (t != 0 && maxNonTaxable[index] != 0)
             {

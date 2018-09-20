@@ -116,12 +116,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label74 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label74 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1125,6 +1125,15 @@
             this.panel1.Size = new System.Drawing.Size(900, 571);
             this.panel1.TabIndex = 254;
             // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(370, 589);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(41, 13);
+            this.label74.TabIndex = 260;
+            this.label74.Text = "label74";
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -1174,15 +1183,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 253;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(356, 483);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(41, 13);
-            this.label74.TabIndex = 260;
-            this.label74.Text = "label74";
             // 
             // Form2_Salaries
             // 

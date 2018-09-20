@@ -20,22 +20,23 @@ namespace Tax_Calculator
         public static double totalTaxExtempted = 0.0;
         public double basicPay = 0.0;
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
-        private string[] data = {"false","true","0","0",        //BasicPay 
-                               "false","true","0","0",          //SpecialPay
-                               "false","true","0","0",          //Dearness_allowance
-                                "false","false","0","30000",    //Conveyance_allowance 
-                                "false","false","0.5","300000", //HouseRent_allowance  
-                                 "false","false","0.1","120000",";","1000000",  //Medical_allowance
-                                "false","true","0","0",      //Leave_allowance
-                                "false","true","0","0",     //Honorarium/Reward/Fee	
-                                 "false","true","0","0",    //Overtime_allowance
-                                 "false","true","0","0",    //Bonus/Ex-gratia
-                                 "false","true","0","0",    //Other_allowance
-                                 "false","true","0","0",    //Employer's_contribution_to_recognized_provident_fund 
-                                 "false","false","0.145","0.0",   //interest_accrued_on_Recognized_provident_fund 
-                                 "false","false","0.05","60000",    //Deemed_income_for_transport_facility 
-                                 "false","false","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
-                                 "false","true","0","0"         //Other,if_any
+        private string[] data = {"true","0","0",        //BasicPay 
+                                 "true","0","0",          //SpecialPay
+                                 "true","0","0",          //Dearness_allowance
+                                "true","0","30000",    //Conveyance_allowance 
+                                "true","0.5","300000", //HouseRent_allowance  
+                                "true","0.1","120000",";","1000000",  //Medical_allowance
+                                "true","0","0",      //Leave_allowance
+                                "true","0","0",     //Honorarium/Reward/Fee	
+                                 "true","0","0",    //Overtime_allowance
+                                 "true","0","0",    //Bonus/Ex-gratia
+                                 "true","0","0",    //Other_allowance
+                                 "true","0","0",    //Employer's_contribution_to_recognized_provident_fund 
+                                 "true","0.145","0.0",   //interest_accrued_on_Recognized_provident_fund 
+                                 "true","0.05","60000",    //Deemed_income_for_transport_facility 
+                                 "true","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
+                                 "true","0","0",        //Other,if_any
+                                 "true","0.7","0"       //randomly created for fixing list index out of bound
                                 };
         public Form2_Salaries()
         {
@@ -52,23 +53,28 @@ namespace Tax_Calculator
             comboBox2.SelectedIndex = 0;
 
             List<double> maxNonTaxable;
-            for (int i = 0; i < data.Length - 4; i++)
+            for (int i = 0; i < data.Length; i++)
             {
-                bool fullIncomeNonTaxable = Boolean.Parse(data[i]);
-                bool fullIncomeTaxable = Boolean.Parse(data[++i]);
+                bool taxable = Boolean.Parse(data[i]);
                 float maxPercentOfNonTaxable = float.Parse(data[++i]);
                 maxNonTaxable = new List<double>();
                 maxNonTaxable.Add(double.Parse(data[++i]));
-
-                if (data[i + 1] == ";")
+                if ( i == data.Length-1)
+                    break;
+                else
                 {
-                    maxNonTaxable.Add(double.Parse(data[i + 2]));
-                    i += 2;
+                    if (data[i + 1] == ";")
+                    {
+                        maxNonTaxable.Add(double.Parse(data[i + 2]));
+                        i += 2;
+                    }
                 }
+    
 
-                SalaryConditionals salaryType = new SalaryConditionals(fullIncomeNonTaxable, fullIncomeTaxable, maxPercentOfNonTaxable, maxNonTaxable);
+                SalaryConditionals salaryType = new SalaryConditionals(taxable, maxPercentOfNonTaxable, maxNonTaxable);
                 list.Add(salaryType);
             }
+            label74.Text = list.Count.ToString();
 
         }
         public void madeAllTextBoxZero()
@@ -219,18 +225,13 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 double medicalAllowance = double.Parse(textBox6.Text.ToString());
-
                 double taxableIncome;
-
+                //double taxableIncome;
                 if (comboBox1.SelectedIndex == 0)
-                {
                     taxableIncome = list[5].TaxableIncome(basicPay,medicalAllowance, 0);
-                }
-                else
-                {
 
+                else  
                     taxableIncome = list[5].TaxableIncome(basicPay,medicalAllowance, 1);
-                }
 
                 double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
 
@@ -358,8 +359,6 @@ namespace Tax_Calculator
             {
                 //sum = basic pay + Dearness Allowances
                 double sum = basicPay + double.Parse(textBox3.Text.ToString());
-                //List<double> maxNonTaxable = new List<double>();
-                //maxNonTaxable.Add(sum / 3.0);
 
                 //set the maxNonTaxable value for "Interest accrued on Recognized provident fund"
                 list[12].setmaxNonTaxable(sum / 3.0);   
@@ -367,10 +366,6 @@ namespace Tax_Calculator
                 double InterestOnprovidentFund = double.Parse(textBox13.Text.ToString());
                 double taxableIncome = list[12].TaxableIncome(sum, InterestOnprovidentFund, 0);
                 double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
-
-
-                //testing purpose
-                label74.Text = list[0].getMaxNonTaxable().ToString();
 
                 label52.Text = "" + taxExtempted;
                 label69.Text = "" + taxableIncome;
@@ -449,6 +444,7 @@ namespace Tax_Calculator
                 // net taxable income from salary
                 label39.Text = TotalAmountOfIncome().ToString();
                 label56.Text = totalTaxExtempted.ToString();
+                //showing total taxable income
                 label73.Text = totalTaxableIncome.ToString();
             }
         }
