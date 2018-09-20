@@ -516,7 +516,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                municipalTax = Double.Parse(textBox18.Text.ToString());
+                municipalTax = Double.Parse(textBox19.Text.ToString());
 
                 totalClaimedExpense += municipalTax;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
@@ -532,7 +532,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                landRevenue = Double.Parse(textBox18.Text.ToString());
+                landRevenue = Double.Parse(textBox20.Text.ToString());
 
                 totalClaimedExpense += landRevenue;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
@@ -548,7 +548,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                interestOnLoan = Double.Parse(textBox18.Text.ToString());
+                interestOnLoan = Double.Parse(textBox21.Text.ToString());
 
                 totalClaimedExpense += interestOnLoan;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
@@ -564,7 +564,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                insurancePremium = Double.Parse(textBox18.Text.ToString());
+                insurancePremium = Double.Parse(textBox22.Text.ToString());
 
                 totalClaimedExpense += insurancePremium;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
@@ -580,7 +580,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                vacancyAllowance = Double.Parse(textBox18.Text.ToString());
+                vacancyAllowance = Double.Parse(textBox23.Text.ToString());
 
                 totalClaimedExpense += vacancyAllowance;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
@@ -596,7 +596,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                other = Double.Parse(textBox18.Text.ToString());
+                other = Double.Parse(textBox24.Text.ToString());
 
                 totalClaimedExpense += other;
                 netRentalIncome = annualRentalIncome - totalClaimedExpense;
