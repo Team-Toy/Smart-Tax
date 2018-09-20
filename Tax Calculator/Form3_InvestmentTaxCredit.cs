@@ -14,6 +14,17 @@ namespace Tax_Calculator
     public partial class Form3_InvestmentTaxCredit : Form
     {
         public static double sum = 0.0;
+        // investment documents
+        public static string document1 = "";
+        public static string document2 = "";
+        public static string document3 = "";
+        public static string document4 = "";
+        public static string document5 = "";
+        public static string document6 = "";
+        public static string document7 = "";
+        public static string document8 = "";
+        public static string document9 = "";
+        public static string document10 = "";
         public Form3_InvestmentTaxCredit()
         {
             InitializeComponent();
@@ -155,5 +166,102 @@ namespace Tax_Calculator
             //showing "Satement Of Salary" form
             f.Show();        
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document1 = textBox11.Text.ToString();
+                textBox12.Focus();
+            }
+        }
+
+        private void textBox12_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document2 = textBox12.Text.ToString();
+                textBox13.Focus();
+            }
+        }
+
+        private void textBox13_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document3 = textBox13.Text.ToString();
+                textBox14.Focus();
+            }
+        }
+
+        private void textBox14_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document4 = textBox14.Text.ToString();
+                textBox15.Focus();
+            }
+        }
+
+        private void textBox15_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document5 = textBox15.Text.ToString();
+                textBox16.Focus();
+            }
+        }
+        private void textBox16_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document6 = textBox16.Text.ToString();
+                textBox17.Focus();
+            }
+        }
+        private void textBox17_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document7 = textBox17.Text.ToString();
+                textBox18.Focus();
+            }
+        }
+        private void textBox18_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document8 = textBox18.Text.ToString();
+                textBox19.Focus();
+            }
+        }
+        private void textBox19_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document9 = textBox19.Text.ToString();
+                textBox20.Focus();
+            }
+        }
+        private void textBox20_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                document10 = textBox20.Text.ToString();
+            }
+        }
+
+        
+
+        
+
+        
+
+        
     }
 }
