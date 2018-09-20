@@ -441,7 +441,7 @@
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(111, 15);
             this.label30.TabIndex = 29;
-            this.label30.Text = "Foriegn Income ";
+            this.label30.Text = "Foreign Income ";
             // 
             // label31
             // 
@@ -840,7 +840,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(817, 507);
+            this.ClientSize = new System.Drawing.Size(834, 507);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.label50);

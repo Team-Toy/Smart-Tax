@@ -12,7 +12,7 @@ namespace Tax_Calculator
         //private string salaryType = "";
         private bool fullIncomeNonTaxable = false;
         private bool fullIncomeTaxable = false;
-        private List<double> maxNonTaxable = null;
+        public List<double> maxNonTaxable = null;
         private double maxPercentOfNonTaxable = 0.0;
        public SalaryConditionals( bool fullIncomeNonTaxable, bool fullIncomeTaxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
         {
@@ -27,9 +27,17 @@ namespace Tax_Calculator
         {
             return maxPercentOfNonTaxable;
         }
-        public void setmaxNonTaxable(List<double> maxNonTaxable)
+        public void setmaxNonTaxable(double newMaxNonTaxable)
         {
-            this.maxNonTaxable = maxNonTaxable;
+            //delete previous maxNonTaxable data
+           // this.maxNonTaxable = null;
+            maxNonTaxable[0] = newMaxNonTaxable;
+           
+        }
+        //testing purpose
+        public double getMaxNonTaxable()
+        {
+            return maxNonTaxable[0];
         }
         public double TaxableIncome(double income,double salaryType, int index)
         {
@@ -66,17 +74,38 @@ namespace Tax_Calculator
             else if (t != 0 && maxNonTaxable[index] != 0)
             {
                 if (maxNonTaxable[index] < t)
-                    result = (salaryType - maxNonTaxable[index]);
+                {
+                    if(salaryType > maxNonTaxable[index])
+                        return (salaryType - maxNonTaxable[index]);
+                    else
+                        result = 0.0;       //here salary type is under the maxNonTaxable
+                }
+                    
                 else if (t <= maxNonTaxable[index])
-                    result = (salaryType - t);
+                {
+                    if (salaryType > t)
+                        return (salaryType - t);
+                    else
+                        return 0.0;      //here salary type is under the percent of basic salary
+                }
+                    
             }
             else if (t == 0)
             {
-                result = (salaryType - maxNonTaxable[index]);
+                if (salaryType > maxNonTaxable[index])
+                    result= (salaryType - maxNonTaxable[index]);
+                else
+                    result = 0.0;
+
             }
             //if maxNontaxable = 0
             else
-                result = (salaryType - t);
+            {
+                if (salaryType > t)
+                    return (salaryType - t);
+                else
+                    return 0.0;
+            }
 
             // if you dont use return statement at the last of a non-void function it will show error
             return result;

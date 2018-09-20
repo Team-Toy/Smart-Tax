@@ -137,8 +137,11 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 total += double.Parse(textBox9.Text.ToString());
+                //
                 label39.Text = total.ToString();
                 label40.Text = total.ToString();
+                //focusing "foreign income" text field
+                textBox9.Focus();
             }
         }
 
@@ -146,10 +149,13 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                //totalIncome=total + foreignIncome
                 double totalIncome= total + double.Parse(textBox10.Text.ToString());
-                
+                //showing total income by label
                 label40.Text = totalIncome.ToString();
             }
         }
+
+
     }
 }

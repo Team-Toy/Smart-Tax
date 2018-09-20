@@ -32,7 +32,7 @@ namespace Tax_Calculator
                                  "false","true","0","0",    //Bonus/Ex-gratia
                                  "false","true","0","0",    //Other_allowance
                                  "false","true","0","0",    //Employer's_contribution_to_recognized_provident_fund 
-                                 "false","false","0.145","0",   //interest_accrued_on_Recognized_provident_fund 
+                                 "false","false","0.145","0.0",   //interest_accrued_on_Recognized_provident_fund 
                                  "false","false","0.05","60000",    //Deemed_income_for_transport_facility 
                                  "false","false","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
                                  "false","true","0","0"         //Other,if_any
@@ -356,9 +356,21 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                //sum = basic pay + Dearness Allowances
+                double sum = basicPay + double.Parse(textBox3.Text.ToString());
+                //List<double> maxNonTaxable = new List<double>();
+                //maxNonTaxable.Add(sum / 3.0);
+
+                //set the maxNonTaxable value for "Interest accrued on Recognized provident fund"
+                list[12].setmaxNonTaxable(sum / 3.0);   
+                //saving "Interest accrued On provident Fund" user input
                 double InterestOnprovidentFund = double.Parse(textBox13.Text.ToString());
-                double taxableIncome = list[12].TaxableIncome(basicPay,InterestOnprovidentFund, 0);
+                double taxableIncome = list[12].TaxableIncome(sum, InterestOnprovidentFund, 0);
                 double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
+
+
+                //testing purpose
+                label74.Text = list[0].getMaxNonTaxable().ToString();
 
                 label52.Text = "" + taxExtempted;
                 label69.Text = "" + taxableIncome;
