@@ -27,10 +27,6 @@ namespace Tax_Calculator
             maxNonTaxable[0] = newMaxNonTaxable;         
         }
 
-        public double getMaxNonTaxable(int index)
-        {
-            return this.maxNonTaxable[index];
-        }
         public double TaxableIncome(double income, double salaryType, int index)
         {
             double result = 0.0;
