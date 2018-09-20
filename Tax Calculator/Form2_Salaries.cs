@@ -372,7 +372,7 @@ namespace Tax_Calculator
 
                 totalTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
-
+                
                 textBox14.Focus();
             }
         }
