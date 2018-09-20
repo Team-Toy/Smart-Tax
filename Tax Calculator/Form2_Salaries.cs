@@ -23,11 +23,11 @@ namespace Tax_Calculator
         private string[] data = {"true","0","0",        //BasicPay 
                                  "true","0","0",          //SpecialPay
                                  "true","0","0",          //Dearness_allowance
-                                "true","0","30000",    //Conveyance_allowance 
-                                "true","0.5","300000", //HouseRent_allowance  
-                                "true","0.1","120000",";","1000000",  //Medical_allowance
-                                "true","0","0",      //Leave_allowance
-                                "true","0","0",     //Honorarium/Reward/Fee	
+                                 "true","0","30000",    //Conveyance_allowance 
+                                 "true","0.5","300000", //HouseRent_allowance  
+                                 "true","0.1","120000",";","1000000",  //Medical_allowance
+                                 "true","0","0",      //Leave_allowance
+                                 "true","0","0",     //Honorarium/Reward/Fee	
                                  "true","0","0",    //Overtime_allowance
                                  "true","0","0",    //Bonus/Ex-gratia
                                  "true","0","0",    //Other_allowance
@@ -38,6 +38,22 @@ namespace Tax_Calculator
                                  "true","0","0",        //Other,if_any
                                  "true","0.7","0"       //randomly created for fixing list index out of bound
                                 };
+
+        // house property income
+        public static string locationAndDescription = "";
+        public static double annualRentalIncome = 0.0;
+        // claimed expense
+        public static double repair = 0.0;
+        public static double municipalTax = 0.0;
+        public static double landRevenue = 0.0;
+        public static double interestOnLoan = 0.0;
+        public static double insurancePremium = 0.0;
+        public static double vacancyAllowance = 0.0;
+        public static double other = 0.0;
+        public static double totalClaimedExpense = 0.0;
+        // netRentalIncome = annualRentalIncome - totalClaimedExpense
+        public static double netRentalIncome = 0.0;
+
         public Form2_Salaries()
         {
             InitializeComponent();
@@ -446,6 +462,148 @@ namespace Tax_Calculator
                 label56.Text = totalTaxExtempted.ToString();
                 //showing total taxable income
                 label73.Text = totalTaxableIncome.ToString();
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label90_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                locationAndDescription = richTextBox1.Text.ToString();
+
+                textBox17.Focus();
+                
+            }
+        }
+
+        private void textBox17_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                annualRentalIncome = Double.Parse(textBox17.Text.ToString());
+
+                textBox18.Focus();
+            }
+        }
+
+        private void textBox18_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                repair = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += repair;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox19.Focus();
+            }
+        }
+
+        private void textBox19_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                municipalTax = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += municipalTax;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox20.Focus();
+            }
+        }
+
+        private void textBox20_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                landRevenue = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += landRevenue;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox21.Focus();
+            }
+        }
+
+        private void textBox21_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                interestOnLoan = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += interestOnLoan;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox22.Focus();
+            }
+        }
+
+        private void textBox22_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                insurancePremium = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += insurancePremium;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox23.Focus();
+            }
+        }
+
+        private void textBox23_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                vacancyAllowance = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += vacancyAllowance;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
+                textBox24.Focus();
+            }
+        }
+
+        private void textBox24_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                other = Double.Parse(textBox18.Text.ToString());
+
+                totalClaimedExpense += other;
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                label90.Text = totalClaimedExpense.ToString();
+                label91.Text = netRentalIncome.ToString();
+
             }
         }
     }
