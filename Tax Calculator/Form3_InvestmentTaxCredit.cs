@@ -13,7 +13,7 @@ namespace Tax_Calculator
     
     public partial class Form3_InvestmentTaxCredit : Form
     {
-        public static double sum = 0.0;
+        public static double totalInvestment = 0.0;
         // investment documents
         public static string document1 = "";
         public static string document2 = "";
@@ -55,18 +55,18 @@ namespace Tax_Calculator
 
         private double InvestmentTaxCalculate()
         {
-            sum =   double.Parse(textBox1.Text.ToString()) +
-                    double.Parse(textBox2.Text.ToString()) +
-                    double.Parse(textBox3.Text.ToString()) +
-                    double.Parse(textBox4.Text.ToString()) +
-                    double.Parse(textBox5.Text.ToString()) +
-                    double.Parse(textBox6.Text.ToString()) +
-                    double.Parse(textBox7.Text.ToString()) +
-                    double.Parse(textBox8.Text.ToString()) +
-                    double.Parse(textBox9.Text.ToString()) +
-                    double.Parse(textBox10.Text.ToString());
+            totalInvestment =   double.Parse(textBox1.Text.ToString()) +
+                                double.Parse(textBox2.Text.ToString()) +
+                                double.Parse(textBox3.Text.ToString()) +
+                                double.Parse(textBox4.Text.ToString()) +
+                                double.Parse(textBox5.Text.ToString()) +
+                                double.Parse(textBox6.Text.ToString()) +
+                                double.Parse(textBox7.Text.ToString()) +
+                                double.Parse(textBox8.Text.ToString()) +
+                                double.Parse(textBox9.Text.ToString()) +
+                                double.Parse(textBox10.Text.ToString());
            
-            return sum;
+            return totalInvestment;
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)

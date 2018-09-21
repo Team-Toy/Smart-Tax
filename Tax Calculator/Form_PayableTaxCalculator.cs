@@ -36,7 +36,7 @@ namespace Tax_Calculator
         {
             // default combobox value selected
             comboBox1.SelectedIndex = 0;
-            label4.Text=Form4_SatementOfSalary.
+            label4.Text = Form4_SatementOfSalary.totalTaxableIncome.ToString();
 
             // make result of tax calculation transparent over background image
             label3.Parent = this.panel1;
@@ -318,6 +318,9 @@ namespace Tax_Calculator
 
         }
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

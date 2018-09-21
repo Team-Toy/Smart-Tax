@@ -92,11 +92,13 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -515,7 +517,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(33, 691);
+            this.label37.Location = new System.Drawing.Point(33, 756);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(23, 15);
             this.label37.TabIndex = 36;
@@ -729,7 +731,7 @@
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(335, 15);
             this.label44.TabIndex = 77;
-            this.label44.Text = "(Please attach ahallan/pay order/bank draft/check)";
+            this.label44.Text = "(Please attach challan/pay order/bank draft/check)";
             // 
             // textBox14
             // 
@@ -743,7 +745,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(61, 691);
+            this.label45.Location = new System.Drawing.Point(61, 756);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(246, 15);
             this.label45.TabIndex = 79;
@@ -753,7 +755,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(65, 727);
+            this.label46.Location = new System.Drawing.Point(65, 792);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(227, 15);
             this.label46.TabIndex = 80;
@@ -763,7 +765,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(61, 760);
+            this.label47.Location = new System.Drawing.Point(61, 825);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(280, 15);
             this.label47.TabIndex = 81;
@@ -773,7 +775,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(33, 727);
+            this.label48.Location = new System.Drawing.Point(33, 792);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(23, 15);
             this.label48.TabIndex = 82;
@@ -783,25 +785,17 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(33, 760);
+            this.label49.Location = new System.Drawing.Point(33, 825);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(23, 15);
             this.label49.TabIndex = 83;
             this.label49.Text = "19";
             // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(406, 756);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(183, 23);
-            this.textBox17.TabIndex = 86;
-            // 
             // label50
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(406, 728);
+            this.label50.Location = new System.Drawing.Point(403, 756);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(27, 15);
             this.label50.TabIndex = 87;
@@ -821,7 +815,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(406, 764);
+            this.label52.Location = new System.Drawing.Point(403, 792);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(27, 15);
             this.label52.TabIndex = 89;
@@ -841,17 +835,49 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(248, 701);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(129, 14);
+            this.label53.TabIndex = 91;
+            this.label53.Text = "Total ( a + b + c + d ) :";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(403, 825);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(27, 15);
+            this.label54.TabIndex = 92;
+            this.label54.Text = "0.0";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(403, 701);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(27, 15);
+            this.label55.TabIndex = 93;
+            this.label55.Text = "0.0";
+            // 
             // Form4_SatementOfSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(834, 507);
+            this.Controls.Add(this.label55);
+            this.Controls.Add(this.label54);
+            this.Controls.Add(this.label53);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.label50);
-            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label47);
@@ -990,10 +1016,12 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
     }
 }
