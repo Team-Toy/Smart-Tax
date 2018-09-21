@@ -16,7 +16,7 @@ namespace Tax_Calculator
 
         //values for form 4, totalTaxableIncome, totalTaxExtempted
         public static double totalAmountOfIncome = 0.0;
-        public static double totalTaxableIncome = 0.0;
+        public static double netTaxableIncome = 0.0;
         public static double totalTaxExtempted = 0.0;
         public double basicPay = 0.0;
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
@@ -72,7 +72,8 @@ namespace Tax_Calculator
             for (int i = 0; i < data.Length; i++)
             {
                 bool taxable = Boolean.Parse(data[i]);
-                float maxPercentOfNonTaxable = float.Parse(data[++i]);
+                double maxPercentOfNonTaxable = Math.Round(double.Parse(data[++i]));
+                
                 maxNonTaxable = new List<double>();
                 maxNonTaxable.Add(double.Parse(data[++i]));
                 if ( i == data.Length-1)
@@ -157,7 +158,7 @@ namespace Tax_Calculator
                 label40.Text = "" + taxExtempted;
                 label57.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox2.Focus();
@@ -175,7 +176,7 @@ namespace Tax_Calculator
                 label41.Text = "" + taxExtempted;
                 label58.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox3.Focus();
@@ -193,7 +194,7 @@ namespace Tax_Calculator
                 label42.Text = "" + taxExtempted;
                 label59.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox4.Focus();
@@ -211,7 +212,7 @@ namespace Tax_Calculator
                 label43.Text = "" + taxExtempted;
                 label60.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox5.Focus();
@@ -229,7 +230,7 @@ namespace Tax_Calculator
                 label44.Text = "" + taxExtempted;
                 label61.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox6.Focus();
@@ -254,7 +255,7 @@ namespace Tax_Calculator
                 label45.Text = "" + taxExtempted;
                 label62.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox7.Focus();
@@ -272,7 +273,7 @@ namespace Tax_Calculator
                 label46.Text = "" + taxExtempted;
                 label63.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox8.Focus();
@@ -290,7 +291,7 @@ namespace Tax_Calculator
                 label47.Text = "" + taxExtempted;
                 label64.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox9.Focus();
@@ -308,7 +309,7 @@ namespace Tax_Calculator
                 label48.Text = "" + taxExtempted;
                 label65.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox10.Focus();
@@ -326,7 +327,7 @@ namespace Tax_Calculator
                 label49.Text = "" + taxExtempted;
                 label66.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox11.Focus();
@@ -344,7 +345,7 @@ namespace Tax_Calculator
                 label50.Text = "" + taxExtempted;
                 label67.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox12.Focus();
@@ -362,7 +363,7 @@ namespace Tax_Calculator
                 label51.Text = "" + taxExtempted;
                 label68.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox13.Focus();
@@ -386,7 +387,7 @@ namespace Tax_Calculator
                 label52.Text = "" + taxExtempted;
                 label69.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
                 
                 textBox14.Focus();
@@ -404,7 +405,7 @@ namespace Tax_Calculator
                 label53.Text = "" + taxExtempted;
                 label70.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox15.Focus();
@@ -435,7 +436,7 @@ namespace Tax_Calculator
                 label54.Text = "" + taxExtempted;
                 label71.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
                 textBox16.Focus();
@@ -453,7 +454,7 @@ namespace Tax_Calculator
                 label55.Text = "" + taxExtempted;
                 label72.Text = "" + taxableIncome;
 
-                totalTaxableIncome += taxableIncome;
+                netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
 
@@ -461,7 +462,7 @@ namespace Tax_Calculator
                 label39.Text = TotalAmountOfIncome().ToString();
                 label56.Text = totalTaxExtempted.ToString();
                 //showing total taxable income
-                label73.Text = totalTaxableIncome.ToString();
+                label73.Text = netTaxableIncome.ToString();
             }
         }
 

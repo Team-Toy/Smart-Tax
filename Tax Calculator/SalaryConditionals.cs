@@ -14,7 +14,7 @@ namespace Tax_Calculator
         private double maxPercentOfNonTaxable = 0.0;
         public List<double> maxNonTaxable = null;
         
-       public SalaryConditionals( bool taxable, float maxPercentOfNonTaxable, List<double> maxNonTaxable)
+       public SalaryConditionals( bool taxable, double maxPercentOfNonTaxable, List<double> maxNonTaxable)
         {
             this.taxable = taxable;
             this.maxPercentOfNonTaxable = maxPercentOfNonTaxable;
