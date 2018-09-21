@@ -13,7 +13,7 @@ namespace Tax_Calculator
 {
     public partial class Form_PayableTaxCalculator : Form
     {
-        List<double> AreaWiseMinimumPayableTax;
+        //List<double> AreaWiseMinimumPayableTax;
         private bool dataExist = false;
         private string inputErrorMessage = "Input required value !";
         private string ComboBoxErrorMessage = "Select Category !";
@@ -30,6 +30,21 @@ namespace Tax_Calculator
         public Form_PayableTaxCalculator()
         {
             InitializeComponent();
+        }
+
+        private void Form_PayableTaxCalculator_Load(object sender, EventArgs e)
+        {
+            // default combobox value selected
+            comboBox1.SelectedIndex = 0;
+            label4.Text=Form4_SatementOfSalary.
+
+            // make result of tax calculation transparent over background image
+            label3.Parent = this.panel1;
+            label3.BackColor = Color.Transparent;
+            label3.BringToFront();
+
+
+            //this.textBox1.KeyPress += new KeyPressEventHandler(CheckEnterPress);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -303,19 +318,6 @@ namespace Tax_Calculator
 
         }
 
-        private void Form_PayableTaxCalculator_Load(object sender, EventArgs e)
-        {
-            // default combobox value selected
-            comboBox1.SelectedIndex = 0;
-
-            // make result of tax calculation transparent over background image
-            label3.Parent = this.panel1;
-            label3.BackColor = Color.Transparent;
-            label3.BringToFront();
-
-
-
-            //this.textBox1.KeyPress += new KeyPressEventHandler(CheckEnterPress);
-        }
+       
     }
 }

@@ -184,5 +184,24 @@ namespace Tax_Calculator
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
             f.Show();
         }
+        private double CalTaxRevate(double taxableIncome)
+        {
+            //base case
+            if (taxableIncome == 0) return 0.0; //if no taxable income return 0
+            double y = (taxableIncome * 0.25);  //y = taxableIncome*25%
+            double z = 15000000;    //absolute maximum amount
+
+            if (y < z)
+            {
+                if (totalInvestment < y) return totalInvestment;
+                else if (y < totalInvestment) return y;
+            }
+            else if (z < y)
+            {
+                if (totalInvestment < z) return totalInvestment;
+                else if (z < totalInvestment) return z;
+            }
+            return 0.0;
+        }
     }
 }
