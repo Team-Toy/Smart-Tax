@@ -13,7 +13,7 @@ namespace Tax_Calculator
     public partial class Form4_SatementOfSalary : Form
     {
         //declared total for summation from serial no 1 to serial no 9
-        private double total = 0.0;
+        private double totalTaxableIncome = 0.0;
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
@@ -34,12 +34,15 @@ namespace Tax_Calculator
             // make all text boxt zero
             madeAllTextBoxZero();
             //taking total taxable income and showing in label51
-            label51.Text = Form2_Salaries.totalTaxableIncome.ToString();
-            //taking total taxable exempted income and showing in label51
-            label52.Text = Form2_Salaries.totalTaxableIncome.ToString();
-            total += Form2_Salaries.totalTaxableIncome;
-            label39.Text = total.ToString();
-            label40.Text= total.ToString();
+            label51.Text = Form2_Salaries.netTaxableIncome.ToString();
+            //taking total taxable exempted income and showing in label52
+            label52.Text = Form2_Salaries.totalTaxExtempted.ToString();
+
+            totalTaxableIncome += Form2_Salaries.netTaxableIncome;
+
+
+            label39.Text = "0.0";
+            label40.Text= "0.0";
         }
         public void madeAllTextBoxZero()
         {
@@ -65,10 +68,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox2.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox2.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "income from house property" text field
                 textBox3.Focus();
             }
@@ -78,10 +81,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox3.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox3.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "agricultural income" text field
                 textBox4.Focus();
             }
@@ -91,10 +94,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox4.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox4.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "Income from Business or profession" text field
                 textBox5.Focus();
             }
@@ -104,10 +107,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox5.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox5.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "Share of proft in a firm" text field
                 textBox6.Focus();
             }
@@ -117,10 +120,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox6.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox6.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "Income of spouse or minor child as applicable" text field
                 textBox7.Focus();
             }
@@ -130,10 +133,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox7.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox7.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "Capital Gains" text field
                 textBox8.Focus();
             }
@@ -143,10 +146,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox8.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox8.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "Income from other source" text field
                 textBox9.Focus();
             }
@@ -156,10 +159,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                total += double.Parse(textBox9.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox9.Text.ToString());
                 //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                label39.Text = totalTaxableIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
                 //focusing "foreign income" text field
                 textBox9.Focus();
             }
@@ -169,8 +172,8 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //totalIncome=total + foreignIncome
-                double totalIncome= total + double.Parse(textBox10.Text.ToString());
+                //totalTaxableIncome = total + foreignIncome
+                double totalIncome = totalTaxableIncome + double.Parse(textBox10.Text.ToString());
                 //showing total income by label
                 label40.Text = totalIncome.ToString();
             }

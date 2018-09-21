@@ -236,7 +236,7 @@
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(32, 204);
+            this.label12.Location = new System.Drawing.Point(32, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 15);
             this.label12.TabIndex = 6;
@@ -387,7 +387,7 @@
             this.label26.BackColor = System.Drawing.SystemColors.Control;
             this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label26.Location = new System.Drawing.Point(52, 200);
+            this.label26.Location = new System.Drawing.Point(52, 204);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(188, 35);
             this.label26.TabIndex = 25;
@@ -559,7 +559,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(404, 171);
+            this.textBox6.Location = new System.Drawing.Point(404, 173);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(183, 23);
             this.textBox6.TabIndex = 43;
