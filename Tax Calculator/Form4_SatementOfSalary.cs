@@ -60,7 +60,7 @@ namespace Tax_Calculator
             textBox12.Text = "0.0";
             textBox13.Text = "0.0";
             textBox14.Text = "0.0";
-            textBox17.Text = "0.0";
+            //textBox17.Text = "0.0";
 
         }
 
@@ -184,24 +184,64 @@ namespace Tax_Calculator
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
             f.Show();
         }
- /*       private double CalTaxRevate(double taxableIncome)
-        {
-            //base case
-            if (taxableIncome == 0) return 0.0; //if no taxable income return 0
-            double y = (taxableIncome * 0.25);  //y = taxableIncome*25%
-            double z = 15000000;    //absolute maximum amount
 
-            if (y < z)
+        public double CalTaxRebate()
+
+        {
+            double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
+            double taxRebate = 0.0;
+
+            if(allowableInvestmentTaxCredit <= 1000000.00)
             {
-                if (totalInvestment < y) return totalInvestment;
-                else if (y < totalInvestment) return y;
+                taxRebate = allowableInvestmentTaxCredit * 0.15;
             }
-            else if (z < y)
+            else if(allowableInvestmentTaxCredit > 1000000.00 && allowableInvestmentTaxCredit <= 3000000.00)
             {
-                if (totalInvestment < z) return totalInvestment;
-                else if (z < totalInvestment) return z;
+                taxRebate = (250000 * 0.15) + ((allowableInvestmentTaxCredit - 250000) * 0.12);
             }
-            return 0.0;
-        }*/
+            else
+            {
+                taxRebate = (250000 * 0.15) + (500000 * 0.12) + ((allowableInvestmentTaxCredit - 750000) * 0.1);
+            }
+            return taxRebate;
+        }
+
+        private double CalAllowableInvestmentTaxCredit()
+        {
+            List<double> tempList = new List<double>();
+
+            tempList.Add(Form3_InvestmentTaxCredit.totalInvestment);
+            tempList.Add(15000000.00);
+            tempList.Add(totalTaxableIncome*0.25);
+
+            return tempList.Min();
+        }
+        /*
+       private double CalAllowableInvestmentTaxCredit(double taxableIncome)
+       {
+           double result=0.0;
+           //base case
+           if (taxableIncome == 0) return 0.0; //if no taxable income return 0
+           double y = (taxableIncome * 0.25);  //y = taxableIncome*25%
+           double z = 15000000;    //absolute maximum amount
+
+           if (y < z)
+           {
+               if (totalInvestment < y) return totalInvestment;
+               else if (y < totalInvestment) result= y;
+           }
+           else if (z < y)
+           {
+               if (totalInvestment < z) return totalInvestment;
+               else if (z < totalInvestment) result= z;
+           }
+
+           return 0.0;
+       }
+
+           return result; //
+       }
+       */
+
     }
 }
