@@ -14,6 +14,11 @@ namespace Tax_Calculator
     {
         //declared total for summation from serial no 1 to serial no 9
         public static double totalTaxableIncome = 0.0;
+        public static double taxLeviable = 0.0;
+        public static double taxRebate = 0.0;
+        public static double taxPayable = 0.0;
+        public static double totalTaxPayment = 0.0;
+        public static double taxPaidLastYear = 0.0;
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
@@ -60,7 +65,7 @@ namespace Tax_Calculator
             textBox12.Text = "0.0";
             textBox13.Text = "0.0";
             textBox14.Text = "0.0";
-            //textBox17.Text = "0.0";
+            textBox15.Text = "0.0";
 
         }
 
@@ -176,13 +181,17 @@ namespace Tax_Calculator
                 totalTaxableIncome += double.Parse(textBox10.Text.ToString());
                 //showing total income by label
                 label40.Text = totalTaxableIncome.ToString();
+
+                // showing tax rebate
+                taxRebate = CalTaxRebate();
+                label42.Text = taxRebate.ToString();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
-            f.Show();
+            f.ShowDialog();
         }
 
         public double CalTaxRebate()
@@ -216,32 +225,99 @@ namespace Tax_Calculator
 
             return tempList.Min();
         }
+
+        private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
+        {
+            taxLeviable = Form_PayableTaxCalculator.taxLeviable;
+            label41.Text = taxLeviable.ToString();
+
+            taxPayable = Math.Abs(taxLeviable - taxRebate);
+            label43.Text = taxPayable.ToString();
+
+            textBox11.Focus();
+        }
+
+        private void textBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                totalTaxPayment += Double.Parse(textBox11.Text.ToString());
+                label55.Text = totalTaxPayment.ToString();
+
+                textBox12.Focus();
+            }
+        }
+
+        private void textBox12_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                totalTaxPayment += Double.Parse(textBox12.Text.ToString());
+                label55.Text = totalTaxPayment.ToString();
+
+                textBox13.Focus();
+            }
+        }
+
+        private void textBox13_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                totalTaxPayment += Double.Parse(textBox13.Text.ToString());
+                label55.Text = totalTaxPayment.ToString();
+
+                textBox14.Focus();
+            }
+        }
+
+        private void textBox14_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                totalTaxPayment += Double.Parse(textBox14.Text.ToString());
+
+                label55.Text = totalTaxPayment.ToString();
+
+                double difference = taxPayable - totalTaxPayment;
+                label50.Text = difference.ToString();
+
+                textBox15.Focus();
+            }
+        }
+
+        private void textBox15_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                taxPaidLastYear = Double.Parse(textBox15.Text.ToString());
+            }
+        }
         /*
-       private double CalAllowableInvestmentTaxCredit(double taxableIncome)
-       {
-           double result=0.0;
-           //base case
-           if (taxableIncome == 0) return 0.0; //if no taxable income return 0
-           double y = (taxableIncome * 0.25);  //y = taxableIncome*25%
-           double z = 15000000;    //absolute maximum amount
+private double CalAllowableInvestmentTaxCredit(double taxableIncome)
+{
+double result=0.0;
+//base case
+if (taxableIncome == 0) return 0.0; //if no taxable income return 0
+double y = (taxableIncome * 0.25);  //y = taxableIncome*25%
+double z = 15000000;    //absolute maximum amount
 
-           if (y < z)
-           {
-               if (totalInvestment < y) return totalInvestment;
-               else if (y < totalInvestment) result= y;
-           }
-           else if (z < y)
-           {
-               if (totalInvestment < z) return totalInvestment;
-               else if (z < totalInvestment) result= z;
-           }
+if (y < z)
+{
+if (totalInvestment < y) return totalInvestment;
+else if (y < totalInvestment) result= y;
+}
+else if (z < y)
+{
+if (totalInvestment < z) return totalInvestment;
+else if (z < totalInvestment) result= z;
+}
 
-           return 0.0;
-       }
+return 0.0;
+}
 
-           return result; //
-       }
-       */
+return result; //
+}
+*/
 
     }
 }

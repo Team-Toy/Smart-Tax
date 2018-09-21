@@ -13,6 +13,7 @@ namespace Tax_Calculator
 {
     public partial class Form_PayableTaxCalculator : Form
     {
+        public static double taxLeviable = 0.0;
         List<double> areaWiseMinimumPayableTax; //minimum tax for remainning_income_without_tax
         private bool dataExist = false;
         private string inputErrorMessage = "Input required value !";
@@ -40,7 +41,7 @@ namespace Tax_Calculator
             // default combobox value selected
             comboBox1.SelectedIndex = 0;
 
-            label4.Text = ""+ Form4_SatementOfSalary.totalTaxableIncome;
+            label4.Text = "" + Form4_SatementOfSalary.totalTaxableIncome;
 
 
             // make result of tax calculation transparent over background image
@@ -85,6 +86,7 @@ namespace Tax_Calculator
                     label3.ForeColor = Color.Black;
                 }
             }
+            taxLeviable = tax;
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -300,6 +302,15 @@ namespace Tax_Calculator
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form_PayableTaxCalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {    // hide setting form window
+                //Close();
+                this.Hide();
+            }
         }
     }
 }
