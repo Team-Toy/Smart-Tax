@@ -13,11 +13,10 @@ namespace Tax_Calculator
 {
     public partial class Form_PayableTaxCalculator : Form
     {
-        //List<double> AreaWiseMinimumPayableTax;
+        List<double> areaWiseMinimumPayableTax; //minimum tax for remainning_income_without_tax
         private bool dataExist = false;
         private string inputErrorMessage = "Input required value !";
         private string ComboBoxErrorMessage = "Select Category !";
-        private double minTax = 5000.0;  //minimum tax for remainning_income_without_tax
 
         private static double soFar = 0.0;
         private double[] personWiseFirstSlab = new double[5];   //slabs for 1st slab all type of people
@@ -30,13 +29,17 @@ namespace Tax_Calculator
         public Form_PayableTaxCalculator()
         {
             InitializeComponent();
+            areaWiseMinimumPayableTax = new List<double>();
+            areaWiseMinimumPayableTax.Add(5000);    //for Dhaka and Chittagong city corporation
+            areaWiseMinimumPayableTax.Add(4000);    //for other city corporation
+            areaWiseMinimumPayableTax.Add(3000);    //for outside of city corporation
         }
 
         private void Form_PayableTaxCalculator_Load(object sender, EventArgs e)
         {
             // default combobox value selected
             comboBox1.SelectedIndex = 0;
-            label4.Text=Form4_SatementOfSalary.
+            label4.Text = ""+ Form4_SatementOfSalary.totalTaxableIncome;
 
             // make result of tax calculation transparent over background image
             label3.Parent = this.panel1;
@@ -81,11 +84,6 @@ namespace Tax_Calculator
                 }
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }        
 
         private void Form1_Activated(object sender, EventArgs e)
         {
@@ -198,41 +196,20 @@ namespace Tax_Calculator
         private double TaxCal(double total)
         {
             double firstSlab = 0.0, tax = 0.0;
-
-            if (comboBox1.Text == "Male")
-            {
-                firstSlab = personWiseFirstSlab[0];
-
-            }
-            else if (comboBox1.Text == "Female / Old age")
-            {
-                firstSlab = personWiseFirstSlab[1];
-
-            }
-            else if (comboBox1.Text == "Disable People")
-            {
-                firstSlab = personWiseFirstSlab[2];
-
-            }
-            else if (comboBox1.Text == "Freedom Fighter")
-            {
-                firstSlab = personWiseFirstSlab[3];
-
-            }
-
-            // first slab deduction
-
+            firstSlab = personWiseFirstSlab[comboBox1.SelectedIndex-1]; //choose person by selecting combox1
+           
             if (total > firstSlab)
             {
-                soFar = total - firstSlab;
+                soFar = total - firstSlab;  // first slab deduction
             }
 
             if (soFar > 0)
             {   // calculate tax from 2nd to upto Remaining slap
                 tax = Cal2ndTo5thSlab() + RemainingSlab();
-                if (tax < minTax) // for default tax rate 5000
+                //choose area by selecting combox2 to check minimum payable tax after 1st slab
+                if (tax < areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]) 
                 {
-                    tax = minTax;
+                    tax = areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]; // selecting tax rate Area wise by combox2
                 }
             }
 
@@ -262,15 +239,15 @@ namespace Tax_Calculator
             // checking to stop tax calculation
             if (soFar == 0.0) return soFar;
 
-            if (soFar >= slab)
+            if (soFar >= slab)  //if taxable income is above the slab range
             {
-                //for next slab
+                //calculating amount of income excess from current slab range
                 soFar = soFar - slab;
-                tax = (slab * taxPercent) / 100.0;
+                tax = (slab * taxPercent) / 100.0;  //calculating payable tax on this max slab amount
             }
-            else if (soFar > 0.0)
+            else if (soFar > 0.0)   //if taxable income is under the slab range and non-zero
             {
-                tax = (soFar * taxPercent) / 100.0;
+                tax = (soFar * taxPercent) / 100.0;  //calculating payable tax 
                 //making condition not to go next slab
                 soFar = 0.0;
             }

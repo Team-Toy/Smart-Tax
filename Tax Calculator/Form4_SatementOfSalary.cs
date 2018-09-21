@@ -13,7 +13,7 @@ namespace Tax_Calculator
     public partial class Form4_SatementOfSalary : Form
     {
         //declared total for summation from serial no 1 to serial no 9
-        private static double totalTaxableIncome = 0.0;
+        public static double totalTaxableIncome = 0.0;
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
@@ -184,7 +184,7 @@ namespace Tax_Calculator
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
             f.Show();
         }
-        private double CalTaxRevate(double taxableIncome)
+ /*       private double CalTaxRevate(double taxableIncome)
         {
             //base case
             if (taxableIncome == 0) return 0.0; //if no taxable income return 0
@@ -202,6 +202,6 @@ namespace Tax_Calculator
                 else if (z < totalInvestment) return z;
             }
             return 0.0;
-        }
+        }*/
     }
 }

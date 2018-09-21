@@ -42,6 +42,9 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +147,9 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.comboBox2);
@@ -194,6 +200,7 @@
             this.comboBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
+            "Select",
             "Dhaka North or South or  Chittagong City Corporation",
             "Any other city corporation",
             "Outside city corporation"});
@@ -212,6 +219,33 @@
             this.label4.Size = new System.Drawing.Size(48, 33);
             this.label4.TabIndex = 10;
             this.label4.Text = "0.0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(509, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(509, 153);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(513, 180);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
             // 
             // Form_PayableTaxCalculator
             // 
@@ -256,6 +290,9 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 
