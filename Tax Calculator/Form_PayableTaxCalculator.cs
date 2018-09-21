@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form_PayableTaxCalculator : Form
     {
+        List<double> AreaWiseMinimumPayableTax;
         private bool dataExist = false;
         private string inputErrorMessage = "Input required value !";
         private string ComboBoxErrorMessage = "Select Category !";
@@ -26,7 +27,7 @@ namespace Tax_Calculator
         // tax configuration file path variable
         private string filepath = Application.StartupPath + "temp.txt";
 
-        public Form1()
+        public Form_PayableTaxCalculator()
         {
             InitializeComponent();
         }
@@ -40,7 +41,7 @@ namespace Tax_Calculator
         {
             double tax = 0.0;
 
-            if (textBox1.Text.ToString().Equals(string.Empty))
+            if (label4.Text.ToString().Equals(string.Empty))
             {
 
                 label3.Text = inputErrorMessage;
@@ -57,7 +58,7 @@ namespace Tax_Calculator
                 else
                 {
                     // showing output result
-                    tax = TaxCal(double.Parse(textBox1.Text.ToString()));
+                    tax = TaxCal(double.Parse(label4.Text.ToString()));
 
                     // added auto comma in currency style
                     label3.Text = (String.Format("{0:n}", tax) + "  ৳");
@@ -68,17 +69,7 @@ namespace Tax_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // default combobox value selected
-            comboBox1.SelectedIndex = 0;
-
-            // make result of tax calculation transparent over background image
-            label3.Parent = this.panel1;
-            label3.BackColor = Color.Transparent;            
-            label3.BringToFront();
-
             
-
-            //this.textBox1.KeyPress += new KeyPressEventHandler(CheckEnterPress);
         }        
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -176,17 +167,19 @@ namespace Tax_Calculator
             }
         }
 
+/*      //clear button was button2
+ *      
         private void button2_Click(object sender, EventArgs e)
         {
             // if data exits only then this will showed, otherwise update setting will be shown
             if (dataExist)
                 label3.Text = "0.0  ৳";
 
-            textBox1.Text = "";
+            label4.Text = "";
             comboBox1.SelectedIndex = 0;
             label3.ForeColor = Color.Black;
         }
-
+*/
         private double TaxCal(double total)
         {
             double firstSlab = 0.0, tax = 0.0;
@@ -282,7 +275,7 @@ namespace Tax_Calculator
                 VerifyAndTaxCal();
             }
         }
-
+// need to use inside the code 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -308,6 +301,21 @@ namespace Tax_Calculator
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void Form_PayableTaxCalculator_Load(object sender, EventArgs e)
+        {
+            // default combobox value selected
+            comboBox1.SelectedIndex = 0;
+
+            // make result of tax calculation transparent over background image
+            label3.Parent = this.panel1;
+            label3.BackColor = Color.Transparent;
+            label3.BringToFront();
+
+
+
+            //this.textBox1.KeyPress += new KeyPressEventHandler(CheckEnterPress);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Tax_Calculator
     public partial class Form4_SatementOfSalary : Form
     {
         //declared total for summation from serial no 1 to serial no 9
-        private double totalTaxableIncome = 0.0;
+        private static double totalTaxableIncome = 0.0;
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
@@ -173,12 +173,16 @@ namespace Tax_Calculator
             if (e.KeyCode == Keys.Enter)
             {
                 //totalTaxableIncome = total + foreignIncome
-                double totalIncome = totalTaxableIncome + double.Parse(textBox10.Text.ToString());
+                totalTaxableIncome += double.Parse(textBox10.Text.ToString());
                 //showing total income by label
-                label40.Text = totalIncome.ToString();
+                label40.Text = totalTaxableIncome.ToString();
             }
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
+            f.Show();
+        }
     }
 }
