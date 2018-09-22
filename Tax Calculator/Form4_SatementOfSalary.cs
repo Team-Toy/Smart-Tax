@@ -19,6 +19,7 @@ namespace Tax_Calculator
         public static double taxPayable = 0.0;
         public static double totalTaxPayment = 0.0;
         public static double taxPaidLastYear = 0.0;
+        private double foreignIncome = 0;
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
@@ -177,9 +178,13 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                
+                foreignIncome += double.Parse(textBox10.Text.ToString());
+
                 //totalTaxableIncome = total + foreignIncome
-                totalTaxableIncome += double.Parse(textBox10.Text.ToString());
-                //showing total income by label
+                totalTaxableIncome += foreignIncome;
+
+                //showing total income in labe40
                 label40.Text = totalTaxableIncome.ToString();
 
                 // showing tax rebate
