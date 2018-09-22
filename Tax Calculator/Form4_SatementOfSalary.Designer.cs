@@ -97,8 +97,8 @@
             this.label52 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -611,6 +611,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(183, 23);
             this.textBox12.TabIndex = 44;
+            this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
             // 
             // label39
             // 
@@ -692,6 +693,7 @@
             this.textBox11.Size = new System.Drawing.Size(183, 23);
             this.textBox11.TabIndex = 45;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
             // 
             // label19
             // 
@@ -722,6 +724,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(183, 23);
             this.textBox13.TabIndex = 76;
+            this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
             // 
             // label44
             // 
@@ -740,6 +743,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(183, 23);
             this.textBox14.TabIndex = 78;
+            this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
             // 
             // label45
             // 
@@ -827,33 +831,23 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(290, 412);
+            this.button1.Location = new System.Drawing.Point(290, 415);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 38);
+            this.button1.Size = new System.Drawing.Size(99, 26);
             this.button1.TabIndex = 90;
-            this.button1.Text = "Calculate";
+            this.button1.Text = "Tax Leviable";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(248, 701);
+            this.label53.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(237, 701);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(129, 14);
+            this.label53.Size = new System.Drawing.Size(140, 15);
             this.label53.TabIndex = 91;
             this.label53.Text = "Total ( a + b + c + d ) :";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(403, 825);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(27, 15);
-            this.label54.TabIndex = 92;
-            this.label54.Text = "0.0";
             // 
             // label55
             // 
@@ -865,14 +859,23 @@
             this.label55.TabIndex = 93;
             this.label55.Text = "0.0";
             // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(406, 817);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(183, 23);
+            this.textBox15.TabIndex = 94;
+            this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
+            // 
             // Form4_SatementOfSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(834, 507);
+            this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label55);
-            this.Controls.Add(this.label54);
             this.Controls.Add(this.label53);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label52);
@@ -944,6 +947,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form4_SatementOfSalary";
             this.Text = "Statement of Salary";
+            this.Activated += new System.EventHandler(this.Form4_SatementOfSalary_Activated);
             this.Load += new System.EventHandler(this.Form4_SatementOfSalary_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1021,7 +1025,7 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox textBox15;
     }
 }
