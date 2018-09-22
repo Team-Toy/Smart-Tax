@@ -24,16 +24,12 @@ namespace Tax_Calculator
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2_Salaries f = new Form2_Salaries();
-            f.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form2_Salaries f = new Form2_Salaries();
             f.Show();
         }
+
+
     }
 }

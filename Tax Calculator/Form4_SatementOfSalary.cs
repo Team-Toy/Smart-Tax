@@ -188,6 +188,7 @@ namespace Tax_Calculator
         public double CalTaxRebate()
 
         {
+            
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
             double taxRebate = 0.0;
 

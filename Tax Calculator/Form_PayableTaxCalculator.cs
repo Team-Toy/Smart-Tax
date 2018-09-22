@@ -182,19 +182,7 @@ namespace Tax_Calculator
             }
         }
 
-/*      //clear button was button2
- *      
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // if data exits only then this will showed, otherwise update setting will be shown
-            if (dataExist)
-                label3.Text = "0.0  ৳";
 
-            label4.Text = "";
-            comboBox1.SelectedIndex = 0;
-            label3.ForeColor = Color.Black;
-        }
-*/
         private double TaxCal(double total)
         {
             double firstSlab = 0.0, tax = 0.0;
@@ -211,7 +199,8 @@ namespace Tax_Calculator
                 //choose area by selecting combox2 to check minimum payable tax after 1st slab
                 if (tax < areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]) 
                 {
-                    tax = areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]; // selecting tax rate Area wise by combox2
+                    // selecting tax rate Area wise by combox2
+                    tax = areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]; 
                 }
             }
 

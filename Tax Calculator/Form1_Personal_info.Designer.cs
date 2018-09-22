@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -90,7 +89,6 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox17);
             this.panel1.Controls.Add(this.textBox13);
             this.panel1.Controls.Add(this.textBox16);
@@ -146,38 +144,28 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 570);
+            this.panel1.Size = new System.Drawing.Size(705, 570);
             this.panel1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(563, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 257;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(298, 423);
+            this.textBox17.Location = new System.Drawing.Point(298, 601);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(197, 20);
             this.textBox17.TabIndex = 256;
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(299, 610);
+            this.textBox13.Location = new System.Drawing.Point(298, 420);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(267, 20);
+            this.textBox13.Size = new System.Drawing.Size(197, 20);
             this.textBox13.TabIndex = 255;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(298, 559);
+            this.textBox16.Location = new System.Drawing.Point(298, 553);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(267, 20);
+            this.textBox16.Size = new System.Drawing.Size(197, 20);
             this.textBox16.TabIndex = 235;
             // 
             // textBox15
@@ -704,7 +692,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(649, 583);
+            this.button1.Location = new System.Drawing.Point(613, 585);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 253;
@@ -716,7 +704,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 608);
+            this.ClientSize = new System.Drawing.Size(706, 608);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1_Personal_info";
@@ -785,6 +773,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button2;
     }
 }
