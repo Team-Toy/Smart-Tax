@@ -154,27 +154,21 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label62.Location = new System.Drawing.Point(689, 253);
-
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(28, 18);
             this.label62.TabIndex = 251;
             this.label62.Text = "0.0";
-            this.label62.Click += new System.EventHandler(this.label62_Click);
             // 
             // label57
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label57.Location = new System.Drawing.Point(689, 110);
-
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(28, 18);
             this.label57.TabIndex = 250;
             this.label57.Text = "0.0";
-            this.label57.Click += new System.EventHandler(this.label57_Click);
             // 
             // label58
             // 
@@ -185,35 +179,26 @@
             this.label58.Size = new System.Drawing.Size(28, 18);
             this.label58.TabIndex = 249;
             this.label58.Text = "0.0";
-            this.label58.Click += new System.EventHandler(this.label58_Click);
             // 
             // label59
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label59.Location = new System.Drawing.Point(689, 168);
-
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(28, 18);
             this.label59.TabIndex = 248;
             this.label59.Text = "0.0";
-            this.label59.Click += new System.EventHandler(this.label59_Click);
             // 
             // label60
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label60.Location = new System.Drawing.Point(689, 196);
-
-         
-
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(28, 18);
             this.label60.TabIndex = 247;
             this.label60.Text = "0.0";
-            this.label60.Click += new System.EventHandler(this.label60_Click);
             // 
             // label63
             // 
@@ -224,7 +209,6 @@
             this.label63.Size = new System.Drawing.Size(28, 18);
             this.label63.TabIndex = 246;
             this.label63.Text = "0.0";
-            this.label63.Click += new System.EventHandler(this.label63_Click);
             // 
             // label64
             // 
@@ -235,7 +219,6 @@
             this.label64.Size = new System.Drawing.Size(28, 18);
             this.label64.TabIndex = 245;
             this.label64.Text = "0.0";
-            this.label64.Click += new System.EventHandler(this.label64_Click);
             // 
             // label65
             // 
@@ -246,7 +229,6 @@
             this.label65.Size = new System.Drawing.Size(28, 18);
             this.label65.TabIndex = 244;
             this.label65.Text = "0.0";
-            this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // label66
             // 
@@ -257,7 +239,6 @@
             this.label66.Size = new System.Drawing.Size(28, 18);
             this.label66.TabIndex = 243;
             this.label66.Text = "0.0";
-            this.label66.Click += new System.EventHandler(this.label66_Click);
             // 
             // label67
             // 
@@ -268,7 +249,6 @@
             this.label67.Size = new System.Drawing.Size(28, 18);
             this.label67.TabIndex = 242;
             this.label67.Text = "0.0";
-            this.label67.Click += new System.EventHandler(this.label67_Click);
             // 
             // label68
             // 
@@ -279,7 +259,6 @@
             this.label68.Size = new System.Drawing.Size(28, 18);
             this.label68.TabIndex = 241;
             this.label68.Text = "0.0";
-            this.label68.Click += new System.EventHandler(this.label68_Click);
             // 
             // label69
             // 
@@ -290,7 +269,6 @@
             this.label69.Size = new System.Drawing.Size(28, 18);
             this.label69.TabIndex = 240;
             this.label69.Text = "0.0";
-            this.label69.Click += new System.EventHandler(this.label69_Click);
             // 
             // label70
             // 
@@ -301,7 +279,6 @@
             this.label70.Size = new System.Drawing.Size(28, 18);
             this.label70.TabIndex = 239;
             this.label70.Text = "0.0";
-            this.label70.Click += new System.EventHandler(this.label70_Click);
             // 
             // label71
             // 
@@ -312,7 +289,6 @@
             this.label71.Size = new System.Drawing.Size(28, 18);
             this.label71.TabIndex = 238;
             this.label71.Text = "0.0";
-            this.label71.Click += new System.EventHandler(this.label71_Click);
             // 
             // label38
             // 
@@ -342,7 +318,6 @@
             this.textBox16.TabIndex = 235;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             this.textBox16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox16_KeyDown);
-            //this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress);
             // 
             // textBox15
             // 
@@ -352,7 +327,6 @@
             this.textBox15.TabIndex = 234;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
-            
             // 
             // textBox14
             // 
@@ -362,7 +336,6 @@
             this.textBox14.TabIndex = 233;
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
-           
             // 
             // textBox12
             // 
@@ -372,7 +345,6 @@
             this.textBox12.TabIndex = 232;
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
-            
             // 
             // label36
             // 
@@ -448,14 +420,11 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             this.label61.Location = new System.Drawing.Point(689, 223);
-
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(28, 18);
             this.label61.TabIndex = 225;
             this.label61.Text = "0.0";
-            this.label61.Click += new System.EventHandler(this.label61_Click);
             // 
             // label56
             // 
@@ -466,7 +435,6 @@
             this.label56.Size = new System.Drawing.Size(28, 18);
             this.label56.TabIndex = 224;
             this.label56.Text = "0.0";
-            this.label56.Click += new System.EventHandler(this.label56_Click);
             // 
             // label55
             // 
@@ -477,7 +445,6 @@
             this.label55.Size = new System.Drawing.Size(28, 18);
             this.label55.TabIndex = 223;
             this.label55.Text = "0.0";
-            this.label55.Click += new System.EventHandler(this.label55_Click);
             // 
             // label54
             // 
@@ -488,7 +455,6 @@
             this.label54.Size = new System.Drawing.Size(28, 18);
             this.label54.TabIndex = 222;
             this.label54.Text = "0.0";
-            this.label54.Click += new System.EventHandler(this.label54_Click);
             // 
             // label53
             // 
@@ -499,7 +465,6 @@
             this.label53.Size = new System.Drawing.Size(28, 18);
             this.label53.TabIndex = 221;
             this.label53.Text = "0.0";
-            this.label53.Click += new System.EventHandler(this.label53_Click);
             // 
             // label52
             // 
@@ -510,7 +475,6 @@
             this.label52.Size = new System.Drawing.Size(28, 18);
             this.label52.TabIndex = 220;
             this.label52.Text = "0.0";
-            this.label52.Click += new System.EventHandler(this.label52_Click);
             // 
             // label51
             // 
@@ -521,7 +485,6 @@
             this.label51.Size = new System.Drawing.Size(28, 18);
             this.label51.TabIndex = 219;
             this.label51.Text = "0.0";
-            this.label51.Click += new System.EventHandler(this.label51_Click);
             // 
             // label50
             // 
@@ -532,7 +495,6 @@
             this.label50.Size = new System.Drawing.Size(28, 18);
             this.label50.TabIndex = 218;
             this.label50.Text = "0.0";
-            this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
             // label49
             // 
@@ -543,7 +505,6 @@
             this.label49.Size = new System.Drawing.Size(28, 18);
             this.label49.TabIndex = 217;
             this.label49.Text = "0.0";
-            this.label49.Click += new System.EventHandler(this.label49_Click);
             // 
             // label48
             // 
@@ -554,7 +515,6 @@
             this.label48.Size = new System.Drawing.Size(28, 18);
             this.label48.TabIndex = 216;
             this.label48.Text = "0.0";
-            this.label48.Click += new System.EventHandler(this.label48_Click);
             // 
             // label47
             // 
@@ -565,7 +525,6 @@
             this.label47.Size = new System.Drawing.Size(28, 18);
             this.label47.TabIndex = 215;
             this.label47.Text = "0.0";
-            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
             // label46
             // 
@@ -576,7 +535,6 @@
             this.label46.Size = new System.Drawing.Size(28, 18);
             this.label46.TabIndex = 214;
             this.label46.Text = "0.0";
-            this.label46.Click += new System.EventHandler(this.label46_Click);
             // 
             // label45
             // 
@@ -587,7 +545,6 @@
             this.label45.Size = new System.Drawing.Size(28, 18);
             this.label45.TabIndex = 213;
             this.label45.Text = "0.0";
-            this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
             // label44
             // 
@@ -598,7 +555,6 @@
             this.label44.Size = new System.Drawing.Size(28, 18);
             this.label44.TabIndex = 212;
             this.label44.Text = "0.0";
-            this.label44.Click += new System.EventHandler(this.label44_Click);
             // 
             // label43
             // 
@@ -609,7 +565,6 @@
             this.label43.Size = new System.Drawing.Size(28, 18);
             this.label43.TabIndex = 211;
             this.label43.Text = "0.0";
-            this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // label42
             // 
@@ -620,7 +575,6 @@
             this.label42.Size = new System.Drawing.Size(28, 18);
             this.label42.TabIndex = 210;
             this.label42.Text = "0.0";
-            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // label41
             // 
@@ -631,7 +585,6 @@
             this.label41.Size = new System.Drawing.Size(28, 18);
             this.label41.TabIndex = 209;
             this.label41.Text = "0.0";
-            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // label40
             // 
@@ -642,7 +595,6 @@
             this.label40.Size = new System.Drawing.Size(28, 18);
             this.label40.TabIndex = 208;
             this.label40.Text = "0.0";
-            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // label39
             // 
@@ -653,7 +605,6 @@
             this.label39.Size = new System.Drawing.Size(28, 18);
             this.label39.TabIndex = 207;
             this.label39.Text = "0.0";
-            this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // textBox7
             // 
@@ -663,7 +614,6 @@
             this.textBox7.TabIndex = 206;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
-           
             // 
             // textBox8
             // 
@@ -673,7 +623,6 @@
             this.textBox8.TabIndex = 205;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
-           
             // 
             // textBox9
             // 
@@ -683,7 +632,6 @@
             this.textBox9.TabIndex = 204;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
-            
             // 
             // textBox10
             // 
@@ -693,7 +641,6 @@
             this.textBox10.TabIndex = 203;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
-           
             // 
             // textBox11
             // 
@@ -703,7 +650,6 @@
             this.textBox11.TabIndex = 202;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
-           
             // 
             // textBox6
             // 
@@ -713,7 +659,6 @@
             this.textBox6.TabIndex = 201;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
-            
             // 
             // textBox5
             // 
@@ -723,7 +668,6 @@
             this.textBox5.TabIndex = 200;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
-            
             // 
             // textBox4
             // 
@@ -733,7 +677,6 @@
             this.textBox4.TabIndex = 199;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
-            
             // 
             // textBox3
             // 
@@ -743,7 +686,7 @@
             this.textBox3.TabIndex = 198;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
-            
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(283, 138);
@@ -752,7 +695,6 @@
             this.textBox2.TabIndex = 197;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
-           
             // 
             // textBox1
             // 
@@ -762,7 +704,7 @@
             this.textBox1.TabIndex = 196;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            
+            // 
             // label34
             // 
             this.label34.BackColor = System.Drawing.SystemColors.Control;
@@ -1291,12 +1233,9 @@
             this.label91.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.Location = new System.Drawing.Point(457, 1260);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(15, 16);
+            this.label91.Size = new System.Drawing.Size(25, 16);
             this.label91.TabIndex = 287;
-
             this.label91.Text = "0.0";
-            this.label91.Click += new System.EventHandler(this.label91_Click);
-
             // 
             // label90
             // 
@@ -1307,7 +1246,6 @@
             this.label90.Size = new System.Drawing.Size(15, 16);
             this.label90.TabIndex = 286;
             this.label90.Text = "0";
-            this.label90.Click += new System.EventHandler(this.label90_Click);
             // 
             // textBox24
             // 
@@ -1344,7 +1282,6 @@
             this.textBox21.TabIndex = 282;
             this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             this.textBox21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox21_KeyDown);
-           
             // 
             // textBox20
             // 
@@ -1354,7 +1291,6 @@
             this.textBox20.TabIndex = 281;
             this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             this.textBox20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox20_KeyDown);
-            
             // 
             // textBox19
             // 
@@ -1364,7 +1300,6 @@
             this.textBox19.TabIndex = 280;
             this.textBox19.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             this.textBox19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox19_KeyDown);
-           
             // 
             // textBox18
             // 
@@ -1374,7 +1309,6 @@
             this.textBox18.TabIndex = 279;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             this.textBox18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox18_KeyDown);
-            
             // 
             // textBox17
             // 
@@ -1384,7 +1318,6 @@
             this.textBox17.TabIndex = 278;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             this.textBox17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox17_KeyDown);
-            
             // 
             // label89
             // 
@@ -1547,9 +1480,7 @@
             this.label76.Size = new System.Drawing.Size(249, 24);
             this.label76.TabIndex = 262;
             this.label76.Text = "House Property Income";
-
             this.label76.Click += new System.EventHandler(this.label76_Click);
-
             // 
             // comboBox2
             // 
@@ -1572,7 +1503,6 @@
             this.label73.Size = new System.Drawing.Size(28, 18);
             this.label73.TabIndex = 258;
             this.label73.Text = "0.0";
-            this.label73.Click += new System.EventHandler(this.label73_Click);
             // 
             // label72
             // 
@@ -1583,7 +1513,6 @@
             this.label72.Size = new System.Drawing.Size(28, 18);
             this.label72.TabIndex = 257;
             this.label72.Text = "0.0";
-            this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
             // textBox13
             // 
@@ -1593,7 +1522,6 @@
             this.textBox13.TabIndex = 254;
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
-           
             // 
             // comboBox1
             // 
