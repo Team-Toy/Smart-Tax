@@ -1188,7 +1188,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 557);
             this.panel1.TabIndex = 254;
-            
             // 
             // label91
             // 
@@ -1196,9 +1195,9 @@
             this.label91.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.Location = new System.Drawing.Point(447, 1282);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(25, 16);
+            this.label91.Size = new System.Drawing.Size(15, 16);
             this.label91.TabIndex = 287;
-            this.label91.Text = "0.0";
+            this.label91.Text = "0";
             // 
             // label90
             // 
@@ -1206,9 +1205,9 @@
             this.label90.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.Location = new System.Drawing.Point(447, 1243);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(25, 16);
+            this.label90.Size = new System.Drawing.Size(15, 16);
             this.label90.TabIndex = 286;
-            this.label90.Text = "0.0";
+            this.label90.Text = "0";
             this.label90.Click += new System.EventHandler(this.label90_Click);
             // 
             // textBox24

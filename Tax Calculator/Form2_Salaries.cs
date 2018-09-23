@@ -60,7 +60,8 @@ namespace Tax_Calculator
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            madeAllTextBoxZero();
+            makeAllTextBoxZero();
+            makeAllLabelZero();
 
             // default value set for medical allowance
             comboBox1.SelectedIndex = 0;
@@ -91,7 +92,7 @@ namespace Tax_Calculator
                 list.Add(salaryType);
             }
         }
-        public void madeAllTextBoxZero()
+        private void makeAllTextBoxZero()
         {
             textBox1.Text = "0";
             textBox2.Text = "0";
@@ -117,6 +118,48 @@ namespace Tax_Calculator
             textBox22.Text = "0";
             textBox23.Text = "0";
             textBox24.Text = "0";
+        }
+        public void makeAllLabelZero()
+        {
+            label40.Text = "0";
+            label41.Text = "0";
+            label42.Text = "0";
+            label43.Text = "0";
+            label44.Text = "0";
+            label45.Text = "0";
+            label46.Text = "0";
+            label47.Text = "0";
+            label48.Text = "0";
+            label49.Text = "0";
+            label50.Text = "0";
+            label51.Text = "0";
+            label52.Text = "0";
+            label52.Text = "0";
+            label53.Text = "0";
+            label54.Text = "0";
+            label55.Text = "0";
+
+            label57.Text = "0";
+            label58.Text = "0";
+            label59.Text = "0";
+            label60.Text = "0";
+            label61.Text = "0";
+            label62.Text = "0";
+            label63.Text = "0";
+            label64.Text = "0";
+            label65.Text = "0";
+            label66.Text = "0";
+            label67.Text = "0";
+            label68.Text = "0";
+            label69.Text = "0";
+            label70.Text = "0";
+            label71.Text = "0";
+            label72.Text = "0";
+
+            label39.Text = "0";
+            label56.Text = "0";
+            label73.Text = "0";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -176,27 +219,40 @@ namespace Tax_Calculator
         }
         private double CalNetTaxableIncome()
         {
-            netTaxableIncome = double.Parse(label40.Text.ToString()) +
-                                    double.Parse(label41.Text.ToString()) +
-                                    double.Parse(label42.Text.ToString()) +
-                                    double.Parse(label43.Text.ToString()) +
-                                    double.Parse(label44.Text.ToString()) +
-                                    double.Parse(label45.Text.ToString()) +
-                                    double.Parse(label46.Text.ToString()) +
-                                    double.Parse(label47.Text.ToString()) +
-                                    double.Parse(label48.Text.ToString()) +
-                                    double.Parse(label49.Text.ToString()) +
-                                    double.Parse(label50.Text.ToString()) +
-                                    double.Parse(label51.Text.ToString()) +
-                                    double.Parse(label52.Text.ToString()) +
-                                    double.Parse(label53.Text.ToString()) +
-                                    double.Parse(label54.Text.ToString()) +
-                                    double.Parse(label55.Text.ToString());
+            netTaxableIncome = double.Parse(label57.Text.ToString()) +
+                                    double.Parse(label58.Text.ToString()) +
+                                    double.Parse(label59.Text.ToString()) +
+                                    double.Parse(label60.Text.ToString()) +
+                                    double.Parse(label61.Text.ToString()) +
+                                    double.Parse(label62.Text.ToString()) +
+                                    double.Parse(label63.Text.ToString()) +
+                                    double.Parse(label64.Text.ToString()) +
+                                    double.Parse(label65.Text.ToString()) +
+                                    double.Parse(label66.Text.ToString()) +
+                                    double.Parse(label67.Text.ToString()) +
+                                    double.Parse(label68.Text.ToString()) +
+                                    double.Parse(label69.Text.ToString()) +
+                                    double.Parse(label70.Text.ToString()) +
+                                    double.Parse(label71.Text.ToString()) +
+                                    double.Parse(label72.Text.ToString());
 
 
             return netTaxableIncome;
         }
+        private double CalTotalClaimedExpense()
+        {
+            totalClaimedExpense = double.Parse(textBox18.Text.ToString()) +
+                                    double.Parse(textBox19.Text.ToString()) +
+                                    double.Parse(textBox20.Text.ToString()) +
+                                    double.Parse(textBox21.Text.ToString()) +
+                                    double.Parse(textBox22.Text.ToString()) +
+                                    double.Parse(textBox23.Text.ToString()) +
+                                    double.Parse(textBox24.Text.ToString());
+                                
 
+
+            return totalClaimedExpense;
+        }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {           
             if (e.KeyCode == Keys.Enter)
@@ -842,6 +898,9 @@ namespace Tax_Calculator
                 }
                 annualRentalIncome = Double.Parse(textBox17.Text.ToString());
 
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
+                label91.Text = netRentalIncome.ToString();
+
                 textBox18.Focus();
             }
         }
@@ -854,10 +913,8 @@ namespace Tax_Calculator
                 {
                     textBox18.Text = "0";
                 }
-                repair = Double.Parse(textBox18.Text.ToString());
-
-                totalClaimedExpense += repair;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                               
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -874,10 +931,8 @@ namespace Tax_Calculator
                 {
                     textBox19.Text = "0";
                 }
-                municipalTax = Double.Parse(textBox19.Text.ToString());
-
-                totalClaimedExpense += municipalTax;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -894,10 +949,8 @@ namespace Tax_Calculator
                 {
                     textBox20.Text = "0";
                 }
-                landRevenue = Double.Parse(textBox20.Text.ToString());
-
-                totalClaimedExpense += landRevenue;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -914,10 +967,8 @@ namespace Tax_Calculator
                 {
                     textBox21.Text = "0";
                 }
-                interestOnLoan = Double.Parse(textBox21.Text.ToString());
-
-                totalClaimedExpense += interestOnLoan;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -934,10 +985,8 @@ namespace Tax_Calculator
                 {
                     textBox22.Text = "0";
                 }
-                insurancePremium = Double.Parse(textBox22.Text.ToString());
-
-                totalClaimedExpense += insurancePremium;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -954,10 +1003,8 @@ namespace Tax_Calculator
                 {
                     textBox23.Text = "0";
                 }
-                vacancyAllowance = Double.Parse(textBox23.Text.ToString());
-
-                totalClaimedExpense += vacancyAllowance;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -974,10 +1021,8 @@ namespace Tax_Calculator
                 {
                     textBox24.Text = "0";
                 }
-                other = Double.Parse(textBox24.Text.ToString());
-
-                totalClaimedExpense += other;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
