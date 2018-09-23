@@ -34,7 +34,7 @@ namespace Tax_Calculator
                                  "true","0","0",    //Other_allowance
                                  "true","0","0",    //Employer's_contribution_to_recognized_provident_fund 
                                  "true","0.145","0",   //interest_accrued_on_Recognized_provident_fund 
-                                 "true","0.05","60000",    //???? - Deemed_income_for_transport_facility 
+                                 "true","0.05","60000",    // Deemed_income_for_transport_facility 
                                  "true","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
                                  "true","0","0",        //Other,if_any
                                  //"true","0.7","0"       //randomly created for fixing list index out of bound
@@ -72,6 +72,8 @@ namespace Tax_Calculator
             comboBox1.SelectedIndex = 0;
             // default value set for accomodation
             comboBox2.SelectedIndex = 0;
+            //default value set for Deemed_income_for_transport_facility 
+            comboBox3.SelectedIndex = 0;
 
             List<double> maxNonTaxable;
             for (int i = 0; i < data.Length; i++)
@@ -108,7 +110,7 @@ namespace Tax_Calculator
             textBox11.Text = "0";
             textBox12.Text = "0";
             textBox13.Text = "0";
-            textBox14.Text = "0";
+            
             textBox15.Text = "0";
             textBox16.Text = "0";
             textBox17.Text = "0";
@@ -194,7 +196,7 @@ namespace Tax_Calculator
                                     double.Parse(textBox11.Text.ToString()) +
                                     double.Parse(textBox12.Text.ToString()) +
                                     double.Parse(textBox13.Text.ToString()) +
-                                    double.Parse(textBox14.Text.ToString()) +
+                                    
                                     double.Parse(textBox15.Text.ToString()) +
                                     double.Parse(textBox16.Text.ToString());
 
@@ -793,7 +795,7 @@ namespace Tax_Calculator
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
 
-                textBox14.Focus();
+                comboBox3.Focus();
             }
             else
             {
@@ -802,41 +804,40 @@ namespace Tax_Calculator
             }
         }
 
-        private void textBox14_KeyDown(object sender, KeyEventArgs e)
+
+        private void comboBox3_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if(comboBox3.SelectedIndex == 1)
             {
-                if (textBox14.Text.Length == 0)
-                {
-                    textBox14.Text = "0";
+                double taxableIncome = list[14].TaxableIncome(basicPay, 0);
+                double taxExtempted = 0;
 
-                }
-                double transportFacility = double.Parse(textBox14.Text.ToString());
-                double taxableIncome = list[14].TaxableIncome(basicPay,transportFacility, 0);
-                double taxExtempted = TaxExemptCal(transportFacility, taxableIncome);
+                label53.ForeColor = Color.Black;    //valid nontaxable income show as black color
+                label70.ForeColor = Color.Black;    //valid taxable income show as black color
 
-                label53.ForeColor = Color.Black;
-                label70.ForeColor = Color.Black;
+                label53.Text = "" + taxExtempted;   //show valid nontaxable income
+                label70.Text = "" + taxableIncome;  //show valid taxable income 
 
-                label53.Text = "" + taxExtempted;
-                label70.Text = "" + taxableIncome;
+                netTaxableIncome += taxableIncome;  //making sum of upto the net taxable income
+                totalTaxExtempted += taxExtempted;  //making sum of upto the net nontaxable income
 
-                netTaxableIncome += taxableIncome;
-                totalTaxExtempted += taxExtempted;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
+                // net TaxExempted income from salary
                 label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox15.Focus();
             }
             else
             {
-                label53.ForeColor = Color.Red;
-                label70.ForeColor = Color.Red;
+                label53.Text = "0.0";   //select "No", nontaxable show as zero
+                label70.Text = "0.0";  //select "No", taxable show as zero
+
+                // net TaxExempted income from salary
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
             }
+            textBox15.Focus();
+
         }
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
@@ -1447,7 +1448,7 @@ namespace Tax_Calculator
             pdfInputs1[11] = textBox11.Text.ToString();  //Other Allowances
             pdfInputs1[12] = textBox12.Text.ToString();  //Employees contributions to recognized Provdent Fund
             pdfInputs1[13] = textBox13.Text.ToString();  //Interest accrued on Recognized provident fund
-            pdfInputs1[14] = textBox14.Text.ToString();  //Deemed income for transport facility
+            pdfInputs1[14] = comboBox3.Text;  //Deemed income for transport facility "yes" or "No"
             pdfInputs1[15] = textBox15.Text.ToString();  //Deemed income for furnished /unfurnished accomodation
             pdfInputs1[16] = textBox16.Text.ToString();  //Other ( if any)
             pdfInputs1[17] = textBox17.Text.ToString();  //Net taxable income from salary

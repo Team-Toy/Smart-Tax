@@ -46,7 +46,6 @@
             this.label37 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -116,6 +115,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label94 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
             this.textBox25 = new System.Windows.Forms.TextBox();
@@ -151,7 +152,6 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -331,15 +331,6 @@
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
             this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
             // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(276, 616);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(197, 20);
-            this.textBox14.TabIndex = 233;
-            this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
-            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
-            // 
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(276, 523);
@@ -407,7 +398,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(23, 636);
+            this.label15.Location = new System.Drawing.Point(27, 619);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(22, 16);
             this.label15.TabIndex = 226;
@@ -707,7 +698,7 @@
             this.label34.BackColor = System.Drawing.SystemColors.Control;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label34.Location = new System.Drawing.Point(58, 659);
+            this.label34.Location = new System.Drawing.Point(56, 657);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(210, 37);
             this.label34.TabIndex = 195;
@@ -715,12 +706,13 @@
             // 
             // label33
             // 
+            this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.SystemColors.Control;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.MediumBlue;
             this.label33.Location = new System.Drawing.Point(56, 616);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(144, 40);
+            this.label33.Size = new System.Drawing.Size(246, 18);
             this.label33.TabIndex = 194;
             this.label33.Text = "Deemed income for transport facility";
             // 
@@ -884,7 +876,7 @@
             this.label16.BackColor = System.Drawing.SystemColors.Control;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(23, 667);
+            this.label16.Location = new System.Drawing.Point(27, 662);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(22, 16);
             this.label16.TabIndex = 180;
@@ -1073,6 +1065,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label94);
             this.panel1.Controls.Add(this.label93);
             this.panel1.Controls.Add(this.label92);
@@ -1126,7 +1119,6 @@
             this.panel1.Controls.Add(this.label37);
             this.panel1.Controls.Add(this.textBox16);
             this.panel1.Controls.Add(this.textBox15);
-            this.panel1.Controls.Add(this.textBox14);
             this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.label35);
@@ -1198,6 +1190,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 557);
             this.panel1.TabIndex = 254;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
+            this.comboBox3.Location = new System.Drawing.Point(343, 614);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(130, 21);
+            this.comboBox3.TabIndex = 293;
+            this.comboBox3.SelectionChangeCommitted += new System.EventHandler(this.comboBox3_SelectionChangeCommitted);
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.BackColor = System.Drawing.SystemColors.Control;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label94.Location = new System.Drawing.Point(28, 766);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(22, 16);
+            this.label94.TabIndex = 292;
+            this.label94.Text = "18";
             // 
             // label93
             // 
@@ -1538,18 +1555,6 @@
             this.label75.TabIndex = 262;
             this.label75.Text = "Schedules Showing Details of Income";
             // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.BackColor = System.Drawing.SystemColors.Control;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label94.Location = new System.Drawing.Point(28, 766);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(22, 16);
-            this.label94.TabIndex = 292;
-            this.label94.Text = "18";
-            // 
             // Form2_Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1588,7 +1593,6 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
@@ -1694,5 +1698,6 @@
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

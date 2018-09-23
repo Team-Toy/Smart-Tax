@@ -22,23 +22,17 @@ namespace Tax_Calculator
 
         }
  
-        public bool getTaxable()
-        {
-            return this.taxable;
-        }
-        public double getMaxPercentOfNonTaxable()
-        {
-          return  this.maxPercentOfNonTaxable;
-        }
-        public double getMaxNonTaxable()
-        {
-            return this.maxNonTaxable[0];
-        }
+        
         public void setmaxNonTaxable(double newMaxNonTaxable)
         {
             maxNonTaxable[0] = newMaxNonTaxable;         
         }
 
+        public double TaxableIncome(double income,int index)
+        {
+            double percentage = income * maxPercentOfNonTaxable;
+            return Math.Max(percentage, maxNonTaxable[index]);
+        }
         public double TaxableIncome(double income, double salaryType, int index)
         {
             double result = 0.0;
