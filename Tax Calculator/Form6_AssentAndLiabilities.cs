@@ -475,7 +475,7 @@ namespace Tax_Calculator
             }
 
                 tempY = y ;
-            for (int i = 34; i < 51; i++)
+            for (int i = 34; i < 54; i++)
             {
                 Phrase p = new Phrase();
                 string s = Form2_Salaries.pdfInputs1[i];
@@ -488,14 +488,58 @@ namespace Tax_Calculator
 
 
 
-
-
-
-
-
                 stamper.Close();
 
             }
+
+           
+        }
+        private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader, iTextSharp.text.Font font)
+        {
+            PdfContentByte canvas = stamper.GetOverContent(1);
+            HelperFunction(ref canvas,ref reader);
+        }
+        private void HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 273;  //by default x increment left-right
+            float y = 170;
+           
+            var pageSize3 = reader.GetPageSize(3);   //getting page size by giving page number=3
+
+            y = pageSize3.Height - (2 * y + 110); //making the y to increment top-Down
+
+            float tempY = y;
+            for (int i = 0; i < 14; i++)
+            {
+                Phrase p = new Phrase();
+                string s = Form2_Salaries.pdfInputs1[i];
+                p.Add(s);
+                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x, tempY, 0);
+                tempY += 17;
+            }
+            Phrase p1 = new Phrase();
+            string s1 = Form2_Salaries.pdfInputs1[14];
+            p1.Add(s1);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p1, x, pageSize3.Height-(2*412) +110, 0);
+            
+
+            Phrase p2 = new Phrase();
+            string s2 = Form2_Salaries.pdfInputs1[15];
+            p2.Add(s2);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p2, x, pageSize3.Height - (2 * 443) + 110, 0);
+
+            Phrase p3 = new Phrase();
+            string s3 = Form2_Salaries.pdfInputs1[16];
+            p2.Add(s3);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 462) + 110, 0);
+
+            Phrase p4 = new Phrase();
+            string s4 = Form2_Salaries.pdfInputs1[17];
+            p2.Add(s4);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 494) + 110, 0);
+
+
         }
     }
 }

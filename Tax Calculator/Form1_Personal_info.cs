@@ -28,6 +28,7 @@ namespace Tax_Calculator
         {
             Form2_Salaries f = new Form2_Salaries();
             f.Show();
+            
         }
 
 

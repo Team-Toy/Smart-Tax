@@ -22,6 +22,18 @@ namespace Tax_Calculator
 
         }
  
+        public bool getTaxable()
+        {
+            return this.taxable;
+        }
+        public double getMaxPercentOfNonTaxable()
+        {
+          return  this.maxPercentOfNonTaxable;
+        }
+        public double getMaxNonTaxable()
+        {
+            return this.maxNonTaxable[0];
+        }
         public void setmaxNonTaxable(double newMaxNonTaxable)
         {
             maxNonTaxable[0] = newMaxNonTaxable;         
