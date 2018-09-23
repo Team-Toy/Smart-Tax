@@ -84,6 +84,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox1.Text.Length == 0)
+                {
+                    textBox1.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox1.Text.ToString());
                 label10.Text = totalAssets.ToString();
 
@@ -95,6 +99,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox2.Text.Length == 0)
+                {
+                    textBox2.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox2.Text.ToString());
                 label10.Text = totalAssets.ToString();
 
@@ -106,6 +114,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox3.Text.Length == 0)
+                {
+                    textBox3.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox3.Text.ToString());
                 label10.Text = totalAssets.ToString();
 
@@ -117,6 +129,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox4.Text.Length == 0)
+                {
+                    textBox4.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox4.Text.ToString());
                 label10.Text = totalAssets.ToString();
 
@@ -128,6 +144,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox5.Text.Length == 0)
+                {
+                    textBox5.Text = "0";
+                }
                 totalInvestments += Double.Parse(textBox5.Text.ToString());
                 totalAssets += totalInvestments;
 
@@ -142,6 +162,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox6.Text.Length == 0)
+                {
+                    textBox6.Text = "0";
+                }
                 totalInvestments += Double.Parse(textBox6.Text.ToString());
                 totalAssets += totalInvestments;
 
@@ -156,6 +180,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox7.Text.Length == 0)
+                {
+                    textBox7.Text = "0";
+                }
                 totalInvestments += Double.Parse(textBox7.Text.ToString());
                 totalAssets += totalInvestments;
 
@@ -170,6 +198,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox8.Text.Length == 0)
+                {
+                    textBox8.Text = "0";
+                }
                 totalInvestments += Double.Parse(textBox8.Text.ToString());
                 totalAssets += totalInvestments;
 
@@ -184,6 +216,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox9.Text.Length == 0)
+                {
+                    textBox9.Text = "0";
+                }
                 totalInvestments += Double.Parse(textBox9.Text.ToString());
                 totalAssets += totalInvestments;
 
@@ -197,7 +233,11 @@ namespace Tax_Calculator
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {       
+            {
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox10.Text.ToString());
 
                 label10.Text = totalAssets.ToString();
@@ -210,6 +250,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox11.Text.Length == 0)
+                {
+                    textBox11.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox11.Text.ToString());
 
                 label10.Text = totalAssets.ToString();
@@ -222,6 +266,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox12.Text.Length == 0)
+                {
+                    textBox12.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox12.Text.ToString());
 
                 label10.Text = totalAssets.ToString();
@@ -234,6 +282,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox13.Text.Length == 0)
+                {
+                    textBox13.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox13.Text.ToString());
 
                 label10.Text = totalAssets.ToString();
@@ -246,6 +298,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox14.Text.Length == 0)
+                {
+                    textBox14.Text = "0";
+                }
                 cashAssets += Double.Parse(textBox14.Text.ToString());
                 totalAssets += cashAssets;
 
@@ -261,6 +317,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox15.Text.Length == 0)
+                {
+                    textBox15.Text = "0";
+                }
                 cashAssets += Double.Parse(textBox15.Text.ToString());
                 totalAssets += cashAssets;
 
@@ -275,6 +335,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox16.Text.Length == 0)
+                {
+                    textBox16.Text = "0";
+                }
                 cashAssets += Double.Parse(textBox16.Text.ToString());
                 totalAssets += cashAssets;
 
@@ -289,7 +353,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+                if (textBox17.Text.Length == 0)
+                {
+                    textBox17.Text = "0";
+                }
                 totalAssets += Double.Parse(textBox17.Text.ToString());
 
                 label10.Text = totalAssets.ToString();
@@ -303,7 +370,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                if (textBox18.Text.Length == 0)
+                {
+                    textBox18.Text = "0";
+                }
                 totalLiabilities += Double.Parse(textBox18.Text.ToString());
 
                 label56.Text = totalLiabilities.ToString();
@@ -317,7 +387,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                if (textBox19.Text.Length == 0)
+                {
+                    textBox19.Text = "0";
+                }
                 totalLiabilities += Double.Parse(textBox19.Text.ToString());
 
                 label56.Text = totalLiabilities.ToString();
@@ -331,7 +404,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                if (textBox20.Text.Length == 0)
+                {
+                    textBox20.Text = "0";
+                }
                 totalLiabilities += Double.Parse(textBox20.Text.ToString());
 
                 label56.Text = totalLiabilities.ToString();
@@ -345,7 +421,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                if (textBox21.Text.Length == 0)
+                {
+                    textBox21.Text = "0";
+                }
                 totalLiabilities += Double.Parse(textBox21.Text.ToString());
 
                 label56.Text = totalLiabilities.ToString();
@@ -361,6 +440,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox22.Text.Length == 0)
+                {
+                    textBox22.Text = "0";
+                }
                 netWealthPrevYear += Double.Parse(textBox22.Text.ToString());
                 accretionInWealth = netWealthThisYear - netWealthPrevYear;
 
@@ -374,6 +457,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox23.Text.Length == 0)
+                {
+                    textBox23.Text = "0";
+                }
                 familyExpenditure += Double.Parse(textBox23.Text.ToString());
                 totalAccretionInWealth = accretionInWealth + familyExpenditure;
 
@@ -387,6 +474,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox24.Text.Length == 0)
+                {
+                    textBox24.Text = "0";
+                }
                 adult = int.Parse(textBox24.Text.ToString());
                 
 
@@ -398,6 +489,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox25.Text.Length == 0)
+                {
+                    textBox25.Text = "0";
+                }
                 child = int.Parse(textBox25.Text.ToString());
 
 
@@ -409,6 +504,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox26.Text.Length == 0)
+                {
+                    textBox26.Text = "0";
+                }
                 totalSourcesOfFund = Double.Parse(textBox25.Text.ToString()) + shownReturnIncome + taxExempted;
 
                 label83.Text = totalSourcesOfFund.ToString();
