@@ -38,21 +38,21 @@ namespace Tax_Calculator
         }
         public void madeAllTextBoxZero()
         {
-            textBox1.Text = "0.0";
-            textBox2.Text = "0.0";
-            textBox3.Text = "0.0";
-            textBox4.Text = "0.0";
-            textBox5.Text = "0.0";
-            textBox6.Text = "0.0";
-            textBox7.Text = "0.0";
-            textBox8.Text = "0.0";
-            textBox9.Text = "0.0";
-            textBox10.Text = "0.0";
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox4.Text = "0";
+            textBox5.Text = "0";
+            textBox6.Text = "0";
+            textBox7.Text = "0";
+            textBox8.Text = "0";
+            textBox9.Text = "0";
+            textBox10.Text = "0";
         }
         private void button1_Click(object sender, EventArgs e)
         {
             //calling calculation method to show total investment result by label
-            label12.Text=(InvestmentTaxCalculate()).ToString();
+            label12.Text = InvestmentTaxCalculate().ToString();
         }
 
         private double InvestmentTaxCalculate()
@@ -75,6 +75,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox1.Text.Length == 0)
+                {
+                    textBox1.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox2.Focus();
             }
@@ -85,6 +90,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox2.Text.Length == 0)
+                {
+                    textBox2.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox3.Focus();
             }
@@ -93,6 +103,11 @@ namespace Tax_Calculator
         {
             if(e.KeyCode == Keys.Enter)
             {
+                if (textBox3.Text.Length == 0)
+                {
+                    textBox3.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox4.Focus();
             }
@@ -102,6 +117,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox4.Text.Length == 0)
+                {
+                    textBox4.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox5.Focus();
             }
@@ -111,6 +131,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox5.Text.Length == 0)
+                {
+                    textBox5.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox6.Focus();
             }
@@ -120,6 +145,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox6.Text.Length == 0)
+                {
+                    textBox6.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox7.Focus();
             }
@@ -129,6 +159,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox7.Text.Length == 0)
+                {
+                    textBox7.Text = "0";
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox8.Focus();
             }
@@ -138,6 +172,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox8.Text.Length == 0)
+                {
+                    textBox8.Text = "0";
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox9.Focus();
             }
@@ -147,6 +185,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox9.Text.Length == 0)
+                {
+                    textBox9.Text = "0";
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
                 textBox10.Focus();
             }
@@ -156,6 +198,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+
+                }
                 label12.Text = (InvestmentTaxCalculate()).ToString();
             }
         }

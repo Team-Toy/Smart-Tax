@@ -1428,7 +1428,7 @@ namespace Tax_Calculator
             pdfInputs1[50] = label72.Text.ToString();
 
             //House rent property
-            pdfInputs1[0] = richTextBox1.Text.ToString();      
+            pdfInputs2[0] = richTextBox1.Text.ToString();      
             pdfInputs2[1] = textBox17.Text.ToString();  //1.Annual Rental Income
             
             //2.Claimed Expenses:
