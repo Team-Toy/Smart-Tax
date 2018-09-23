@@ -57,16 +57,16 @@ namespace Tax_Calculator
 
         private double InvestmentTaxCalculate()
         {
-            totalInvestment =   double.Parse(textBox1.Text.ToString()) +    //Life insurance premium
-                                double.Parse(textBox2.Text.ToString()) +     // Contribution to deffered annuity
-                                double.Parse(textBox3.Text.ToString()) +    //Contribution to provident fund
-                                double.Parse(textBox4.Text.ToString()) +    //Self contribution and employers contributon to recognized provdent fund
-                                double.Parse(textBox5.Text.ToString()) +    //Contribution to super annuaton fund / DPS
-                                double.Parse(textBox6.Text.ToString()) +    //investment in approved debebnture stock, stock, or shares
-                                double.Parse(textBox7.Text.ToString()) +    //Contributon to depost pension scheem
-                                double.Parse(textBox8.Text.ToString()) +    //Group insurance premium
-                                double.Parse(textBox9.Text.ToString()) +     //Contribution to zaat fund
-                                double.Parse(textBox10.Text.ToString());    //Other (if any)
+            totalInvestment =   double.Parse(textBox1.Text.ToString()) +
+                                double.Parse(textBox2.Text.ToString()) +
+                                double.Parse(textBox3.Text.ToString()) +
+                                double.Parse(textBox4.Text.ToString()) +
+                                double.Parse(textBox5.Text.ToString()) +
+                                double.Parse(textBox6.Text.ToString()) +
+                                double.Parse(textBox7.Text.ToString()) +
+                                double.Parse(textBox8.Text.ToString()) +
+                                double.Parse(textBox9.Text.ToString()) +
+                                double.Parse(textBox10.Text.ToString());
            
             return totalInvestment;
         }
@@ -161,7 +161,7 @@ namespace Tax_Calculator
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   //save data for pdf file
             UserInput_InvestmentTaxCredit();
             //hiding investment tex credit form
             this.Hide();
@@ -259,7 +259,6 @@ namespace Tax_Calculator
             }
         }
 
-        
         public void UserInput_InvestmentTaxCredit()
         {
             pdfInputs[0] = textBox1.Text.ToString();   //Life insurance premium

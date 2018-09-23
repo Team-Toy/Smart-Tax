@@ -99,7 +99,6 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -581,7 +580,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(406, 262);
+            this.textBox8.Location = new System.Drawing.Point(406, 268);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(183, 23);
             this.textBox8.TabIndex = 48;
@@ -668,7 +667,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(426, 19);
+            this.label61.Location = new System.Drawing.Point(432, 29);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(105, 18);
             this.label61.TabIndex = 72;
@@ -679,8 +678,8 @@
             this.label62.AutoSize = true;
             this.label62.BackColor = System.Drawing.SystemColors.Control;
             this.label62.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label62.Location = new System.Drawing.Point(53, 19);
+            this.label62.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label62.Location = new System.Drawing.Point(53, 29);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(132, 18);
             this.label62.TabIndex = 73;
@@ -800,7 +799,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(403, 758);
+            this.label50.Location = new System.Drawing.Point(403, 756);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(27, 15);
             this.label50.TabIndex = 87;
@@ -820,7 +819,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(403, 794);
+            this.label52.Location = new System.Drawing.Point(403, 792);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(27, 15);
             this.label52.TabIndex = 89;
@@ -863,22 +862,11 @@
             // textBox15
             // 
             this.textBox15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(406, 820);
+            this.textBox15.Location = new System.Drawing.Point(406, 817);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(183, 23);
             this.textBox15.TabIndex = 94;
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(703, 856);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form4_SatementOfSalary
             // 
@@ -886,7 +874,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(834, 507);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label55);
             this.Controls.Add(this.label53);
@@ -1040,6 +1027,5 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Button button2;
     }
 }

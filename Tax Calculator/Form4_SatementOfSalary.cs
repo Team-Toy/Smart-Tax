@@ -13,6 +13,7 @@ namespace Tax_Calculator
     public partial class Form4_SatementOfSalary : Form
     {
         public static string[] pdfInputs;
+
         //declared total for summation from serial no 1 to serial no 9
         public static double totalTaxableIncome = 0.0;
         public static double taxLeviable = 0.0;
@@ -300,13 +301,6 @@ namespace Tax_Calculator
                 taxPaidLastYear = Double.Parse(textBox15.Text.ToString());
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            UserInputs_StatementOfSalary();
-            Form5_Expenses f = new Form5_Expenses();
-            f.Show();
-        }
         private void UserInputs_StatementOfSalary()
         {
             pdfInputs[0] = label51.Text.ToString();   //salaries
@@ -336,6 +330,7 @@ namespace Tax_Calculator
             pdfInputs[22] = label55.Text.ToString();  //total
             pdfInputs[23] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
         }
+
         /*
 private double CalAllowableInvestmentTaxCredit(double taxableIncome)
 {

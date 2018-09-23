@@ -13,16 +13,13 @@ namespace Tax_Calculator
 
     public partial class Form2_Salaries : Form
     {
-<<<<<<< HEAD
-        public static string[] pdfInputs1,pdfInputs2;
-=======
+        public static string[] pdfInputs1, pdfInputs2;
         //values for form 4, totalTaxableIncome, totalTaxExtempted
         public static double totalAmountOfIncome = 0.0;
         public static double netTaxableIncome = 0.0;
         public static double totalTaxExtempted = 0.0;
         public double basicPay = 0.0;
         public static List<SalaryConditionals> list = new List<SalaryConditionals>();
->>>>>>> cdb4a9a320aa7a2f8e4b359e4cfb64e6358f39b5
         private string[] data = {"true","0","0",        //BasicPay 
                                  "true","0","0",          //SpecialPay
                                  "true","0","0",          //Dearness_allowance
@@ -40,15 +37,7 @@ namespace Tax_Calculator
                                  "true","0.25","0",        //Deemed_income_for_free_furnished/unfurnish accommodation
                                  "true","0","0",        //Other,if_any
                                  "true","0.7","0"       //randomly created for fixing list index out of bound
-                                };  //dataset for all type of salary incomes
-
-        //values for form 4, totalTaxableIncome, totalTaxExtempted
-        public static double totalAmountOfIncome = 0.0;
-        public static double netTaxableIncome = 0.0;
-        public static double totalTaxExtempted = 0.0;
-        public double basicPay = 0.0;
-        public static List<SalaryConditionals> list = new List<SalaryConditionals>();
-        
+                                };
 
         // house property income
         public static string locationAndDescription = "";
@@ -68,9 +57,9 @@ namespace Tax_Calculator
         public Form2_Salaries()
         {
             InitializeComponent();
-
-            pdfInputs1 = new string[51];  
+            pdfInputs1 = new string[51];
             pdfInputs2 = new string[11];
+
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -106,7 +95,6 @@ namespace Tax_Calculator
                 SalaryConditionals salaryType = new SalaryConditionals(taxable, maxPercentOfNonTaxable, maxNonTaxable);
                 list.Add(salaryType);
             }
-
         }
         private void makeAllTextBoxZero()
         {
@@ -180,6 +168,7 @@ namespace Tax_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //save data for pdf file
             UserInputs_Salaries();
             //go to investment Tax Credit form
             Form3_InvestmentTaxCredit f = new Form3_InvestmentTaxCredit();
@@ -192,24 +181,24 @@ namespace Tax_Calculator
         }
         private double TotalAmountOfIncome()
         {
-            totalAmountOfIncome =   double.Parse(textBox1.Text.ToString()) +    //Basic Pay
-                                    double.Parse(textBox2.Text.ToString()) +    //Special pay
-                                    double.Parse(textBox3.Text.ToString()) +    //Dearness Allowances
-                                    double.Parse(textBox4.Text.ToString()) +    //Conveyance allowances
-                                    double.Parse(textBox5.Text.ToString()) +    //House rent allounces
-                                    double.Parse(textBox6.Text.ToString()) +    //Medical Allowances
-                                    double.Parse(textBox7.Text.ToString()) +    //Servant allowances
-                                    double.Parse(textBox8.Text.ToString()) +    //Honorarum/reward/Arear salary
-                                    double.Parse(textBox9.Text.ToString()) +    //Overtime allowance
-                                    double.Parse(textBox10.Text.ToString()) +   //Bonus / Extra Gratia
-                                    double.Parse(textBox11.Text.ToString()) +   //Other Allowances
-                                    double.Parse(textBox12.Text.ToString()) +   //Employees contributions to recognized Provdent Fund
-                                    double.Parse(textBox13.Text.ToString()) +   //Interest accrued on Recognized provident fund
-                                    double.Parse(textBox14.Text.ToString()) +   //Deemed income for transport facility
-                                    double.Parse(textBox15.Text.ToString()) +   //Deemed income for furnished /unfurnished accomodation
-                                    double.Parse(textBox16.Text.ToString());    //Other ( if any)
+            totalAmountOfIncome =   double.Parse(textBox1.Text.ToString()) +
+                                    double.Parse(textBox2.Text.ToString()) +
+                                    double.Parse(textBox3.Text.ToString()) +
+                                    double.Parse(textBox4.Text.ToString()) +
+                                    double.Parse(textBox5.Text.ToString()) +
+                                    double.Parse(textBox6.Text.ToString()) +
+                                    double.Parse(textBox7.Text.ToString()) +
+                                    double.Parse(textBox8.Text.ToString()) +
+                                    double.Parse(textBox9.Text.ToString()) +
+                                    double.Parse(textBox10.Text.ToString()) +
+                                    double.Parse(textBox11.Text.ToString()) +
+                                    double.Parse(textBox12.Text.ToString()) +
+                                    double.Parse(textBox13.Text.ToString()) +
+                                    double.Parse(textBox14.Text.ToString()) +
+                                    double.Parse(textBox15.Text.ToString()) +
+                                    double.Parse(textBox16.Text.ToString());
 
-
+             
             return totalAmountOfIncome;
         }
         private double CalTotalTaxExempted()
@@ -1047,7 +1036,8 @@ namespace Tax_Calculator
             }
         }
 
-
+        
+        
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -1382,587 +1372,6 @@ namespace Tax_Calculator
             {
                 e.Handled = true;
             }
-        }
-
-<<<<<<< HEAD
-        private void label62_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label57_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label58_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label59_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label60_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label63_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label64_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label65_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label66_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label67_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label68_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label69_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label70_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label71_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label37_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox16_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label61_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label56_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label55_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label54_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label53_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label52_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label51_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label50_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label48_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label47_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label46_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label45_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label44_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label43_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label42_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label91_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox24_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox23_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox22_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox21_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox20_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox19_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox18_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox17_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label89_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label88_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label87_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label86_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label85_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label84_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label83_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label82_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label81_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label80_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label79_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label78_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label77_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label76_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label73_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label72_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label75_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void UserInputs_Salaries()
@@ -1986,382 +1395,58 @@ namespace Tax_Calculator
             pdfInputs1[16] = textBox17.Text.ToString();  //Net taxable income from salary
 
             //non-taxable incomes
-            pdfInputs1[17] = label39.Text.ToString();  
-            pdfInputs1[18] = label40.Text.ToString(); 
-            pdfInputs1[19] = label41.Text.ToString();  
-            pdfInputs1[20] = label42.Text.ToString();  
-            pdfInputs1[21] = label43.Text.ToString();  
-            pdfInputs1[22] = label44.Text.ToString();  
-            pdfInputs1[23] = label45.Text.ToString();  
-            pdfInputs1[24] = label46.Text.ToString();  
-            pdfInputs1[25] = label47.Text.ToString();  
-            pdfInputs1[26] = label48.Text.ToString();  
-            pdfInputs1[27] = label49.Text.ToString();  
-            pdfInputs1[28] = label50.Text.ToString();  
-            pdfInputs1[29] = label51.Text.ToString();  
-            pdfInputs1[30] = label52.Text.ToString();  
-            pdfInputs1[31] = label53.Text.ToString();  
-            pdfInputs1[32] = label54.Text.ToString();  
-            pdfInputs1[33] = label55.Text.ToString();  
-            pdfInputs1[34] = label56.Text.ToString();  
+            pdfInputs1[17] = label39.Text.ToString();
+            pdfInputs1[18] = label40.Text.ToString();
+            pdfInputs1[19] = label41.Text.ToString();
+            pdfInputs1[20] = label42.Text.ToString();
+            pdfInputs1[21] = label43.Text.ToString();
+            pdfInputs1[22] = label44.Text.ToString();
+            pdfInputs1[23] = label45.Text.ToString();
+            pdfInputs1[24] = label46.Text.ToString();
+            pdfInputs1[25] = label47.Text.ToString();
+            pdfInputs1[26] = label48.Text.ToString();
+            pdfInputs1[27] = label49.Text.ToString();
+            pdfInputs1[28] = label50.Text.ToString();
+            pdfInputs1[29] = label51.Text.ToString();
+            pdfInputs1[30] = label52.Text.ToString();
+            pdfInputs1[31] = label53.Text.ToString();
+            pdfInputs1[32] = label54.Text.ToString();
+            pdfInputs1[33] = label55.Text.ToString();
+            pdfInputs1[34] = label56.Text.ToString();
 
             //taxable incomes
-            pdfInputs1[35] = label57.Text.ToString();  
-            pdfInputs1[36] = label58.Text.ToString();  
-            pdfInputs1[37] = label59.Text.ToString();  
-            pdfInputs1[38] = label60.Text.ToString();  
-            pdfInputs1[39] = label61.Text.ToString();  
-            pdfInputs1[40] = label62.Text.ToString();  
-            pdfInputs1[41] = label63.Text.ToString();  
-            pdfInputs1[42] = label64.Text.ToString();  
-            pdfInputs1[43] = label65.Text.ToString();  
-            pdfInputs1[44] = label66.Text.ToString();  
-            pdfInputs1[45] = label67.Text.ToString();  
-            pdfInputs1[46] = label68.Text.ToString();  
-            pdfInputs1[47] = label69.Text.ToString();  
-            pdfInputs1[48] = label70.Text.ToString();  
-            pdfInputs1[49] = label71.Text.ToString();  
-            pdfInputs1[50] = label72.Text.ToString();  
-            pdfInputs1[51] = label73.Text.ToString();  
+            pdfInputs1[35] = label57.Text.ToString();
+            pdfInputs1[36] = label58.Text.ToString();
+            pdfInputs1[37] = label59.Text.ToString();
+            pdfInputs1[38] = label60.Text.ToString();
+            pdfInputs1[39] = label61.Text.ToString();
+            pdfInputs1[40] = label62.Text.ToString();
+            pdfInputs1[41] = label63.Text.ToString();
+            pdfInputs1[42] = label64.Text.ToString();
+            pdfInputs1[43] = label65.Text.ToString();
+            pdfInputs1[44] = label66.Text.ToString();
+            pdfInputs1[45] = label67.Text.ToString();
+            pdfInputs1[46] = label68.Text.ToString();
+            pdfInputs1[47] = label69.Text.ToString();
+            pdfInputs1[48] = label70.Text.ToString();
+            pdfInputs1[49] = label71.Text.ToString();
+            pdfInputs1[50] = label72.Text.ToString();
 
-=======
-        
-        
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+            //House rent property
+            pdfInputs1[0] = richTextBox1.Text.ToString();      
+            pdfInputs2[1] = textBox17.Text.ToString();  //1.Annual Rental Income
+            
+            //2.Claimed Expenses:
+            pdfInputs2[2] = textBox18.Text.ToString();    //Repair
+            pdfInputs2[3] = textBox19.Text.ToString();    //Municipal or Local Tax
+            pdfInputs2[4] = textBox20.Text.ToString();    //Land Revenue
+            pdfInputs2[5] = textBox21.Text.ToString();    //Interest on Loan/ Mortgage/Capital Charge
+            pdfInputs2[6] = textBox22.Text.ToString();     //Insurance Premium
+            pdfInputs2[7] = textBox23.Text.ToString();    //Vacancy Allowance
+            pdfInputs2[8] = textBox24.Text.ToString();    //Other ( If any )
+            pdfInputs2[9] = label90.Text.ToString();    //total
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox15_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox17_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox18_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox19_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox20_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox24_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
->>>>>>> cdb4a9a320aa7a2f8e4b359e4cfb64e6358f39b5
+            pdfInputs2[10] = label91.Text.ToString();       // 3.Net Income(difference between item 1 and 2)
         }
     }
 }

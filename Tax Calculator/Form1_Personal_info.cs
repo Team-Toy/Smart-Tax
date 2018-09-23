@@ -7,18 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 
 namespace Tax_Calculator
 {
     
     public partial class Form1_Personal_info : Form
     {
-        public static string[] userInputs;
 
-    public Form1_Personal_info()
+        public Form1_Personal_info()
         {
             InitializeComponent();
         }
@@ -34,18 +30,6 @@ namespace Tax_Calculator
             f.Show();
         }
 
-        public void UserInputs_Personal_info()
-        {
-            userInputs = new string[17];
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-            userInputs[0] = textBox1.Text.ToString();
-        }
+
     }
 }

@@ -172,13 +172,5 @@ namespace Tax_Calculator
             pdfInputs[9] = textBox10.Text.ToString();   //Festival and other special expenses, if any
             pdfInputs[10] = label13.Text.ToString();  //Total Expenditure
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UserInputs_Expenses();
-            Form6_AssentAndLiabilities f = new Form6_AssentAndLiabilities();
-            f.Show();
-
-        }
     }
 }

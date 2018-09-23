@@ -482,13 +482,12 @@
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.Control;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.MediumBlue;
             this.label23.Location = new System.Drawing.Point(42, 184);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(342, 18);
+            this.label23.Size = new System.Drawing.Size(646, 18);
             this.label23.TabIndex = 280;
             this.label23.Text = "Agricultural Property (at cost with legal expenses ) :";
             // 
@@ -1358,7 +1357,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(845, 504);
+            this.ClientSize = new System.Drawing.Size(828, 504);
             this.Controls.Add(this.label84);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.textBox23);
