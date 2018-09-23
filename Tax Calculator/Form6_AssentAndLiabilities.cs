@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
+        /** The original PDF file. */
+        public static string oldFile = "C:\\Users\\ACM-Bimal\\Desktop Projects\\tax-calculator\\income tax.pdf";
+
         public static string[] pdfInputs;
 
         public static double totalAssets = 0;
@@ -409,6 +415,86 @@ namespace Tax_Calculator
 
                 label81.Text = (totalAccretionInWealth - totalSourcesOfFund).ToString();
                 
+            }
+        }
+
+
+        //pdf creating button. print button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svg = new SaveFileDialog();
+            svg.ShowDialog();
+            // size = reader.GetPageSizeWithRotation(1); 
+
+            using (var outputPdfStream = new FileStream(svg.FileName + ".pdf", FileMode.Create, FileAccess.Write))
+            {
+                //open the reader
+                PdfReader reader = new PdfReader(oldFile);
+
+
+                
+
+                PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
+                //Gets a PdfContentByte to write over the page of the original document. here page=1
+
+                PdfContentByte canvas = stamper.GetOverContent(1);
+                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, new Phrase("Hello people"), 36, 540, 0);
+
+                //...................................
+                
+                 canvas = stamper.GetOverContent(3);
+                //setting-up the X and Y coordinates of the document
+                float x = 273;  //by default x increment left-right
+                float y = 170;//173;// +274;
+                var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
+                var pageSize2 = reader.GetPageSize(2);   //getting page size by giving page number=2
+                var pageSize3 = reader.GetPageSize(3);   //getting page size by giving page number=3
+
+               y = pageSize3.Height - (2*y + 110); //making the y to increment top-Down
+
+                float tempY = y;
+                for (int i=0 ; i< 17; i++)
+                {
+                    Phrase p = new Phrase();
+                    string s = Form2_Salaries.pdfInputs1[i];
+                    p.Add(s);
+                    
+                    ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT,p, x, tempY, 0);
+                    tempY += 17;
+                }
+            
+                tempY =y;
+            for (int i = 17; i < 34; i++)
+            {
+                Phrase p = new Phrase();
+                string s = Form2_Salaries.pdfInputs1[i];
+                p.Add(s);
+
+                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x+102, tempY, 0);
+                tempY += 17;
+            }
+
+                tempY = y ;
+            for (int i = 34; i < 51; i++)
+            {
+                Phrase p = new Phrase();
+                string s = Form2_Salaries.pdfInputs1[i];
+                p.Add(s);
+
+                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x+204, tempY, 0);
+               tempY += 17;
+            }
+
+
+
+
+
+
+
+
+
+                stamper.Close();
+
             }
         }
     }

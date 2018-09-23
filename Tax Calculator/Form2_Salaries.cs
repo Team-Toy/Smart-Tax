@@ -878,11 +878,6 @@ namespace Tax_Calculator
             }
         }
 
-        private void label90_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

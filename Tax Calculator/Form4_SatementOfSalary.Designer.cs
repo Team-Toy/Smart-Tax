@@ -99,6 +99,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -419,7 +420,6 @@
             this.label28.Size = new System.Drawing.Size(174, 15);
             this.label28.TabIndex = 27;
             this.label28.Text = "Income from other source";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -692,7 +692,6 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(183, 23);
             this.textBox11.TabIndex = 45;
-            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
             // 
             // label19
@@ -868,12 +867,24 @@
             this.textBox15.TabIndex = 94;
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(708, 847);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 95;
+            this.button2.Text = "Next";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form4_SatementOfSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(834, 507);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label55);
             this.Controls.Add(this.label53);
@@ -1027,5 +1038,6 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button button2;
     }
 }

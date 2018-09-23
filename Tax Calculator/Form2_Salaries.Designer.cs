@@ -1208,7 +1208,6 @@
             this.label90.Size = new System.Drawing.Size(15, 16);
             this.label90.TabIndex = 286;
             this.label90.Text = "0";
-            this.label90.Click += new System.EventHandler(this.label90_Click);
             // 
             // textBox24
             // 
