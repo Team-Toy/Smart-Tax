@@ -548,7 +548,7 @@ namespace Tax_Calculator
                     textBox25.Text = "0";
 
                 }
-                double serventAllowance = double.Parse(textBox7.Text.ToString());
+                double serventAllowance = double.Parse(textBox25.Text.ToString());
                 double taxableIncome = list[7].TaxableIncome(basicPay, serventAllowance, 0);
                 double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
 
@@ -566,6 +566,11 @@ namespace Tax_Calculator
                 label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
+                //testing purpose
+                 label95.Text=list[7].gettaxable()+"";
+                //label95.Text=""+taxableIncome;
+                label96.Text = list[7].getmaxPercentOfNonTaxable() + "";
+                label97.Text = list[7].getmaxNonTaxable() + "";
 
                 textBox8.Focus();
             }

@@ -106,5 +106,18 @@ namespace Tax_Calculator
                 result = 0.0;
           return result;
         }
+        //testing purpose
+        public bool gettaxable()
+        {
+            return this.taxable;
+        }
+        public double getmaxPercentOfNonTaxable()
+        {
+            return this.maxPercentOfNonTaxable;
+        }
+        public double getmaxNonTaxable()
+        {
+            return this.maxNonTaxable[0];
+        }
     }
 }
