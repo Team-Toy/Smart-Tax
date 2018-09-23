@@ -40,26 +40,26 @@ namespace Tax_Calculator
             totalTaxableIncome += Form2_Salaries.netTaxableIncome;
 
 
-            label39.Text = "0.0";
-            label40.Text= "0.0";
+            label39.Text = "0";
+            label40.Text= "0";
         }
         public void madeAllTextBoxZero()
         {
             
-            textBox2.Text = "0.0";
-            textBox3.Text = "0.0";
-            textBox4.Text = "0.0";
-            textBox5.Text = "0.0";
-            textBox6.Text = "0.0";
-            textBox7.Text = "0.0";
-            textBox8.Text = "0.0";
-            textBox9.Text = "0.0";
-            textBox10.Text = "0.0";
-            textBox11.Text = "0.0";
-            textBox12.Text = "0.0";
-            textBox13.Text = "0.0";
-            textBox14.Text = "0.0";
-            textBox15.Text = "0.0";
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox4.Text = "0";
+            textBox5.Text = "0";
+            textBox6.Text = "0";
+            textBox7.Text = "0";
+            textBox8.Text = "0";
+            textBox9.Text = "0";
+            textBox10.Text = "0";
+            textBox11.Text = "0";
+            textBox12.Text = "0";
+            textBox13.Text = "0";
+            textBox14.Text = "0";
+            textBox15.Text = "0";
 
         }
 
@@ -199,11 +199,12 @@ namespace Tax_Calculator
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
             double taxRebate = 0.0;
 
-            if(allowableInvestmentTaxCredit <= 1000000.00)
+            // see tax book page-29, assessment year(2018-2019)
+            if(totalTaxableIncome <= 1000000.00)
             {
                 taxRebate = allowableInvestmentTaxCredit * 0.15;
             }
-            else if(allowableInvestmentTaxCredit > 1000000.00 && allowableInvestmentTaxCredit <= 3000000.00)
+            else if(totalTaxableIncome > 1000000.00 && totalTaxableIncome <= 3000000.00)
             {
                 taxRebate = (250000 * 0.15) + ((allowableInvestmentTaxCredit - 250000) * 0.12);
             }

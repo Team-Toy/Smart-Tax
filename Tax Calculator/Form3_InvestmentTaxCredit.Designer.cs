@@ -380,9 +380,9 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label12.Location = new System.Drawing.Point(364, 420);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 18);
+            this.label12.Size = new System.Drawing.Size(16, 18);
             this.label12.TabIndex = 152;
-            this.label12.Text = "0.0";
+            this.label12.Text = "0";
             // 
             // label4
             // 
@@ -735,7 +735,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(608, 514);
+            this.ClientSize = new System.Drawing.Size(625, 514);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.splitContainer1);
