@@ -13,7 +13,7 @@ namespace Tax_Calculator
     public partial class Form5_Expenses : Form
     {
         public static string[] pdfInputs;
-        public static double totalExpense = 0.0;
+        public static double totalExpense = 0;
         public Form5_Expenses()
         {
             InitializeComponent();
@@ -23,27 +23,45 @@ namespace Tax_Calculator
         private void Form5_Expenses_Load(object sender, EventArgs e)
         {
             // made all textbox zero by default
-            madeAllTextBoxZero();
+            makeAllTextBoxZero();
         }
-        public void madeAllTextBoxZero()
+        public void makeAllTextBoxZero()
         {
-            textBox1.Text = "0.0";
-            textBox2.Text = "0.0";
-            textBox3.Text = "0.0";
-            textBox4.Text = "0.0";
-            textBox5.Text = "0.0";
-            textBox6.Text = "0.0";
-            textBox7.Text = "0.0";
-            textBox8.Text = "0.0";
-            textBox9.Text = "0.0";
-            textBox10.Text = "0.0";
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox4.Text = "0";
+            textBox5.Text = "0";
+            textBox6.Text = "0";
+            textBox7.Text = "0";
+            textBox8.Text = "0";
+            textBox9.Text = "0";
+            textBox10.Text = "0";
+            textBox11.Text = "0";
+        }
+        private double CalTotalExpense()
+        {
+            totalExpense = Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString()) +
+                            Double.Parse(textBox1.Text.ToString());
+
+            return totalExpense;
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox1.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox2.Focus();
@@ -54,7 +72,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox2.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox3.Focus();
@@ -65,7 +83,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox3.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox4.Focus();
@@ -76,7 +94,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox4.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox5.Focus();
@@ -87,7 +105,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox5.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox6.Focus();
@@ -98,7 +116,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox6.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox7.Focus();
@@ -109,7 +127,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox7.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox8.Focus();
@@ -120,7 +138,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox8.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox9.Focus();
@@ -131,7 +149,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox9.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox10.Focus();
@@ -142,7 +160,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox10.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
                 textBox11.Focus();
@@ -153,7 +171,7 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalExpense += Double.Parse(textBox11.ToString());
+                totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
             }
         }

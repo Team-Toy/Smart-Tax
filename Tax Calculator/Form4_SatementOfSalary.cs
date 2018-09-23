@@ -195,7 +195,7 @@ namespace Tax_Calculator
                 label39.Text = totalTaxableIncome.ToString();
                 label40.Text = totalTaxableIncome.ToString();
                 //focusing "foreign income" text field
-                textBox9.Focus();
+                textBox10.Focus();
             }
         }
 
@@ -268,8 +268,6 @@ namespace Tax_Calculator
 
             taxPayable = Math.Abs(taxLeviable - taxRebate);
             label43.Text = taxPayable.ToString();
-
-            textBox11.Focus();
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
