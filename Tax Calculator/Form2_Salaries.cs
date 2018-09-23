@@ -566,11 +566,6 @@ namespace Tax_Calculator
                 label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
-                //testing purpose
-                 label95.Text=list[7].gettaxable()+"";
-                //label95.Text=""+taxableIncome;
-                label96.Text = list[7].getmaxPercentOfNonTaxable() + "";
-                label97.Text = list[7].getmaxNonTaxable() + "";
 
                 textBox8.Focus();
             }
