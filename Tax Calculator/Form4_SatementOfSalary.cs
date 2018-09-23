@@ -12,6 +12,7 @@ namespace Tax_Calculator
 {
     public partial class Form4_SatementOfSalary : Form
     {
+        public static string[] pdfInputs;
         //declared total for summation from serial no 1 to serial no 9
         public static double totalTaxableIncome = 0.0;
         public static double taxLeviable = 0.0;
@@ -23,6 +24,7 @@ namespace Tax_Calculator
         public Form4_SatementOfSalary()
         {
             InitializeComponent();
+            pdfInputs = new string[23];
         }
 
         private void label28_Click(object sender, EventArgs e)
@@ -297,6 +299,42 @@ namespace Tax_Calculator
             {
                 taxPaidLastYear = Double.Parse(textBox15.Text.ToString());
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserInputs_StatementOfSalary();
+            Form5_Expenses f = new Form5_Expenses();
+            f.Show();
+        }
+        private void UserInputs_StatementOfSalary()
+        {
+            pdfInputs[0] = label51.Text.ToString();   //salaries
+            pdfInputs[1] = textBox2.Text.ToString();   //Interest on securities
+            pdfInputs[2] = textBox3.Text.ToString();   //Income from house property
+            pdfInputs[3] = textBox4.Text.ToString();   //Agricultural Income
+            pdfInputs[4] = textBox5.Text.ToString();   //Income from Business or profession
+            pdfInputs[5] = textBox6.Text.ToString();   //Share of proft in a firm
+            pdfInputs[6] = textBox7.Text.ToString();   //Income of spouse or minor child as applicable
+            pdfInputs[7] = textBox8.Text.ToString();   //Capital Gains
+            pdfInputs[8] = textBox9.Text.ToString();   //Income from other source
+            pdfInputs[9] = label39.Text.ToString();   //total
+            pdfInputs[10] = textBox10.Text.ToString();  //Foreign Income 
+
+            pdfInputs[11] = label40.Text.ToString();  //Total income ( serial 10 and 11)
+            pdfInputs[12] = label41.Text.ToString();  //TAX Leviable on Total Income
+            pdfInputs[13] = label42.Text.ToString();  //Tax Rebate
+            pdfInputs[14] = label43.Text.ToString();  //Tax Payable( Difference between serial 13 and 14)
+            pdfInputs[15] = textBox11.Text.ToString();  //a) Tax deducted at source
+            pdfInputs[16] = textBox12.Text.ToString();  //b) advance tax as per challan
+            pdfInputs[17] = textBox13.Text.ToString();  //c) Tax paid on the basis of this return
+            pdfInputs[18] = textBox14.Text.ToString();  //d) Adjustment of tax refund (If any)
+            pdfInputs[19] = label55.Text.ToString();  //total
+
+            pdfInputs[20] = label50.Text.ToString();  //Difference between 15 and 16 (if any)   
+            pdfInputs[21] = label52.Text.ToString();  //Tax exempted and tax free income
+            pdfInputs[22] = label55.Text.ToString();  //total
+            pdfInputs[23] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
         }
         /*
 private double CalAllowableInvestmentTaxCredit(double taxableIncome)

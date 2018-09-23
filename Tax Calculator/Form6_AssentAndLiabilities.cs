@@ -12,6 +12,8 @@ namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
+        public static string[] pdfInputs;
+
         public static double totalAssets = 0;
         public static double totalInvestments = 0;
         public static double cashAssets = 0;
@@ -30,6 +32,7 @@ namespace Tax_Calculator
         public Form6_AssentAndLiabilities()
         {
             InitializeComponent();
+            pdfInputs = new string[35];
         }
 
         private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
@@ -407,6 +410,63 @@ namespace Tax_Calculator
                 label81.Text = (totalAccretionInWealth - totalSourcesOfFund).ToString();
                 
             }
+        }
+
+        private void UserIput_AssetsAndLiabilities()
+        {
+            pdfInputs[0] = textBox1.Text.ToString();   //a)Business Capital ( Closing Balance)
+            pdfInputs[1] = textBox2.Text.ToString();   //b)Directors Shareholdings in Limited Companies (at cost) 
+            pdfInputs[2] = textBox3.Text.ToString();   //Non-Agricultural Property (at cost with legal expenses ) :
+            pdfInputs[3] = textBox4.Text.ToString();   //Agricultural Property (at cost with legal expenses ) :
+            pdfInputs[4] = textBox5.Text.ToString();   //(a) Shares/Debentures 
+            pdfInputs[5] = textBox6.Text.ToString();   //(b) Saving Certificate/Unit Certificate/Bond 
+            pdfInputs[6] = textBox7.Text.ToString();   //(c) Prize bond/Savings Scheme 
+            pdfInputs[7] = textBox8.Text.ToString();   //(d) Loans given 
+            pdfInputs[8] = textBox9.Text.ToString();   //(e) Other Investment 
+            pdfInputs[9] = label11.Text.ToString();     //Total 
+
+            pdfInputs[10] = textBox10.Text.ToString();  //Motor Vehicles (at cost) : 
+            pdfInputs[11] = textBox11.Text.ToString();   //Jewellery (quantity and cost) :
+            pdfInputs[12] = textBox12.Text.ToString();   //Furniture (at cost) :
+            pdfInputs[13] = textBox13.Text.ToString();   //Electronic Equipment (at cost) :
+
+            //Cash Asset Outside Business:
+            pdfInputs[14] = textBox14.Text.ToString();   //(a) Cash in hand Tk.
+            pdfInputs[15] = textBox15.Text.ToString();   //(b) Cash at bank Tk.
+            pdfInputs[16] = textBox16.Text.ToString();   //(c) Other deposits Tk. 
+            pdfInputs[17] = label51.Text.ToString();    //Total
+
+            pdfInputs[18] = textBox17.Text.ToString();   //Any Other Assets
+            pdfInputs[19] = label10.Text.ToString();   //Total Assets
+
+            //Less Liabilities
+            pdfInputs[20] = textBox18.Text.ToString();   //(a) Mortgages secured on property or land (Tk)
+            pdfInputs[21] = label19.Text.ToString();  //(b) Unsecured loans (Tk)
+            pdfInputs[22] = textBox20.Text.ToString();   //(c) Bank loan Tk.
+            pdfInputs[23] = textBox21.Text.ToString();   //(d) Others
+
+            pdfInputs[24] = label56.Text.ToString();   //Total Liabilities
+
+            pdfInputs[25] = label86.Text.ToString();   //Net wealth as on last date of this income year
+
+            pdfInputs[26] = textBox22.Text.ToString();   //Net wealth as on last date of previous income year
+
+            pdfInputs[27] = label22.Text.ToString();   //Accretion in wealth (Difference between serial no. 12 and 13)
+
+            pdfInputs[28] = label82.Text.ToString();   //(a) Family Expenditure: (Total expenditure as per Form IT 10 BB)  
+            //(b) Number of dependant children of the family:
+            pdfInputs[29] = textBox8.Text.ToString();   //Adult
+            pdfInputs[30] = textBox9.Text.ToString();   //Child
+
+            pdfInputs[31)= label85.Text.ToString();   //Total Accretion of wealth (Total of serial 14 and 15)
+            //Sources of Fund :
+            pdfInputs[32] = label35.Text.ToString();  //(i) Shown Return Income 
+            pdfInputs[33] = label84.Text.ToString();    //(ii) Tax exempted/Tax free Income
+
+            pdfInputs[34] = textBox26.Text.ToString(); //(iii)Other receipts
+
+            pdfInputs[35] = label83.Text.ToString(); //Total source of Fund 
+            pdfInputs[36] = label81.Text.ToString();//Difference (Between serial 16 and 17)
         }
     }
 }

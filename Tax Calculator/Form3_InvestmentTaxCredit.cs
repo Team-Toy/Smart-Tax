@@ -13,6 +13,7 @@ namespace Tax_Calculator
     
     public partial class Form3_InvestmentTaxCredit : Form
     {
+        public static string[] pdfInputs;
         public static double totalInvestment = 0.0;
         // investment documents
         public static string document1 = "";
@@ -28,6 +29,7 @@ namespace Tax_Calculator
         public Form3_InvestmentTaxCredit()
         {
             InitializeComponent();
+            pdfInputs = new string[21];
         }
 
         private void Form6_Load(object sender, EventArgs e)
@@ -55,16 +57,16 @@ namespace Tax_Calculator
 
         private double InvestmentTaxCalculate()
         {
-            totalInvestment =   double.Parse(textBox1.Text.ToString()) +
-                                double.Parse(textBox2.Text.ToString()) +
-                                double.Parse(textBox3.Text.ToString()) +
-                                double.Parse(textBox4.Text.ToString()) +
-                                double.Parse(textBox5.Text.ToString()) +
-                                double.Parse(textBox6.Text.ToString()) +
-                                double.Parse(textBox7.Text.ToString()) +
-                                double.Parse(textBox8.Text.ToString()) +
-                                double.Parse(textBox9.Text.ToString()) +
-                                double.Parse(textBox10.Text.ToString());
+            totalInvestment =   double.Parse(textBox1.Text.ToString()) +    //Life insurance premium
+                                double.Parse(textBox2.Text.ToString()) +     // Contribution to deffered annuity
+                                double.Parse(textBox3.Text.ToString()) +    //Contribution to provident fund
+                                double.Parse(textBox4.Text.ToString()) +    //Self contribution and employers contributon to recognized provdent fund
+                                double.Parse(textBox5.Text.ToString()) +    //Contribution to super annuaton fund / DPS
+                                double.Parse(textBox6.Text.ToString()) +    //investment in approved debebnture stock, stock, or shares
+                                double.Parse(textBox7.Text.ToString()) +    //Contributon to depost pension scheem
+                                double.Parse(textBox8.Text.ToString()) +    //Group insurance premium
+                                double.Parse(textBox9.Text.ToString()) +     //Contribution to zaat fund
+                                double.Parse(textBox10.Text.ToString());    //Other (if any)
            
             return totalInvestment;
         }
@@ -160,6 +162,7 @@ namespace Tax_Calculator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            UserInput_InvestmentTaxCredit();
             //hiding investment tex credit form
             this.Hide();
             Form4_SatementOfSalary f = new Form4_SatementOfSalary();
@@ -257,11 +260,31 @@ namespace Tax_Calculator
         }
 
         
+        public void UserInput_InvestmentTaxCredit()
+        {
+            pdfInputs[0] = textBox1.Text.ToString();   //Life insurance premium
+            pdfInputs[1] = textBox2.Text.ToString();   //Contribution to deffered annuity
+            pdfInputs[2] = textBox3.Text.ToString();   //Contribution to provident fund
+            pdfInputs[3] = textBox4.Text.ToString();   //Self contribution and employers contributon to recognized provdent fund
+            pdfInputs[4] = textBox5.Text.ToString();   //Contribution to super annuaton fund / DPS
+            pdfInputs[5] = textBox6.Text.ToString();   //investment in approved debebnture stock, stock, or shares
+            pdfInputs[6] = textBox7.Text.ToString();   //Contributon to depost pension scheem
+            pdfInputs[7] = textBox8.Text.ToString();   //Group insurance premium
+            pdfInputs[8] = textBox9.Text.ToString();   //Contribution to zaat fund
+            pdfInputs[9] = textBox10.Text.ToString();   //Other (if any)
+            pdfInputs[10] = label12.Text.ToString();  //total
 
-        
+            pdfInputs[11] = textBox11.Text.ToString();  //Document 1
+            pdfInputs[12] = textBox12.Text.ToString();  //Document 2
+            pdfInputs[13] = textBox13.Text.ToString();  //Document 3
+            pdfInputs[14] = textBox14.Text.ToString();  //Document 4
+            pdfInputs[15] = textBox15.Text.ToString();  //Document 5
+            pdfInputs[16] = textBox16.Text.ToString();  //Document 6
+            pdfInputs[17] = textBox17.Text.ToString();  //Document 7
+            pdfInputs[18] = textBox18.Text.ToString();  //Document 8
+            pdfInputs[19] = textBox19.Text.ToString();  //Document 9
+            pdfInputs[20] = textBox20.Text.ToString();  //Document 10           
 
-        
-
-        
+        }
     }
 }

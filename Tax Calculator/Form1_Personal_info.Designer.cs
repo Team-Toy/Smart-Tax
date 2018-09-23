@@ -205,11 +205,11 @@
             // 
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.SystemColors.Control;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.MediumBlue;
             this.label35.Location = new System.Drawing.Point(59, 555);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(77, 18);
+            this.label35.Size = new System.Drawing.Size(75, 15);
             this.label35.TabIndex = 230;
             this.label35.Text = "Telephone";
             // 
@@ -334,11 +334,11 @@
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.SystemColors.Control;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.MediumBlue;
             this.label34.Location = new System.Drawing.Point(62, 506);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(138, 18);
+            this.label34.Size = new System.Drawing.Size(135, 15);
             this.label34.TabIndex = 195;
             this.label34.Text = "Parmanent Address";
             // 
@@ -346,11 +346,11 @@
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.SystemColors.Control;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.MediumBlue;
             this.label33.Location = new System.Drawing.Point(60, 463);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(117, 18);
+            this.label33.Size = new System.Drawing.Size(114, 15);
             this.label33.TabIndex = 194;
             this.label33.Text = "Present Address";
             // 
@@ -358,11 +358,11 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.SystemColors.Control;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.MediumBlue;
             this.label32.Location = new System.Drawing.Point(59, 415);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(99, 18);
+            this.label32.Size = new System.Drawing.Size(97, 15);
             this.label32.TabIndex = 193;
             this.label32.Text = "Date ofr Birth ";
             // 
@@ -370,11 +370,11 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.SystemColors.Control;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.MediumBlue;
             this.label31.Location = new System.Drawing.Point(59, 382);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(107, 18);
+            this.label31.Size = new System.Drawing.Size(101, 15);
             this.label31.TabIndex = 192;
             this.label31.Text = "Mothers Name";
             // 
@@ -382,11 +382,11 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.SystemColors.Control;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.MediumBlue;
             this.label30.Location = new System.Drawing.Point(59, 348);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(102, 18);
+            this.label30.Size = new System.Drawing.Size(98, 15);
             this.label30.TabIndex = 191;
             this.label30.Text = "Fathers Name";
             // 
@@ -394,11 +394,11 @@
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.SystemColors.Control;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.MediumBlue;
             this.label29.Location = new System.Drawing.Point(59, 320);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(95, 18);
+            this.label29.Size = new System.Drawing.Size(87, 15);
             this.label29.TabIndex = 190;
             this.label29.Text = "Wife`s Name";
             // 
@@ -406,11 +406,11 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.SystemColors.Control;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.MediumBlue;
             this.label28.Location = new System.Drawing.Point(57, 292);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(132, 18);
+            this.label28.Size = new System.Drawing.Size(125, 15);
             this.label28.TabIndex = 189;
             this.label28.Text = "Name of Employer";
             // 
@@ -418,11 +418,11 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.SystemColors.Control;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.MediumBlue;
             this.label27.Location = new System.Drawing.Point(57, 262);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(50, 18);
+            this.label27.Size = new System.Drawing.Size(49, 15);
             this.label27.TabIndex = 188;
             this.label27.Text = "Status";
             // 
@@ -430,11 +430,11 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.SystemColors.Control;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.MediumBlue;
             this.label26.Location = new System.Drawing.Point(59, 230);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(123, 18);
+            this.label26.Size = new System.Drawing.Size(121, 15);
             this.label26.TabIndex = 187;
             this.label26.Text = "Rasdential Status";
             // 
@@ -442,11 +442,11 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.SystemColors.Control;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.MediumBlue;
             this.label25.Location = new System.Drawing.Point(56, 201);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(120, 18);
+            this.label25.Size = new System.Drawing.Size(114, 15);
             this.label25.TabIndex = 186;
             this.label25.Text = "Assesment Year ";
             // 
@@ -454,11 +454,11 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.SystemColors.Control;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.MediumBlue;
             this.label24.Location = new System.Drawing.Point(56, 170);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 18);
+            this.label24.Size = new System.Drawing.Size(74, 15);
             this.label24.TabIndex = 185;
             this.label24.Text = "Circle 230";
             // 
@@ -466,11 +466,11 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.Control;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.MediumBlue;
             this.label23.Location = new System.Drawing.Point(57, 143);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 18);
+            this.label23.Size = new System.Drawing.Size(29, 15);
             this.label23.TabIndex = 184;
             this.label23.Text = "TIN";
             // 
@@ -478,11 +478,11 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.SystemColors.Control;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.MediumBlue;
             this.label22.Location = new System.Drawing.Point(57, 114);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 18);
+            this.label22.Size = new System.Drawing.Size(86, 15);
             this.label22.TabIndex = 183;
             this.label22.Text = "UTIN (if any)";
             // 
@@ -490,11 +490,11 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.SystemColors.Control;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.MediumBlue;
             this.label21.Location = new System.Drawing.Point(57, 86);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(101, 18);
+            this.label21.Size = new System.Drawing.Size(96, 15);
             this.label21.TabIndex = 182;
             this.label21.Text = "Natonal ID No";
             // 
@@ -502,11 +502,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.SystemColors.Control;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.MediumBlue;
             this.label20.Location = new System.Drawing.Point(57, 60);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(134, 18);
+            this.label20.Size = new System.Drawing.Size(124, 15);
             this.label20.TabIndex = 181;
             this.label20.Text = "Name of Assessee";
             // 

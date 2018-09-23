@@ -12,10 +12,12 @@ namespace Tax_Calculator
 {
     public partial class Form5_Expenses : Form
     {
+        public static string[] pdfInputs;
         public static double totalExpense = 0.0;
         public Form5_Expenses()
         {
             InitializeComponent();
+            pdfInputs = new string[12];
         }
 
         private void Form5_Expenses_Load(object sender, EventArgs e)
@@ -154,6 +156,29 @@ namespace Tax_Calculator
                 totalExpense += Double.Parse(textBox11.ToString());
                 label13.Text = totalExpense.ToString();
             }
+        }
+
+        private void UserInputs_Expenses()
+        {
+            pdfInputs[0] = textBox1.Text.ToString();   //Personal and fooding expenses
+            pdfInputs[1] = textBox2.Text.ToString();   //Tax paid including deduction at source of the last financial year
+            pdfInputs[2] = textBox3.Text.ToString();   //Accommodation expenses
+            pdfInputs[3] = textBox4.Text.ToString();   //Transport expenses
+            pdfInputs[4] = textBox5.Text.ToString();   //Electricity Bill for residence
+            pdfInputs[5] = textBox6.Text.ToString();   //Wasa Bill for residence
+            pdfInputs[6] = textBox7.Text.ToString();   //Gas Bill for residence
+            pdfInputs[7] = textBox8.Text.ToString();   //Telephone Bill for residence
+            pdfInputs[8] = textBox9.Text.ToString();   //Personal expenses for Foreign travel
+            pdfInputs[9] = textBox10.Text.ToString();   //Festival and other special expenses, if any
+            pdfInputs[10] = label13.Text.ToString();  //Total Expenditure
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserInputs_Expenses();
+            Form6_AssentAndLiabilities f = new Form6_AssentAndLiabilities();
+            f.Show();
+
         }
     }
 }
