@@ -42,17 +42,17 @@ namespace Tax_Calculator
         private double CalTotalExpense()
         {
             totalExpense = Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox1.Text.ToString());
+                            Double.Parse(textBox2.Text.ToString()) +
+                            Double.Parse(textBox3.Text.ToString()) +
+                            Double.Parse(textBox4.Text.ToString()) +
+                            Double.Parse(textBox5.Text.ToString()) +
+                            Double.Parse(textBox6.Text.ToString()) +
+                            Double.Parse(textBox7.Text.ToString()) +
+                            Double.Parse(textBox8.Text.ToString()) +
+                            Double.Parse(textBox9.Text.ToString()) +
+                            Double.Parse(textBox10.Text.ToString()) +
+                            Double.Parse(textBox11.Text.ToString());
+                            
 
             return totalExpense;
         }
@@ -61,6 +61,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox1.Text.Length == 0)
+                {
+                    textBox1.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -72,6 +76,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox2.Text.Length == 0)
+                {
+                    textBox2.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -83,6 +91,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox3.Text.Length == 0)
+                {
+                    textBox3.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -94,6 +106,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox4.Text.Length == 0)
+                {
+                    textBox4.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -105,6 +121,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox5.Text.Length == 0)
+                {
+                    textBox5.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -116,6 +136,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox6.Text.Length == 0)
+                {
+                    textBox6.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -127,6 +151,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox7.Text.Length == 0)
+                {
+                    textBox7.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -138,6 +166,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox8.Text.Length == 0)
+                {
+                    textBox8.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -149,6 +181,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox9.Text.Length == 0)
+                {
+                    textBox9.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -160,6 +196,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
 
@@ -171,6 +211,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox11.Text.Length == 0)
+                {
+                    textBox11.Text = "0";
+                }
                 totalExpense = CalTotalExpense();
                 label13.Text = totalExpense.ToString();
             }
