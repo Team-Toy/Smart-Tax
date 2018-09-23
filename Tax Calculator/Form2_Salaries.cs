@@ -13,7 +13,16 @@ namespace Tax_Calculator
 
     public partial class Form2_Salaries : Form
     {
+<<<<<<< HEAD
         public static string[] pdfInputs1,pdfInputs2;
+=======
+        //values for form 4, totalTaxableIncome, totalTaxExtempted
+        public static double totalAmountOfIncome = 0.0;
+        public static double netTaxableIncome = 0.0;
+        public static double totalTaxExtempted = 0.0;
+        public double basicPay = 0.0;
+        public static List<SalaryConditionals> list = new List<SalaryConditionals>();
+>>>>>>> cdb4a9a320aa7a2f8e4b359e4cfb64e6358f39b5
         private string[] data = {"true","0","0",        //BasicPay 
                                  "true","0","0",          //SpecialPay
                                  "true","0","0",          //Dearness_allowance
@@ -66,7 +75,8 @@ namespace Tax_Calculator
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            madeAllTextBoxZero();
+            makeAllTextBoxZero();
+            makeAllLabelZero();
 
             // default value set for medical allowance
             comboBox1.SelectedIndex = 0;
@@ -96,26 +106,79 @@ namespace Tax_Calculator
                 SalaryConditionals salaryType = new SalaryConditionals(taxable, maxPercentOfNonTaxable, maxNonTaxable);
                 list.Add(salaryType);
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cdb4a9a320aa7a2f8e4b359e4cfb64e6358f39b5
         }
-        public void madeAllTextBoxZero()
+        private void makeAllTextBoxZero()
         {
-            textBox1.Text = "0.0";
-            textBox2.Text = "0.0";
-            textBox3.Text = "0.0";
-            textBox4.Text = "0.0";
-            textBox5.Text = "0.0";
-            textBox6.Text = "0.0";
-            textBox7.Text = "0.0";
-            textBox8.Text = "0.0";
-            textBox9.Text = "0.0";
-            textBox10.Text = "0.0";
-            textBox11.Text = "0.0";
-            textBox12.Text = "0.0";
-            textBox13.Text = "0.0";
-            textBox14.Text = "0.0";
-            textBox15.Text = "0.0";
-            textBox16.Text = "0.0";
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox4.Text = "0";
+            textBox5.Text = "0";
+            textBox6.Text = "0";
+            textBox7.Text = "0";
+            textBox8.Text = "0";
+            textBox9.Text = "0";
+            textBox10.Text = "0";
+            textBox11.Text = "0";
+            textBox12.Text = "0";
+            textBox13.Text = "0";
+            textBox14.Text = "0";
+            textBox15.Text = "0";
+            textBox16.Text = "0";
+            textBox17.Text = "0";
+            textBox18.Text = "0";
+            textBox19.Text = "0";
+            textBox20.Text = "0";
+            textBox21.Text = "0";
+            textBox22.Text = "0";
+            textBox23.Text = "0";
+            textBox24.Text = "0";
+        }
+        public void makeAllLabelZero()
+        {
+            label40.Text = "0";
+            label41.Text = "0";
+            label42.Text = "0";
+            label43.Text = "0";
+            label44.Text = "0";
+            label45.Text = "0";
+            label46.Text = "0";
+            label47.Text = "0";
+            label48.Text = "0";
+            label49.Text = "0";
+            label50.Text = "0";
+            label51.Text = "0";
+            label52.Text = "0";
+            label52.Text = "0";
+            label53.Text = "0";
+            label54.Text = "0";
+            label55.Text = "0";
+
+            label57.Text = "0";
+            label58.Text = "0";
+            label59.Text = "0";
+            label60.Text = "0";
+            label61.Text = "0";
+            label62.Text = "0";
+            label63.Text = "0";
+            label64.Text = "0";
+            label65.Text = "0";
+            label66.Text = "0";
+            label67.Text = "0";
+            label68.Text = "0";
+            label69.Text = "0";
+            label70.Text = "0";
+            label71.Text = "0";
+            label72.Text = "0";
+
+            label39.Text = "0";
+            label56.Text = "0";
+            label73.Text = "0";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -152,13 +215,80 @@ namespace Tax_Calculator
 
             return totalAmountOfIncome;
         }
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private double CalTotalTaxExempted()
         {
+            totalTaxExtempted = double.Parse(label40.Text.ToString()) +
+                                    double.Parse(label41.Text.ToString()) +
+                                    double.Parse(label42.Text.ToString()) +
+                                    double.Parse(label43.Text.ToString()) +
+                                    double.Parse(label44.Text.ToString()) +
+                                    double.Parse(label45.Text.ToString()) +
+                                    double.Parse(label46.Text.ToString()) +
+                                    double.Parse(label47.Text.ToString()) +
+                                    double.Parse(label48.Text.ToString()) +
+                                    double.Parse(label49.Text.ToString()) +
+                                    double.Parse(label50.Text.ToString()) +
+                                    double.Parse(label51.Text.ToString()) +
+                                    double.Parse(label52.Text.ToString()) +
+                                    double.Parse(label53.Text.ToString()) +
+                                    double.Parse(label54.Text.ToString()) +
+                                    double.Parse(label55.Text.ToString());
+
+
+            return totalTaxExtempted;
+        }
+        private double CalNetTaxableIncome()
+        {
+            netTaxableIncome = double.Parse(label57.Text.ToString()) +
+                                    double.Parse(label58.Text.ToString()) +
+                                    double.Parse(label59.Text.ToString()) +
+                                    double.Parse(label60.Text.ToString()) +
+                                    double.Parse(label61.Text.ToString()) +
+                                    double.Parse(label62.Text.ToString()) +
+                                    double.Parse(label63.Text.ToString()) +
+                                    double.Parse(label64.Text.ToString()) +
+                                    double.Parse(label65.Text.ToString()) +
+                                    double.Parse(label66.Text.ToString()) +
+                                    double.Parse(label67.Text.ToString()) +
+                                    double.Parse(label68.Text.ToString()) +
+                                    double.Parse(label69.Text.ToString()) +
+                                    double.Parse(label70.Text.ToString()) +
+                                    double.Parse(label71.Text.ToString()) +
+                                    double.Parse(label72.Text.ToString());
+
+
+            return netTaxableIncome;
+        }
+        private double CalTotalClaimedExpense()
+        {
+            totalClaimedExpense = double.Parse(textBox18.Text.ToString()) +
+                                    double.Parse(textBox19.Text.ToString()) +
+                                    double.Parse(textBox20.Text.ToString()) +
+                                    double.Parse(textBox21.Text.ToString()) +
+                                    double.Parse(textBox22.Text.ToString()) +
+                                    double.Parse(textBox23.Text.ToString()) +
+                                    double.Parse(textBox24.Text.ToString());
+                                
+
+
+            return totalClaimedExpense;
+        }
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {           
             if (e.KeyCode == Keys.Enter)
             {
+                if(textBox1.Text.Length == 0)
+                {
+                    textBox1.Text = "0";
+                    
+                }
+                
                 basicPay = double.Parse(textBox1.Text.ToString());
-                double taxableIncome = list[0].TaxableIncome(basicPay,basicPay,0);
+                double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
+
+                label40.ForeColor = Color.Black;
+                label57.ForeColor = Color.Black;
 
                 label40.Text = "" + taxExtempted;
                 label57.Text = "" + taxableIncome;
@@ -166,17 +296,39 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox2.Focus();
+                
+               
             }
+            else
+            {
+                label40.ForeColor = Color.Red;
+                label57.ForeColor = Color.Red;
+            }
+           
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if(textBox2.Text.Length == 0)
+                {
+                    textBox2.Text = "0";
+                   
+                }
                 double specialPay = double.Parse(textBox2.Text.ToString());
                 double taxableIncome = list[1].TaxableIncome(basicPay,specialPay, 0);
                 double taxExtempted = TaxExemptCal(specialPay, taxableIncome);
+
+                label41.ForeColor = Color.Black;
+                label58.ForeColor = Color.Black;
 
                 label41.Text = "" + taxExtempted;
                 label58.Text = "" + taxableIncome;
@@ -184,7 +336,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox3.Focus();
+            }
+            else
+            {
+                label41.ForeColor = Color.Red;
+                label58.ForeColor = Color.Red;
             }
         }
 
@@ -192,9 +355,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox3.Text.Length == 0)
+                {
+                    textBox3.Text = "0";
+
+                }
                 double dearnessAllowance = double.Parse(textBox3.Text.ToString());
                 double taxableIncome = list[2].TaxableIncome(basicPay,dearnessAllowance, 0);
                 double taxExtempted = TaxExemptCal(dearnessAllowance, taxableIncome);
+
+                label42.ForeColor = Color.Black;
+                label59.ForeColor = Color.Black;
 
                 label42.Text = "" + taxExtempted;
                 label59.Text = "" + taxableIncome;
@@ -202,7 +373,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox4.Focus();
+            }
+            else
+            {
+                label42.ForeColor = Color.Red;
+                label59.ForeColor = Color.Red;
             }
         }
 
@@ -210,9 +392,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox4.Text.Length == 0)
+                {
+                    textBox4.Text = "0";
+
+                }
                 double conveyanceAllowance = double.Parse(textBox4.Text.ToString());
                 double taxableIncome = list[3].TaxableIncome(basicPay,conveyanceAllowance, 0);
                 double taxExtempted = TaxExemptCal(conveyanceAllowance, taxableIncome);
+
+                label43.ForeColor = Color.Black;
+                label60.ForeColor = Color.Black;
 
                 label43.Text = "" + taxExtempted;
                 label60.Text = "" + taxableIncome;
@@ -220,7 +410,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox5.Focus();
+            }
+            else
+            {
+                label43.ForeColor = Color.Red;
+                label60.ForeColor = Color.Red;
             }
         }
 
@@ -228,9 +429,16 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox5.Text.Length == 0)
+                {
+                    textBox5.Text = "0";
+                }
                 double houseRentAllowance = double.Parse(textBox5.Text.ToString());
                 double taxableIncome = list[4].TaxableIncome(basicPay,houseRentAllowance, 0);
                 double taxExtempted = TaxExemptCal(houseRentAllowance, taxableIncome);
+
+                label44.ForeColor = Color.Black;
+                label61.ForeColor = Color.Black;
 
                 label44.Text = "" + taxExtempted;
                 label61.Text = "" + taxableIncome;
@@ -238,7 +446,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox6.Focus();
+            }
+            else
+            {
+                label44.ForeColor = Color.Red;
+                label61.ForeColor = Color.Red;
             }
         }
 
@@ -246,6 +465,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox6.Text.Length == 0)
+                {
+                    textBox6.Text = "0";
+
+                }
                 double medicalAllowance = double.Parse(textBox6.Text.ToString());
                 double taxableIncome;
                 //double taxableIncome;
@@ -257,13 +481,27 @@ namespace Tax_Calculator
 
                 double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
 
+                label45.ForeColor = Color.Black;
+                label62.ForeColor = Color.Black;
+
                 label45.Text = "" + taxExtempted;
                 label62.Text = "" + taxableIncome;
 
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox7.Focus();
+            }
+            else
+            {
+                label45.ForeColor = Color.Red;
+                label62.ForeColor = Color.Red;
             }
         }
 
@@ -271,9 +509,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox7.Text.Length == 0)
+                {
+                    textBox7.Text = "0";
+
+                }
                 double serventAllowance = double.Parse(textBox7.Text.ToString());
                 double taxableIncome = list[6].TaxableIncome(basicPay,serventAllowance, 0);
                 double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
+
+                label46.ForeColor = Color.Black;
+                label63.ForeColor = Color.Black;
 
                 label46.Text = "" + taxExtempted;
                 label63.Text = "" + taxableIncome;
@@ -281,7 +527,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox8.Focus();
+            }
+            else
+            {
+                label46.ForeColor = Color.Red;
+                label63.ForeColor = Color.Red;
             }
         }
 
@@ -289,9 +546,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox8.Text.Length == 0)
+                {
+                    textBox8.Text = "0";
+
+                }
                 double rewardSalary = double.Parse(textBox8.Text.ToString());
                 double taxableIncome = list[7].TaxableIncome(basicPay,rewardSalary, 0);
                 double taxExtempted = TaxExemptCal(rewardSalary, taxableIncome);
+
+                label47.ForeColor = Color.Black;
+                label64.ForeColor = Color.Black;
 
                 label47.Text = "" + taxExtempted;
                 label64.Text = "" + taxableIncome;
@@ -299,7 +564,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox9.Focus();
+            }
+            else
+            {
+                label47.ForeColor = Color.Red;
+                label64.ForeColor = Color.Red;
             }
         }
 
@@ -307,9 +583,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox9.Text.Length == 0)
+                {
+                    textBox9.Text = "0";
+
+                }
                 double overtimeAllowance = double.Parse(textBox9.Text.ToString());
                 double taxableIncome = list[8].TaxableIncome(basicPay,overtimeAllowance, 0);
                 double taxExtempted = TaxExemptCal(overtimeAllowance, taxableIncome);
+
+                label48.ForeColor = Color.Black;
+                label65.ForeColor = Color.Black;
 
                 label48.Text = "" + taxExtempted;
                 label65.Text = "" + taxableIncome;
@@ -317,7 +601,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox10.Focus();
+            }
+            else
+            {
+                label48.ForeColor = Color.Red;
+                label65.ForeColor = Color.Red;
             }
         }
 
@@ -325,9 +620,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+
+                }
                 double bonusOrGratia = double.Parse(textBox10.Text.ToString());
                 double taxableIncome = list[9].TaxableIncome(basicPay,bonusOrGratia, 0);
                 double taxExtempted = TaxExemptCal(bonusOrGratia, taxableIncome);
+
+                label49.ForeColor = Color.Black;
+                label66.ForeColor = Color.Black;
 
                 label49.Text = "" + taxExtempted;
                 label66.Text = "" + taxableIncome;
@@ -335,7 +638,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox11.Focus();
+            }
+            else
+            {
+                label49.ForeColor = Color.Red;
+                label66.ForeColor = Color.Red;
             }
         }
 
@@ -343,9 +657,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox11.Text.Length == 0)
+                {
+                    textBox11.Text = "0";
+
+                }
                 double otherAllowance = double.Parse(textBox11.Text.ToString());
                 double taxableIncome = list[10].TaxableIncome(basicPay,otherAllowance, 0);
                 double taxExtempted = TaxExemptCal(otherAllowance, taxableIncome);
+
+                label50.ForeColor = Color.Black;
+                label67.ForeColor = Color.Black;
 
                 label50.Text = "" + taxExtempted;
                 label67.Text = "" + taxableIncome;
@@ -353,7 +675,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox12.Focus();
+            }
+            else
+            {
+                label50.ForeColor = Color.Red;
+                label67.ForeColor = Color.Red;
             }
         }
 
@@ -361,9 +694,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox12.Text.Length == 0)
+                {
+                    textBox12.Text = "0";
+
+                }
                 double providentFund = double.Parse(textBox12.Text.ToString());
                 double taxableIncome = list[11].TaxableIncome(basicPay,providentFund, 0);
                 double taxExtempted = TaxExemptCal(providentFund, taxableIncome);
+
+                label51.ForeColor = Color.Black;
+                label68.ForeColor = Color.Black;
 
                 label51.Text = "" + taxExtempted;
                 label68.Text = "" + taxableIncome;
@@ -371,7 +712,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox13.Focus();
+            }
+            else
+            {
+                label51.ForeColor = Color.Red;
+                label68.ForeColor = Color.Red;
             }
         }
 
@@ -379,6 +731,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox13.Text.Length == 0)
+                {
+                    textBox13.Text = "0";
+
+                }
                 //sum = basic pay + Dearness Allowances
                 double sum = basicPay + double.Parse(textBox3.Text.ToString());
 
@@ -389,13 +746,27 @@ namespace Tax_Calculator
                 double taxableIncome = list[12].TaxableIncome(sum, InterestOnprovidentFund, 0);
                 double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
 
+                label52.ForeColor = Color.Black;
+                label69.ForeColor = Color.Black;
+
                 label52.Text = "" + taxExtempted;
                 label69.Text = "" + taxableIncome;
 
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
-                
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox14.Focus();
+            }
+            else
+            {
+                label52.ForeColor = Color.Red;
+                label69.ForeColor = Color.Red;
             }
         }
 
@@ -403,9 +774,17 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox14.Text.Length == 0)
+                {
+                    textBox14.Text = "0";
+
+                }
                 double transportFacility = double.Parse(textBox14.Text.ToString());
                 double taxableIncome = list[13].TaxableIncome(basicPay,transportFacility, 0);
                 double taxExtempted = TaxExemptCal(transportFacility, taxableIncome);
+
+                label53.ForeColor = Color.Black;
+                label70.ForeColor = Color.Black;
 
                 label53.Text = "" + taxExtempted;
                 label70.Text = "" + taxableIncome;
@@ -413,7 +792,18 @@ namespace Tax_Calculator
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox15.Focus();
+            }
+            else
+            {
+                label53.ForeColor = Color.Red;
+                label70.ForeColor = Color.Red;
             }
         }
 
@@ -421,6 +811,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox15.Text.Length == 0)
+                {
+                    textBox15.Text = "0";
+
+                }
                 double accomodation = double.Parse(textBox15.Text.ToString());
                 
                 double taxableIncome;
@@ -438,13 +833,27 @@ namespace Tax_Calculator
                 
                 double taxExtempted = TaxExemptCal(accomodation, taxableIncome);
 
+                label54.ForeColor = Color.Black;
+                label71.ForeColor = Color.Black;
+
                 label54.Text = "" + taxExtempted;
                 label71.Text = "" + taxableIncome;
 
                 netTaxableIncome += taxableIncome;
                 totalTaxExtempted += taxExtempted;
 
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+
                 textBox16.Focus();
+            }
+            else
+            {
+                label54.ForeColor = Color.Red;
+                label71.ForeColor = Color.Red;
             }
         }
 
@@ -452,9 +861,16 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox16.Text.Length == 0)
+                {
+                    textBox16.Text = "0";
+                }
                 double other = double.Parse(textBox16.Text.ToString());
                 double taxableIncome = list[15].TaxableIncome(basicPay,other, 0);
                 double taxExtempted = TaxExemptCal(other, taxableIncome);
+
+                label55.ForeColor = Color.Black;
+                label72.ForeColor = Color.Black;
 
                 label55.Text = "" + taxExtempted;
                 label72.Text = "" + taxableIncome;
@@ -465,15 +881,15 @@ namespace Tax_Calculator
 
                 // net taxable income from salary
                 label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = totalTaxExtempted.ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
-                label73.Text = netTaxableIncome.ToString();
+                label73.Text = CalNetTaxableIncome().ToString();
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            else
+            {
+                label55.ForeColor = Color.Red;
+                label72.ForeColor = Color.Red;
+            }
         }
 
         private void label90_Click(object sender, EventArgs e)
@@ -496,7 +912,14 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox17.Text.Length == 0)
+                {
+                    textBox17.Text = "0";
+                }
                 annualRentalIncome = Double.Parse(textBox17.Text.ToString());
+
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
+                label91.Text = netRentalIncome.ToString();
 
                 textBox18.Focus();
             }
@@ -506,10 +929,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                repair = Double.Parse(textBox18.Text.ToString());
-
-                totalClaimedExpense += repair;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox18.Text.Length == 0)
+                {
+                    textBox18.Text = "0";
+                }
+                               
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -522,10 +947,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                municipalTax = Double.Parse(textBox19.Text.ToString());
-
-                totalClaimedExpense += municipalTax;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox19.Text.Length == 0)
+                {
+                    textBox19.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -538,10 +965,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                landRevenue = Double.Parse(textBox20.Text.ToString());
-
-                totalClaimedExpense += landRevenue;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox20.Text.Length == 0)
+                {
+                    textBox20.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -554,10 +983,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                interestOnLoan = Double.Parse(textBox21.Text.ToString());
-
-                totalClaimedExpense += interestOnLoan;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox21.Text.Length == 0)
+                {
+                    textBox21.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -570,10 +1001,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                insurancePremium = Double.Parse(textBox22.Text.ToString());
-
-                totalClaimedExpense += insurancePremium;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox22.Text.Length == 0)
+                {
+                    textBox22.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -586,10 +1019,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                vacancyAllowance = Double.Parse(textBox23.Text.ToString());
-
-                totalClaimedExpense += vacancyAllowance;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox23.Text.Length == 0)
+                {
+                    textBox23.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -602,10 +1037,12 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                other = Double.Parse(textBox24.Text.ToString());
-
-                totalClaimedExpense += other;
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+                if (textBox24.Text.Length == 0)
+                {
+                    textBox24.Text = "0";
+                }
+                
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
 
                 label90.Text = totalClaimedExpense.ToString();
                 label91.Text = netRentalIncome.ToString();
@@ -613,6 +1050,7 @@ namespace Tax_Calculator
             }
         }
 
+<<<<<<< HEAD
         private void label62_Click(object sender, EventArgs e)
         {
 
@@ -1252,6 +1690,344 @@ namespace Tax_Calculator
             pdfInputs1[50] = label72.Text.ToString();  
             pdfInputs1[51] = label73.Text.ToString();  
 
+=======
+        
+        
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox17_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox18_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox19_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox20_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox24_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+>>>>>>> cdb4a9a320aa7a2f8e4b359e4cfb64e6358f39b5
         }
     }
 }
