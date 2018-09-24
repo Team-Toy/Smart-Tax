@@ -13,12 +13,11 @@ namespace Tax_Calculator
     
     public partial class Form1_Personal_info : Form
     {
-
         public Form1_Personal_info()
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
             
@@ -30,7 +29,5 @@ namespace Tax_Calculator
             f.Show();
             
         }
-
-
     }
 }
