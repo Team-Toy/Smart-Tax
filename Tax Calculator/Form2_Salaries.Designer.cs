@@ -1284,6 +1284,7 @@
             this.textBox24.Size = new System.Drawing.Size(125, 20);
             this.textBox24.TabIndex = 285;
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
+            this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox24_KeyPress);
             // 
             // textBox23
             // 
@@ -1292,6 +1293,7 @@
             this.textBox23.Size = new System.Drawing.Size(125, 20);
             this.textBox23.TabIndex = 284;
             this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
+            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // textBox22
             // 
@@ -1300,6 +1302,7 @@
             this.textBox22.Size = new System.Drawing.Size(125, 20);
             this.textBox22.TabIndex = 283;
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
+            this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox22_KeyPress);
             // 
             // textBox21
             // 
