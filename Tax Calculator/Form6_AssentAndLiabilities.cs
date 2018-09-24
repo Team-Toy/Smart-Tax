@@ -9,15 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using iTextSharp.text;
-using iTextSharp.text.pdf; 
-using System.Reflection;
+using iTextSharp.text.pdf;
 
 namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
         /** The original PDF file. */
-        public static string oldFile = Application.StartupPath + @"\File\income tax.pdf";
+        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
 
         public static string[] pdfInputs;
 
