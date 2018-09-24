@@ -547,9 +547,6 @@ namespace Tax_Calculator
                 //open the reader
                 PdfReader reader = new PdfReader(oldFile);
 
-
-                
-
                 PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
                 //Gets a PdfContentByte to write over the page of the original document. here page=1
 
@@ -567,7 +564,8 @@ namespace Tax_Calculator
 
                 pdfWrite_Form2(ref stamper, ref reader);
                 pdfWrite_Form3(ref stamper, ref reader);
-
+                pdfWrite_Form5(ref stamper, ref reader);
+                pdfWrite_Form4(ref stamper, ref reader);
 
                 stamper.Close();
                
@@ -577,7 +575,6 @@ namespace Tax_Calculator
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
-
             int pageNo = 3;     //page = 3 is Salaries form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
             Form2_HelperFunction(ref canvas,ref reader);        
@@ -586,16 +583,30 @@ namespace Tax_Calculator
 
         private void pdfWrite_Form3(ref PdfStamper stamper, ref PdfReader reader)
         {
-            //setting-up the X and Y coordinates of the document
-            float x = 424;  //by default x increment left-right for investment form
-            float y = 99;      //define vertically staring =99
-
             int pageNo = 4;     //page = 4 is investment form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            //print "investment tax  credit"
+            Form3_HelperFunction1(ref canvas, ref reader);
+            //print "list of documents furnished"
+            Form3_HelperFunction2(ref canvas, ref reader);
 
-            Form3_HelperFunction1(ref canvas, ref reader, x, y);
+        }
 
-            Form3_HelperFunction2(ref canvas, ref reader, x, y);
+        private void pdfWrite_Form5(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            int pageNo = 7;     //page = 7 is Expense form
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            //print "Expense" form
+            Form5_HelperFunction(ref canvas, ref reader);
+
+        }
+        private void pdfWrite_Form4(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            int pageNo = 2;     //page = 2 is "statement of income" form
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            //print "Expense" form
+            Form4_HelperFunction(ref canvas, ref reader);
+
         }
         //testing purpose
         private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
@@ -671,38 +682,121 @@ namespace Tax_Calculator
 
         }
 
-        private void Form3_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader, float x, float y)
+        private void Form3_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader)
         {
+            //setting-up the X and Y coordinates of the document
+            float x = 424;  //by default x increment left-right for investment form
+            float y = 99;      //define vertically staring =99
+
             int length = Form3_InvestmentTaxCredit.pdfInputs.Length;
-            for (int i = 0; i < length; i++)
+            //printing "investment tax credit"
+            for (int i = 0; i < 11; i++)
             {
-                string s = Form2_Salaries.pdfInputs1[i];
-                if (i == 3 || i == 4 || i == 6)
+                string s = Form3_InvestmentTaxCredit.pdfInputs[i];
+                if (i == 3)
                 {
-                    y += 33;    //some lines shift down
+                    y += 13;    //some lines shift down
 
                 }
+                if (i == 4 || i == 6)
+                {
+                    y += 15;    //some lines shift down
+                }
                 WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from basicPay to "employer's contribution to recongnized provident fund"
-                y += 17;    //one line shit down     ......................testing      
+                y += 17;     
+            }
+
+          
+            
+        }
+        private void Form3_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 78;   //by default x coordinate for "investment form"
+            float y = 437;  //by default y increment top-down for "investment form"
+
+            // printing "list of document furnished" from 1-5
+            for (int i = 11; i < 16; i++)
+            {
+                string s = Form3_InvestmentTaxCredit.pdfInputs[i];
+                
+
+                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 1-5"
+                y += 66;    //some lines shift down
+            }
+
+            x = 321;
+            y = 435;
+            int length = Form3_InvestmentTaxCredit.pdfInputs.Length;
+            //print from "document 6-10" in "investment tax credit" form
+            for (int i = 16; i < length; i++)
+            {
+                string s = Form3_InvestmentTaxCredit.pdfInputs[i];
+
+                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 6-7"
+                y += 66;    //some lines shit down
             }
         }
-        private void Form3_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader, float x, float y)
-        {
 
+        private void Form5_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 343;   //by default x coordinate for "Expenses form"
+            float y = 197;  //by default y increment top-down for "Expenses form"
+
+            int length = Form5_Expenses.pdfInputs.Length;
+            // printing "list of Expenses" entry
+            for (int i = 0; i < length; i++)
+            {
+                string s = Form5_Expenses.pdfInputs[i];
+
+                WriteStringOnPdf(ref canvas, ref reader, 7, s, x, y);   //print all entry "Expenses"
+                y += 20;    //some lines shift down
+            }
         }
 
+        private void Form4_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 453;   //by default x coordinate for "statement of income form"
+            float y = 116;  //by default y increment top-down for "statement of income form"
+
+            int length = Form4_SatementOfSalary.pdfInputs.Length;
+            // printing "statement of income" entry
+            for (int i = 0; i < 18; i++)
+            {
+                string s = Form4_SatementOfSalary.pdfInputs[i];
+                if(i==15 ||i==16 || i==17 )
+                {
+                    y += 11;
+                }
+         
+                WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "statement of income"
+                y += 17;    //one lines shift down
+            }
+            y += 8;
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[18], x, y);   //print all entry "statement of income"
+            y += 25;    //some lines shift down
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[19], x, y);
+            y += 22;    //some lines shift down
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[20], x, y);
+            y += 17;    //one lines shift down
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);
+            y += 17;    //one lines shift down
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);
+
+        }
         //write a single string on existing pdf file 
         private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
         {             
             var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
 
             //making the y to increment top-Down
-
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
             //defining Arial font with font_size=8 
             iTextSharp.text.Font font = FontFactory.GetFont("Arial", 8);
             Phrase p = new Phrase(s,font);          
-
+            
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
         }
 

@@ -374,23 +374,23 @@ namespace Tax_Calculator
             pdfInputs[7] = textBox8.Text.ToString();   //Capital Gains
             pdfInputs[8] = textBox9.Text.ToString();   //Income from other source
             pdfInputs[9] = label39.Text.ToString();   //total
-            pdfInputs[11] = textBox10.Text.ToString();  //Foreign Income 
 
-            pdfInputs[12] = label40.Text.ToString();  //Total income ( serial 10 and 11)
-            pdfInputs[13] = label41.Text.ToString();  //TAX Leviable on Total Income
-            pdfInputs[14] = label42.Text.ToString();  //Tax Rebate
+            pdfInputs[10] = textBox10.Text.ToString();  //Foreign Income 
 
-            pdfInputs[15] = label43.Text.ToString();  //Tax Payable( Difference between serial 13 and 14)
-            pdfInputs[16] = textBox11.Text.ToString();  //a) Tax deducted at source
-            pdfInputs[17] = textBox12.Text.ToString();  //b) advance tax as per challan
-            pdfInputs[18] = textBox13.Text.ToString();  //c) Tax paid on the basis of this return
-            pdfInputs[19] = textBox14.Text.ToString();  //d) Adjustment of tax refund (If any)
+            pdfInputs[11] = label40.Text.ToString();  //Total income ( serial 10 and 11)
+            pdfInputs[12] = label41.Text.ToString();  //TAX Leviable on Total Income
+            pdfInputs[13] = label42.Text.ToString();  //Tax Rebate
+
+            pdfInputs[14] = label43.Text.ToString();  //Tax Payable( Difference between serial 13 and 14)
+            pdfInputs[15] = textBox11.Text.ToString();  //a) Tax deducted at source
+            pdfInputs[16] = textBox12.Text.ToString();  //b) advance tax as per challan
+            pdfInputs[17] = textBox13.Text.ToString();  //c) Tax paid on the basis of this return
+            pdfInputs[18] = textBox14.Text.ToString();  //d) Adjustment of tax refund (If any)
        
-
-            pdfInputs[20] = label55.Text.ToString();  //Total ( a + b + c + d )  
-            pdfInputs[21] = label50.Text.ToString();  //Difference between 15 and 16 (if any)
-            pdfInputs[22] = label52.Text.ToString();  //Tax exempted and tax free income
-           // pdfInputs[22] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
+            pdfInputs[19] = label55.Text.ToString();  //Total ( a + b + c + d )  
+            pdfInputs[20] = label50.Text.ToString();  //Difference between 15 and 16 (if any)
+            pdfInputs[21] = label52.Text.ToString();  //Tax exempted and tax free income
+            pdfInputs[22] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
         }
 
         private void button2_Click(object sender, EventArgs e)

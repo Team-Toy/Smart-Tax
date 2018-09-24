@@ -230,9 +230,10 @@ namespace Tax_Calculator
             pdfInputs[5] = textBox6.Text.ToString();   //Wasa Bill for residence
             pdfInputs[6] = textBox7.Text.ToString();   //Gas Bill for residence
             pdfInputs[7] = textBox8.Text.ToString();   //Telephone Bill for residence
-            pdfInputs[8] = textBox9.Text.ToString();   //Personal expenses for Foreign travel
-            pdfInputs[9] = textBox10.Text.ToString();   //Festival and other special expenses, if any
-            pdfInputs[10] = label13.Text.ToString();  //Total Expenditure
+            pdfInputs[8] = textBox9.Text.ToString();   //Education expenses for foreign travel
+            pdfInputs[9] = textBox10.Text.ToString();   //Personal expenses for Foreign travel
+            pdfInputs[10] = textBox11.Text.ToString();   //Festival and other special expenses, if any
+            pdfInputs[11] = label13.Text.ToString();    //Total Expenditure
         }
 
         private void button1_Click(object sender, EventArgs e)
