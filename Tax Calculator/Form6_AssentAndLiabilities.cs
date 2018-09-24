@@ -16,7 +16,7 @@ namespace Tax_Calculator
     public partial class Form6_AssentAndLiabilities : Form
     {
         /** The original PDF file. */
-        public static string oldFile = Application.StartupPath + @"\File\income tax.pdf";
+        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
 
         public static string[] pdfInputs;
 
