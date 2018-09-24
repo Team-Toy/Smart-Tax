@@ -582,36 +582,75 @@ namespace Tax_Calculator
             int pageNo = 3;
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
 
-            HelperFunction(ref canvas,ref reader);
-        }
-
-        //testing purpose
-        private void HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
-        {
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
             float y = 170;
+            int starIndex = 0;
+            int endIndex = 18;
+            Form2_HelperFunction1(ref canvas,ref reader, x,y, starIndex, endIndex);
+
+            x += 103;   //x coordinate right shift(column)
+            starIndex =endIndex;
+            endIndex += endIndex;
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex,  endIndex);
+
+            x += 103;   //x coordinate right shift(column)
+            starIndex = 36;
+            endIndex = 54;
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
+
+            Form2_HelperFunction2(ref canvas, ref reader);
+
+        }
+
+        private void Form2_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
+        {
             int pageNo = 3;
-            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3
-
-           // y = pageSize3.Height - (2 * y )+ 110; 
-
-            float tempY = y;
-            for (int i = 0 ; i < 13; i++)
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0], 71, 593);    //location and description of property
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[1], 469, 593);   //print annual rental income
+            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3   
+            float x = 374;
+            float tempY = 627;
+            for (int i=2 ; i < 9; i++)
             {
                 string s = Form2_Salaries.pdfInputs1[i];
+                if (i == 6)
+                {
+                    tempY += 8;    //one line shit down
+
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
+                tempY += 17;    //one line shit down           
+            }
+
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.pdfInputs2[9], 469, tempY);
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY+17);
+        }
+        //testing purpose
+        private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader,float x,float y, int startIndex, int endIndex)
+        {           
+            int pageNo = 3;
+            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3 
+
+            float tempY = y;
+            for ( ; startIndex < endIndex- 5; startIndex++)
+            {
+                string s = Form2_Salaries.pdfInputs1[startIndex];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo,s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
                 tempY += 17;
             }
             tempY += 17;    //one line shift down
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[13], x, tempY);  //print interest accrued on recoginzed provient fund
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[startIndex], x, tempY);  //print interest accrued on recoginzed provient fund
             tempY += 17*2;  // two line shift down
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[14], x, tempY);     //print deemed income for transport facility
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[15], x, tempY + 17); //print deemed income for free furnished/unfurnished accommodation
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);     //print deemed income for transport facility
+            tempY += 17;    //one line shift down
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY); //print deemed income for free furnished/unfurnished accommodation
             tempY += 17 * 2;    // two line shift down
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[16], x, tempY);  //print other, if any
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print other, if any
             tempY += 17;    ////one line shift down
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[17], x, tempY);  //print net taxable income from salary
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print net taxable income from salary
+
         }
 
         //write a single string on existing pdf file 
