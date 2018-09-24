@@ -596,8 +596,36 @@ namespace Tax_Calculator
         {
             int pageNo = 7;     //page = 7 is Expense form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", 185, 141); //print "Name of Assessee"
+
+            float tempX = 342;  //set "TIN" number positon x=342 , y =142
+            for(int i=0; i<10; i++)
+            {
+                if(i==3 || tempX==7)
+                {
+                    tempX += 18 * 2;    // two times shift right-hand-side box
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", tempX, 142);
+                tempX += 18;    // shift right hand side box
+            }
             //print "Expense" form
             Form5_HelperFunction(ref canvas, ref reader);
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", 184, 642); //print "name of assessee" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Assessment year", 467, 642); //print "Assessment year" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Circle", 390, 677); //print "Circle" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Taxes Zone", 491, 680); //print "Taxes Zone" in Receipt of income tax return
+
+            float tempX1 = 140;  //set "TIN" number positon x=140 , y =680
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 3 || tempX1 == 7)
+                {
+                    tempX1 += 15 * 2;    // two times shift right-hand-side box
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", tempX1, 680);
+                tempX1 += 15;    // shift right hand side box
+            }
 
         }
         private void pdfWrite_Form4(ref PdfStamper stamper, ref PdfReader reader)
