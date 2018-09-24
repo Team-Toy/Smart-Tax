@@ -10,13 +10,15 @@ using System.Windows.Forms;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Reflection;
 
 namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
         /** The original PDF file. */
-        public static string oldFile = "C:\\Users\\ACM-Bimal\\Desktop Projects\\tax-calculator\\income tax.pdf";
+        //Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Names.txt");
+        public static string oldFile = Application.StartupPath + @"\File\income tax.pdf";
 
         public static string[] pdfInputs;
 
@@ -580,7 +582,8 @@ namespace Tax_Calculator
             PdfContentByte canvas = stamper.GetOverContent(3);
             //testing
             float x = 273;  //by default x increment left-right
-            float y = 173;  //initial y value for salary column
+                            // float y = 173;  //initial y value for salary column
+            float y = 325;
 
             WriteStringOnPdf(ref canvas, ref reader, 3, "testing on", x, y);
             y += 17;
