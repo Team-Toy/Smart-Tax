@@ -1448,51 +1448,51 @@ namespace Tax_Calculator
             pdfInputs1[11] = textBox11.Text.ToString();  //Other Allowances
             pdfInputs1[12] = textBox12.Text.ToString();  //Employees contributions to recognized Provdent Fund
             pdfInputs1[13] = textBox13.Text.ToString();  //Interest accrued on Recognized provident fund
-            pdfInputs1[14] = comboBox3.Text;  //Deemed income for transport facility "yes" or "No"
+            pdfInputs1[14] = comboBox3.Text;             //Deemed income for transport facility "yes" or "No"
             pdfInputs1[15] = textBox15.Text.ToString();  //Deemed income for furnished /unfurnished accomodation
             pdfInputs1[16] = textBox16.Text.ToString();  //Other ( if any)
-            pdfInputs1[17] = textBox17.Text.ToString();  //Net taxable income from salary
+            pdfInputs1[17] = label39.Text.ToString();   //Net taxable income from salary
 
-            pdfInputs1[18] = label39.Text.ToString();
-           
+
             //non-taxable incomes
-            pdfInputs1[19] = label40.Text.ToString();
-            pdfInputs1[20] = label41.Text.ToString();
-            pdfInputs1[21] = label42.Text.ToString();
-            pdfInputs1[22] = label43.Text.ToString();
-            pdfInputs1[23] = label44.Text.ToString();
-            pdfInputs1[24] = label45.Text.ToString();
-            pdfInputs1[25] = label46.Text.ToString();
-            pdfInputs1[26] = label92.Text.ToString();       //Leave allowance for nontaxable
-            pdfInputs1[27] = label47.Text.ToString();
-            pdfInputs1[28] = label48.Text.ToString();
-            pdfInputs1[29] = label49.Text.ToString();
-            pdfInputs1[30] = label50.Text.ToString();
-            pdfInputs1[31] = label51.Text.ToString();
-            pdfInputs1[32] = label52.Text.ToString();
-            pdfInputs1[33] = label53.Text.ToString();
-            pdfInputs1[34] = label54.Text.ToString();
-            pdfInputs1[35] = label55.Text.ToString();
-            pdfInputs1[36] = label56.Text.ToString();
+            pdfInputs1[18] = label40.Text.ToString();
+            pdfInputs1[19] = label41.Text.ToString();
+            pdfInputs1[20] = label42.Text.ToString();
+            pdfInputs1[21] = label43.Text.ToString();
+            pdfInputs1[22] = label44.Text.ToString();
+            pdfInputs1[23] = label45.Text.ToString();
+            pdfInputs1[24] = label46.Text.ToString();
+            pdfInputs1[25] = label92.Text.ToString();       //Leave allowance for nontaxable
+            pdfInputs1[26] = label47.Text.ToString();
+            pdfInputs1[27] = label48.Text.ToString();
+            pdfInputs1[28] = label49.Text.ToString();
+            pdfInputs1[29] = label50.Text.ToString();
+            pdfInputs1[30] = label51.Text.ToString();
+            pdfInputs1[31] = label52.Text.ToString();
+            pdfInputs1[32] = label53.Text.ToString();
+            pdfInputs1[33] = label54.Text.ToString();
+            pdfInputs1[34] = label55.Text.ToString();
+            pdfInputs1[35] = label56.Text.ToString();
 
             //taxable incomes
-            pdfInputs1[37] = label57.Text.ToString();
-            pdfInputs1[38] = label58.Text.ToString();
-            pdfInputs1[39] = label59.Text.ToString();
-            pdfInputs1[40] = label60.Text.ToString();
-            pdfInputs1[41] = label61.Text.ToString();
-            pdfInputs1[42] = label62.Text.ToString();
-            pdfInputs1[43] = label63.Text.ToString();
-            pdfInputs1[44] = label93.Text.ToString();
-            pdfInputs1[45] = label64.Text.ToString();
-            pdfInputs1[46] = label65.Text.ToString();
-            pdfInputs1[47] = label66.Text.ToString();
-            pdfInputs1[48] = label67.Text.ToString();
-            pdfInputs1[49] = label68.Text.ToString();
-            pdfInputs1[50] = label69.Text.ToString();
-            pdfInputs1[51] = label70.Text.ToString();
-            pdfInputs1[52] = label71.Text.ToString();
-            pdfInputs1[53] = label72.Text.ToString();
+            pdfInputs1[36] = label57.Text.ToString();
+            pdfInputs1[37] = label58.Text.ToString();
+            pdfInputs1[38] = label59.Text.ToString();
+            pdfInputs1[39] = label60.Text.ToString();
+            pdfInputs1[40] = label61.Text.ToString();
+            pdfInputs1[41] = label62.Text.ToString();
+            pdfInputs1[42] = label63.Text.ToString();
+            pdfInputs1[43] = label93.Text.ToString();
+            pdfInputs1[44] = label64.Text.ToString();
+            pdfInputs1[45] = label65.Text.ToString();
+            pdfInputs1[46] = label66.Text.ToString();
+            pdfInputs1[47] = label67.Text.ToString();
+            pdfInputs1[48] = label68.Text.ToString();
+            pdfInputs1[49] = label69.Text.ToString();
+            pdfInputs1[50] = label70.Text.ToString();
+            pdfInputs1[51] = label71.Text.ToString();
+            pdfInputs1[52] = label72.Text.ToString();
+            pdfInputs1[53] = label73.Text.ToString();
 
             //House rent property
             pdfInputs2[0] = richTextBox1.Text.ToString();      

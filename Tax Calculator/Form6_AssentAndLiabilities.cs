@@ -543,47 +543,12 @@ namespace Tax_Calculator
                 
                  canvas = stamper.GetOverContent(3);
                 //setting-up the X and Y coordinates of the document
-                float x = 273;  //by default x increment left-right
-                float y = 170;//173;// +274;
+               
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
-                var pageSize2 = reader.GetPageSize(2);   //getting page size by giving page number=2
-                var pageSize3 = reader.GetPageSize(3);   //getting page size by giving page number=3
+                                                        // var pageSize2 = reader.GetPageSize(2);   //getting page size by giving page number=2
+                //iTextSharp.text.Font font = 4;
 
-               y = pageSize3.Height - (2*y + 110); //making the y to increment top-Down
-
-                float tempY = y;
-                for (int i=0 ; i< 17; i++)
-                {
-                    Phrase p = new Phrase();
-                    string s = Form2_Salaries.pdfInputs1[i];
-                    p.Add(s);
-                    
-                    ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT,p, x, tempY, 0);
-                    tempY += 17;
-                }
-            
-                tempY =y;
-            for (int i = 17; i < 34; i++)
-            {
-                Phrase p = new Phrase();
-                string s = Form2_Salaries.pdfInputs1[i];
-                p.Add(s);
-
-                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x+102, tempY, 0);
-                tempY += 17;
-            }
-
-                tempY = y ;
-            for (int i = 34; i < 54; i++)
-            {
-                Phrase p = new Phrase();
-                string s = Form2_Salaries.pdfInputs1[i];
-                p.Add(s);
-
-                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x+204, tempY, 0);
-               tempY += 17;
-            }
-
+                pdfWrite_Form2(ref stamper, ref reader);
 
 
 
@@ -593,23 +558,34 @@ namespace Tax_Calculator
 
            
         }
-        private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader, iTextSharp.text.Font font)
+        private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
-            PdfContentByte canvas = stamper.GetOverContent(1);
-            HelperFunction(ref canvas,ref reader);
+            PdfContentByte canvas = stamper.GetOverContent(3);
+            //testing
+            float x = 273;  //by default x increment left-right
+            float y = 173;  //initial y value for salary column
+
+            WriteStringOnPdf(ref canvas, ref reader, 3, "testing on", x, y);
+            y += 17;
+            WriteStringOnPdf(ref canvas, ref reader, 3, "testing on 2", x, y);
+           
+
+            //HelperFunction(ref canvas,ref reader);
         }
+
+        //testing purpose
         private void HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
             float y = 170;
-           
+            
             var pageSize3 = reader.GetPageSize(3);   //getting page size by giving page number=3
 
-            y = pageSize3.Height - (2 * y + 110); //making the y to increment top-Down
+           // y = pageSize3.Height - (2 * y )+ 110; //making the y to increment top-Down
 
             float tempY = y;
-            for (int i = 0; i < 14; i++)
+            for (int i = 0; i < 13; i++)
             {
                 Phrase p = new Phrase();
                 string s = Form2_Salaries.pdfInputs1[i];
@@ -618,27 +594,41 @@ namespace Tax_Calculator
                 tempY += 17;
             }
             Phrase p1 = new Phrase();
-            string s1 = Form2_Salaries.pdfInputs1[14];
+            string s1 = Form2_Salaries.pdfInputs1[13];
             p1.Add(s1);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p1, x, pageSize3.Height-(2*412) +110, 0);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p1, x, pageSize3.Height-(2*420) +110, 0);
             
 
             Phrase p2 = new Phrase();
-            string s2 = Form2_Salaries.pdfInputs1[15];
+            string s2 = Form2_Salaries.pdfInputs1[14];
             p2.Add(s2);
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p2, x, pageSize3.Height - (2 * 443) + 110, 0);
 
             Phrase p3 = new Phrase();
-            string s3 = Form2_Salaries.pdfInputs1[16];
-            p2.Add(s3);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 462) + 110, 0);
+            string s3 = Form2_Salaries.pdfInputs1[15];
+            p3.Add(s3);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 469) + 110, 0);
 
             Phrase p4 = new Phrase();
-            string s4 = Form2_Salaries.pdfInputs1[17];
-            p2.Add(s4);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 494) + 110, 0);
+            string s4 = Form2_Salaries.pdfInputs1[16];
+            p4.Add(s4);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p4, x, pageSize3.Height - (2 * 493) + 110, 0);
+
+            Phrase p5 = new Phrase();
+            string s5 = Form2_Salaries.pdfInputs1[17];
+            p5.Add(s5);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p5, x, pageSize3.Height - (2 * 511) + 110, 0);
 
 
+        }
+
+        //write a single string on existing pdf file 
+        private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
+        {
+            var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
+            posY = pageSize.Height - posY - 3;  //posY = position token from gimp
+            Phrase p = new Phrase(s);          
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
