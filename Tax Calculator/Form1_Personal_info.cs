@@ -13,21 +13,47 @@ namespace Tax_Calculator
     
     public partial class Form1_Personal_info : Form
     {
+        public static string[] pdfInputs;
+
         public Form1_Personal_info()
         {
             InitializeComponent();
+            pdfInputs = new string[15];
         }
         
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
             
         }
-
+        private void UserInputs_PersonInformation()
+        {
+            pdfInputs[0] = textBox1.Text.ToString();   // Name
+            pdfInputs[1] = textBox2.Text.ToString();   // National ID
+            pdfInputs[2] = textBox3.Text.ToString();   // UTIN
+            pdfInputs[3] = textBox4.Text.ToString();   // TIN
+            pdfInputs[4] = textBox5.Text.ToString();   // Circle
+            pdfInputs[5] = textBox6.Text.ToString();   // taxes zone
+            pdfInputs[6] = textBox7.Text.ToString();   // Assessment year
+            pdfInputs[7] = textBox8.Text.ToString();   // Name of employer
+            pdfInputs[8] = textBox9.Text.ToString();   // Wife/husband name
+            pdfInputs[9] = textBox10.Text.ToString();   // Father name
+            pdfInputs[10] = textBox11.Text.ToString();   // Mother name
+            pdfInputs[11] = dateTimePicker1.Text.ToString();  // Date of birth
+            pdfInputs[12] = textBox12.Text.ToString();  // Present address
+            pdfInputs[13] = textBox13.Text.ToString();  // Permanent address
+            pdfInputs[14] = textBox14.Text.ToString();  // Office telephone
+            pdfInputs[15] = textBox15.Text.ToString();  // Resident telephone
+            pdfInputs[16] = textBox16.Text.ToString();  // VAT registration number
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            UserInputs_PersonInformation();
+
             Form2_Salaries f = new Form2_Salaries();
-            f.Show();
+            f.ShowDialog();
             
         }
+
+        
     }
 }
