@@ -152,9 +152,6 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1068,9 +1065,6 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label97);
-            this.panel1.Controls.Add(this.label96);
-            this.panel1.Controls.Add(this.label95);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label94);
             this.panel1.Controls.Add(this.label93);
@@ -1290,6 +1284,7 @@
             this.textBox24.Size = new System.Drawing.Size(125, 20);
             this.textBox24.TabIndex = 285;
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
+            this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox24_KeyPress);
             // 
             // textBox23
             // 
@@ -1298,6 +1293,7 @@
             this.textBox23.Size = new System.Drawing.Size(125, 20);
             this.textBox23.TabIndex = 284;
             this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
+            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // textBox22
             // 
@@ -1306,6 +1302,7 @@
             this.textBox22.Size = new System.Drawing.Size(125, 20);
             this.textBox22.TabIndex = 283;
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
+            this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox22_KeyPress);
             // 
             // textBox21
             // 
@@ -1502,6 +1499,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Original Rent",
@@ -1542,6 +1540,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Normal",
@@ -1560,33 +1559,6 @@
             this.label75.Size = new System.Drawing.Size(504, 32);
             this.label75.TabIndex = 262;
             this.label75.Text = "Schedules Showing Details of Income";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(207, 367);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(41, 13);
-            this.label95.TabIndex = 294;
-            this.label95.Text = "label95";
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(590, 367);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(41, 13);
-            this.label96.TabIndex = 295;
-            this.label96.Text = "label96";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(742, 366);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(41, 13);
-            this.label97.TabIndex = 296;
-            this.label97.Text = "label97";
             // 
             // Form2_Salaries
             // 
@@ -1732,8 +1704,5 @@
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label95;
     }
 }

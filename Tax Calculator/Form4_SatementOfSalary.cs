@@ -37,7 +37,7 @@ namespace Tax_Calculator
             //taking total taxable exempted income and showing in label52
             label52.Text = Form2_Salaries.totalTaxExtempted.ToString();
 
-            totalTaxableIncome += Form2_Salaries.netTaxableIncome;
+            
 
 
             label39.Text = "0";
@@ -62,7 +62,23 @@ namespace Tax_Calculator
             textBox15.Text = "0";
 
         }
+        
+        private double CalTotalTaxableIncome()
+        {
+            return totalTaxableIncome = Form2_Salaries.netTaxableIncome +
+                                        double.Parse(textBox2.Text.ToString()) +
+                                        double.Parse(textBox3.Text.ToString()) +
+                                        double.Parse(textBox4.Text.ToString()) +
+                                        double.Parse(textBox5.Text.ToString()) +
+                                        double.Parse(textBox6.Text.ToString()) +
+                                        double.Parse(textBox7.Text.ToString()) +
+                                        double.Parse(textBox8.Text.ToString()) +
+                                        double.Parse(textBox9.Text.ToString()) +
+                                        double.Parse(textBox10.Text.ToString());
 
+
+            
+        }
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -71,10 +87,10 @@ namespace Tax_Calculator
                 {
                     textBox2.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox2.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "income from house property" text field
                 textBox3.Focus();
             }
@@ -88,10 +104,10 @@ namespace Tax_Calculator
                 {
                     textBox3.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox3.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "agricultural income" text field
                 textBox4.Focus();
             }
@@ -105,10 +121,10 @@ namespace Tax_Calculator
                 {
                     textBox4.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox4.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "Income from Business or profession" text field
                 textBox5.Focus();
             }
@@ -122,10 +138,10 @@ namespace Tax_Calculator
                 {
                     textBox5.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox5.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "Share of proft in a firm" text field
                 textBox6.Focus();
             }
@@ -139,10 +155,10 @@ namespace Tax_Calculator
                 {
                     textBox6.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox6.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "Income of spouse or minor child as applicable" text field
                 textBox7.Focus();
             }
@@ -156,10 +172,10 @@ namespace Tax_Calculator
                 {
                     textBox7.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox7.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "Capital Gains" text field
                 textBox8.Focus();
             }
@@ -173,10 +189,10 @@ namespace Tax_Calculator
                 {
                     textBox8.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox8.Text.ToString());
-                //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                double total = CalTotalTaxableIncome();
+
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "Income from other source" text field
                 textBox9.Focus();
             }
@@ -190,10 +206,10 @@ namespace Tax_Calculator
                 {
                     textBox9.Text = "0";
                 }
-                totalTaxableIncome += double.Parse(textBox9.Text.ToString());
+                double total = CalTotalTaxableIncome();
                 //
-                label39.Text = totalTaxableIncome.ToString();
-                label40.Text = totalTaxableIncome.ToString();
+                label39.Text = total.ToString();
+                label40.Text = total.ToString();
                 //focusing "foreign income" text field
                 textBox10.Focus();
             }
@@ -207,13 +223,11 @@ namespace Tax_Calculator
                 {
                     textBox10.Text = "0";
                 }
-                foreignIncome += double.Parse(textBox10.Text.ToString());
 
-                //totalTaxableIncome = total + foreignIncome
-                totalTaxableIncome += foreignIncome;
-
+                double totalIncome = CalTotalTaxableIncome();
+             
                 //showing total income in labe40
-                label40.Text = totalTaxableIncome.ToString();
+                label40.Text = totalIncome.ToString();
 
                 // showing tax rebate
                 taxRebate = CalTaxRebate();
@@ -232,7 +246,7 @@ namespace Tax_Calculator
         {
             
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
-            double taxRebate = 0.0;
+            double taxRebate = 0;
 
             // see tax book page-29, assessment year(2018-2019)
             if(totalTaxableIncome <= 1000000.00)
@@ -269,13 +283,23 @@ namespace Tax_Calculator
             taxPayable = Math.Abs(taxLeviable - taxRebate);
             label43.Text = taxPayable.ToString();
         }
+        private double totalTaxPayments()
+        {
+            return totalTaxPayment = Double.Parse(textBox11.Text.ToString()) +
+                                     Double.Parse(textBox12.Text.ToString()) +
+                                     Double.Parse(textBox13.Text.ToString()) +
+                                     Double.Parse(textBox14.Text.ToString());
+        }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalTaxPayment += Double.Parse(textBox11.Text.ToString());
-                label55.Text = totalTaxPayment.ToString();
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
+                label55.Text = totalTaxPayments().ToString();
 
                 textBox12.Focus();
             }
@@ -285,8 +309,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalTaxPayment += Double.Parse(textBox12.Text.ToString());
-                label55.Text = totalTaxPayment.ToString();
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
+                label55.Text = totalTaxPayments().ToString();
 
                 textBox13.Focus();
             }
@@ -296,8 +323,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalTaxPayment += Double.Parse(textBox13.Text.ToString());
-                label55.Text = totalTaxPayment.ToString();
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
+                label55.Text = totalTaxPayments().ToString();
 
                 textBox14.Focus();
             }
@@ -307,11 +337,16 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                totalTaxPayment += Double.Parse(textBox14.Text.ToString());
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
 
-                label55.Text = totalTaxPayment.ToString();
+                double totalTaxPay = totalTaxPayments();
 
-                double difference = taxPayable - totalTaxPayment;
+                label55.Text = totalTaxPay.ToString();
+
+                double difference = taxPayable - totalTaxPay;
                 label50.Text = difference.ToString();
 
                 textBox15.Focus();

@@ -1430,8 +1430,6 @@ namespace Tax_Calculator
             }
         }
 
-       
-
         private void UserInputs_Salaries()
         {
             pdfInputs1[0] = textBox1.Text.ToString();   //salaries
