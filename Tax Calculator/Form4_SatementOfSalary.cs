@@ -37,11 +37,13 @@ namespace Tax_Calculator
             //taking total taxable exempted income and showing in label52
             label52.Text = Form2_Salaries.totalTaxExtempted.ToString();
 
+
+
             
-
-
-            label39.Text = "0";
-            label40.Text= "0";
+            // showing total and total income
+            label39.Text = CalTotalTaxableIncome().ToString();
+            label40.Text = CalTotalTaxableIncome().ToString();
+            
         }
         public void madeAllTextBoxZero()
         {
