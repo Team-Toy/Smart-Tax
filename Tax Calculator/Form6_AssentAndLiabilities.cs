@@ -565,7 +565,7 @@ namespace Tax_Calculator
                
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
                                                         // var pageSize2 = reader.GetPageSize(2);   //getting page size by giving page number=2
-                //iTextSharp.text.Font font = 4;
+                
 
                 pdfWrite_Form2(ref stamper, ref reader);
 
@@ -585,9 +585,9 @@ namespace Tax_Calculator
                             // float y = 173;  //initial y value for salary column
             float y = 325;
 
-            WriteStringOnPdf(ref canvas, ref reader, 3, "testing on", x, y);
+            WriteStringOnPdf(ref canvas, ref reader, 3, "01234567890123456789", x, y);
             y += 17;
-            WriteStringOnPdf(ref canvas, ref reader, 3, "testing on 2", x, y);
+            WriteStringOnPdf(ref canvas, ref reader, 3,"testing on 56789", x, y);
            
 
             //HelperFunction(ref canvas,ref reader);
@@ -644,10 +644,12 @@ namespace Tax_Calculator
 
         //write a single string on existing pdf file 
         private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
-        {
+        {             
             var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
-            Phrase p = new Phrase(s);          
+            //defining Arial font with font_size=8 
+            iTextSharp.text.Font font = FontFactory.GetFont("Arial", 8);
+            Phrase p = new Phrase(s,font);          
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
         }
 
