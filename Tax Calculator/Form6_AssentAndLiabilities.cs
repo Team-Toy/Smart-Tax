@@ -579,18 +579,10 @@ namespace Tax_Calculator
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
-            PdfContentByte canvas = stamper.GetOverContent(3);
-            //testing
-            float x = 273;  //by default x increment left-right
-                            // float y = 173;  //initial y value for salary column
-            float y = 325;
+            int pageNo = 3;
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
 
-            WriteStringOnPdf(ref canvas, ref reader, 3, "01234567890123456789", x, y);
-            y += 17;
-            WriteStringOnPdf(ref canvas, ref reader, 3,"testing on 56789", x, y);
-           
-
-            //HelperFunction(ref canvas,ref reader);
+            HelperFunction(ref canvas,ref reader);
         }
 
         //testing purpose
@@ -599,53 +591,34 @@ namespace Tax_Calculator
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
             float y = 170;
-            
-            var pageSize3 = reader.GetPageSize(3);   //getting page size by giving page number=3
+            int pageNo = 3;
+            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3
 
-           // y = pageSize3.Height - (2 * y )+ 110; //making the y to increment top-Down
+           // y = pageSize3.Height - (2 * y )+ 110; 
 
             float tempY = y;
-            for (int i = 0; i < 13; i++)
+            for (int i = 0 ; i < 13; i++)
             {
-                Phrase p = new Phrase();
                 string s = Form2_Salaries.pdfInputs1[i];
-                p.Add(s);
-                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, x, tempY, 0);
+                WriteStringOnPdf(ref canvas, ref reader, pageNo,s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
                 tempY += 17;
             }
-            Phrase p1 = new Phrase();
-            string s1 = Form2_Salaries.pdfInputs1[13];
-            p1.Add(s1);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p1, x, pageSize3.Height-(2*420) +110, 0);
-            
-
-            Phrase p2 = new Phrase();
-            string s2 = Form2_Salaries.pdfInputs1[14];
-            p2.Add(s2);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p2, x, pageSize3.Height - (2 * 443) + 110, 0);
-
-            Phrase p3 = new Phrase();
-            string s3 = Form2_Salaries.pdfInputs1[15];
-            p3.Add(s3);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p3, x, pageSize3.Height - (2 * 469) + 110, 0);
-
-            Phrase p4 = new Phrase();
-            string s4 = Form2_Salaries.pdfInputs1[16];
-            p4.Add(s4);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p4, x, pageSize3.Height - (2 * 493) + 110, 0);
-
-            Phrase p5 = new Phrase();
-            string s5 = Form2_Salaries.pdfInputs1[17];
-            p5.Add(s5);
-            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p5, x, pageSize3.Height - (2 * 511) + 110, 0);
-
-
+            tempY += 17;    //one line shift down
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[13], x, tempY);  //print interest accrued on recoginzed provient fund
+            tempY += 17*2;  // two line shift down
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[14], x, tempY);     //print deemed income for transport facility
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[15], x, tempY + 17); //print deemed income for free furnished/unfurnished accommodation
+            tempY += 17 * 2;    // two line shift down
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[16], x, tempY);  //print other, if any
+            tempY += 17;    ////one line shift down
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[17], x, tempY);  //print net taxable income from salary
         }
 
         //write a single string on existing pdf file 
         private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
         {             
             var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
+            //making the y to increment top-Down
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
             //defining Arial font with font_size=8 
             iTextSharp.text.Font font = FontFactory.GetFont("Arial", 8);
