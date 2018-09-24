@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using iTextSharp.text;
-using iTextSharp.text.pdf;
+using iTextSharp.text.pdf; 
 using System.Reflection;
 
 namespace Tax_Calculator
@@ -17,7 +17,6 @@ namespace Tax_Calculator
     public partial class Form6_AssentAndLiabilities : Form
     {
         /** The original PDF file. */
-        //Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Names.txt");
         public static string oldFile = Application.StartupPath + @"\File\income tax.pdf";
 
         public static string[] pdfInputs;
@@ -579,9 +578,15 @@ namespace Tax_Calculator
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
+
             int pageNo = 3;
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            HelperFunction(ref canvas,ref reader);
+        }
 
+        //testing purpose
+        private void HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
             float y = 170;
@@ -657,11 +662,14 @@ namespace Tax_Calculator
         private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
         {             
             var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
+
             //making the y to increment top-Down
+
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
             //defining Arial font with font_size=8 
             iTextSharp.text.Font font = FontFactory.GetFont("Arial", 8);
             Phrase p = new Phrase(s,font);          
+
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
         }
 
