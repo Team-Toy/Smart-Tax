@@ -22,7 +22,7 @@ namespace Tax_Calculator
 
         public static double totalAssets = 0;
         public static double totalInvestments = 0;
-        public static double cashAssets = 0;
+        public static double totalCashAssets = 0;
         public static double totalLiabilities = 0;
         public static double netWealthThisYear = 0;
         public static double netWealthPrevYear = 0;
@@ -79,7 +79,27 @@ namespace Tax_Calculator
             textBox25.Text = "0";
             textBox26.Text = "0";
         }
+        private double CalTotalAssets()
+        {
+            return totalAssets = Double.Parse(textBox1.Text.ToString()) +
+                                 Double.Parse(textBox2.Text.ToString()) +
+                                 Double.Parse(textBox3.Text.ToString()) +
+                                 Double.Parse(textBox4.Text.ToString()) +
+                                 Double.Parse(textBox5.Text.ToString()) +
+                                 Double.Parse(textBox6.Text.ToString()) +
+                                 Double.Parse(textBox7.Text.ToString()) +
+                                 Double.Parse(textBox8.Text.ToString()) +
+                                 Double.Parse(textBox9.Text.ToString()) +
+                                 Double.Parse(textBox10.Text.ToString()) +
+                                 Double.Parse(textBox11.Text.ToString()) +
+                                 Double.Parse(textBox12.Text.ToString()) +
+                                 Double.Parse(textBox13.Text.ToString()) +
+                                 Double.Parse(textBox14.Text.ToString()) +
+                                 Double.Parse(textBox15.Text.ToString()) +
+                                 Double.Parse(textBox16.Text.ToString()) +
+                                 Double.Parse(textBox17.Text.ToString());
 
+        }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -88,8 +108,8 @@ namespace Tax_Calculator
                 {
                     textBox1.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox1.Text.ToString());
-                label10.Text = totalAssets.ToString();
+                
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox2.Focus();
             }
@@ -103,8 +123,8 @@ namespace Tax_Calculator
                 {
                     textBox2.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox2.Text.ToString());
-                label10.Text = totalAssets.ToString();
+                
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox3.Focus();
             }
@@ -118,8 +138,8 @@ namespace Tax_Calculator
                 {
                     textBox3.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox3.Text.ToString());
-                label10.Text = totalAssets.ToString();
+                
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox4.Focus();
             }
@@ -133,13 +153,22 @@ namespace Tax_Calculator
                 {
                     textBox4.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox4.Text.ToString());
-                label10.Text = totalAssets.ToString();
+                
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox5.Focus();
             }
         }
+        private double CalTotalInvestments()
+        {
+            return totalInvestments = Double.Parse(textBox5.Text.ToString()) +
+                                        Double.Parse(textBox6.Text.ToString()) +
+                                        Double.Parse(textBox7.Text.ToString()) +
+                                        Double.Parse(textBox8.Text.ToString()) +
+                                        Double.Parse(textBox9.Text.ToString());
 
+
+        }
         private void textBox5_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -148,11 +177,10 @@ namespace Tax_Calculator
                 {
                     textBox5.Text = "0";
                 }
-                totalInvestments += Double.Parse(textBox5.Text.ToString());
-                totalAssets += totalInvestments;
+                
 
-                label10.Text = totalAssets.ToString();
-                label11.Text = totalInvestments.ToString();
+                label10.Text = CalTotalAssets().ToString();
+                label11.Text = CalTotalInvestments().ToString();
 
                 textBox6.Focus();
             }
@@ -166,11 +194,10 @@ namespace Tax_Calculator
                 {
                     textBox6.Text = "0";
                 }
-                totalInvestments += Double.Parse(textBox6.Text.ToString());
-                totalAssets += totalInvestments;
+                
 
-                label10.Text = totalAssets.ToString();
-                label11.Text = totalInvestments.ToString();
+                label10.Text = CalTotalAssets().ToString();
+                label11.Text = CalTotalInvestments().ToString();
 
                 textBox7.Focus();
             }
@@ -184,11 +211,10 @@ namespace Tax_Calculator
                 {
                     textBox7.Text = "0";
                 }
-                totalInvestments += Double.Parse(textBox7.Text.ToString());
-                totalAssets += totalInvestments;
+               
 
-                label10.Text = totalAssets.ToString();
-                label11.Text = totalInvestments.ToString();
+                label10.Text = CalTotalAssets().ToString();
+                label11.Text = CalTotalInvestments().ToString();
 
                 textBox8.Focus();
             }
@@ -202,11 +228,10 @@ namespace Tax_Calculator
                 {
                     textBox8.Text = "0";
                 }
-                totalInvestments += Double.Parse(textBox8.Text.ToString());
-                totalAssets += totalInvestments;
+                
 
-                label10.Text = totalAssets.ToString();
-                label11.Text = totalInvestments.ToString();
+                label10.Text = CalTotalAssets().ToString();
+                label11.Text = CalTotalInvestments().ToString();
 
                 textBox9.Focus();
             }
@@ -220,11 +245,10 @@ namespace Tax_Calculator
                 {
                     textBox9.Text = "0";
                 }
-                totalInvestments += Double.Parse(textBox9.Text.ToString());
-                totalAssets += totalInvestments;
+               
 
-                label10.Text = totalAssets.ToString();
-                label11.Text = totalInvestments.ToString();
+                label10.Text = CalTotalAssets().ToString();
+                label11.Text = CalTotalInvestments().ToString();
 
                 textBox10.Focus();
             }
@@ -238,9 +262,9 @@ namespace Tax_Calculator
                 {
                     textBox10.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox10.Text.ToString());
+                
 
-                label10.Text = totalAssets.ToString();
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox11.Focus();
             }
@@ -254,9 +278,7 @@ namespace Tax_Calculator
                 {
                     textBox11.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox11.Text.ToString());
-
-                label10.Text = totalAssets.ToString();
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox12.Focus();
             }
@@ -270,9 +292,7 @@ namespace Tax_Calculator
                 {
                     textBox12.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox12.Text.ToString());
-
-                label10.Text = totalAssets.ToString();
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox13.Focus();
             }
@@ -286,12 +306,16 @@ namespace Tax_Calculator
                 {
                     textBox13.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox13.Text.ToString());
-
-                label10.Text = totalAssets.ToString();
+                label10.Text = CalTotalAssets().ToString();
 
                 textBox14.Focus();
             }
+        }
+        private double CalTotalCashAssets()
+        {
+            return totalCashAssets = Double.Parse(textBox14.Text.ToString())+
+                                     Double.Parse(textBox15.Text.ToString())+
+                                     Double.Parse(textBox16.Text.ToString());
         }
 
         private void textBox14_KeyDown(object sender, KeyEventArgs e)
@@ -302,11 +326,9 @@ namespace Tax_Calculator
                 {
                     textBox14.Text = "0";
                 }
-                cashAssets += Double.Parse(textBox14.Text.ToString());
-                totalAssets += cashAssets;
+                label10.Text = CalTotalAssets().ToString();
 
-                label10.Text = totalAssets.ToString();
-                label51.Text = cashAssets.ToString();
+                label51.Text = CalTotalCashAssets().ToString();
 
                 textBox15.Focus();
             }
@@ -321,11 +343,10 @@ namespace Tax_Calculator
                 {
                     textBox15.Text = "0";
                 }
-                cashAssets += Double.Parse(textBox15.Text.ToString());
-                totalAssets += cashAssets;
 
-                label10.Text = totalAssets.ToString();
-                label51.Text = cashAssets.ToString();
+                label10.Text = CalTotalAssets().ToString();
+
+                label51.Text = CalTotalCashAssets().ToString();
 
                 textBox16.Focus();
             }
@@ -339,11 +360,9 @@ namespace Tax_Calculator
                 {
                     textBox16.Text = "0";
                 }
-                cashAssets += Double.Parse(textBox16.Text.ToString());
-                totalAssets += cashAssets;
+                label10.Text = CalTotalAssets().ToString();
 
-                label10.Text = totalAssets.ToString();
-                label51.Text = cashAssets.ToString();
+                label51.Text = CalTotalCashAssets().ToString();
 
                 textBox17.Focus();
             }
@@ -357,15 +376,19 @@ namespace Tax_Calculator
                 {
                     textBox17.Text = "0";
                 }
-                totalAssets += Double.Parse(textBox17.Text.ToString());
+                label10.Text = CalTotalAssets().ToString();
 
-                label10.Text = totalAssets.ToString();
-                
 
                 textBox18.Focus();
             }
         }
-
+        private double CalTotalLiabilities()
+        {
+            return totalLiabilities = Double.Parse(textBox18.Text.ToString()) +
+                                      Double.Parse(textBox19.Text.ToString()) +
+                                      Double.Parse(textBox20.Text.ToString()) +
+                                      Double.Parse(textBox21.Text.ToString());
+        }
         private void textBox18_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -374,9 +397,9 @@ namespace Tax_Calculator
                 {
                     textBox18.Text = "0";
                 }
-                totalLiabilities += Double.Parse(textBox18.Text.ToString());
+                
 
-                label56.Text = totalLiabilities.ToString();
+                label56.Text = CalTotalLiabilities().ToString();
 
 
                 textBox19.Focus();
@@ -391,9 +414,7 @@ namespace Tax_Calculator
                 {
                     textBox19.Text = "0";
                 }
-                totalLiabilities += Double.Parse(textBox19.Text.ToString());
-
-                label56.Text = totalLiabilities.ToString();
+                label56.Text = CalTotalLiabilities().ToString();
 
 
                 textBox20.Focus();
@@ -408,9 +429,7 @@ namespace Tax_Calculator
                 {
                     textBox20.Text = "0";
                 }
-                totalLiabilities += Double.Parse(textBox20.Text.ToString());
-
-                label56.Text = totalLiabilities.ToString();
+                label56.Text = CalTotalLiabilities().ToString();
 
 
                 textBox21.Focus();
@@ -425,9 +444,7 @@ namespace Tax_Calculator
                 {
                     textBox21.Text = "0";
                 }
-                totalLiabilities += Double.Parse(textBox21.Text.ToString());
-
-                label56.Text = totalLiabilities.ToString();
+                label56.Text = CalTotalLiabilities().ToString();
 
                 netWealthThisYear = totalAssets - totalLiabilities;
                 label86.Text = netWealthThisYear.ToString();
@@ -444,7 +461,7 @@ namespace Tax_Calculator
                 {
                     textBox22.Text = "0";
                 }
-                netWealthPrevYear += Double.Parse(textBox22.Text.ToString());
+                netWealthPrevYear = Double.Parse(textBox22.Text.ToString());
                 accretionInWealth = netWealthThisYear - netWealthPrevYear;
 
                 label82.Text = accretionInWealth.ToString();
@@ -461,7 +478,7 @@ namespace Tax_Calculator
                 {
                     textBox23.Text = "0";
                 }
-                familyExpenditure += Double.Parse(textBox23.Text.ToString());
+                familyExpenditure = Double.Parse(textBox23.Text.ToString());
                 totalAccretionInWealth = accretionInWealth + familyExpenditure;
 
                 label85.Text = totalAccretionInWealth.ToString();
