@@ -295,7 +295,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
                 label55.Text = totalTaxPayments().ToString();
 
                 textBox12.Focus();
@@ -306,7 +309,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
                 label55.Text = totalTaxPayments().ToString();
 
                 textBox13.Focus();
@@ -317,7 +323,10 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-               
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
                 label55.Text = totalTaxPayments().ToString();
 
                 textBox14.Focus();
@@ -328,6 +337,11 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (textBox10.Text.Length == 0)
+                {
+                    textBox10.Text = "0";
+                }
+
                 double totalTaxPay = totalTaxPayments();
 
                 label55.Text = totalTaxPay.ToString();
