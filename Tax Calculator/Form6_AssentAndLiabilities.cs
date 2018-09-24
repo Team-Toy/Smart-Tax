@@ -581,11 +581,12 @@ namespace Tax_Calculator
 
             int pageNo = 3;
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            HelperFunction(ref canvas,ref reader);
+            Form2_HelperFunction(ref canvas,ref reader);
+
         }
 
         //testing purpose
-        private void HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
@@ -621,7 +622,7 @@ namespace Tax_Calculator
                 string s = Form2_Salaries.pdfInputs1[i];
                 if (i == 6)
                 {
-                    tempY += 8;    //one line shit down
+                    tempY += 8;    //half line shit down
 
                 }
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
