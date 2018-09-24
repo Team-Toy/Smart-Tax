@@ -567,11 +567,11 @@ namespace Tax_Calculator
                 
 
                 pdfWrite_Form2(ref stamper, ref reader);
-
+                pdfWrite_Form3(ref stamper, ref reader);
 
 
                 stamper.Close();
-
+               
             }
 
            
@@ -579,12 +579,25 @@ namespace Tax_Calculator
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
 
-            int pageNo = 3;
+            int pageNo = 3;     //page = 3 is Salaries form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            Form2_HelperFunction(ref canvas,ref reader);
+            Form2_HelperFunction(ref canvas,ref reader);        
 
         }
 
+        private void pdfWrite_Form3(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 424;  //by default x increment left-right for investment form
+            float y = 99;      //define vertically staring =99
+
+            int pageNo = 4;     //page = 4 is investment form
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+
+            Form3_HelperFunction1(ref canvas, ref reader, x, y);
+
+            Form3_HelperFunction2(ref canvas, ref reader, x, y);
+        }
         //testing purpose
         private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
@@ -656,6 +669,26 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print other, if any
             tempY += 17;    ////one line shift down
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print net taxable income from salary
+
+        }
+
+        private void Form3_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader, float x, float y)
+        {
+            int length = Form3_InvestmentTaxCredit.pdfInputs.Length;
+            for (int i = 0; i < length; i++)
+            {
+                string s = Form2_Salaries.pdfInputs1[i];
+                if (i == 3 || i == 4 || i == 6)
+                {
+                    y += 33;    //some lines shift down
+
+                }
+                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from basicPay to "employer's contribution to recongnized provident fund"
+                y += 17;    //one line shit down     ......................testing      
+            }
+        }
+        private void Form3_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader, float x, float y)
+        {
 
         }
 

@@ -301,6 +301,7 @@ namespace Tax_Calculator
             }
         }
 
+        //saving all user inputs to print in pdf file
         public void UserInput_InvestmentTaxCredit()
         {
             pdfInputs[0] = textBox1.Text.ToString();   //Life insurance premium
