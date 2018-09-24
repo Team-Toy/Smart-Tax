@@ -150,6 +150,7 @@
             this.textBox25.Size = new System.Drawing.Size(51, 20);
             this.textBox25.TabIndex = 315;
             this.textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
+            this.textBox25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox25_KeyPress);
             // 
             // label40
             // 
@@ -1033,6 +1034,7 @@
             this.textBox17.Size = new System.Drawing.Size(183, 20);
             this.textBox17.TabIndex = 355;
             this.textBox17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox17_KeyDown);
+            this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox17_KeyPress);
             // 
             // textBox18
             // 
@@ -1041,6 +1043,7 @@
             this.textBox18.Size = new System.Drawing.Size(183, 20);
             this.textBox18.TabIndex = 356;
             this.textBox18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox18_KeyDown);
+            this.textBox18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox18_KeyPress);
             // 
             // textBox19
             // 
@@ -1049,6 +1052,7 @@
             this.textBox19.Size = new System.Drawing.Size(183, 20);
             this.textBox19.TabIndex = 357;
             this.textBox19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox19_KeyDown);
+            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox19_KeyPress);
             // 
             // textBox20
             // 
@@ -1057,6 +1061,7 @@
             this.textBox20.Size = new System.Drawing.Size(182, 20);
             this.textBox20.TabIndex = 358;
             this.textBox20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox20_KeyDown);
+            this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox20_KeyPress);
             // 
             // textBox21
             // 
@@ -1065,6 +1070,7 @@
             this.textBox21.Size = new System.Drawing.Size(183, 20);
             this.textBox21.TabIndex = 359;
             this.textBox21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox21_KeyDown);
+            this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox21_KeyPress);
             // 
             // textBox24
             // 
@@ -1073,6 +1079,7 @@
             this.textBox24.Size = new System.Drawing.Size(50, 20);
             this.textBox24.TabIndex = 363;
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
+            this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox24_KeyPress);
             // 
             // label69
             // 
@@ -1186,6 +1193,8 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(183, 20);
             this.textBox26.TabIndex = 385;
+            this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
+            this.textBox26.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox26_KeyPress);
             // 
             // label70
             // 
@@ -1336,6 +1345,7 @@
             this.textBox22.Size = new System.Drawing.Size(183, 20);
             this.textBox22.TabIndex = 401;
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
+            this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox22_KeyPress);
             // 
             // textBox23
             // 
@@ -1344,6 +1354,7 @@
             this.textBox23.Size = new System.Drawing.Size(183, 20);
             this.textBox23.TabIndex = 402;
             this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
+            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // label35
             // 
