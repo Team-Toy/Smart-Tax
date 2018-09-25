@@ -16,8 +16,9 @@ namespace Tax_Calculator
     public partial class Form6_AssentAndLiabilities : Form
     {
         /** The original PDF file. */
-        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
-
+        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
+        private string myFont = "Arial";    //Font name to print
+        private int fontSize = 8;       //font size to print
         public static string[] pdfInputs;
 
         public static double totalAssets = 0;
@@ -538,10 +539,9 @@ namespace Tax_Calculator
         //pdf creating button. print button
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog svg = new SaveFileDialog();
-            svg.ShowDialog();
+            SaveFileDialog svg = new SaveFileDialog();  //show dialgue box to take a location with file name
+            svg.ShowDialog();   //getting new pdf file location and file name given by user
             // size = reader.GetPageSizeWithRotation(1); 
-            label87.Text = svg.ToString();
 
             using (var outputPdfStream = new FileStream(svg.FileName + ".pdf", FileMode.Create, FileAccess.Write))
             {
@@ -549,27 +549,15 @@ namespace Tax_Calculator
                 PdfReader reader = new PdfReader(oldFile);
 
                 PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
-                //Gets a PdfContentByte to write over the page of the original document. here page=1
-
-                PdfContentByte canvas = stamper.GetOverContent(1);
-                ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, new Phrase("Hello people"), 36, 540, 0);
-
-                //...................................
-                
-                 canvas = stamper.GetOverContent(3);
-                //setting-up the X and Y coordinates of the document
-               
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
                 
-
                 pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
                 pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
                 pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
                 pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
                 pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
                 stamper.Close();
-                PrintDialog p = new PrintDialog();
-                p.ShowDialog();
+
             }
 
             
@@ -646,7 +634,7 @@ namespace Tax_Calculator
         {
             int pageNo = 5;     //page = 5 is   //Asset and Liabilities form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            Form6_HelperFunction(ref canvas, ref reader);
+           // Form6_HelperFunction(ref canvas, ref reader);
 
         }
 
@@ -854,7 +842,7 @@ namespace Tax_Calculator
             //making the y to increment top-Down
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
             //defining Arial font with font_size=8 
-            iTextSharp.text.Font font = FontFactory.GetFont("Arial", 8);
+            iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize);
             Phrase p = new Phrase(s,font);          
             
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
