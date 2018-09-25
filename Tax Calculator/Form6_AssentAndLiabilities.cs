@@ -541,6 +541,7 @@ namespace Tax_Calculator
             SaveFileDialog svg = new SaveFileDialog();
             svg.ShowDialog();
             // size = reader.GetPageSizeWithRotation(1); 
+            label87.Text = svg.ToString();
 
             using (var outputPdfStream = new FileStream(svg.FileName + ".pdf", FileMode.Create, FileAccess.Write))
             {
@@ -567,10 +568,11 @@ namespace Tax_Calculator
                 pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
                 pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
                 stamper.Close();
-               
+                PrintDialog p = new PrintDialog();
+                p.ShowDialog();
             }
 
-           
+            
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
@@ -829,7 +831,7 @@ namespace Tax_Calculator
             float x = 0;   //by default x coordinate for "statement of income form"
             float y = 0;  //by default y increment top-down for "statement of income form"
 
-            int length = Form4_SatementOfSalary.pdfInputs.Length;
+            int length = pdfInputs.Length;
             //printing "Asset and Liabilities" form entry
             for (int i = 0; i < 18; i++)
             {

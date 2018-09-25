@@ -141,6 +141,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label87 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox25
@@ -1390,12 +1391,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(672, 43);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(41, 13);
+            this.label87.TabIndex = 406;
+            this.label87.Text = "label87";
+            // 
             // Form6_AssentAndLiabilities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(862, 504);
+            this.Controls.Add(this.label87);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label84);
             this.Controls.Add(this.label35);
@@ -1632,5 +1643,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label87;
     }
 }
