@@ -17,8 +17,8 @@ namespace Tax_Calculator
     {
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
-        private string myFont = "Arial";    //Font name to print
-        private int fontSize = 9;       //font size to print
+        private const string myFont = "Arial";    //Font name to print
+        private const int fontSize = 9;       //font size to print
         public static string[] pdfInputs;
 
         public static double totalAssets = 0;
@@ -555,6 +555,7 @@ namespace Tax_Calculator
                 PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
 
+                pdfWrite_Form1(ref stamper, ref reader);    //Personal_info form print
                 pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
                 pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
                 pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
@@ -565,6 +566,13 @@ namespace Tax_Calculator
             }
 
 
+        }
+
+        private void pdfWrite_Form1(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            int pageNo = 1;     //page = 1 is; Personal Info form
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            Form1_HelperFunction(ref canvas, ref reader);
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
@@ -668,7 +676,76 @@ namespace Tax_Calculator
 
         }
 
-        private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        private void Form1_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {// todo code 
+            int pageNo = 1;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 202, 283);    //Print "Nanme of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[1], 210, 303);   //print "National ID no"
+            //.....................................................
+            //setting x and y position for "UTIN" number
+            int x = 191;
+            int y = 325;
+            string s = Form1_Personal_info.pdfInputs[2];    //taking "UTIN" number       
+            //printing UTIN number
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (i == 3 || i==6)  //checking to jump down additionally
+                {
+                    x += 22;   // jump almost line go left with difference of x = 21
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"" , x, y);  //print each of the UTIN number
+                x += 22;
+            }
+            //...................................................
+            //update x and y position for TIN number position
+            x = 191;
+            y = 351;
+            string s2 = Form1_Personal_info.pdfInputs[3];
+            //printing TIN number
+            for (int i = 0; i < s2.Length; i++)
+            {
+                if (i == 3 || i == 6)  //checking to jump down additionally
+                {
+                    x += 22;   // jump almost line go left with difference of x = 21
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s2[i]+"" , x, y);  //print each of the UTIN number
+                x += 22;
+            }
+            //...............................................
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[4], 147, 381);   //print "Circle"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[5], 350, 381);   //print "Taxes Zone"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[6], 181, 410);   //print "Assessment Year"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[7], 328, 460);   //print "Name of employer/Business"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[8], 353, 483);   //print "Wife of Husband name"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[9], 171, 508);   //print "Father name"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[10], 176, 532);   //print "Mother name"
+
+            //...............................................................
+            //update x and y position for Date of birth number print position
+            x = 283;
+            y = 562;
+            string s3 = Form1_Personal_info.pdfInputs[11];
+            //printing Date of birth 
+            for (int i = 0; i < s3.Length; i++)
+            {
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"", x, y);  //print each of the Date of birth numbers
+                x += 28;
+            }
+            //...............................................................
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[12], 199, 602);   //print "Present address"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[13], 225, 665);   //print "Permanent address"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[14], 225, 726);   //print "Telephone"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[15], 388, 726);   //print "Resident"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[16], 266, 748);   //print "VAT Registration" number
+
+        }
+        private void Print_UTINorTIN(ref PdfContentByte canvas, ref PdfReader reader, ref string s, int pageNo, int posX, int posY, int diff)
+        {
+        }
+
+         private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
 
             //'''''''''''''''''''''print for "Name of Assessee and TIN number"
