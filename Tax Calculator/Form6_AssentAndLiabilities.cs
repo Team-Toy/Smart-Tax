@@ -15,6 +15,17 @@ namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
+        static Form6_AssentAndLiabilities _instance;
+        public static Form6_AssentAndLiabilities GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form6_AssentAndLiabilities();
+                return _instance;
+            }
+
+        }
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
         private const string myFont = "Arial";    //Font name to print
@@ -1525,6 +1536,22 @@ namespace Tax_Calculator
             b_f += double.Parse(label51.Text.ToString() );    //total
 
             return b_f;
+        }
+
+        private void Form6_AssentAndLiabilities_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                //application Closing by cross cursor;
+                Application.Exit();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form5_Expenses f = Form5_Expenses.GetInstance;
+            this.Hide();
+            f.Show();
         }
     }
 }

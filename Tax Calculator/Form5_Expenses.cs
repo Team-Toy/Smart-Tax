@@ -12,6 +12,17 @@ namespace Tax_Calculator
 {
     public partial class Form5_Expenses : Form
     {
+        static Form5_Expenses _instance;
+        public static Form5_Expenses GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form5_Expenses();
+                return _instance;
+            }
+
+        }
         public static string[] pdfInputs;
         public static double totalExpense = 0;
         public Form5_Expenses()
@@ -240,7 +251,8 @@ namespace Tax_Calculator
         {
             //save data for pdf file
             UserInputs_Expenses();
-            Form6_AssentAndLiabilities f = new Form6_AssentAndLiabilities();
+            Form6_AssentAndLiabilities f = Form6_AssentAndLiabilities.GetInstance;
+            this.Hide();
             f.Show();
         }
 
@@ -396,6 +408,22 @@ namespace Tax_Calculator
             {
                 e.Handled = true;
             }
+        }
+
+        private void Form5_Expenses_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                //application Closing by cross cursor;
+                Application.Exit();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;
+            this.Hide();
+            f.Show();
         }
     }
 }

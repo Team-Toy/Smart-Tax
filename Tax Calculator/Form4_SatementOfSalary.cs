@@ -12,6 +12,17 @@ namespace Tax_Calculator
 {
     public partial class Form4_SatementOfSalary : Form
     {
+        static Form4_SatementOfSalary _instance;
+        public static Form4_SatementOfSalary GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form4_SatementOfSalary();
+                return _instance;
+            }
+
+        }
         public static string[] pdfInputs;
 
         //declared total for summation from serial no 1 to serial no 9
@@ -400,7 +411,8 @@ namespace Tax_Calculator
         {
             //save data for pdf file
             UserInputs_StatementOfSalary();
-            Form5_Expenses f = new Form5_Expenses();
+            Form5_Expenses f = Form5_Expenses.GetInstance;
+            this.Hide();
             f.Show();
 
         }
@@ -599,6 +611,22 @@ namespace Tax_Calculator
             {
                 e.Handled = true;
             }
+        }
+
+        private void Form4_SatementOfSalary_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                //application Closing by cross cursor;
+                Application.Exit();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {           
+            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
+            this.Hide();
+            f.Show();
         }
     }
 }

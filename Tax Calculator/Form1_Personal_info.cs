@@ -13,8 +13,18 @@ namespace Tax_Calculator
     
     public partial class Form1_Personal_info : Form
     {
+        static Form1_Personal_info _instance;
+        public static Form1_Personal_info GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form1_Personal_info();
+                return _instance;
+            }
+            
+        }
         public static string[] pdfInputs;
-
         public Form1_Personal_info()
         {
             InitializeComponent();
@@ -49,8 +59,9 @@ namespace Tax_Calculator
         {
             UserInputs_PersonInformation();
 
-            Form2_Salaries f = new Form2_Salaries();
-            f.ShowDialog();
+            Form2_Salaries f =  Form2_Salaries.GetInstance;
+            this.Hide(); // form1 hide
+            f.Show();
             
         }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -180,5 +191,15 @@ namespace Tax_Calculator
             }
         }
 
+        private void Form1_Personal_info_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                 //application Closing by cross cursor;
+                Application.Exit();
+            }
+           
+        }
     }
 }

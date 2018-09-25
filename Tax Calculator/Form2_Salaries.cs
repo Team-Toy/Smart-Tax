@@ -13,6 +13,17 @@ namespace Tax_Calculator
 
     public partial class Form2_Salaries : Form
     {
+        static Form2_Salaries _instance;
+        public static Form2_Salaries GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form2_Salaries();
+                return _instance;
+            }
+
+        }
         public static string[] pdfInputs1, pdfInputs2;
         //values for form 4, totalTaxableIncome, totalTaxExtempted
         public static double totalAmountOfIncome = 0.0;
@@ -172,7 +183,8 @@ namespace Tax_Calculator
             //save data for pdf file
             UserInputs_Salaries();
             //go to investment Tax Credit form
-            Form3_InvestmentTaxCredit f = new Form3_InvestmentTaxCredit();
+            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
+            this.Hide(); // form1 hide
             f.Show();
         }
 
@@ -1427,6 +1439,21 @@ namespace Tax_Calculator
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1_Personal_info.GetInstance.Show();
+        }
+
+        private void Form2_Salaries_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                //application Closing by cross cursor;
+                Application.Exit();
             }
         }
 
