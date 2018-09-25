@@ -211,8 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico" />
-    <None Include="Resources\rsz_03_right-512.png" />
-    <None Include="Resources\rsz_03_left-512.png" />
   </ItemGroup>
   <ItemGroup>
     <FileAssociation Include=".ico">
@@ -222,5 +220,6 @@
       <DefaultIcon>flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico</DefaultIcon>
     </FileAssociation>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
