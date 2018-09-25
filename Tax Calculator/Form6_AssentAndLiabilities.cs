@@ -559,14 +559,13 @@ namespace Tax_Calculator
                 //setting-up the X and Y coordinates of the document
                
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
-                                                        // var pageSize2 = reader.GetPageSize(2);   //getting page size by giving page number=2
                 
 
-                pdfWrite_Form2(ref stamper, ref reader);
-                pdfWrite_Form3(ref stamper, ref reader);
-                pdfWrite_Form5(ref stamper, ref reader);
-                pdfWrite_Form4(ref stamper, ref reader);
-
+                pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
+                pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
+                pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
+                pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
+                pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
                 stamper.Close();
                
             }
@@ -623,7 +622,7 @@ namespace Tax_Calculator
            //print "TIN" under the "Expense form"
             for (int i = 0; i < s.Length; i++)
             {
-                if (i == 3 || i == 6)    //checking to jump additionally
+                if (i == 3 || i == 6)    //checking to jump R.H.S. additionally
                 {
                     tempX1 += 16;    // jump with difference of x=16 to right hand side box
                 }
@@ -640,7 +639,15 @@ namespace Tax_Calculator
             Form4_HelperFunction(ref canvas, ref reader);
 
         }
-        //testing purpose
+
+        private void pdfWrite_Form6(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            int pageNo = 5;     //page = 5 is   //Asset and Liabilities form
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            Form6_HelperFunction(ref canvas, ref reader);
+
+        }
+
         private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
             //setting-up the X and Y coordinates of the document
@@ -658,9 +665,8 @@ namespace Tax_Calculator
             x += 103;   //x coordinate right shift(column)
             starIndex = 36;
             endIndex = 54;
-            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
-
-            Form2_HelperFunction2(ref canvas, ref reader);
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex); //print "salaried"
+            Form2_HelperFunction2(ref canvas, ref reader);  //print "House property income"
 
         }
 
@@ -672,44 +678,43 @@ namespace Tax_Calculator
             var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3   
             float x = 374;
             float tempY = 627;
+            //printing House property income under "salaries" form 
             for (int i=2 ; i < 9; i++)
             {
                 string s = Form2_Salaries.pdfInputs1[i];
-                if (i == 6)
+                if (i == 6)  //checking to jump down additionally
                 {
-                    tempY += 8;    //half line shit down
-
+                    tempY += 8;   // jump half line down with difference of x=8 
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
-                tempY += 17;    //one line shit down           
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //printing "House property income" from "annual rental income" to "others, if any"
+                tempY += 17;    // jump one line down with difference of x=17 .          
             }
-
-
-            WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.pdfInputs2[9], 469, tempY);
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY+17);
+            WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.pdfInputs2[9], 469, tempY);  //printing total "House property income"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY+17); //printing "Net income" from house
         }
-        //testing purpose
+ 
         private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader,float x,float y, int startIndex, int endIndex)
         {           
             int pageNo = 3;
             var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3 
 
-            float tempY = y;
+            float tempY = y;    //set y positon
+            //printing "salaries" form
             for ( ; startIndex < endIndex- 5; startIndex++)
             {
-                string s = Form2_Salaries.pdfInputs1[startIndex];
+                string s = Form2_Salaries.pdfInputs1[startIndex];   //get each of the salary amount
                 WriteStringOnPdf(ref canvas, ref reader, pageNo,s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
-                tempY += 17;
+                tempY += 17;    // jump one line down with difference of x=17
             }
-            tempY += 17;    //one line shift down
+            tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[startIndex], x, tempY);  //print interest accrued on recoginzed provient fund
-            tempY += 17*2;  // two line shift down
+            tempY += 17*2;  //jump two line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);     //print deemed income for transport facility
-            tempY += 17;    //one line shift down
+            tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY); //print deemed income for free furnished/unfurnished accommodation
-            tempY += 17 * 2;    // two line shift down
+            tempY += 17 * 2;    //jump two line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print other, if any
-            tempY += 17;    ////one line shift down
+            tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print net taxable income from salary
 
         }
@@ -725,21 +730,19 @@ namespace Tax_Calculator
             for (int i = 0; i < 11; i++)
             {
                 string s = Form3_InvestmentTaxCredit.pdfInputs[i];
-                if (i == 3)
+                if (i == 3) //checking to jump down additionally
                 {
-                    y += 13;    //some lines shift down
+                    y += 13;   // jump almost one line down with difference of x=13
 
                 }
-                if (i == 4 || i == 6)
+                if (i == 4 || i == 6)   //checking to jump down additionally
                 {
-                    y += 15;    //some lines shift down
+                    y += 15;    // jump almost one line down with difference of x=15
                 }
-                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from basicPay to "employer's contribution to recongnized provident fund"
-                y += 17;     
+                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print all "investment tax"
+                y += 17;    // jump one line down with difference of x=17 . 
             }
-
-          
-            
+                      
         }
         private void Form3_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
         {
@@ -752,11 +755,11 @@ namespace Tax_Calculator
             {
                 string s = Form3_InvestmentTaxCredit.pdfInputs[i];
                 
-
                 WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 1-5"
-                y += 66;    //some lines shift down
+                y += 66;    // jump three lines down with difference of x=66
             }
 
+            //setting x and y positions
             x = 321;
             y = 435;
             int length = Form3_InvestmentTaxCredit.pdfInputs.Length;
@@ -764,9 +767,8 @@ namespace Tax_Calculator
             for (int i = 16; i < length; i++)
             {
                 string s = Form3_InvestmentTaxCredit.pdfInputs[i];
-
                 WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 6-7"
-                y += 66;    //some lines shit down
+                y += 66;  // jump three lines down with difference of x=66
             }
         }
 
@@ -780,10 +782,10 @@ namespace Tax_Calculator
             // printing "list of Expenses" entry
             for (int i = 0; i < length; i++)
             {
-                string s = Form5_Expenses.pdfInputs[i];
+                string s = Form5_Expenses.pdfInputs[i]; //getting all Expenses one by one
 
                 WriteStringOnPdf(ref canvas, ref reader, 7, s, x, y);   //print all entry "Expenses"
-                y += 20;    //some lines shift down
+                y += 20;   // jump almost one line down with difference of x=20
             }
         }
 
@@ -797,27 +799,51 @@ namespace Tax_Calculator
             // printing "statement of income" entry
             for (int i = 0; i < 18; i++)
             {
-                string s = Form4_SatementOfSalary.pdfInputs[i];
-                if(i==15 ||i==16 || i==17 )
+                string s = Form4_SatementOfSalary.pdfInputs[i]; //getting each statement of salary info one by by
+                if(i==15 ||i==16 || i==17) //checking to jump down additionally
                 {
-                    y += 11;
+                    y += 11;    // jump half line down with difference of x=11
                 }
          
                 WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "statement of income"
-                y += 17;    //one lines shift down
+                y += 17;    // jump one line down with difference of x=17
             }
-            y += 8;
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[18], x, y);   //print all entry "statement of income"
-            y += 25;    //some lines shift down
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[19], x, y);
-            y += 22;    //some lines shift down
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[20], x, y);
-            y += 17;    //one lines shift down
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);
-            y += 17;    //one lines shift down
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);
+
+            y += 8; // jump half line down with difference of x=8
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
+            y += 25;    // jump some lines down with difference of x=25
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[19], x, y);     //printing "Advance o Tax Refund (if any)"
+            y += 22;    // jump almost one line down with difference of x=22
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[20], x, y);     //printing "Difference between serial no.15 and 16 (if any)"
+            y += 17;    // jump one line down with difference of x=17
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
+            y += 17;    // jump one line down with difference of x=17
+            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
 
         }
+
+        //testing /..............
+        private void Form6_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 0;   //by default x coordinate for "statement of income form"
+            float y = 0;  //by default y increment top-down for "statement of income form"
+
+            int length = Form4_SatementOfSalary.pdfInputs.Length;
+            //printing "Asset and Liabilities" form entry
+            for (int i = 0; i < 18; i++)
+            {
+                string s = Form4_SatementOfSalary.pdfInputs[i];
+                if (i == 15 || i == 16 || i == 17)  //checking to jump down additionally
+                {
+                    y += 11;    // jump half line down with difference of x=11
+                }
+
+                WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "Asset and Liabilities"
+                y += 17;   // jump one line down with difference of x=17
+            }
+        }
+
         //write a single string on existing pdf file 
         private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
         {             
