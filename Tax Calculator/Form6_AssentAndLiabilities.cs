@@ -886,23 +886,73 @@ namespace Tax_Calculator
         //testing in page 6
         private void Form6_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
         {
+            int pageNo = 6;
             //setting-up the X and Y coordinates of the document
-            float x = 0;   //by default x coordinate for "statement of income form"
-            float y = 0;  //by default y increment top-down for "statement of income form"
+            float x = 452;   //by default x coordinate for "statement of income form"
+            float y = 130;  //by default y increment top-down for "statement of income form"
 
-            int length = pdfInputs.Length;
-            //printing "Asset and Liabilities" form entry
-            for (int i = 0; i < 18; i++)
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[18], x, y);   //print "Any other assets"
+            y = 178;    //set position for "Less Liabilities"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[19], x, y);   //print "total assets"
+
+            x = 308;    //set position x for "total assets"
+            y = 203;    //set position y for "total assets"
+            //printing "Less Liabilities" form entry
+            for (int i = 20; i < 24; i++)
             {
-                string s = Form4_SatementOfSalary.pdfInputs[i];
-                if (i == 15 || i == 16 || i == 17)  //checking to jump down additionally
-                {
-                    y += 11;    // jump half line down with difference of x=11
-                }
+                string s = pdfInputs[i];
 
-                WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "Asset and Liabilities"
-                y += 17;   // jump one line down with difference of x=17
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Less Liabilities"
+                y += 19;   // jump one line down with difference of x=19
             }
+
+            x = 452;    //position of x "total liabilties"
+            y = 298;    //position of y "total liabilties"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[24], x, y);   //print "total liabilties"
+
+            y = 343;    //position of y "Net wealth " and "Accretion in wealth"
+            //printing "Net wealth " and "Accretion in wealth"
+            for (int i = 25; i < 28; i++)
+            {
+                string s = pdfInputs[i];
+
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Less Liabilities"
+                y += 21;   // jump one line down with difference of x=19
+            }
+            x = 452;
+            y = 409;    //set position of y  for "Family expenditure"  
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[28], x, y);   //print each entries of "Number of dependent children"
+
+
+            x = 116;    //set position of x  for "adult:
+            y = 448;    //set position of y  for "adult
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[29], x, y);   //print entry of "adult"
+
+            x = 208;   //set position of x  for "child"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[30], x, y);   //print entry of "child"
+
+
+            x = 452;    //set position of x  for "total Accretion of wealth"
+            y = 486;    //set position of y  for "total Accretion of wealth"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[31], x, y);   //print  "total Accretion of wealth"
+
+            x = 308;    //position of x "Sources of fund"
+            y = 518;    //position of y "Sources of fund"
+            //printing "Sources of fund"
+            for (int i = 32; i < 35; i++)
+            {
+                string s = pdfInputs[i];
+
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Sources of fund"
+                y += 13;   // jump half line down with difference of y=13
+            }
+
+
+            x = 452;    //set position of x  for "total Accretion of wealth"
+            y = 563;    //set position of y  for "total Accretion of wealth"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[35], x, y);   //print "Total source of fund"
+            y +=25;    //set position of y  for "Difference"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[36], x, y);   //print "Total source of fund"
         }
 
         //write a single string on existing pdf file 
