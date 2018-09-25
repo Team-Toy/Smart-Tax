@@ -23,7 +23,7 @@ namespace Tax_Calculator
         
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
-            
+            //label8.Text = dateTimePicker1.Text.ToString();
         }
         private void UserInputs_PersonInformation()
         {
@@ -179,5 +179,6 @@ namespace Tax_Calculator
                 textBox16.Focus();
             }
         }
+
     }
 }

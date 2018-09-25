@@ -729,8 +729,10 @@ namespace Tax_Calculator
             //printing Date of birth 
             for (int i = 0; i < s3.Length; i++)
             {
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"", x, y);  //print each of the Date of birth numbers
-                x += 28;
+                if (s3[i] == '/') continue;
+
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s3[i] + "", x, y);  //print each of the Date of birth numbers
+                x += 29;
             }
             //...............................................................
 
@@ -741,10 +743,7 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[16], 266, 748);   //print "VAT Registration" number
 
         }
-        private void Print_UTINorTIN(ref PdfContentByte canvas, ref PdfReader reader, ref string s, int pageNo, int posX, int posY, int diff)
-        {
-        }
-
+ 
          private void Form2_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
 
