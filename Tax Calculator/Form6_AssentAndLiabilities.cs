@@ -561,6 +561,7 @@ namespace Tax_Calculator
                 pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
                 pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
                 pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
+                pdfWrite_Page8(ref stamper, ref reader);    //last page of tex return form
                 stamper.Close();
 
             }
@@ -676,10 +677,22 @@ namespace Tax_Calculator
 
         }
 
+        private void pdfWrite_Page8(ref PdfStamper stamper, ref PdfReader reader)
+        {
+            int pageNo = 8;
+            float x = 233;
+            float y = 644;
+            PdfContentByte canvas = stamper.GetOverContent(pageNo);
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[11], x, y);    //Print "Total income" from "Statement of Salary" form
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[14], 410, 648);   //print "Tax paid" from "Statement of Salary" form
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[14], x, 666);   //print "Net Wealth of Assessee" from "Assets and Liabilities" form
+            //.....................................................
+        }
+
         private void Form1_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {// todo code 
             int pageNo = 1;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 202, 283);    //Print "Nanme of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 202, 283);    //Print "Name of Assessee"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[1], 210, 303);   //print "National ID no"
             //.....................................................
             //setting x and y position for "UTIN" number
