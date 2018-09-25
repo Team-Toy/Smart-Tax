@@ -42,8 +42,6 @@
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -152,6 +150,7 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,24 +293,6 @@
             this.label71.Size = new System.Drawing.Size(28, 18);
             this.label71.TabIndex = 238;
             this.label71.Text = "0.0";
-            // 
-            // label38
-            // 
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(682, 70);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(101, 45);
-            this.label38.TabIndex = 237;
-            this.label38.Text = "Net Taxable income (TK.)";
-            // 
-            // label37
-            // 
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(503, 72);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(185, 44);
-            this.label37.TabIndex = 236;
-            this.label37.Text = "Amount of exempted income (TK.)";
             // 
             // textBox16
             // 
@@ -698,9 +679,9 @@
             this.label34.BackColor = System.Drawing.SystemColors.Control;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label34.Location = new System.Drawing.Point(56, 657);
+            this.label34.Location = new System.Drawing.Point(56, 532);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(210, 37);
+            this.label34.Size = new System.Drawing.Size(210, 101);
             this.label34.TabIndex = 195;
             this.label34.Text = "Deemed income for furnished /unfurnished accomodation";
             // 
@@ -721,9 +702,9 @@
             this.label32.BackColor = System.Drawing.SystemColors.Control;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label32.Location = new System.Drawing.Point(55, 568);
+            this.label32.Location = new System.Drawing.Point(55, 443);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(188, 38);
+            this.label32.Size = new System.Drawing.Size(188, 102);
             this.label32.TabIndex = 193;
             this.label32.Text = "Interest accrued on Recognized provident fund";
             // 
@@ -732,9 +713,9 @@
             this.label31.BackColor = System.Drawing.SystemColors.Control;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label31.Location = new System.Drawing.Point(55, 523);
+            this.label31.Location = new System.Drawing.Point(55, 398);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(193, 37);
+            this.label31.Size = new System.Drawing.Size(193, 101);
             this.label31.TabIndex = 192;
             this.label31.Text = "Employees contributions to recognized Provdent Fund";
             // 
@@ -1054,9 +1035,9 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(784, 662);
+            this.button1.Location = new System.Drawing.Point(762, 577);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 255;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -1115,8 +1096,6 @@
             this.panel1.Controls.Add(this.label69);
             this.panel1.Controls.Add(this.label70);
             this.panel1.Controls.Add(this.label71);
-            this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.label37);
             this.panel1.Controls.Add(this.textBox16);
             this.panel1.Controls.Add(this.textBox15);
             this.panel1.Controls.Add(this.textBox12);
@@ -1186,9 +1165,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(5, 57);
+            this.panel1.Location = new System.Drawing.Point(5, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 557);
+            this.panel1.Size = new System.Drawing.Size(883, 506);
             this.panel1.TabIndex = 254;
             // 
             // comboBox3
@@ -1462,17 +1441,17 @@
             // label78
             // 
             this.label78.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(172, 862);
+            this.label78.Location = new System.Drawing.Point(172, 734);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(114, 69);
+            this.label78.Size = new System.Drawing.Size(114, 133);
             this.label78.TabIndex = 265;
             this.label78.Text = "Location and description of property";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(316, 853);
+            this.richTextBox1.Location = new System.Drawing.Point(316, 725);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(266, 102);
+            this.richTextBox1.Size = new System.Drawing.Size(266, 166);
             this.richTextBox1.TabIndex = 264;
             this.richTextBox1.Text = "";
             this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
@@ -1560,12 +1539,23 @@
             this.label75.TabIndex = 262;
             this.label75.Text = "Schedules Showing Details of Income";
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(655, 577);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 31);
+            this.button2.TabIndex = 263;
+            this.button2.Text = "Next";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form2_Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(909, 741);
+            this.ClientSize = new System.Drawing.Size(890, 620);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label75);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -1594,8 +1584,6 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox12;
@@ -1704,5 +1692,6 @@
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button2;
     }
 }

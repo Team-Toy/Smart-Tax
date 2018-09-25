@@ -151,9 +151,9 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(365, 257);
+            this.textBox6.Location = new System.Drawing.Point(363, 255);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 20);
+            this.textBox6.Size = new System.Drawing.Size(185, 20);
             this.textBox6.TabIndex = 180;
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
@@ -469,7 +469,7 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(473, 798);
+            this.button1.Location = new System.Drawing.Point(747, 768);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 190;
@@ -480,7 +480,7 @@
             // button2
             // 
             this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(314, 798);
+            this.button2.Location = new System.Drawing.Point(623, 768);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 191;
@@ -745,7 +745,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(625, 514);
+            this.ClientSize = new System.Drawing.Size(890, 620);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.splitContainer1);

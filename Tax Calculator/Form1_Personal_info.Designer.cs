@@ -139,7 +139,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(705, 536);
+            this.panel1.Size = new System.Drawing.Size(886, 501);
             this.panel1.TabIndex = 0;
             // 
             // textBox16
@@ -678,7 +678,7 @@
             this.label18.BackColor = System.Drawing.SystemColors.Control;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(247, 15);
+            this.label18.Location = new System.Drawing.Point(319, 9);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(205, 24);
             this.label18.TabIndex = 178;
@@ -688,7 +688,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(570, 596);
+            this.button1.Location = new System.Drawing.Point(768, 564);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 253;
@@ -700,7 +700,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 644);
+            this.ClientSize = new System.Drawing.Size(890, 620);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label18);

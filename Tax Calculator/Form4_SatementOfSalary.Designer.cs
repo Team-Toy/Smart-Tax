@@ -884,7 +884,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(708, 847);
+            this.button2.Location = new System.Drawing.Point(731, 838);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 95;
@@ -897,7 +897,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(834, 507);
+            this.ClientSize = new System.Drawing.Size(890, 620);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label55);
