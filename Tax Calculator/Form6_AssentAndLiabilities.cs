@@ -596,35 +596,39 @@ namespace Tax_Calculator
         {
             int pageNo = 7;     //page = 7 is Expense form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", 185, 141); //print "Name of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 185, 140); //print "Name of Assessee"
 
             float tempX = 342;  //set "TIN" number positon x=342 , y =142
-            for(int i=0; i<10; i++)
+            string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
+            //print "TIN" above the "Expense form"
+            for (int i=0; i<s.Length; i++)
             {
-                if(i==3 || tempX==7)
+                if(i==3 || i==6)    //checking to jump additionally
                 {
-                    tempX += 18 * 2;    // two times shift right-hand-side box
+                    tempX += 18;     // jump with difference of x=18 to right hand side box
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", tempX, 142);
-                tempX += 18;    // shift right hand side box
+               
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"", tempX, 142);
+                tempX += 18;    // jump with difference of x=18 to right hand side box
             }
             //print "Expense" form
             Form5_HelperFunction(ref canvas, ref reader);
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", 184, 642); //print "name of assessee" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Assessment year", 467, 642); //print "Assessment year" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Circle", 390, 677); //print "Circle" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, "Taxes Zone", 491, 680); //print "Taxes Zone" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 184, 642); //print "name of assessee" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[3], 467, 642); //print "Assessment year" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[4], 390, 678); //print "Circle" in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[5], 491, 680); //print "Taxes Zone" in Receipt of income tax return
 
-            float tempX1 = 140;  //set "TIN" number positon x=140 , y =680
-            for (int i = 0; i < 10; i++)
+            float tempX1 = 139;  //set "TIN" number positon x=140 , y =680
+           //print "TIN" under the "Expense form"
+            for (int i = 0; i < s.Length; i++)
             {
-                if (i == 3 || tempX1 == 7)
+                if (i == 3 || i == 6)    //checking to jump additionally
                 {
-                    tempX1 += 15 * 2;    // two times shift right-hand-side box
+                    tempX1 += 16;    // jump with difference of x=16 to right hand side box
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, "Name of Assessee", tempX1, 680);
-                tempX1 += 15;    // shift right hand side box
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"" , tempX1, 680);
+                tempX1 += 16;    // jump with difference of x=16 to right hand side box
             }
 
         }

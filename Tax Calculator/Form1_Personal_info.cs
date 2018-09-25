@@ -18,7 +18,7 @@ namespace Tax_Calculator
         public Form1_Personal_info()
         {
             InitializeComponent();
-            pdfInputs = new string[15];
+            pdfInputs = new string[17];
         }
         
         private void Form1_Personal_info_Load(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace Tax_Calculator
         }
         private void UserInputs_PersonInformation()
         {
-            pdfInputs[0] = textBox1.Text.ToString();   // Name
+            pdfInputs[0] = textBox1.Text.ToString();   // Name of Assessese
             pdfInputs[1] = textBox2.Text.ToString();   // National ID
             pdfInputs[2] = textBox3.Text.ToString();   // UTIN
             pdfInputs[3] = textBox4.Text.ToString();   // TIN
@@ -179,6 +179,5 @@ namespace Tax_Calculator
                 textBox16.Focus();
             }
         }
-
     }
 }
