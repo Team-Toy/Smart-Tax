@@ -15,6 +15,17 @@ namespace Tax_Calculator
 {
     public partial class Form6_AssentAndLiabilities : Form
     {
+        static Form6_AssentAndLiabilities _instance;
+        public static Form6_AssentAndLiabilities GetInstance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form6_AssentAndLiabilities();
+                return _instance;
+            }
+
+        }
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
         private const string myFont = "Arial";    //Font name to print
@@ -721,7 +732,7 @@ namespace Tax_Calculator
                 {
                     x += 22;   // jump almost line go left with difference of x = 21
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s2[i]+"" , x, y);  //print each of the UTIN number
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s2[i]+"" , x, y);  //print each of the TIN number
                 x += 22;
             }
             //...............................................
@@ -922,11 +933,11 @@ namespace Tax_Calculator
 
         private void Form4_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
+            int pageNo = 2;
             //setting-up the X and Y coordinates of the document
             float x = 453;   //by default x coordinate for "statement of income form"
             float y = 116;  //by default y increment top-down for "statement of income form"
 
-            int length = Form4_SatementOfSalary.pdfInputs.Length;
             // printing "statement of income" entry
             for (int i = 0; i < 18; i++)
             {
@@ -936,21 +947,39 @@ namespace Tax_Calculator
                     y += 11;    // jump half line down with difference of x=11
                 }
 
-                WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "statement of income"
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all entry "statement of income"
                 y += 17;    // jump one line down with difference of x=17
             }
 
             y += 8; // jump half line down with difference of x=8
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
             y += 25;    // jump some lines down with difference of x=25
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[19], x, y);     //printing "Advance o Tax Refund (if any)"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[19], x, y);     //printing "Advance o Tax Refund (if any)"
             y += 22;    // jump almost one line down with difference of x=22
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[20], x, y);     //printing "Difference between serial no.15 and 16 (if any)"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[20], x, y);     //printing "Difference between serial no.15 and 16 (if any)"
             y += 17;    // jump one line down with difference of x=17
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
             y += 17;    // jump one line down with difference of x=17
-            WriteStringOnPdf(ref canvas, ref reader, 2, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
+            //...........................................................................................................
+            //Verfication part print
+            x = 127;
+            y = 636;
+             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], x, y);   //print "Name of the Assessee" from "Personal info" form
+             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[9], 371, y);   //print "Father name" from "Personal info" form
 
+            //................................................
+            //update only y position for TIN number position            
+            y = 649;
+            string TIN_number = Form1_Personal_info.pdfInputs[3];   //taking "TIN" number form "Personal info" form
+            //printing TIN number
+            for (int i = 0; i < TIN_number.Length; i++)
+            {
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, TIN_number[i] + "", x, y);  //print each of the TIN number
+                x += 8;
+            }
+            
+            //.......................................................................
         }
 
         //print page=5; Statement of Assets and Liabilities 
@@ -1525,6 +1554,22 @@ namespace Tax_Calculator
             b_f += double.Parse(label51.Text.ToString() );    //total
 
             return b_f;
+        }
+
+        private void Form6_AssentAndLiabilities_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                //application Closing by cross cursor;
+                Application.Exit();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form5_Expenses f = Form5_Expenses.GetInstance;
+            this.Hide();
+            f.Show();
         }
     }
 }

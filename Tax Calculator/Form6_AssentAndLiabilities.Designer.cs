@@ -141,6 +141,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox25
@@ -1383,13 +1384,27 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(755, 1493);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(759, 1501);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 405;
             this.button1.Text = "Print";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(648, 1501);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 33);
+            this.button2.TabIndex = 406;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form6_AssentAndLiabilities
             // 
@@ -1398,6 +1413,7 @@
             this.AutoScroll = true;
 
             this.ClientSize = new System.Drawing.Size(890, 620);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label84);
             this.Controls.Add(this.label35);
@@ -1512,7 +1528,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form6_AssentAndLiabilities";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asset and Liabilities";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form6_AssentAndLiabilities_FormClosing);
             this.Load += new System.EventHandler(this.Form6_AssentAndLiabilities_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1634,5 +1652,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
