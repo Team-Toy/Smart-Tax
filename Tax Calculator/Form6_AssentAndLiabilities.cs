@@ -18,7 +18,7 @@ namespace Tax_Calculator
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
         private string myFont = "Arial";    //Font name to print
-        private int fontSize = 8;       //font size to print
+        private int fontSize = 9;       //font size to print
         public static string[] pdfInputs;
 
         public static double totalAssets = 0;
@@ -39,7 +39,7 @@ namespace Tax_Calculator
         public Form6_AssentAndLiabilities()
         {
             InitializeComponent();
-            pdfInputs = new string[35];
+            pdfInputs = new string[37];
         }
 
         private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace Tax_Calculator
                 {
                     textBox1.Text = "0";
                 }
-                
+
                 label10.Text = CalTotalAssets().ToString();
 
                 textBox2.Focus();
@@ -124,7 +124,7 @@ namespace Tax_Calculator
                 {
                     textBox2.Text = "0";
                 }
-                
+
                 label10.Text = CalTotalAssets().ToString();
 
                 textBox3.Focus();
@@ -139,7 +139,7 @@ namespace Tax_Calculator
                 {
                     textBox3.Text = "0";
                 }
-                
+
                 label10.Text = CalTotalAssets().ToString();
 
                 textBox4.Focus();
@@ -154,7 +154,7 @@ namespace Tax_Calculator
                 {
                     textBox4.Text = "0";
                 }
-                
+
                 label10.Text = CalTotalAssets().ToString();
 
                 textBox5.Focus();
@@ -178,7 +178,7 @@ namespace Tax_Calculator
                 {
                     textBox5.Text = "0";
                 }
-                
+
 
                 label10.Text = CalTotalAssets().ToString();
                 label11.Text = CalTotalInvestments().ToString();
@@ -195,7 +195,7 @@ namespace Tax_Calculator
                 {
                     textBox6.Text = "0";
                 }
-                
+
 
                 label10.Text = CalTotalAssets().ToString();
                 label11.Text = CalTotalInvestments().ToString();
@@ -212,7 +212,7 @@ namespace Tax_Calculator
                 {
                     textBox7.Text = "0";
                 }
-               
+
 
                 label10.Text = CalTotalAssets().ToString();
                 label11.Text = CalTotalInvestments().ToString();
@@ -229,7 +229,7 @@ namespace Tax_Calculator
                 {
                     textBox8.Text = "0";
                 }
-                
+
 
                 label10.Text = CalTotalAssets().ToString();
                 label11.Text = CalTotalInvestments().ToString();
@@ -246,7 +246,7 @@ namespace Tax_Calculator
                 {
                     textBox9.Text = "0";
                 }
-               
+
 
                 label10.Text = CalTotalAssets().ToString();
                 label11.Text = CalTotalInvestments().ToString();
@@ -263,7 +263,7 @@ namespace Tax_Calculator
                 {
                     textBox10.Text = "0";
                 }
-                
+
 
                 label10.Text = CalTotalAssets().ToString();
 
@@ -314,8 +314,8 @@ namespace Tax_Calculator
         }
         private double CalTotalCashAssets()
         {
-            return totalCashAssets = Double.Parse(textBox14.Text.ToString())+
-                                     Double.Parse(textBox15.Text.ToString())+
+            return totalCashAssets = Double.Parse(textBox14.Text.ToString()) +
+                                     Double.Parse(textBox15.Text.ToString()) +
                                      Double.Parse(textBox16.Text.ToString());
         }
 
@@ -398,7 +398,7 @@ namespace Tax_Calculator
                 {
                     textBox18.Text = "0";
                 }
-                
+
 
                 label56.Text = CalTotalLiabilities().ToString();
 
@@ -497,7 +497,7 @@ namespace Tax_Calculator
                     textBox24.Text = "0";
                 }
                 adult = int.Parse(textBox24.Text.ToString());
-                
+
 
                 textBox25.Focus();
             }
@@ -531,7 +531,7 @@ namespace Tax_Calculator
                 label83.Text = totalSourcesOfFund.ToString();
 
                 label81.Text = (totalAccretionInWealth - totalSourcesOfFund).ToString();
-                
+
             }
         }
 
@@ -539,6 +539,9 @@ namespace Tax_Calculator
         //pdf creating button. print button
         private void button1_Click(object sender, EventArgs e)
         {
+            //taking all assets and liabilities info in a string
+            UserInputs_AssetAndLiabilities();
+
             SaveFileDialog svg = new SaveFileDialog();  //show dialgue box to take a location with file name
             svg.ShowDialog();   //getting new pdf file location and file name given by user
             // size = reader.GetPageSizeWithRotation(1); 
@@ -550,7 +553,7 @@ namespace Tax_Calculator
 
                 PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
                 var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
-                
+
                 pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
                 pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
                 pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
@@ -560,13 +563,13 @@ namespace Tax_Calculator
 
             }
 
-            
+
         }
         private void pdfWrite_Form2(ref PdfStamper stamper, ref PdfReader reader)
         {
             int pageNo = 3;     //page = 3 is Salaries form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            Form2_HelperFunction(ref canvas,ref reader);        
+            Form2_HelperFunction(ref canvas, ref reader);
 
         }
 
@@ -587,17 +590,17 @@ namespace Tax_Calculator
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 185, 140); //print "Name of Assessee"
 
-            float tempX = 342;  //set "TIN" number positon x=342 , y =142
+            float tempX = 340;  //set "TIN" number positon x=342 , y =142
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
             //print "TIN" above the "Expense form"
-            for (int i=0; i<s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                if(i==3 || i==6)    //checking to jump additionally
+                if (i == 3 || i == 6)    //checking to jump additionally
                 {
                     tempX += 18;     // jump with difference of x=18 to right hand side box
                 }
-               
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"", tempX, 142);
+
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i] + "", tempX, 142);
                 tempX += 18;    // jump with difference of x=18 to right hand side box
             }
             //print "Expense" form
@@ -608,15 +611,15 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[4], 390, 678); //print "Circle" in Receipt of income tax return
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[5], 491, 680); //print "Taxes Zone" in Receipt of income tax return
 
-            float tempX1 = 139;  //set "TIN" number positon x=140 , y =680
-           //print "TIN" under the "Expense form"
+            float tempX1 = 137;  //set "TIN" number positon x=140 , y =680
+                                 //print "TIN" under the "Expense form"
             for (int i = 0; i < s.Length; i++)
             {
                 if (i == 3 || i == 6)    //checking to jump R.H.S. additionally
                 {
                     tempX1 += 16;    // jump with difference of x=16 to right hand side box
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i]+"" , tempX1, 680);
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i] + "", tempX1, 680);
                 tempX1 += 16;    // jump with difference of x=16 to right hand side box
             }
 
@@ -632,9 +635,15 @@ namespace Tax_Calculator
 
         private void pdfWrite_Form6(ref PdfStamper stamper, ref PdfReader reader)
         {
-            int pageNo = 5;     //page = 5 is   //Asset and Liabilities form
+            int pageNo = 5;     //page = 5 is  ;Asset and Liabilities form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-           // Form6_HelperFunction(ref canvas, ref reader);
+            //todo code
+            Form6_HelperFunction1(ref canvas, ref reader);
+
+            pageNo = 6;     //page = 6 is  ;Asset and Liabilities form
+            canvas = stamper.GetOverContent(pageNo);
+            //todo code
+            Form6_HelperFunction2(ref canvas, ref reader);
 
         }
 
@@ -645,12 +654,12 @@ namespace Tax_Calculator
             float y = 170;
             int starIndex = 0;
             int endIndex = 18;
-            Form2_HelperFunction1(ref canvas,ref reader, x,y, starIndex, endIndex);
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
 
             x += 103;   //x coordinate right shift(column)
-            starIndex =endIndex;
+            starIndex = endIndex;
             endIndex += endIndex;
-            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex,  endIndex);
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
 
             x += 103;   //x coordinate right shift(column)
             starIndex = 36;
@@ -669,7 +678,7 @@ namespace Tax_Calculator
             float x = 374;
             float tempY = 627;
             //printing House property income under "salaries" form 
-            for (int i=2 ; i < 9; i++)
+            for (int i = 2; i < 9; i++)
             {
                 string s = Form2_Salaries.pdfInputs1[i];
                 if (i == 6)  //checking to jump down additionally
@@ -679,26 +688,26 @@ namespace Tax_Calculator
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //printing "House property income" from "annual rental income" to "others, if any"
                 tempY += 17;    // jump one line down with difference of x=17 .          
             }
-            WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.pdfInputs2[9], 469, tempY);  //printing total "House property income"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY+17); //printing "Net income" from house
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[9], 469, tempY);  //printing total "House property income"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY + 17); //printing "Net income" from house
         }
- 
-        private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader,float x,float y, int startIndex, int endIndex)
-        {           
+
+        private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader, float x, float y, int startIndex, int endIndex)
+        {
             int pageNo = 3;
             var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3 
 
             float tempY = y;    //set y positon
             //printing "salaries" form
-            for ( ; startIndex < endIndex- 5; startIndex++)
+            for (; startIndex < endIndex - 5; startIndex++)
             {
                 string s = Form2_Salaries.pdfInputs1[startIndex];   //get each of the salary amount
-                WriteStringOnPdf(ref canvas, ref reader, pageNo,s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //print from basicPay to "employer's contribution to recongnized provident fund"
                 tempY += 17;    // jump one line down with difference of x=17
             }
             tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[startIndex], x, tempY);  //print interest accrued on recoginzed provient fund
-            tempY += 17*2;  //jump two line shift down using difference of y =17
+            tempY += 17 * 2;  //jump two line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);     //print deemed income for transport facility
             tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY); //print deemed income for free furnished/unfurnished accommodation
@@ -732,7 +741,7 @@ namespace Tax_Calculator
                 WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print all "investment tax"
                 y += 17;    // jump one line down with difference of x=17 . 
             }
-                      
+
         }
         private void Form3_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
         {
@@ -744,7 +753,7 @@ namespace Tax_Calculator
             for (int i = 11; i < 16; i++)
             {
                 string s = Form3_InvestmentTaxCredit.pdfInputs[i];
-                
+
                 WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 1-5"
                 y += 66;    // jump three lines down with difference of x=66
             }
@@ -790,11 +799,11 @@ namespace Tax_Calculator
             for (int i = 0; i < 18; i++)
             {
                 string s = Form4_SatementOfSalary.pdfInputs[i]; //getting each statement of salary info one by by
-                if(i==15 ||i==16 || i==17) //checking to jump down additionally
+                if (i == 15 || i == 16 || i == 17) //checking to jump down additionally
                 {
                     y += 11;    // jump half line down with difference of x=11
                 }
-         
+
                 WriteStringOnPdf(ref canvas, ref reader, 2, s, x, y);   //print all entry "statement of income"
                 y += 17;    // jump one line down with difference of x=17
             }
@@ -812,8 +821,70 @@ namespace Tax_Calculator
 
         }
 
-        //testing /..............
-        private void Form6_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
+        //print Statement of Assets nad Liabilities page=5
+        private void Form6_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            //setting-up the X and Y coordinates of the document
+            float x = 401;   //by default x coordinate for "Asset and liabilities form"
+            float y = 131;  //by default y increment top-down for "Asset and liabilities form"
+            int pageNo = 5;
+            int length = pdfInputs.Length;
+            //printing "Asset and Liabilities" form entry
+            for (int i = 0; i < 2; i++)
+            {
+                string s = pdfInputs[i];
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all entry "Asset and Liabilities"
+                y += 15;   // jump half line down with difference of y=11
+            }
+
+            y = 232;    //set positions for "Non-agricultural property" and "Agicultral Property" 
+            for (int i = 2; i < 4; i++)
+            {
+                string s = pdfInputs[i];
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print "Non-agricultural property" and "Agicultral Property" 
+                y += 90;   // jump five lines down with difference of y=90
+            }
+
+            x = 321;    //set position x for "Investments"
+            y = 429;    //set position y for "Investments"
+            for (int i = 4; i < 9; i++)
+            {
+                string s = pdfInputs[i];
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all "Investments" in "Asset and Liabilities" form
+                y += 19;   // jump one line down with difference of y=18
+            }
+            //........................
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[9], 397, 525);  //print "total investments"
+
+            x = 320;    //set position x for "Motor vihicles"
+            y = 566;    //set position y for "Motor vihicles"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[10], x, y);   //print "Motor vihicles"
+            y = 586;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[11], x, y);   //print Jewellery
+            y = 612;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[12], x, y);   //print Furniture
+            y = 626;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[13], x, y);   //print Electronic Equipment
+
+
+            x = 320;    //set position x for "Cash Asset Outside Business"
+            y =669;    //set position y for "Cash Asset Outside Business"
+            for (int i = 14; i < 17; i++)
+            {
+                string s = pdfInputs[i];
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each of "Cash Asset Outside Business"
+                y += 19;   // jump one line down with difference of y=19
+            }
+
+            x = 397;    //set position x for "total" Cash Asset Outside Business
+            y = 732;    //set position y for "total" Cash Asset Outside Business
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, pdfInputs[17], x, y);   //print "total " Cash Asset Outside Business
+
+        }
+
+        //testing in page 6
+        private void Form6_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
         {
             //setting-up the X and Y coordinates of the document
             float x = 0;   //by default x coordinate for "statement of income form"
@@ -835,16 +906,16 @@ namespace Tax_Calculator
         }
 
         //write a single string on existing pdf file 
-        private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,int pageNo , string s, float posX,float posY)
-        {             
+        private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader, int pageNo, string s, float posX, float posY)
+        {
             var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
 
             //making the y to increment top-Down
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
-            //defining Arial font with font_size=8 
+            //defining a font
             iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize);
-            Phrase p = new Phrase(s,font);          
-            
+            Phrase p = new Phrase(s, font);
+
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
         }
 
@@ -1200,6 +1271,57 @@ namespace Tax_Calculator
             {
                 e.Handled = true;
             }
+        }
+
+        private void UserInputs_AssetAndLiabilities()
+        {
+            pdfInputs[0] = textBox1.Text.ToString();   //Business Capital ( Closing Balance)
+            pdfInputs[1] = textBox2.Text.ToString();   //Directors Shareholdings in Limited Companies (at cost) 
+            pdfInputs[2] = textBox3.Text.ToString();   //Non-Agricultural Property (at cost with legal expenses)
+            pdfInputs[3] = textBox4.Text.ToString();   //Agricultural Property (at cost with legal expenses)
+            pdfInputs[4] = textBox5.Text.ToString();   //Shares/Debentures 
+            pdfInputs[5] = textBox6.Text.ToString();   //Saving Certificate/Unit Certificate/Bond 
+            pdfInputs[6] = textBox7.Text.ToString();   // Prize bond/Savings Scheme 
+            pdfInputs[7] = textBox8.Text.ToString();   //Loans Given
+            pdfInputs[8] = textBox9.Text.ToString();   //Other investment
+            pdfInputs[9] = label11.Text.ToString();   //total
+
+            pdfInputs[10] = textBox10.Text.ToString();   //Motor Vehicles (at cost)
+            pdfInputs[11] = textBox11.Text.ToString();   //Jewellery (quantity and cost)
+            pdfInputs[12] = textBox12.Text.ToString();   //Furniture (at cost)
+            pdfInputs[13] = textBox13.Text.ToString();   //Electronic Equipment (at cost)
+
+            //Cash Asset Outside Business:
+            pdfInputs[14] = textBox14.Text.ToString();   //(a) Cash in hand Tk
+            pdfInputs[15] = textBox15.Text.ToString();   //(b) Cash at bank Tk
+            pdfInputs[16] = textBox16.Text.ToString();   // (c) Other deposits Tk
+            pdfInputs[17] = label51.Text.ToString();    //total
+
+            pdfInputs[18] = textBox17.Text.ToString();   //Any Other Assets
+            pdfInputs[19] = label10.Text.ToString();    //total assets
+
+            //Less Liabilities:
+            pdfInputs[20] = textBox18.Text.ToString();   //(a) Mortgages secured on property or land Tk.
+            pdfInputs[21] = textBox19.Text.ToString();   //(b) Unsecured loans Tk. ...........
+            pdfInputs[22] = textBox20.Text.ToString();   //(c) Bank loan Tk
+            pdfInputs[23] = textBox21.Text.ToString();    //(d) Others
+            pdfInputs[24] = label56.Text.ToString();     //Total Liabilities
+            pdfInputs[25] = label86.Text.ToString();    //Net wealth as on last date of this income year
+            pdfInputs[26] = textBox22.Text.ToString();   // Net wealth as on last date of previous income year
+            pdfInputs[27] = label82.Text.ToString();   //Accretion in wealth (Difference between serial no. 12 and 13)
+            pdfInputs[28] = textBox23.Text.ToString();   //(a) Family Expenditure: (Total expenditure as per Form IT 10 BB)  
+           
+            // (b)Number of dependant children of the family:
+            pdfInputs[29] = textBox24.Text.ToString();  //adult
+            pdfInputs[30] = textBox25.Text.ToString();  //child
+            pdfInputs[31] = label85.Text.ToString();  //Total Accretion of wealth (Total of serial 14 and 15)
+
+            //Sources of Fund :
+            pdfInputs[32] = label35.Text.ToString();     //(i) Shown Return Income 
+            pdfInputs[33] = label84.Text.ToString();    //(ii) Tax exempted/Tax free Income
+            pdfInputs[34] = textBox26.Text.ToString();   // (iii) Other receipts
+            pdfInputs[35] = label83.Text.ToString();   //Total source of Fund =
+            pdfInputs[36] = label81.Text.ToString();  //Difference (Between serial 16 and 17)
         }
     }
 }
