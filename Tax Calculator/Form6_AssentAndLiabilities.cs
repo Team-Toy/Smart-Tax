@@ -1265,11 +1265,21 @@ namespace Tax_Calculator
             }
         }
 
+        //Back button click event
         private void button2_Click(object sender, EventArgs e)
         {
             Form5_Expenses f = Form5_Expenses.GetInstance;
             this.Hide();
             f.Show();
+        }
+
+
+        //Home button click event
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Show();    //Hide curent window form
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();   //go to Home page
         }
     }
 }
