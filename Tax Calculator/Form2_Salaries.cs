@@ -1091,13 +1091,13 @@ namespace Tax_Calculator
         }
 
 
-        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             //
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;   //cancel the event 
-               
+
             }
 
 
@@ -1109,15 +1109,467 @@ namespace Tax_Calculator
             }
             else if (e.Handled == false)
             {
-                if (textBox6.Text.ToString().Length > 0 && textBox6.Text.ToString()[0] != '0')
+                if (textBox1.Text.ToString().Length > 0 && textBox1.Text.ToString()[0] != '0')
                 {
-                   
-                    double medicalAllowance = double.Parse(textBox6.Text.ToString());
-                    myFunction(medicalAllowance);
+
+                    if (textBox1.Text.Length == 0)
+                    {
+                        textBox1.Text = "0";
+
+                    }
+
+                    basicPay = double.Parse(textBox1.Text.ToString());
+                    double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
+                    double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
+
+                    label40.ForeColor = Color.Black;
+                    label57.ForeColor = Color.Black;
+
+                    label40.Text = "" + taxExtempted;
+                    label57.Text = "" + taxableIncome;
+
+                    netTaxableIncome += taxableIncome;
+                    totalTaxExtempted += taxExtempted;
+
+                    // net taxable income from salary
+                    label39.Text = TotalAmountOfIncome().ToString();
+                    label56.Text = CalTotalTaxExempted().ToString();
+                    //showing total taxable income
+                    label73.Text = CalNetTaxableIncome().ToString();
+
+                    
                 }
             }
         }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+            else
+            {
+                if (textBox6.Text.ToString().Length > 0 && textBox6.Text.ToString()[0] != '0')
+                {
+
+                    double medicalAllowance = double.Parse(textBox6.Text.ToString());
+                    myFunction(medicalAllowance);
+                }
+            }
+
+        }
+    private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox25_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox17_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox18_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox19_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox20_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+        private void textBox24_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;   //cancel the event 
+
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+
+        }
+     
+               
         private void myFunction(double medicalAllowance)
         {
                
@@ -1166,6 +1618,8 @@ namespace Tax_Calculator
                 Application.Exit();
             }
         }
+
+ 
 
         private void UserInputs_Salaries()
         {
