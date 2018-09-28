@@ -241,7 +241,6 @@ namespace Tax_Calculator
         }
 
         public double CalTaxRebate()
-
         {
             
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
@@ -254,11 +253,20 @@ namespace Tax_Calculator
             }
             else if(totalTaxableIncome > 1000000.00 && totalTaxableIncome <= 3000000.00)
             {
-                taxRebate = (250000 * 0.15) + ((allowableInvestmentTaxCredit - 250000) * 0.12);
+                if ((allowableInvestmentTaxCredit - 250000) >= 0)
+                    taxRebate = (250000 * 0.15) + ((allowableInvestmentTaxCredit - 250000) * 0.12);
+                else
+                    taxRebate = allowableInvestmentTaxCredit * 0.15;
+
             }
             else
             {
-                taxRebate = (250000 * 0.15) + (500000 * 0.12) + ((allowableInvestmentTaxCredit - 750000) * 0.1);
+                if ((allowableInvestmentTaxCredit - 750000) >= 0)
+                    taxRebate = (250000 * 0.15) + (500000 * 0.12) + ((allowableInvestmentTaxCredit - 750000) * 0.1);
+                else if ((allowableInvestmentTaxCredit - 250000) >= 0)
+                    taxRebate = (250000 * 0.15) + ((allowableInvestmentTaxCredit - 250000) * 0.12);
+                else
+                    taxRebate = allowableInvestmentTaxCredit * 0.15;                
             }
             return taxRebate;
         }
