@@ -1091,7 +1091,7 @@ namespace Tax_Calculator
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            label_test1.Text = textBox1.Text.ToString();    //testing  
+           
             //
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
