@@ -194,23 +194,23 @@ namespace Tax_Calculator
         }
         private double TotalAmountOfIncome()
         {
-            totalAmountOfIncome =   double.Parse(textBox1.Text.ToString()) +
-                                    double.Parse(textBox2.Text.ToString()) +
-                                    double.Parse(textBox3.Text.ToString()) +
-                                    double.Parse(textBox4.Text.ToString()) +
-                                    double.Parse(textBox5.Text.ToString()) +
-                                    double.Parse(textBox6.Text.ToString()) +
-                                    double.Parse(textBox7.Text.ToString()) +
-                                    double.Parse(textBox25.Text.ToString()) +  //Leave allowance
-                                    double.Parse(textBox8.Text.ToString()) +
-                                    double.Parse(textBox9.Text.ToString()) +
-                                    double.Parse(textBox10.Text.ToString()) +
-                                    double.Parse(textBox11.Text.ToString()) +
-                                    double.Parse(textBox12.Text.ToString()) +
-                                    double.Parse(textBox13.Text.ToString()) +
+            totalAmountOfIncome =   double.Parse("0"+textBox1.Text.ToString() ) +
+                                    double.Parse("0"+textBox2.Text.ToString()) +
+                                    double.Parse("0" + textBox3.Text.ToString()) +
+                                    double.Parse("0" + textBox4.Text.ToString()) +
+                                    double.Parse("0" + textBox5.Text.ToString()) +
+                                    double.Parse("0" + textBox6.Text.ToString()) +
+                                    double.Parse("0" + textBox7.Text.ToString()) +
+                                    double.Parse("0" + textBox25.Text.ToString()) +  //Leave allowance
+                                    double.Parse("0" + textBox8.Text.ToString()) +
+                                    double.Parse("0" + textBox9.Text.ToString()) +
+                                    double.Parse("0" + textBox10.Text.ToString()) +
+                                    double.Parse("0" + textBox11.Text.ToString()) +
+                                    double.Parse("0" + textBox12.Text.ToString()) +
+                                    double.Parse("0" + textBox13.Text.ToString()) +
                                     
-                                    double.Parse(textBox15.Text.ToString()) +
-                                    double.Parse(textBox16.Text.ToString());
+                                    double.Parse("0" + textBox15.Text.ToString()) +
+                                    double.Parse("0" + textBox16.Text.ToString());
 
              
             return totalAmountOfIncome;
@@ -276,37 +276,35 @@ namespace Tax_Calculator
             return totalClaimedExpense;
         }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {           
-            if (e.KeyCode == Keys.Enter)
+        {       
+            if (e.KeyCode == Keys.Enter)  
             {
-                if(textBox1.Text.Length == 0)
+                if(textBox1.Text.Length != 0)
                 {
-                    textBox1.Text = "0";
-                    
-                }
-                
-                basicPay = double.Parse(textBox1.Text.ToString());
-                double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
-                double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
+                    // textBox1.Text = "0";
+                    basicPay = double.Parse(textBox1.Text.ToString());
+                    double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
+                    double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
-                label40.ForeColor = Color.Black;
-                label57.ForeColor = Color.Black;
+                    label40.ForeColor = Color.Black;
+                    label57.ForeColor = Color.Black;
 
-                label40.Text = "" + taxExtempted;
-                label57.Text = "" + taxableIncome;
+                    label40.Text = "" + taxExtempted;
+                    label57.Text = "" + taxableIncome;
 
-                netTaxableIncome += taxableIncome;
-                totalTaxExtempted += taxExtempted;
+                    netTaxableIncome += taxableIncome;
+                    totalTaxExtempted += taxExtempted;
 
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
+                    // net taxable income from salary
+                    label39.Text = TotalAmountOfIncome().ToString();
+                    label56.Text = CalTotalTaxExempted().ToString();
+                    //showing total taxable income
+                    label73.Text = CalNetTaxableIncome().ToString();
 
-                textBox2.Focus();
-                
-               
+                    textBox2.Focus();
+
+                } 
+            
             }
             else
             {
@@ -1093,6 +1091,7 @@ namespace Tax_Calculator
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            label_test1.Text = textBox1.Text.ToString();    //testing  
             //
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -1107,39 +1106,8 @@ namespace Tax_Calculator
                 e.Handled = true;
 
             }
-            else if (e.Handled == false)
-            {
-                if (textBox1.Text.ToString().Length > 0 && textBox1.Text.ToString()[0] != '0')
-                {
 
-                    if (textBox1.Text.Length == 0)
-                    {
-                        textBox1.Text = "0";
-
-                    }
-
-                    basicPay = double.Parse(textBox1.Text.ToString());
-                    double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
-                    double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
-
-                    label40.ForeColor = Color.Black;
-                    label57.ForeColor = Color.Black;
-
-                    label40.Text = "" + taxExtempted;
-                    label57.Text = "" + taxableIncome;
-
-                    netTaxableIncome += taxableIncome;
-                    totalTaxExtempted += taxExtempted;
-
-                    // net taxable income from salary
-                    label39.Text = TotalAmountOfIncome().ToString();
-                    label56.Text = CalTotalTaxExempted().ToString();
-                    //showing total taxable income
-                    label73.Text = CalNetTaxableIncome().ToString();
-
-                    
-                }
-            }
+           
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -1236,7 +1204,7 @@ namespace Tax_Calculator
                 {
 
                     double medicalAllowance = double.Parse(textBox6.Text.ToString());
-                    myFunction(medicalAllowance);
+                    
                 }
             }
 
@@ -1570,40 +1538,7 @@ namespace Tax_Calculator
         }
      
                
-        private void myFunction(double medicalAllowance)
-        {
-               
-                double taxableIncome;
-                //double taxableIncome;
-                if (comboBox1.SelectedIndex == 0)
-                {
-                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 0);
 
-                }
-
-
-                else
-                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 1);
-
-                double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
-
-                label45.ForeColor = Color.Black;
-                label62.ForeColor = Color.Black;
-
-                label45.Text = "" + taxExtempted;
-                label62.Text = "" + taxableIncome;
-
-                netTaxableIncome += taxableIncome;
-                totalTaxExtempted += taxExtempted;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-         
-
-        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -1618,8 +1553,6 @@ namespace Tax_Calculator
                 Application.Exit();
             }
         }
-
- 
 
         private void UserInputs_Salaries()
         {

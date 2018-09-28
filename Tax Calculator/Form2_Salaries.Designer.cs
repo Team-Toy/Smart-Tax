@@ -113,6 +113,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_test3 = new System.Windows.Forms.Label();
+            this.label_test2 = new System.Windows.Forms.Label();
+            this.label_test1 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label94 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
@@ -151,9 +154,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label_test3 = new System.Windows.Forms.Label();
-            this.label_test2 = new System.Windows.Forms.Label();
-            this.label_test1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1175,6 +1175,36 @@
             this.panel1.Size = new System.Drawing.Size(883, 506);
             this.panel1.TabIndex = 254;
             // 
+            // label_test3
+            // 
+            this.label_test3.AutoSize = true;
+            this.label_test3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_test3.Location = new System.Drawing.Point(322, 293);
+            this.label_test3.Name = "label_test3";
+            this.label_test3.Size = new System.Drawing.Size(44, 18);
+            this.label_test3.TabIndex = 296;
+            this.label_test3.Text = "None";
+            // 
+            // label_test2
+            // 
+            this.label_test2.AutoSize = true;
+            this.label_test2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_test2.Location = new System.Drawing.Point(272, 289);
+            this.label_test2.Name = "label_test2";
+            this.label_test2.Size = new System.Drawing.Size(44, 18);
+            this.label_test2.TabIndex = 295;
+            this.label_test2.Text = "None";
+            // 
+            // label_test1
+            // 
+            this.label_test1.AutoSize = true;
+            this.label_test1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_test1.Location = new System.Drawing.Point(217, 289);
+            this.label_test1.Name = "label_test1";
+            this.label_test1.Size = new System.Drawing.Size(44, 18);
+            this.label_test1.TabIndex = 294;
+            this.label_test1.Text = "None";
+            // 
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1555,36 +1585,6 @@
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label_test3
-            // 
-            this.label_test3.AutoSize = true;
-            this.label_test3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_test3.Location = new System.Drawing.Point(316, 293);
-            this.label_test3.Name = "label_test3";
-            this.label_test3.Size = new System.Drawing.Size(28, 18);
-            this.label_test3.TabIndex = 296;
-            this.label_test3.Text = "0.0";
-            // 
-            // label_test2
-            // 
-            this.label_test2.AutoSize = true;
-            this.label_test2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_test2.Location = new System.Drawing.Point(272, 289);
-            this.label_test2.Name = "label_test2";
-            this.label_test2.Size = new System.Drawing.Size(28, 18);
-            this.label_test2.TabIndex = 295;
-            this.label_test2.Text = "0.0";
-            // 
-            // label_test1
-            // 
-            this.label_test1.AutoSize = true;
-            this.label_test1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_test1.Location = new System.Drawing.Point(217, 289);
-            this.label_test1.Name = "label_test1";
-            this.label_test1.Size = new System.Drawing.Size(28, 18);
-            this.label_test1.TabIndex = 294;
-            this.label_test1.Text = "0.0";
             // 
             // Form2_Salaries
             // 
