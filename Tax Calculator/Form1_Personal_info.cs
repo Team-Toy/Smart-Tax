@@ -201,5 +201,61 @@ namespace Tax_Calculator
             }
            
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {   
+            // national ID
+            // only accept digit upto 13 character
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') || (sender as TextBox).Text.Length >= 13)
+            {
+                e.Handled = true;
+            }
+        }
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // UTIN
+            // only accept digit upto 12 character
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') || (sender as TextBox).Text.Length >= 12)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // TIN
+            // only accept digit upto 12 character
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') || (sender as TextBox).Text.Length >= 12)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // telephone
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') || (sender as TextBox).Text.Length >= 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox15_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // telephone
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') || (sender as TextBox).Text.Length >= 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // VAT no
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (e.KeyChar == '.') )
+            { 
+                e.Handled = true;
+            }
+        }
     }
 }
