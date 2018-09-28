@@ -32,9 +32,7 @@ namespace Tax_Calculator
         public static double taxPayable = 0.0;
         public static double totalTaxPayment = 0.0;
         public static double taxPaidLastYear = 0.0;
-        private double foreignIncome = 0;
-
-        
+     
         public Form4_SatementOfSalary()
         {
            
