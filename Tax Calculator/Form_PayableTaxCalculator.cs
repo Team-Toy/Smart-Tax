@@ -25,7 +25,7 @@ namespace Tax_Calculator
         private double[] taxPercents = new double[6];
 
         // tax configuration file path variable
-        private string filepath = Application.StartupPath + "temp.txt";
+        private string filepath = Application.StartupPath + @"payable-tax-conf.txt";
 
         public Form_PayableTaxCalculator()
         {
@@ -103,6 +103,7 @@ namespace Tax_Calculator
             dataExist = defaultSlabAndPercentageRead();
             if (dataExist)
             {
+                label3.ForeColor = Color.Black;
                 label3.Text = "0.0  ৳";
                 comboBox1.SelectedIndex = 0;
             }
@@ -134,8 +135,6 @@ namespace Tax_Calculator
                         taxPercents[i] = double.Parse(sr.ReadLine());
                     }
 
-                    // file reader closed
-                    sr.Close();
                     label3.Text = "0.0  ৳";
                 }
 

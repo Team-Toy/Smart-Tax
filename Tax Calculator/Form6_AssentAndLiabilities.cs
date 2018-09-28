@@ -27,7 +27,7 @@ namespace Tax_Calculator
 
         }
         /** The original PDF file. */
-        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";  //making 
+        public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
         private const string myFont = "Arial";    //Font name to print
         private const int fontSize = 9;       //font size to print
         public static string[] pdfInputs;

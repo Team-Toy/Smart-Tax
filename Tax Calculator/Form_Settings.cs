@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace Tax_Calculator
     public partial class Form_Settings : Form
     {
         // tax configuration file path variable
-        private string filepath = Application.StartupPath + "temp.txt";
+        private string filepath = Application.StartupPath + @"payable-tax-conf.txt";
         private string emptyString = "";
         
 
@@ -25,6 +26,7 @@ namespace Tax_Calculator
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //label20.Text = filepath; // test purpose
             InitializeConfiguration();
         }
 
@@ -35,9 +37,6 @@ namespace Tax_Calculator
 
             if (File.Exists(filepath))
             {
-                
-                
-                //List<string> lines = myFileReadIntoList();
 
                 // checking tax slabs values and it's percentage records info not empty
                 StreamReader sr = new StreamReader(filepath, true);
@@ -65,13 +64,12 @@ namespace Tax_Calculator
             }
             //if tax configuration file not found
             //else
-            //
-            //    //find current file directory
-            //    FileInfo fi = new FileInfo(filepath);
+            //{
             //    //create file in current directory
+            //    FileInfo fi = new FileInfo(filepath);
             //    fi.Create();
-
             //}
+            //
         }
 
         /// <summary>
