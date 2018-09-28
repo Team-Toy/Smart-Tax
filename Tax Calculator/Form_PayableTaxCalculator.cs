@@ -25,7 +25,7 @@ namespace Tax_Calculator
         private double[] taxPercents = new double[6];
 
         // tax configuration file path variable
-        private string filepath = Application.StartupPath + @"payable-tax-conf.txt";
+        private string filepath = Application.StartupPath + @"\File\payable-tax-conf.txt";
 
         public Form_PayableTaxCalculator()
         {

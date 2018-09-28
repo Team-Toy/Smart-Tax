@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_69C9C52271BE94E4C4E0BD4158D388F2"
-        "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
         "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,25 +40,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_69C9C52271BE94E4C4E0BD4158D388F2"
+        "OwnerKey" = "8:_3DA297BD654802B084CC125E512C2837"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3DA297BD654802B084CC125E512C2837"
+        "OwnerKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -85,6 +73,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -101,6 +105,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -144,37 +164,6 @@
                     }
                 }
             "SourcePath" = "8:itextsharp.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_69C9C52271BE94E4C4E0BD4158D388F2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_69C9C52271BE94E4C4E0BD4158D388F2"
-                    {
-                    "Name" = "8:System.Windows.Interactivity.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Windows.Interactivity.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
@@ -333,7 +322,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup - Tax Calculator"
         "ProductCode" = "8:{6B7C7244-8FAF-40F7-A38E-89914B734075}"
-        "PackageCode" = "8:{C2925927-27E4-4D1D-B983-B4900053647F}"
+        "PackageCode" = "8:{D3742523-81FA-42F7-96E0-1EB6584E6228}"
         "UpgradeCode" = "8:{EB93A505-DAAE-464B-B15E-B564587D0EC2}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -882,7 +871,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_465EBBB5E94B4385A4EDEBDFFAB57529"
             {
-            "SourcePath" = "8:..\\..\\Tax Calculator\\obj\\Release\\Tax Calculator.exe"
+            "SourcePath" = "8:..\\..\\Tax Calculator\\obj\\Debug\\Tax Calculator.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"

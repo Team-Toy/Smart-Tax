@@ -61,11 +61,20 @@ namespace Tax_Calculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to \File\payable-tax-conf.txt.
         /// </summary>
-        internal static string String1 {
+        internal static string file1 {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("file1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \File\income tax form.pdf.
+        /// </summary>
+        internal static string file2 {
+            get {
+                return ResourceManager.GetString("file2", resourceCulture);
             }
         }
     }

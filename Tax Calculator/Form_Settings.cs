@@ -15,7 +15,7 @@ namespace Tax_Calculator
     public partial class Form_Settings : Form
     {
         // tax configuration file path variable
-        private string filepath = Application.StartupPath + @"payable-tax-conf.txt";
+        private string filepath = Application.StartupPath + @"\File\payable-tax-conf.txt";
         private string emptyString = "";
         
 
