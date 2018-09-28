@@ -49,6 +49,15 @@ namespace Tax_Calculator
             label3.BackColor = Color.Transparent;
             label3.BringToFront();
 
+            // make taxable income transparent over background image
+            label1.Parent = this.panel1;
+            label1.BackColor = Color.Transparent;
+            label1.BringToFront();
+            // make taxable income transparent over background image
+            label4.Parent = this.panel1;
+            label4.BackColor = Color.Transparent;
+            label4.BringToFront();
+
 
             //this.textBox1.KeyPress += new KeyPressEventHandler(CheckEnterPress);
         }
