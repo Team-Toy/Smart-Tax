@@ -48,10 +48,12 @@ namespace Tax_Calculator
             label51.Text = Form2_Salaries.netTaxableIncome.ToString();
             //taking total taxable exempted income and showing in label52
             label52.Text = Form2_Salaries.totalTaxExtempted.ToString();
+            //taking value from NetHousePropertyIncome of Form2_Salaries
+            label_NetHousePropertyIncome.Text = Form2_Salaries.netRentalIncome.ToString();
 
 
 
-            
+
             // showing total and total income
             label39.Text = CalTotalTaxableIncome().ToString();
             label40.Text = CalTotalTaxableIncome().ToString();
@@ -61,7 +63,6 @@ namespace Tax_Calculator
         {
             
             textBox2.Text = "0";
-            textBox3.Text = "0";
             textBox4.Text = "0";
             textBox5.Text = "0";
             textBox6.Text = "0";
@@ -81,7 +82,7 @@ namespace Tax_Calculator
         {
             return totalTaxableIncome = Form2_Salaries.netTaxableIncome +
                                         double.Parse(textBox2.Text.ToString()) +
-                                        double.Parse(textBox3.Text.ToString()) +
+                                        double.Parse(label_NetHousePropertyIncome.Text.ToString()) +
                                         double.Parse(textBox4.Text.ToString()) +
                                         double.Parse(textBox5.Text.ToString()) +
                                         double.Parse(textBox6.Text.ToString()) +
@@ -100,23 +101,6 @@ namespace Tax_Calculator
                 if (textBox2.Text.Length == 0)
                 {
                     textBox2.Text = "0";
-                }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "income from house property" text field
-                textBox3.Focus();
-            }
-        }
-
-        private void textBox3_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (textBox3.Text.Length == 0)
-                {
-                    textBox3.Text = "0";
                 }
                 double total = CalTotalTaxableIncome();
                 //
@@ -378,7 +362,7 @@ namespace Tax_Calculator
         {
             pdfInputs[0] = label51.Text.ToString();   //salaries
             pdfInputs[1] = textBox2.Text.ToString();   //Interest on securities
-            pdfInputs[2] = textBox3.Text.ToString();   //Income from house property
+            pdfInputs[2] = label_NetHousePropertyIncome.Text.ToString();   //Income from house property
             pdfInputs[3] = textBox4.Text.ToString();   //Agricultural Income
             pdfInputs[4] = textBox5.Text.ToString();   //Income from Business or profession
             pdfInputs[5] = textBox6.Text.ToString();   //Share of proft in a firm
