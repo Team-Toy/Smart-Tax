@@ -574,7 +574,7 @@ namespace Tax_Calculator
                 pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
                 pdfWrite_Page8(ref stamper, ref reader);    //last page of tex return form
                 stamper.Close();
-                //MessageBox.Show("Print succeessfully");
+                MessageBox.Show("Print succeessfully");
             }
 
 
@@ -701,7 +701,7 @@ namespace Tax_Calculator
         }
 
         private void Form1_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
-        {// todo code 
+        {
             int pageNo = 1;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 202, 283);    //Print "Name of Assessee"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[1], 210, 303);   //print "National ID no"
@@ -823,7 +823,7 @@ namespace Tax_Calculator
             //printing House property income under "salaries" form 
             for (int i = 2; i < 9; i++)
             {
-                string s = Form2_Salaries.pdfInputs1[i];
+                string s = Form2_Salaries.pdfInputs2[i];
                 if (i == 6)  //checking to jump down additionally
                 {
                     tempY += 8;   // jump half line down with difference of x=8 
