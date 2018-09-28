@@ -61,6 +61,7 @@ namespace Tax_Calculator
 
             label35.Text = shownReturnIncome.ToString();
             label84.Text = taxExempted.ToString();
+            label_totalExpense.Text = Form5_Expenses.totalExpense.ToString();
 
         }
         private void makeAlltextBoxZero()
@@ -87,7 +88,7 @@ namespace Tax_Calculator
             textBox20.Text = "0";
             textBox21.Text = "0";
             textBox22.Text = "0";
-            textBox23.Text = "0";
+            label_totalExpense.Text = "0";
             textBox24.Text = "0";
             textBox25.Text = "0";
             textBox26.Text = "0";
@@ -479,26 +480,10 @@ namespace Tax_Calculator
 
                 label82.Text = accretionInWealth.ToString();
 
-                textBox23.Focus();
-            }
-        }
-
-        private void textBox23_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (textBox23.Text.Length == 0)
-                {
-                    textBox23.Text = "0";
-                }
-                familyExpenditure = Double.Parse(textBox23.Text.ToString());
-                totalAccretionInWealth = accretionInWealth + familyExpenditure;
-
-                label85.Text = totalAccretionInWealth.ToString();
-
                 textBox24.Focus();
             }
         }
+
 
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1224,7 +1209,7 @@ namespace Tax_Calculator
             pdfInputs[26] = label86.Text.ToString();    //Net wealth as on last date of this income year
             pdfInputs[27] = textBox22.Text.ToString();   // Net wealth as on last date of previous income year
             pdfInputs[28] = label82.Text.ToString();   //Accretion in wealth (Difference between serial no. 12 and 13)
-            pdfInputs[29] = textBox23.Text.ToString();   //(a) Family Expenditure: (Total expenditure as per Form IT 10 BB)  
+            pdfInputs[29] = label_totalExpense.Text.ToString();   //(a) Family Expenditure: (Total expenditure as per Form IT 10 BB)  
            
             // (b)Number of dependant children of the family:
             pdfInputs[30] = textBox24.Text.ToString();  //adult
