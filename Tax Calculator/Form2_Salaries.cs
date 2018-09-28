@@ -1093,18 +1093,65 @@ namespace Tax_Calculator
 
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled = true;
+                e.Handled = true;   //cancel the event 
+               
             }
+
 
             // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+
+            }
+            else if (e.Handled == false)
+            {
+                if (textBox6.Text.ToString().Length > 0 && textBox6.Text.ToString()[0] != '0')
+                {
+                   
+                    double medicalAllowance = double.Parse(textBox6.Text.ToString());
+                    myFunction(medicalAllowance);
+                }
             }
         }
 
+        private void myFunction(double medicalAllowance)
+        {
+               
+                double taxableIncome;
+                //double taxableIncome;
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 0);
+
+                }
+
+
+                else
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 1);
+
+                double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
+
+                label45.ForeColor = Color.Black;
+                label62.ForeColor = Color.Black;
+
+                label45.Text = "" + taxExtempted;
+                label62.Text = "" + taxableIncome;
+
+                netTaxableIncome += taxableIncome;
+                totalTaxExtempted += taxExtempted;
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString();
+                label56.Text = CalTotalTaxExempted().ToString();
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+         
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
