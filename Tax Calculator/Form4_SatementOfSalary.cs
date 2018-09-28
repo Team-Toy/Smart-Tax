@@ -205,10 +205,14 @@ namespace Tax_Calculator
                 {
                     textBox9.Text = "0";
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
+                double totalIncome = CalTotalTaxableIncome();
+                //showing total income on label39 and labe40
+                label39.Text = totalIncome.ToString();
+                label40.Text = totalIncome.ToString();
+
+                // calculate tax rebate and show on label42
+                taxRebate = CalTaxRebate();
+                label42.Text = taxRebate.ToString();
                 //focusing "foreign income" text field
                 textBox10.Focus();
             }
@@ -236,6 +240,15 @@ namespace Tax_Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            double totalIncome = CalTotalTaxableIncome();
+
+            //showing total income in labe40
+            label40.Text = totalIncome.ToString();
+
+            // showing tax rebate
+            taxRebate = CalTaxRebate();
+            label42.Text = taxRebate.ToString();
+
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
             f.ShowDialog();
         }
