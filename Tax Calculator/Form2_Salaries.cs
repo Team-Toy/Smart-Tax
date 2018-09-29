@@ -194,6 +194,7 @@ namespace Tax_Calculator
         }
         private double TotalAmountOfIncome()
         {
+            //addind "0" to prevent program crash because of null character of textBox
             totalAmountOfIncome =   double.Parse("0"+textBox1.Text.ToString() ) +
                                     double.Parse("0"+textBox2.Text.ToString()) +
                                     double.Parse("0" + textBox3.Text.ToString()) +
