@@ -80,16 +80,17 @@ namespace Tax_Calculator
         
         private double CalTotalTaxableIncome()
         {
+            //addind "0" to prevent program crash because of null character of textBox
             return totalTaxableIncome = Form2_Salaries.netTaxableIncome +
-                                        double.Parse(textBox2.Text.ToString()) +
-                                        double.Parse(label_NetHousePropertyIncome.Text.ToString()) +
-                                        double.Parse(textBox4.Text.ToString()) +
-                                        double.Parse(textBox5.Text.ToString()) +
-                                        double.Parse(textBox6.Text.ToString()) +
-                                        double.Parse(textBox7.Text.ToString()) +
-                                        double.Parse(textBox8.Text.ToString()) +
-                                        double.Parse(textBox9.Text.ToString()) +
-                                        double.Parse(textBox10.Text.ToString());
+                                        double.Parse("0"+ textBox2.Text.ToString()) +
+                                        double.Parse("0" + label_NetHousePropertyIncome.Text.ToString()) +
+                                        double.Parse("0" + textBox4.Text.ToString()) +
+                                        double.Parse("0" + textBox5.Text.ToString()) +
+                                        double.Parse("0" + textBox6.Text.ToString()) +
+                                        double.Parse("0" + textBox7.Text.ToString()) +
+                                        double.Parse("0" + textBox8.Text.ToString()) +
+                                        double.Parse("0" + textBox9.Text.ToString()) +
+                                        double.Parse("0" + textBox10.Text.ToString());
 
 
             
@@ -283,10 +284,11 @@ namespace Tax_Calculator
         }
         private double totalTaxPayments()
         {
-            return totalTaxPayment = Double.Parse(textBox11.Text.ToString()) +
-                                     Double.Parse(textBox12.Text.ToString()) +
-                                     Double.Parse(textBox13.Text.ToString()) +
-                                     Double.Parse(textBox14.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            return totalTaxPayment = Double.Parse("0"+ textBox11.Text.ToString()) +
+                                     Double.Parse("0" + textBox12.Text.ToString()) +
+                                     Double.Parse("0" + textBox13.Text.ToString()) +
+                                     Double.Parse("0" + textBox14.Text.ToString());
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
