@@ -52,17 +52,18 @@ namespace Tax_Calculator
         }
         private double CalTotalExpense()
         {
-            totalExpense = Double.Parse(textBox1.Text.ToString()) +
-                            Double.Parse(textBox2.Text.ToString()) +
-                            Double.Parse(textBox3.Text.ToString()) +
-                            Double.Parse(textBox4.Text.ToString()) +
-                            Double.Parse(textBox5.Text.ToString()) +
-                            Double.Parse(textBox6.Text.ToString()) +
-                            Double.Parse(textBox7.Text.ToString()) +
-                            Double.Parse(textBox8.Text.ToString()) +
-                            Double.Parse(textBox9.Text.ToString()) +
+            //addind "0" to prevent program crash because of null character of textBox
+            totalExpense = Double.Parse("0"+ textBox1.Text.ToString()) +
+                            Double.Parse("0" + textBox2.Text.ToString()) +
+                            Double.Parse("0" + textBox3.Text.ToString()) +
+                            Double.Parse("0" + textBox4.Text.ToString()) +
+                            Double.Parse("0" + textBox5.Text.ToString()) +
+                            Double.Parse("0" + textBox6.Text.ToString()) +
+                            Double.Parse("0" + textBox7.Text.ToString()) +
+                            Double.Parse("0" + textBox8.Text.ToString()) +
+                            Double.Parse("0" + textBox9.Text.ToString()) +
                             Double.Parse(textBox10.Text.ToString()) +
-                            Double.Parse(textBox11.Text.ToString());
+                            Double.Parse("0" + textBox11.Text.ToString());
                             
 
             return totalExpense;
