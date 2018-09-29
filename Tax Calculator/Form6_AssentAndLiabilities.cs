@@ -95,23 +95,24 @@ namespace Tax_Calculator
         }
         private double CalTotalAssets()
         {
-            return totalAssets = Double.Parse(textBox1.Text.ToString()) +
-                                 Double.Parse(textBox2.Text.ToString()) +
-                                 Double.Parse(textBox3.Text.ToString()) +
-                                 Double.Parse(textBox4.Text.ToString()) +
-                                 Double.Parse(textBox5.Text.ToString()) +
-                                 Double.Parse(textBox6.Text.ToString()) +
-                                 Double.Parse(textBox7.Text.ToString()) +
-                                 Double.Parse(textBox8.Text.ToString()) +
-                                 Double.Parse(textBox9.Text.ToString()) +
-                                 Double.Parse(textBox10.Text.ToString()) +
-                                 Double.Parse(textBox11.Text.ToString()) +
-                                 Double.Parse(textBox12.Text.ToString()) +
-                                 Double.Parse(textBox13.Text.ToString()) +
-                                 Double.Parse(textBox14.Text.ToString()) +
-                                 Double.Parse(textBox15.Text.ToString()) +
-                                 Double.Parse(textBox16.Text.ToString()) +
-                                 Double.Parse(textBox17.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            return totalAssets = Double.Parse("0"+ textBox1.Text.ToString()) +
+                                 Double.Parse("0" + textBox2.Text.ToString()) +
+                                 Double.Parse("0" + textBox3.Text.ToString()) +
+                                 Double.Parse("0" + textBox4.Text.ToString()) +
+                                 Double.Parse("0" + textBox5.Text.ToString()) +
+                                 Double.Parse("0" + textBox6.Text.ToString()) +
+                                 Double.Parse("0" + textBox7.Text.ToString()) +
+                                 Double.Parse("0" + textBox8.Text.ToString()) +
+                                 Double.Parse("0" + textBox9.Text.ToString()) +
+                                 Double.Parse("0" + textBox10.Text.ToString()) +
+                                 Double.Parse("0" + textBox11.Text.ToString()) +
+                                 Double.Parse("0" + textBox12.Text.ToString()) +
+                                 Double.Parse("0" + textBox13.Text.ToString()) +
+                                 Double.Parse("0" + textBox14.Text.ToString()) +
+                                 Double.Parse("0" + textBox15.Text.ToString()) +
+                                 Double.Parse("0" + textBox16.Text.ToString()) +
+                                 Double.Parse("0" + textBox17.Text.ToString());
 
         }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -175,11 +176,12 @@ namespace Tax_Calculator
         }
         private double CalTotalInvestments()
         {
-            return totalInvestments = Double.Parse(textBox5.Text.ToString()) +
-                                        Double.Parse(textBox6.Text.ToString()) +
-                                        Double.Parse(textBox7.Text.ToString()) +
-                                        Double.Parse(textBox8.Text.ToString()) +
-                                        Double.Parse(textBox9.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            return totalInvestments = Double.Parse("0" + textBox5.Text.ToString()) +
+                                        Double.Parse("0" + textBox6.Text.ToString()) +
+                                        Double.Parse("0" + textBox7.Text.ToString()) +
+                                        Double.Parse("0" + textBox8.Text.ToString()) +
+                                        Double.Parse("0" + textBox9.Text.ToString());
 
 
         }
@@ -327,9 +329,10 @@ namespace Tax_Calculator
         }
         private double CalTotalCashAssets()
         {
-            return totalCashAssets = Double.Parse(textBox14.Text.ToString()) +
-                                     Double.Parse(textBox15.Text.ToString()) +
-                                     Double.Parse(textBox16.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            return totalCashAssets = Double.Parse("0" + textBox14.Text.ToString()) +
+                                     Double.Parse("0" + textBox15.Text.ToString()) +
+                                     Double.Parse("0" + textBox16.Text.ToString());
         }
 
         private void textBox14_KeyDown(object sender, KeyEventArgs e)
@@ -398,10 +401,11 @@ namespace Tax_Calculator
         }
         private double CalTotalLiabilities()
         {
-            return totalLiabilities = Double.Parse(textBox18.Text.ToString()) +
-                                      Double.Parse(textBox19.Text.ToString()) +
-                                      Double.Parse(textBox20.Text.ToString()) +
-                                      Double.Parse(textBox21.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            return totalLiabilities = Double.Parse("0" + textBox18.Text.ToString()) +
+                                      Double.Parse("0" + textBox19.Text.ToString()) +
+                                      Double.Parse("0" + textBox20.Text.ToString()) +
+                                      Double.Parse("0" + textBox21.Text.ToString());
         }
         private void textBox18_KeyDown(object sender, KeyEventArgs e)
         {
@@ -475,7 +479,8 @@ namespace Tax_Calculator
                 {
                     textBox22.Text = "0";
                 }
-                netWealthPrevYear = Double.Parse(textBox22.Text.ToString());
+                //addind "0" to prevent program crash because of null character of textBox
+                netWealthPrevYear = Double.Parse("0" + textBox22.Text.ToString());
                 accretionInWealth = netWealthThisYear - netWealthPrevYear;
 
                 label82.Text = accretionInWealth.ToString();
@@ -493,7 +498,8 @@ namespace Tax_Calculator
                 {
                     textBox24.Text = "0";
                 }
-                adult = int.Parse(textBox24.Text.ToString());
+                //addind "0" to prevent program crash because of null character of textBox
+                adult = int.Parse("0" + textBox24.Text.ToString());
 
 
                 textBox25.Focus();
@@ -508,7 +514,8 @@ namespace Tax_Calculator
                 {
                     textBox25.Text = "0";
                 }
-                child = int.Parse(textBox25.Text.ToString());
+                //addind "0" to prevent program crash because of null character of textBox
+                child = int.Parse("0" + textBox25.Text.ToString());
 
 
                 textBox26.Focus();
