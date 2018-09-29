@@ -68,16 +68,17 @@ namespace Tax_Calculator
 
         private double InvestmentTaxCalculate()
         {
-            totalInvestment =   double.Parse(textBox1.Text.ToString()) +
-                                double.Parse(textBox2.Text.ToString()) +
-                                double.Parse(textBox3.Text.ToString()) +
-                                double.Parse(textBox4.Text.ToString()) +
-                                double.Parse(textBox5.Text.ToString()) +
-                                double.Parse(textBox6.Text.ToString()) +
-                                double.Parse(textBox7.Text.ToString()) +
-                                double.Parse(textBox8.Text.ToString()) +
-                                double.Parse(textBox9.Text.ToString()) +
-                                double.Parse(textBox10.Text.ToString());
+            //addind "0" to prevent program crash because of null character of textBox
+            totalInvestment =   double.Parse("0"+ textBox1.Text.ToString()) +
+                                double.Parse("0" + textBox2.Text.ToString()) +
+                                double.Parse("0" + textBox3.Text.ToString()) +
+                                double.Parse("0" + textBox4.Text.ToString()) +
+                                double.Parse("0" + textBox5.Text.ToString()) +
+                                double.Parse("0" + textBox6.Text.ToString()) +
+                                double.Parse("0" + textBox7.Text.ToString()) +
+                                double.Parse("0" + textBox8.Text.ToString()) +
+                                double.Parse("0" + textBox9.Text.ToString()) +
+                                double.Parse("0" + textBox10.Text.ToString());
            
             return totalInvestment;
         }
