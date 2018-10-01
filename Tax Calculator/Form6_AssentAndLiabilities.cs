@@ -1234,16 +1234,16 @@ namespace Tax_Calculator
         private double BalanceForward()
         {
             double b_f = 0.0;
-            b_f +=double.Parse(textBox1.Text.ToString() );   //Business Capital ( Closing Balance)
-            b_f += double.Parse(textBox2.Text.ToString());   //Directors Shareholdings in Limited Companies (at cost) 
-            b_f += double.Parse(textBox3.Text.ToString() );   //Non-Agricultural Property (at cost with legal expenses)
-            b_f += double.Parse(textBox4.Text.ToString() );   //Agricultural Property (at cost with legal expenses)
-            b_f += double.Parse(label11.Text.ToString() );   //total
-            b_f += double.Parse(textBox10.Text.ToString() );   //Motor Vehicles (at cost)
-            b_f += double.Parse(textBox11.Text.ToString() );   //Jewellery (quantity and cost)
-            b_f += double.Parse(textBox12.Text.ToString() );   //Furniture (at cost)
-            b_f += double.Parse(textBox13.Text.ToString() );   //Electronic Equipment (at cost)
-            b_f += double.Parse(label51.Text.ToString() );    //total
+            b_f +=double.Parse("0" + textBox1.Text.ToString() );   //Business Capital ( Closing Balance)
+            b_f += double.Parse("0" + textBox2.Text.ToString());   //Directors Shareholdings in Limited Companies (at cost) 
+            b_f += double.Parse("0" + textBox3.Text.ToString() );   //Non-Agricultural Property (at cost with legal expenses)
+            b_f += double.Parse("0" + textBox4.Text.ToString() );   //Agricultural Property (at cost with legal expenses)
+            b_f += double.Parse("0" + label11.Text.ToString() );   //total
+            b_f += double.Parse("0" + textBox10.Text.ToString() );   //Motor Vehicles (at cost)
+            b_f += double.Parse("0" + textBox11.Text.ToString() );   //Jewellery (quantity and cost)
+            b_f += double.Parse("0" + textBox12.Text.ToString() );   //Furniture (at cost)
+            b_f += double.Parse("0" + textBox13.Text.ToString() );   //Electronic Equipment (at cost)
+            b_f += double.Parse("0" + label51.Text.ToString() );    //total
 
             return b_f;
         }
