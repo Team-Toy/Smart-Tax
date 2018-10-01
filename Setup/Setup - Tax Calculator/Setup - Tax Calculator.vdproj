@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_07E4373201AD4A24A886E60C710E8A04"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3DA297BD654802B084CC125E512C2837"
         "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
         "MsmSig" = "8:_UNDEFINED"
@@ -27,13 +33,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6CB4AC648D1E4329A839F99E0004606B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
         "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E4F33B11F3DD47E481C176FD5AFC579A"
+        "MsmKey" = "8:_D6DE5DCEA44A44E89AF4D4F3F4989D59"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -150,6 +162,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07E4373201AD4A24A886E60C710E8A04"
+            {
+            "SourcePath" = "8:..\\..\\Tax Calculator\\File\\income tax form.pdf"
+            "TargetName" = "8:income tax form.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_87C771F931E846ACB99C453D8719F357"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3DA297BD654802B084CC125E512C2837"
             {
             "AssemblyRegister" = "3:1"
@@ -179,6 +211,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CB4AC648D1E4329A839F99E0004606B"
+            {
+            "SourcePath" = "8:..\\..\\Tax Calculator\\flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico"
+            "TargetName" = "8:flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D5CBA506520F0F90D03933E3B0B15981"
@@ -212,10 +264,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4F33B11F3DD47E481C176FD5AFC579A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D6DE5DCEA44A44E89AF4D4F3F4989D59"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\income tax form.pdf"
-            "TargetName" = "8:income tax form.pdf"
+            "SourcePath" = "8:..\\..\\Tax Calculator\\File\\payable-tax-conf.txt"
+            "TargetName" = "8:payable-tax-conf.txt"
             "Tag" = "8:"
             "Folder" = "8:_87C771F931E846ACB99C453D8719F357"
             "Condition" = "8:"
@@ -320,7 +372,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup - Tax Calculator"
+        "ProductName" = "8:Tax Calculator"
         "ProductCode" = "8:{6B7C7244-8FAF-40F7-A38E-89914B734075}"
         "PackageCode" = "8:{D3742523-81FA-42F7-96E0-1EB6584E6228}"
         "UpgradeCode" = "8:{EB93A505-DAAE-464B-B15E-B564587D0EC2}"
@@ -328,18 +380,18 @@
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:BlueGet"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup - Tax Calculator"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Bimal & Nayeem"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_6CB4AC648D1E4329A839F99E0004606B"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -453,7 +505,7 @@
             "Target" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
             "Folder" = "8:_1E81F970029549A6A463211D6EB56E26"
             "WorkingFolder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Icon" = "8:"
+            "Icon" = "8:_6CB4AC648D1E4329A839F99E0004606B"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E3A9BD392B5F43CA831AF7886A7360CA"
@@ -467,7 +519,7 @@
             "Target" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
             "Folder" = "8:_05A50F0E432749CBB6C2CA014C1909ED"
             "WorkingFolder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Icon" = "8:"
+            "Icon" = "8:_6CB4AC648D1E4329A839F99E0004606B"
             "Feature" = "8:"
             }
         }
