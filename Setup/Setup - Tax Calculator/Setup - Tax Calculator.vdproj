@@ -22,25 +22,19 @@
         "Entry"
         {
         "MsmKey" = "8:_3DA297BD654802B084CC125E512C2837"
-        "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
+        "OwnerKey" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6CB4AC648D1E4329A839F99E0004606B"
+        "MsmKey" = "8:_AABCCF4912CA4F59B4EB5721ACE9E2D0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
-        "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
+        "OwnerKey" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,20 +45,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3DA297BD654802B084CC125E512C2837"
+        "MsmKey" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D5CBA506520F0F90D03933E3B0B15981"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3DA297BD654802B084CC125E512C2837"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -213,10 +213,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CB4AC648D1E4329A839F99E0004606B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AABCCF4912CA4F59B4EB5721ACE9E2D0"
             {
-            "SourcePath" = "8:..\\..\\Tax Calculator\\flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico"
-            "TargetName" = "8:flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico"
+            "SourcePath" = "8:..\\..\\..\\flat_image_national_emblem_of_bangladesh_svg_icons\\tax-icon.ico"
+            "TargetName" = "8:tax-icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
             "Condition" = "8:"
@@ -374,7 +374,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Tax Calculator"
         "ProductCode" = "8:{6B7C7244-8FAF-40F7-A38E-89914B734075}"
-        "PackageCode" = "8:{D3742523-81FA-42F7-96E0-1EB6584E6228}"
+        "PackageCode" = "8:{8C431285-F3B7-4982-8C9D-511E000DCAD8}"
         "UpgradeCode" = "8:{EB93A505-DAAE-464B-B15E-B564587D0EC2}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -391,7 +391,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_6CB4AC648D1E4329A839F99E0004606B"
+        "ARPPRODUCTICON" = "8:_AABCCF4912CA4F59B4EB5721ACE9E2D0"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -494,7 +494,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3C757CB9C8A046A8B1A8A94F0AAE717F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5B47DFF166D84FB4BAFDBD95233E2127"
             {
             "Name" = "8:Tax Calculator"
             "Arguments" = "8:"
@@ -502,13 +502,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
+            "Target" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
             "Folder" = "8:_1E81F970029549A6A463211D6EB56E26"
             "WorkingFolder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Icon" = "8:_6CB4AC648D1E4329A839F99E0004606B"
+            "Icon" = "8:_AABCCF4912CA4F59B4EB5721ACE9E2D0"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E3A9BD392B5F43CA831AF7886A7360CA"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6157F9300645435498A49BEEFCB30236"
             {
             "Name" = "8:Tax Calculator"
             "Arguments" = "8:"
@@ -516,10 +516,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_465EBBB5E94B4385A4EDEBDFFAB57529"
+            "Target" = "8:_FFDE94625CC64CD4A512879DAB29A97C"
             "Folder" = "8:_05A50F0E432749CBB6C2CA014C1909ED"
             "WorkingFolder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Icon" = "8:_6CB4AC648D1E4329A839F99E0004606B"
+            "Icon" = "8:_AABCCF4912CA4F59B4EB5721ACE9E2D0"
             "Feature" = "8:"
             }
         }
@@ -921,35 +921,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_465EBBB5E94B4385A4EDEBDFFAB57529"
-            {
-            "SourcePath" = "8:..\\..\\Tax Calculator\\obj\\Debug\\Tax Calculator.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{0F275AC0-FF5F-4519-B09F-9DA55EC28D12}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D32FCAA1F4154930945BF8A393440332"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3E407A5AE20F44AA92F1C0FEB82228DA"
             {
             "SourcePath" = "8:"
             "TargetName" = "8:"
@@ -999,6 +971,34 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
+            "OutputProjectGuid" = "8:{0F275AC0-FF5F-4519-B09F-9DA55EC28D12}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FFDE94625CC64CD4A512879DAB29A97C"
+            {
+            "SourcePath" = "8:..\\..\\Tax Calculator\\obj\\Release\\Tax Calculator.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_BB244E53B599408F85EE0472114C2D46"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{0F275AC0-FF5F-4519-B09F-9DA55EC28D12}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
