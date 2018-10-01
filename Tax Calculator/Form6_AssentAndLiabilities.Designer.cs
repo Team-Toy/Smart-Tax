@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label_totalExpense = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label84 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -143,8 +145,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label_totalExpense = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -269,6 +269,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 550);
             this.panel1.TabIndex = 0;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(504, 1161);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(51, 16);
+            this.label88.TabIndex = 521;
+            this.label88.Text = "Tk. .......";
+            // 
+            // label_totalExpense
+            // 
+            this.label_totalExpense.AutoSize = true;
+            this.label_totalExpense.BackColor = System.Drawing.SystemColors.Control;
+            this.label_totalExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_totalExpense.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_totalExpense.Location = new System.Drawing.Point(561, 1160);
+            this.label_totalExpense.Name = "label_totalExpense";
+            this.label_totalExpense.Size = new System.Drawing.Size(15, 16);
+            this.label_totalExpense.TabIndex = 520;
+            this.label_totalExpense.Text = "0";
             // 
             // button1
             // 
@@ -1524,35 +1546,13 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 12);
+            this.button3.Location = new System.Drawing.Point(12, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(75, 33);
             this.button3.TabIndex = 1;
             this.button3.Text = "Home";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label_totalExpense
-            // 
-            this.label_totalExpense.AutoSize = true;
-            this.label_totalExpense.BackColor = System.Drawing.SystemColors.Control;
-            this.label_totalExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_totalExpense.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_totalExpense.Location = new System.Drawing.Point(561, 1160);
-            this.label_totalExpense.Name = "label_totalExpense";
-            this.label_totalExpense.Size = new System.Drawing.Size(15, 16);
-            this.label_totalExpense.TabIndex = 520;
-            this.label_totalExpense.Text = "0";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(504, 1161);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(51, 16);
-            this.label88.TabIndex = 521;
-            this.label88.Text = "Tk. .......";
             // 
             // Form6_AssentAndLiabilities
             // 

@@ -141,7 +141,7 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 180, 85); //print "Name of Assessee"
 
             float tempX = 104;  //set "TIN" number positon x=104 
-            float tempY = 104;   //set "TIN" number positon  y =142
+            float tempY = 104;   //set "TIN" number positon  y = 104
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
                                                             //print "TIN" above the "Expense form"
             for (int i = 0; i < s.Length; i++)
@@ -157,7 +157,7 @@ namespace Tax_Calculator
 
             //..........................
 
-            Form6_HelperFunction1(ref canvas, ref reader);
+            Form6_HelperFunction1(ref canvas, ref reader);  //print on page 5;Asset and Liabilities form
 
             pageNo = 6;     //page = 6 is  ;Asset and Liabilities form
             canvas = stamper.GetOverContent(pageNo);
@@ -252,8 +252,8 @@ namespace Tax_Calculator
             int pageNo = 3;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 180, 66); //print "Name of Assessee"
 
-            float tempX = 102;  //set "TIN" number positon x=102 
-            float tempY = 88;   //set "TIN" number positon  y =88
+            float tempX = 101;  //set "TIN" number positon x=101 
+            float tempY = 89;   //set "TIN" number positon  y =89
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
                                                             //print "TIN" above the "Expense form"
             for (int i = 0; i < s.Length; i++)
@@ -471,8 +471,9 @@ namespace Tax_Calculator
             for (int i = 0; i < 2; i++)
             {
                 string s = Form6_AssentAndLiabilities.pdfInputs[i];
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all entry "Asset and Liabilities"
-                y += 15;   // jump half line down with difference of y=11
+                //print "Business Capital" and "Directors Shareholdings"  on page 5
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   
+                y += 17;   // jump half line down with difference of y=17
             }
 
             y = 232;    //set positions for "Non-agricultural property" and "Agicultral Property" 
@@ -489,7 +490,7 @@ namespace Tax_Calculator
             {
                 string s = Form6_AssentAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all "Investments" in "Asset and Liabilities" form
-                y += 19;   // jump one line down with difference of y=18
+                y += 19;   // jump one line down with difference of y=19
             }
             //........................
 
