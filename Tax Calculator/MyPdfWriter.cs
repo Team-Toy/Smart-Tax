@@ -272,19 +272,27 @@ namespace Tax_Calculator
             //setting-up the X and Y coordinates of the document
             float x = 273;  //by default x increment left-right
             float y = 170;
-            int starIndex = 0;
+            int startIndex = 0;
             int endIndex = 18;
-            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
+            //print each "amount of income" in "salaried" form(page 3)
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex);  
+            
+
+            //print amount of reduced house rent
+            WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.reducedHomeRent + "", 276, 476);    //print amount of reduced house rent
 
             x += 103;   //x coordinate right shift(column)
-            starIndex = endIndex;
-            endIndex += endIndex;
-            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex);
+            startIndex = 18;
+            endIndex = 36;
+            //print each of "Exempted income" in "salaried" form(page 3)
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex);
+
 
             x += 103;   //x coordinate right shift(column)
-            starIndex = 36;
+            startIndex = 36;
             endIndex = 54;
-            Form2_HelperFunction1(ref canvas, ref reader, x, y, starIndex, endIndex); //print "salaried"
+            //print each of "Net Taxable income" in "salaried" form
+            Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex); 
             Form2_HelperFunction2(ref canvas, ref reader);  //print "House property income"
 
         }
