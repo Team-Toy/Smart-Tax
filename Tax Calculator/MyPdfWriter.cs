@@ -74,9 +74,11 @@ namespace Tax_Calculator
         {
             int pageNo = 7;     //page = 7 is Expense form
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 185, 140); //print "Name of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 181, 121); //print "Name of Assessee"
 
-            float tempX = 340;  //set "TIN" number positon x=342 , y =142
+            //set "TIN" number positon x=106 , y =143
+            float tempX = 106; 
+            float tempY = 143;
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
                                                             //print "TIN" above the "Expense form"
             for (int i = 0; i < s.Length; i++)
@@ -86,16 +88,25 @@ namespace Tax_Calculator
                     tempX += 18;     // jump with difference of x=18 to right hand side box
                 }
 
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i] + "", tempX, 142);    //print each of TIN number one by one
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i] + "", tempX, tempY);    //print each of TIN number one by one
                 tempX += 18;    // jump with difference of x=18 to right hand side box
             }
             //print "Expense" form
             Form5_HelperFunction(ref canvas, ref reader);
 
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 184, 642); //print "name of assessee" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[3], 467, 642); //print "Assessment year" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[4], 390, 678); //print "Circle" in Receipt of income tax return
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[5], 491, 680); //print "Taxes Zone" in Receipt of income tax return
+            float x = 460;
+            float y = 664;
+            for (int index =4; index < 6; index++)
+            {
+                //print "Circle" and "Taxes Zone" one by one in Receipt of income tax return
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[index], x, y);
+                y += 22;
+            }
+            
+            y = 642;//set y for print assessment year
+            //print "Assessment year"  in Receipt of income tax return
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[6], x, y);
 
             float tempX1 = 137;  //set "TIN" number positon x=137 , y =680
                                  //print "TIN" under the "Expense form"
@@ -119,6 +130,7 @@ namespace Tax_Calculator
 
         }
 
+        //print on page 5
         private void pdfWrite_Form6(ref PdfStamper stamper, ref PdfReader reader)
         {
             int pageNo = 5;     //page = 5 is  ;Asset and Liabilities form
@@ -126,9 +138,9 @@ namespace Tax_Calculator
 
             //'''''''''''''''''''''print for "Name of Assessee and TIN number"
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 183, 104); //print "Name of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 180, 85); //print "Name of Assessee"
 
-            float tempX = 374;  //set "TIN" number positon x=342 
+            float tempX = 104;  //set "TIN" number positon x=104 
             float tempY = 104;   //set "TIN" number positon  y =142
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
                                                             //print "TIN" above the "Expense form"
@@ -238,21 +250,21 @@ namespace Tax_Calculator
 
             //'''''''''''''''''''''print for "Name of Assessee and TIN number"
             int pageNo = 3;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 185, 91); //print "Name of Assessee"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 180, 66); //print "Name of Assessee"
 
-            float tempX = 407;  //set "TIN" number positon x=342 
-            float tempY = 91;   //set "TIN" number positon  y =142
+            float tempX = 102;  //set "TIN" number positon x=102 
+            float tempY = 88;   //set "TIN" number positon  y =88
             string s = Form1_Personal_info.pdfInputs[3];    //get "TIN" as a string 
                                                             //print "TIN" above the "Expense form"
             for (int i = 0; i < s.Length; i++)
             {
                 if (i == 3 || i == 6)    //checking to jump additionally
                 {
-                    tempX += 15;     // jump with difference of x=16 to right hand side box
+                    tempX += 15;     // jump with difference of x=15 to right hand side box
                 }
 
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s[i] + "", tempX, tempY);    //print each of TIN number one by one
-                tempX += 13;    // jump with difference of x=16 to right hand side box
+                tempX += 13;    // jump with difference of x=13 to right hand side box
             }
 
             //..........................
