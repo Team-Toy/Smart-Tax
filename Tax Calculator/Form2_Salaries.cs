@@ -65,11 +65,12 @@ namespace Tax_Calculator
         public static double totalClaimedExpense = 0.0;
         // netRentalIncome = annualRentalIncome - totalClaimedExpense
         public static double netRentalIncome = 0.0;
+        private double reducedHomeRent = 0;
 
         public Form2_Salaries()
         {
             InitializeComponent();
-            pdfInputs1 = new string[54];
+            pdfInputs1 = new string[55];
             pdfInputs2 = new string[11];
 
         }
@@ -78,6 +79,8 @@ namespace Tax_Calculator
         {
             makeAllTextBoxZero();
             makeAllLabelZero();
+
+            textBox15.Enabled = false; // 
 
             // default value set for medical allowance
             comboBox1.SelectedIndex = 0;
@@ -208,9 +211,7 @@ namespace Tax_Calculator
                                     double.Parse("0" + textBox10.Text.ToString()) +
                                     double.Parse("0" + textBox11.Text.ToString()) +
                                     double.Parse("0" + textBox12.Text.ToString()) +
-                                    double.Parse("0" + textBox13.Text.ToString()) +
-                                    
-                                    double.Parse("0" + textBox15.Text.ToString()) +
+                                    double.Parse("0" + textBox13.Text.ToString()) +                                                        
                                     double.Parse("0" + textBox16.Text.ToString());
 
              
@@ -283,7 +284,7 @@ namespace Tax_Calculator
                 if(textBox1.Text.Length != 0)
                 {
                     // textBox1.Text = "0";
-                    basicPay = double.Parse(textBox1.Text.ToString());
+                    basicPay = double.Parse("0" + textBox1.Text.ToString());
                     double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                     double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
@@ -839,16 +840,15 @@ namespace Tax_Calculator
             }
             else
             {
-                label53.Text = "0.0";   //select "No", nontaxable show as zero
-                label70.Text = "0.0";  //select "No", taxable show as zero
+                label53.Text = "0";   //select "No", nontaxable show as zero
+                label70.Text = "0";  //select "No", taxable show as zero
 
                 // net TaxExempted income from salary
                 label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
             }
-            textBox15.Focus();
-
+            comboBox2.Focus();
         }
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
@@ -858,47 +858,21 @@ namespace Tax_Calculator
                 if (textBox15.Text.Length == 0)
                 {
                     textBox15.Text = "0";
-
                 }
-                double accomodation = double.Parse(textBox15.Text.ToString());
-                
-                double taxableIncome;
+               
+                reducedHomeRent = double.Parse("0" + textBox15.Text.ToString());
 
-                // combobox value 0 handled, need to implement for value 1
-                if (comboBox2.SelectedIndex == 0)
-                {
-                    taxableIncome = list[15].TaxableIncome(basicPay,accomodation, 0);
-                }
+                double houseRentTax = (basicPay * 0.25) - reducedHomeRent;
+                if (houseRentTax > 0)
+                    label71.Text = houseRentTax.ToString();
                 else
-                {
-                    // made it zero by force, but it is wrong, need to fix
-                    taxableIncome = 0.0;
-                }
-                
-                double taxExtempted = TaxExemptCal(accomodation, taxableIncome);
+                    label71.Text = "0"; // if basic pay is zero , tax is zero
 
-                label54.ForeColor = Color.Black;
-                label71.ForeColor = Color.Black;
-
-                label54.Text = "" + taxExtempted;
-                label71.Text = "" + taxableIncome;
-
-                netTaxableIncome += taxableIncome;
-                totalTaxExtempted += taxExtempted;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString();
 
                 textBox16.Focus();
-            }
-            else
-            {
-                label54.ForeColor = Color.Red;
-                label71.ForeColor = Color.Red;
-            }
+            }                               
         }
 
         private void textBox16_KeyDown(object sender, KeyEventArgs e)
@@ -1555,67 +1529,114 @@ namespace Tax_Calculator
             }
         }
 
+
+        private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if(comboBox2.SelectedIndex == 0) // if none is selected
+            {
+                textBox15.Enabled = false;
+                label54.ForeColor = Color.Black;
+                label71.ForeColor = Color.Black;
+
+                textBox15.Text = "0";
+                label54.Text = "0";
+                label71.Text = "0";
+
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+            }
+            else if(comboBox2.SelectedIndex == 1) // if it is free home
+            {
+                textBox15.Enabled = false;
+                label54.ForeColor = Color.Black;
+                label71.ForeColor = Color.Black;
+
+                textBox15.Text = "0";
+                label54.Text = "0";
+                label71.Text = (basicPay * 0.25).ToString();
+
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+            }
+            else if(comboBox2.SelectedIndex == 2) // if there is reduced rent
+            {
+                textBox15.Enabled = true;
+                textBox15.Focus();
+
+                label54.ForeColor = Color.Black;
+                label71.ForeColor = Color.Black;
+
+                label54.Text = "0";
+                label71.Text = "0";
+                textBox15.Text = "0";
+
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString();
+            }
+        }
+
         private void UserInputs_Salaries()
         {
-            pdfInputs1[0] = textBox1.Text.ToString();   //salaries
-            pdfInputs1[1] = textBox2.Text.ToString();   //Special pay
-            pdfInputs1[2] = textBox3.Text.ToString();   //Dearness Allowances
-            pdfInputs1[3] = textBox4.Text.ToString();   //Conveyance allowances
-            pdfInputs1[4] = textBox5.Text.ToString();   //House rent allounces
-            pdfInputs1[5] = textBox6.Text.ToString();   //Medical Allowances
-            pdfInputs1[6] = textBox7.Text.ToString();   //Servant allowances
+            pdfInputs1[0] = textBox1.Text.ToString();    //salaries
+            pdfInputs1[1] = textBox2.Text.ToString();    //Special pay
+            pdfInputs1[2] = textBox3.Text.ToString();    //Dearness Allowances
+            pdfInputs1[3] = textBox4.Text.ToString();    //Conveyance allowances
+            pdfInputs1[4] = textBox5.Text.ToString();    //House rent allounces
+            pdfInputs1[5] = textBox6.Text.ToString();    //Medical Allowances
+            pdfInputs1[6] = textBox7.Text.ToString();    //Servant allowances
             pdfInputs1[7] = textBox25.Text.ToString();   //Leave allowances
-            pdfInputs1[8] = textBox8.Text.ToString();   //Honorarum/reward/Arear salary
-            pdfInputs1[9] = textBox9.Text.ToString();   //Overtime allowance
-            pdfInputs1[10] = textBox10.Text.ToString();   //Bonus / Extra Gratia
+            pdfInputs1[8] = textBox8.Text.ToString();    //Honorarum/reward/Arear salary
+            pdfInputs1[9] = textBox9.Text.ToString();    //Overtime allowance
+            pdfInputs1[10] = textBox10.Text.ToString();  //Bonus / Extra Gratia
             pdfInputs1[11] = textBox11.Text.ToString();  //Other Allowances
             pdfInputs1[12] = textBox12.Text.ToString();  //Employees contributions to recognized Provdent Fund
             pdfInputs1[13] = textBox13.Text.ToString();  //Interest accrued on Recognized provident fund
             pdfInputs1[14] = comboBox3.Text;             //Deemed income for transport facility "yes" or "No"
-            pdfInputs1[15] = textBox15.Text.ToString();  //Deemed income for furnished /unfurnished accomodation
-            pdfInputs1[16] = textBox16.Text.ToString();  //Other ( if any)
-            pdfInputs1[17] = label39.Text.ToString();   //Net taxable income from salary
+            pdfInputs1[15] = textBox15.Text.ToString();  // rent for furnished /unfurnished accomodation
+            pdfInputs1[16] = comboBox2.Text;             //Deemed income for furnished /unfurnished accomodation, None, Free Home, Reduced Rent
+            pdfInputs1[17] = textBox16.Text.ToString();  //Other ( if any)
+            pdfInputs1[18] = label39.Text.ToString();    //Net taxable income from salary
 
 
             //non-taxable incomes
-            pdfInputs1[18] = label40.Text.ToString();
-            pdfInputs1[19] = label41.Text.ToString();
-            pdfInputs1[20] = label42.Text.ToString();
-            pdfInputs1[21] = label43.Text.ToString();
-            pdfInputs1[22] = label44.Text.ToString();
-            pdfInputs1[23] = label45.Text.ToString();
-            pdfInputs1[24] = label46.Text.ToString();
-            pdfInputs1[25] = label92.Text.ToString();       //Leave allowance for nontaxable
-            pdfInputs1[26] = label47.Text.ToString();
-            pdfInputs1[27] = label48.Text.ToString();
-            pdfInputs1[28] = label49.Text.ToString();
-            pdfInputs1[29] = label50.Text.ToString();
-            pdfInputs1[30] = label51.Text.ToString();
-            pdfInputs1[31] = label52.Text.ToString();
-            pdfInputs1[32] = label53.Text.ToString();
-            pdfInputs1[33] = label54.Text.ToString();
-            pdfInputs1[34] = label55.Text.ToString();
-            pdfInputs1[35] = label56.Text.ToString();
+            pdfInputs1[19] = label40.Text.ToString();
+            pdfInputs1[20] = label41.Text.ToString();
+            pdfInputs1[21] = label42.Text.ToString();
+            pdfInputs1[22] = label43.Text.ToString();
+            pdfInputs1[23] = label44.Text.ToString();
+            pdfInputs1[24] = label45.Text.ToString();
+            pdfInputs1[25] = label46.Text.ToString();
+            pdfInputs1[26] = label92.Text.ToString();       //Leave allowance for nontaxable
+            pdfInputs1[27] = label47.Text.ToString();
+            pdfInputs1[28] = label48.Text.ToString();
+            pdfInputs1[29] = label49.Text.ToString();
+            pdfInputs1[30] = label50.Text.ToString();
+            pdfInputs1[31] = label51.Text.ToString();
+            pdfInputs1[32] = label52.Text.ToString();
+            pdfInputs1[33] = label53.Text.ToString();
+            pdfInputs1[34] = label54.Text.ToString();
+            pdfInputs1[35] = label55.Text.ToString();
+            pdfInputs1[36] = label56.Text.ToString();
 
             //taxable incomes
-            pdfInputs1[36] = label57.Text.ToString();
-            pdfInputs1[37] = label58.Text.ToString();
-            pdfInputs1[38] = label59.Text.ToString();
-            pdfInputs1[39] = label60.Text.ToString();
-            pdfInputs1[40] = label61.Text.ToString();
-            pdfInputs1[41] = label62.Text.ToString();
-            pdfInputs1[42] = label63.Text.ToString();
-            pdfInputs1[43] = label93.Text.ToString();
-            pdfInputs1[44] = label64.Text.ToString();
-            pdfInputs1[45] = label65.Text.ToString();
-            pdfInputs1[46] = label66.Text.ToString();
-            pdfInputs1[47] = label67.Text.ToString();
-            pdfInputs1[48] = label68.Text.ToString();
-            pdfInputs1[49] = label69.Text.ToString();
-            pdfInputs1[50] = label70.Text.ToString();
-            pdfInputs1[51] = label71.Text.ToString();
-            pdfInputs1[52] = label72.Text.ToString();
-            pdfInputs1[53] = label73.Text.ToString();
+            pdfInputs1[37] = label57.Text.ToString();
+            pdfInputs1[38] = label58.Text.ToString();
+            pdfInputs1[39] = label59.Text.ToString();
+            pdfInputs1[40] = label60.Text.ToString();
+            pdfInputs1[41] = label61.Text.ToString();
+            pdfInputs1[42] = label62.Text.ToString();
+            pdfInputs1[43] = label63.Text.ToString();
+            pdfInputs1[44] = label93.Text.ToString();
+            pdfInputs1[45] = label64.Text.ToString();
+            pdfInputs1[46] = label65.Text.ToString();
+            pdfInputs1[47] = label66.Text.ToString();
+            pdfInputs1[48] = label67.Text.ToString();
+            pdfInputs1[49] = label68.Text.ToString();
+            pdfInputs1[50] = label69.Text.ToString();
+            pdfInputs1[51] = label70.Text.ToString();
+            pdfInputs1[52] = label71.Text.ToString();
+            pdfInputs1[53] = label72.Text.ToString();
+            pdfInputs1[54] = label73.Text.ToString();
 
             //House rent property
             pdfInputs2[0] = richTextBox1.Text.ToString();      
