@@ -712,7 +712,7 @@
             this.Controls.Add(this.label18);
             this.Name = "Form1_Personal_info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form9";
+            this.Text = "Personal Info";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Personal_info_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Personal_info_Load);
             this.panel1.ResumeLayout(false);

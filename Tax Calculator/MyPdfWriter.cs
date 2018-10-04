@@ -172,8 +172,8 @@ namespace Tax_Calculator
             float y = 644;
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[11], x, y);    //Print "Total income" from "Statement of Salary" form
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[14], 410, 648);   //print "Tax paid" from "Statement of Salary" form
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[14], x, 666);   //print "Net Wealth of Assessee" from "Assets and Liabilities" form
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[19], 410, 648);   //print "Tax paid" from "Statement of Salary" form(serial no 16:"total")
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[26], x, 666);   //print "Net Wealth of Assessee" from "Assets and Liabilities" form(serial no 12)
                                                                                                               //.....................................................
         }
 
@@ -621,7 +621,8 @@ namespace Tax_Calculator
 
             x = 308;    //position of x "Sources of fund"
             y = 518;    //position of y "Sources of fund"
-                        //printing "Sources of fund"
+             
+            //printing "Sources of fund"
             for (int i = 33; i < 36; i++)
             {
                 string s = Form6_AssentAndLiabilities.pdfInputs[i];
@@ -631,11 +632,11 @@ namespace Tax_Calculator
             }
 
 
-            x = 452;    //set position of x  for "total Accretion of wealth"
-            y = 563;    //set position of y  for "total Accretion of wealth"
+            x = 452;    //set position of x  for "total source of fund"
+            y = 563;    //set position of y  for "total source of fund"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[36], x, y);   //print "Total source of fund"
             y += 25;    //set position of y  for "Difference"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[37], x, y);   //print "Total source of fund"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[37], x, y);   //print "Difference"
         }
 
         //write a single string on existing pdf file 

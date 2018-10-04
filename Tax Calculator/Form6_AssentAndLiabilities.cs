@@ -652,7 +652,8 @@ namespace Tax_Calculator
             pdfInputs[33] = label35.Text.ToString();     //(i) Shown Return Income 
             pdfInputs[34] = label84.Text.ToString();    //(ii) Tax exempted/Tax free Income
             pdfInputs[35] = textBox26.Text.ToString();   // (iii) Other receipts
-            pdfInputs[36] = label83.Text.ToString();   //Total source of Fund =
+            pdfInputs[36] = label83.Text.ToString();   //Total source of Fund 
+
             pdfInputs[37] = label81.Text.ToString();  //Difference (Between serial 16 and 17)
         }
 

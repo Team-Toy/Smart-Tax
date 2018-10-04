@@ -406,7 +406,7 @@ namespace Tax_Calculator
             pdfInputs[17] = textBox13.Text.ToString();  //c) Tax paid on the basis of this return
             pdfInputs[18] = textBox14.Text.ToString();  //d) Adjustment of tax refund (If any)
        
-            pdfInputs[19] = label55.Text.ToString();  //Total ( a + b + c + d )  
+            pdfInputs[19] = label55.Text.ToString();  //Total ( a + b + c + d )  :Total payments of tax
             pdfInputs[20] = label50.Text.ToString();  //Difference between 15 and 16 (if any)
             pdfInputs[21] = label52.Text.ToString();  //Tax exempted and tax free income
             pdfInputs[22] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
