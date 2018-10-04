@@ -300,24 +300,58 @@ namespace Tax_Calculator
         private void Form2_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
         {
             int pageNo = 3;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0], 71, 593);    //location and description of property
+            float x = 71;
+            float y = 593;
+            string descriptionOfPerperty = Form2_Salaries.pdfInputs2[0];
+            int stringLength = descriptionOfPerperty.Length;
+            int endIndex = 23;
+
+            //string subString = descriptionOfPerperty.Substring(0, 23);
+            //WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);
+           // string subString2 = descriptionOfPerperty.Substring(24);
+           // y += 10;
+            //WriteStringOnPdf(ref canvas, ref reader, pageNo, subString2, x, y);
+            for (int startIndex=0; startIndex < stringLength; )
+            {
+                string subString;
+                if (endIndex < stringLength)
+                {
+                    subString = descriptionOfPerperty.Substring(startIndex, endIndex);
+                    WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);    //location and description of property
+                    y += 10;
+                    startIndex += ++endIndex;
+                    endIndex += endIndex;
+                }
+                else
+                {
+                    subString = descriptionOfPerperty.Substring(startIndex);
+                    WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);
+                }
+                
+            }
+
+            //WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0]., 71, 593);    //location and description of property
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[1], 469, 593);   //print annual rental income
+
             var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3   
-            float x = 374;
-            float tempY = 627;
+            //set x and y position
+            x = 374;
+            y = 627;
             //printing House property income under "salaries" form 
             for (int i = 2; i < 9; i++)
             {
                 string s = Form2_Salaries.pdfInputs2[i];
                 if (i == 6)  //checking to jump down additionally
                 {
-                    tempY += 8;   // jump half line down with difference of x=8 
+                    y += 8;   // jump half line down with difference of x=8 
                 }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, tempY);   //printing "House property income" from "annual rental income" to "others, if any"
-                tempY += 17;    // jump one line down with difference of x=17 .          
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //printing "House property income" from "annual rental income" to "others, if any"
+                y += 17;    // jump one line down with difference of x=17 .          
             }
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[9], 469, tempY);  //printing total "House property income"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], 469, tempY + 17); //printing "Net income" from house
+
+            x = 469;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[9], x, y);  //printing total "House property income"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], x, y + 17); //printing "Net income" from house
         }
 
         private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader, float x, float y, int startIndex, int endIndex)

@@ -44,20 +44,27 @@ namespace Tax_Calculator
         {
             // make all text boxt zero
             madeAllTextBoxZero();
-            //taking total taxable income and showing in label51
-            label51.Text = Form2_Salaries.netTaxableIncome.ToString();
+        }
+        private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
+        {
+            //taking total taxable income from "salaries" form and showing in label51
+            label51.Text = Form2_Salaries.pdfInputs1[53];
             //taking total taxable exempted income and showing in label52
-            label52.Text = Form2_Salaries.totalTaxExtempted.ToString();
+            label52.Text = Form2_Salaries.pdfInputs1[35];
             //taking value from NetHousePropertyIncome of Form2_Salaries
             label_NetHousePropertyIncome.Text = Form2_Salaries.netRentalIncome.ToString();
-
-
-
 
             // showing total and total income
             label39.Text = CalTotalTaxableIncome().ToString();
             label40.Text = CalTotalTaxableIncome().ToString();
-            
+            //............................
+
+            taxLeviable = Form_PayableTaxCalculator.taxLeviable;
+            label41.Text = taxLeviable.ToString();
+
+            taxPayable = Math.Abs(taxLeviable - taxRebate);
+            label43.Text = taxPayable.ToString();
+
         }
         public void madeAllTextBoxZero()
         {
@@ -81,7 +88,7 @@ namespace Tax_Calculator
         private double CalTotalTaxableIncome()
         {
             //addind "0" to prevent program crash because of null character of textBox
-            return totalTaxableIncome = Form2_Salaries.netTaxableIncome +
+            return totalTaxableIncome = double.Parse(Form2_Salaries.pdfInputs1[53]) +   //net taxable income from salaries form
                                         double.Parse("0"+ textBox2.Text.ToString()) +
                                         double.Parse("0" + label_NetHousePropertyIncome.Text.ToString()) +
                                         double.Parse("0" + textBox4.Text.ToString()) +
@@ -295,14 +302,7 @@ namespace Tax_Calculator
             return tempList.Min();
         }
 
-        private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
-        {
-            taxLeviable = Form_PayableTaxCalculator.taxLeviable;
-            label41.Text = taxLeviable.ToString();
-
-            taxPayable = Math.Abs(taxLeviable - taxRebate);
-            label43.Text = taxPayable.ToString();
-        }
+     
         private double totalTaxPayments()
         {
             //addind "0" to prevent program crash because of null character of textBox
