@@ -52,7 +52,7 @@ namespace Tax_Calculator
             //taking total taxable exempted income and showing in label52
             label52.Text = Form2_Salaries.pdfInputs1[35];
             //taking value from NetHousePropertyIncome of Form2_Salaries
-            label_NetHousePropertyIncome.Text = Form2_Salaries.netRentalIncome.ToString();
+            label_NetHousePropertyIncome.Text = Form2_Salaries.pdfInputs2[10]; 
 
             // showing total and total income
             label39.Text = CalTotalTaxableIncome().ToString();

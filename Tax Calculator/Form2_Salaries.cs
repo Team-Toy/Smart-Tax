@@ -50,7 +50,9 @@ namespace Tax_Calculator
                                  "true","0","0",        //Other,if_any
                                  //"true","0.7","0"       //randomly created for fixing list index out of bound
                                 };
-       
+        public static double reducedHomeRent = 0.0;
+
+
 
         public Form2_Salaries()
         {
@@ -791,7 +793,7 @@ namespace Tax_Calculator
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
         {
-            double reducedHomeRent = 0.0, houseRentTax=0.0;
+            double houseRentTax=0.0;
 
             if (e.KeyCode == Keys.Enter)
             {

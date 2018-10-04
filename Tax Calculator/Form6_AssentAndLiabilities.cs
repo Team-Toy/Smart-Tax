@@ -52,7 +52,7 @@ namespace Tax_Calculator
         {
             makeAlltextBoxZero();
             shownReturnIncome = Form4_SatementOfSalary.totalTaxableIncome;
-            taxExempted = Form2_Salaries.totalTaxExtempted;
+            taxExempted = double.Parse(Form2_Salaries.pdfInputs1[35] ); //taking tax exempted from Salaries form
 
             label35.Text = shownReturnIncome.ToString();
             label84.Text = taxExempted.ToString();
