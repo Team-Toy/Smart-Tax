@@ -60,6 +60,27 @@ namespace Tax_Calculator
             pdfInputs1 = new string[54];
             pdfInputs2 = new string[11];
 
+            //testing
+
+            List<double> maxNonTaxable;
+            for (int i = 0; i < data.Length; i++)
+            {
+                bool taxable = Boolean.Parse(data[i]);
+                double maxPercentOfNonTaxable = (double.Parse(data[++i]));
+
+                maxNonTaxable = new List<double>();
+                maxNonTaxable.Add(double.Parse(data[++i]));
+
+                if (i == 17)
+                {
+                    maxNonTaxable.Add(double.Parse(data[i + 2]));
+                    i += 2; //jump to next row 
+                }
+
+                SalaryConditionals salaryType = new SalaryConditionals(taxable, maxPercentOfNonTaxable, maxNonTaxable);
+                list.Add(salaryType);
+            }
+
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -1530,6 +1551,33 @@ namespace Tax_Calculator
                 label73.Text = CalNetTaxableIncome().ToString();
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //label37.Text = textBox1.Text.ToString();
+            //testing
+
+            basicPay = double.Parse("0" + textBox1.Text.ToString());
+            double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
+            double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
+
+            label40.ForeColor = Color.Black;
+            label57.ForeColor = Color.Black;
+
+            label40.Text = "" + taxExtempted;
+            label57.Text = "" + taxableIncome;
+
+            // net taxable income from salary
+            label39.Text = TotalAmountOfIncome().ToString();
+            label56.Text = CalTotalTaxExempted().ToString();
+            //showing total taxable income
+            label73.Text = CalNetTaxableIncome().ToString();
+        }
+
+        private void Form2_Salaries_Activated(object sender, EventArgs e)
+        {
+            
+         }
 
         private void UserInputs_Salaries()
         {

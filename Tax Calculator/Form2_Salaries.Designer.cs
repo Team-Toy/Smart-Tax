@@ -112,6 +112,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label94 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
@@ -150,7 +151,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -340,7 +342,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(286, 79);
+            this.label19.Location = new System.Drawing.Point(271, 66);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(175, 20);
             this.label19.TabIndex = 229;
@@ -662,6 +664,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 196;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -1036,6 +1039,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.label37);
             this.panel1.Controls.Add(this.textBox15);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label94);
@@ -1159,6 +1164,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(883, 506);
             this.panel1.TabIndex = 254;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(53, 718);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(197, 20);
+            this.textBox15.TabIndex = 294;
+            this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
             // 
             // comboBox3
             // 
@@ -1543,13 +1556,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox15
+            // label37
             // 
-            this.textBox15.Location = new System.Drawing.Point(53, 718);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(197, 20);
-            this.textBox15.TabIndex = 294;
-            this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(490, 56);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(165, 43);
+            this.label37.TabIndex = 295;
+            this.label37.Text = "Amount of exempted  income (TK.)";
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(661, 51);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(102, 48);
+            this.label38.TabIndex = 296;
+            this.label38.Text = "Net Taxable Income (Tk.)";
             // 
             // Form2_Salaries
             // 
@@ -1563,6 +1586,7 @@
             this.Name = "Form2_Salaries";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salaries";
+            this.Activated += new System.EventHandler(this.Form2_Salaries_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_Salaries_FormClosing);
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
@@ -1696,5 +1720,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
     }
 }
