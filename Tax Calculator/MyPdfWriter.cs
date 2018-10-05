@@ -15,7 +15,7 @@ namespace Tax_Calculator
     {
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
-        private const string myFont = "Arial";    //Font name to print
+        private const string myFont = "Arial";   //"Impact";    //Font name to print
         private const int fontSize = 9;       //font size to print
 
         public MyPdfWriter()
@@ -646,8 +646,8 @@ namespace Tax_Calculator
 
             //making the y to increment top-Down
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
-                                                //defining a font
-            iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize);
+              //creating default font with font name ,size and font type BOLD
+            iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize,Font.BOLD);
             Phrase p = new Phrase(s, font);
 
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "

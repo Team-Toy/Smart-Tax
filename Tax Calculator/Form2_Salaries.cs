@@ -1554,8 +1554,6 @@ namespace Tax_Calculator
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //label37.Text = textBox1.Text.ToString();
-            //testing
 
             basicPay = double.Parse("0" + textBox1.Text.ToString());
             double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
