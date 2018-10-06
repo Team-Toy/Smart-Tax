@@ -1344,7 +1344,6 @@ namespace Tax_Calculator
             {
                 //any string number(with comma or without comma) coverted to double
                 basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
-                //basicPay = double.Parse("0" + textBox1.Text.ToString());
                 double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
@@ -1360,7 +1359,7 @@ namespace Tax_Calculator
                                                                      //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
             }
-            catch (Exception ex)
+            catch
             {
                 //show crash issue to user
                 //textBox1.Text = "";    //clear user input because of invaild inputs
@@ -1390,7 +1389,7 @@ namespace Tax_Calculator
                                                                      //showing total taxable income                                                   
                 label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
             }
-            catch (Exception ex)
+            catch
             {
                 //show crash issue to user
                // textBox2.Text = "";    //clear user input because of invaild inputs
@@ -1420,7 +1419,7 @@ namespace Tax_Calculator
                 //showing total taxable income
                 label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
             }
-            catch (Exception ex)
+            catch 
             {
                 //show crash issue to user
                 //textBox3.Text = "";    //clear user input because of invaild inputs

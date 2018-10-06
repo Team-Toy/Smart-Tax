@@ -36,6 +36,7 @@ namespace Tax_Calculator
         public static double accretionInWealth = 0;
         public static double totalAccretionInWealth = 0;
         public static double familyExpenditure = 0;
+        public double B_F =0.0;
         private int adult = 0;
         private int child = 0;
         public static double totalSourcesOfFund = 0;
@@ -48,489 +49,521 @@ namespace Tax_Calculator
             pdfInputs = new string[38];
         }
 
+        //need to shift code
         private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
         {
             makeAlltextBoxZero();
             shownReturnIncome = Form4_SatementOfSalary.totalTaxableIncome;
-            taxExempted = double.Parse(Form2_Salaries.pdfInputs1[35] ); //taking tax exempted from Salaries form
+            taxExempted = (double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[35] ); //taking tax exempted from Salaries form
 
-            label35.Text = shownReturnIncome.ToString();
-            label84.Text = taxExempted.ToString();
-            label_totalExpense.Text = Form5_Expenses.totalExpense.ToString();
+            label35.Text = shownReturnIncome.ToString("N"); //string formatting as a currency number
+            label84.Text = taxExempted.ToString("N");       //string formatting as a currency number
+            label_totalExpense.Text = Form5_Expenses.totalExpense.ToString("N");    //string formatting as a currency number
 
         }
+       
         private void makeAlltextBoxZero()
         {
-            textBox1.Text = "0";
-            textBox2.Text = "0";
-            textBox3.Text = "0";
-            textBox4.Text = "0";
-            textBox5.Text = "0";
-            textBox6.Text = "0";
-            textBox7.Text = "0";
-            textBox8.Text = "0";
-            textBox9.Text = "0";
-            textBox10.Text = "0";
-            textBox11.Text = "0";
-            textBox12.Text = "0";
-            textBox13.Text = "0";
-            textBox14.Text = "0";
-            textBox15.Text = "0";
-            textBox16.Text = "0";
-            textBox17.Text = "0";
-            textBox18.Text = "0";
-            textBox19.Text = "0";
-            textBox20.Text = "0";
-            textBox21.Text = "0";
-            textBox22.Text = "0";
-            label_totalExpense.Text = "0";
-            textBox24.Text = "0";
-            textBox25.Text = "0";
-            textBox26.Text = "0";
+            textBox1.Text = "0.0";
+            textBox2.Text = "0.0";
+            textBox3.Text = "0.0";
+            textBox4.Text = "0.0";
+            textBox5.Text = "0.0";
+            textBox6.Text = "0.0";
+            textBox7.Text = "0.0";
+            textBox8.Text = "0.0";
+            textBox9.Text = "0.0";
+            textBox10.Text = "0.0";
+            textBox11.Text = "0.0";
+            textBox12.Text = "0.0";
+            textBox13.Text = "0.0";
+            textBox14.Text = "0.0";
+            textBox15.Text = "0.0";
+            textBox16.Text = "0.0";
+            textBox17.Text = "0.0";
+            textBox18.Text = "0.0";
+            textBox19.Text = "0.0";
+            textBox20.Text = "0.0";
+            textBox21.Text = "0.0";
+            textBox22.Text = "0.0";
+            label_totalExpense.Text = "0.0";
+            textBox24.Text = "0";   //number of adult family member
+            textBox25.Text = "0";  //number of child family member
+            textBox26.Text = "0.0";
+        }
+
+        //need to remove
+        private double BalanceForward()
+        {
+            double b_f = 0.0;
+            b_f += double.Parse("0" + textBox1.Text.ToString());   
+            b_f += double.Parse("0" + textBox2.Text.ToString());   
+            b_f += double.Parse("0" + textBox3.Text.ToString());   
+            b_f += double.Parse("0" + textBox4.Text.ToString());   
+            b_f += double.Parse("0" + label11.Text.ToString());   //total
+            b_f += double.Parse("0" + textBox10.Text.ToString());  
+            b_f += double.Parse("0" + textBox11.Text.ToString());   
+            b_f += double.Parse("0" + textBox12.Text.ToString());   
+            b_f += double.Parse("0" + textBox13.Text.ToString());   
+            b_f += double.Parse("0" + label51.Text.ToString());    //total
+
+            return b_f;
         }
         private double CalTotalAssets()
         {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalAssets = Double.Parse("0"+ textBox1.Text.ToString()) +
-                                 Double.Parse("0" + textBox2.Text.ToString()) +
-                                 Double.Parse("0" + textBox3.Text.ToString()) +
-                                 Double.Parse("0" + textBox4.Text.ToString()) +
-                                 Double.Parse("0" + textBox5.Text.ToString()) +
-                                 Double.Parse("0" + textBox6.Text.ToString()) +
-                                 Double.Parse("0" + textBox7.Text.ToString()) +
-                                 Double.Parse("0" + textBox8.Text.ToString()) +
-                                 Double.Parse("0" + textBox9.Text.ToString()) +
-                                 Double.Parse("0" + textBox10.Text.ToString()) +
-                                 Double.Parse("0" + textBox11.Text.ToString()) +
-                                 Double.Parse("0" + textBox12.Text.ToString()) +
-                                 Double.Parse("0" + textBox13.Text.ToString()) +
-                                 Double.Parse("0" + textBox14.Text.ToString()) +
-                                 Double.Parse("0" + textBox15.Text.ToString()) +
-                                 Double.Parse("0" + textBox16.Text.ToString()) +
-                                 Double.Parse("0" + textBox17.Text.ToString());
+            B_F = (double)Convert.ToDecimal(textBox1.Text.ToString()) + //Business Capital ( Closing Balance)
+                 (double)Convert.ToDecimal(textBox2.Text.ToString()) +  //Directors Shareholdings in Limited Companies (at cost) 
+                 (double)Convert.ToDecimal(textBox3.Text.ToString()) +  //Non-Agricultural Property (at cost with legal expenses)
+                 (double)Convert.ToDecimal(textBox4.Text.ToString()) +  //Agricultural Property (at cost with legal expenses)
+                  CalTotalInvestments() +
+                 (double)Convert.ToDecimal(textBox10.Text.ToString()) +  //Motor Vehicles (at cost)
+                 (double)Convert.ToDecimal(textBox11.Text.ToString()) +  //Jewellery (quantity and cost)
+                 (double)Convert.ToDecimal(textBox12.Text.ToString()) +   //Furniture (at cost)
+                 (double)Convert.ToDecimal(textBox13.Text.ToString()) +   //Electronic Equipment (at cost)
+                 CalTotalCashAsset_OutsideBusiness();
+           //total Asset = B/F + any other assets
+           totalAssets = B_F + (double)Convert.ToDecimal(textBox17.Text.ToString());
+           return totalAssets;
+        }
+        private double CalTotalInvestments()
+        {
+            totalInvestments = (double)Convert.ToDecimal(textBox5.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox6.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox7.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox8.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox9.Text.ToString());
+            return totalInvestments;
 
+        }
+
+        private double CalTotalCashAsset_OutsideBusiness()
+        {
+            totalCashAssets = (double)Convert.ToDecimal(textBox14.Text.ToString()) +
+                                             (double)Convert.ToDecimal(textBox15.Text.ToString()) +
+                                             (double)Convert.ToDecimal(textBox16.Text.ToString());
+            return totalCashAssets;
+        }
+
+        private double CalTotalLiabilities()
+        {
+            return totalLiabilities = (double)Convert.ToDecimal(textBox18.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox19.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox20.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox21.Text.ToString());
+        }
+
+   
+        private double CalTotalSourceOfFund()
+        {
+            totalSourcesOfFund = (double)Convert.ToDecimal(textBox25.Text.ToString()) + 
+                                  shownReturnIncome + taxExempted;
+
+            return totalSourcesOfFund;
         }
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox1.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox1.Text = "0";
+                    Convert.ToDecimal(textBox1.Text.ToString());    //checking user inputs valid or not
+                    textBox2.Focus();
                 }
-
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox2.Focus();
             }
+            catch
+            {
+                textBox1.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox2.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox2.Text = "0";
+                    Convert.ToDecimal(textBox2.Text.ToString());    //checking user inputs valid or not
+                    textBox3.Focus();
                 }
-
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox3.Focus();
+            }
+            catch
+            {
+                textBox2.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox3.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox3.Text = "0";
+                    Convert.ToDecimal(textBox3.Text.ToString());    //checking user inputs valid or not
+                    textBox4.Focus();
                 }
-
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox4.Focus();
+            }
+            catch
+            {
+                textBox3.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox4.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox4.Text = "0";
+                    Convert.ToDecimal(textBox4.Text.ToString());    //checking user inputs valid or not
+                    textBox5.Focus();
                 }
-
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox5.Focus();
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
-        private double CalTotalInvestments()
-        {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalInvestments = Double.Parse("0" + textBox5.Text.ToString()) +
-                                        Double.Parse("0" + textBox6.Text.ToString()) +
-                                        Double.Parse("0" + textBox7.Text.ToString()) +
-                                        Double.Parse("0" + textBox8.Text.ToString()) +
-                                        Double.Parse("0" + textBox9.Text.ToString());
-
-
-        }
+        
         private void textBox5_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox5.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox5.Text = "0";
+                    Convert.ToDecimal(textBox5.Text.ToString());    //checking user inputs valid or not
+                    textBox6.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-                label11.Text = CalTotalInvestments().ToString();
-
-                textBox6.Focus();
+            }
+            catch
+            {
+                textBox5.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox6_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox6.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox6.Text = "0";
+                    Convert.ToDecimal(textBox6.Text.ToString());    //checking user inputs valid or not
+                    textBox7.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-                label11.Text = CalTotalInvestments().ToString();
-
-                textBox7.Focus();
+            }
+            catch
+            {
+                textBox6.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox7_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox7.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox7.Text = "0";
+                    Convert.ToDecimal(textBox7.Text.ToString());    //checking user inputs valid or not
+                    textBox8.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-                label11.Text = CalTotalInvestments().ToString();
-
-                textBox8.Focus();
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox8.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox8.Text = "0";
+                    Convert.ToDecimal(textBox8.Text.ToString());    //checking user inputs valid or not
+                    textBox9.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-                label11.Text = CalTotalInvestments().ToString();
-
-                textBox9.Focus();
+            }
+            catch
+            {
+                textBox8.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox9.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox9.Text = "0";
+                    Convert.ToDecimal(textBox9.Text.ToString());    //checking user inputs valid or not
+                    textBox10.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-                label11.Text = CalTotalInvestments().ToString();
-
-                textBox10.Focus();
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
+                    Convert.ToDecimal(textBox10.Text.ToString());    //checking user inputs valid or not
+                    textBox11.Focus();
                 }
-
-
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox11.Focus();
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox11.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox11.Text = "0";
+                    Convert.ToDecimal(textBox11.Text.ToString());    //checking user inputs valid or not
+                    textBox12.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox12.Focus();
+            }
+            catch
+            {
+                textBox11.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox12_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox12.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox12.Text = "0";
+                    Convert.ToDecimal(textBox12.Text.ToString());    //checking user inputs valid or not
+                    textBox13.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox13.Focus();
+            }
+            catch
+            {
+                textBox12.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox13_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox13.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox13.Text = "0";
+                    Convert.ToDecimal(textBox13.Text.ToString());    //checking user inputs valid or not
+                    textBox14.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-                textBox14.Focus();
+            }
+            catch
+            {
+                textBox13.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
-        private double CalTotalCashAssets()
-        {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalCashAssets = Double.Parse("0" + textBox14.Text.ToString()) +
-                                     Double.Parse("0" + textBox15.Text.ToString()) +
-                                     Double.Parse("0" + textBox16.Text.ToString());
-        }
+       
 
         private void textBox14_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox14.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox14.Text = "0";
+                    Convert.ToDecimal(textBox14.Text.ToString());    //checking user inputs valid or not
+                    textBox15.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-                label51.Text = CalTotalCashAssets().ToString();
-
-                textBox15.Focus();
+            }
+            catch
+            {
+                textBox14.Text = "0.0";  //clear user input because of invaild inputs
             }
 
         }
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox15.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox15.Text = "0";
+                    Convert.ToDecimal(textBox15.Text.ToString());    //checking user inputs valid or not
+                    textBox16.Focus();
                 }
-
-                label10.Text = CalTotalAssets().ToString();
-
-                label51.Text = CalTotalCashAssets().ToString();
-
-                textBox16.Focus();
+            }
+            catch
+            {
+                textBox15.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox16_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox16.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox16.Text = "0";
+                    Convert.ToDecimal(textBox16.Text.ToString());    //checking user inputs valid or not
+                    textBox17.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-                label51.Text = CalTotalCashAssets().ToString();
-
-                textBox17.Focus();
+            }
+            catch
+            {
+                textBox16.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox17_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox17.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox17.Text = "0";
+                    Convert.ToDecimal(textBox17.Text.ToString());    //checking user inputs valid or not
+                    textBox18.Focus();
                 }
-                label10.Text = CalTotalAssets().ToString();
-
-
-                textBox18.Focus();
+            }
+            catch
+            {
+                textBox17.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
-        private double CalTotalLiabilities()
-        {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalLiabilities = Double.Parse("0" + textBox18.Text.ToString()) +
-                                      Double.Parse("0" + textBox19.Text.ToString()) +
-                                      Double.Parse("0" + textBox20.Text.ToString()) +
-                                      Double.Parse("0" + textBox21.Text.ToString());
-        }
+       
+        //need to start edit from now
         private void textBox18_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox18.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox18.Text = "0";
+                    Convert.ToDecimal(textBox18.Text.ToString());    //checking user inputs valid or not
+                    textBox19.Focus();
                 }
-
-
-                label56.Text = CalTotalLiabilities().ToString();
-
-
-                textBox19.Focus();
             }
+            catch
+            {
+                textBox18.Text = "0.0"; //clear user input because of invaild inputs
+            }
+        
         }
 
         private void textBox19_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox19.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox19.Text = "0";
+                    Convert.ToDecimal(textBox19.Text.ToString());    //checking user inputs valid or not
+                    textBox20.Focus();
                 }
-                label56.Text = CalTotalLiabilities().ToString();
-
-
-                textBox20.Focus();
+            }
+            catch
+            {
+                textBox19.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox20_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox20.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox20.Text = "0";
+                    Convert.ToDecimal(textBox20.Text.ToString());    //checking user inputs valid or not
+                    textBox21.Focus();
                 }
-                label56.Text = CalTotalLiabilities().ToString();
-
-
-                textBox21.Focus();
+            }
+            catch
+            {
+                textBox20.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox21_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox21.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox21.Text = "0";
+                    Convert.ToDecimal(textBox21.Text.ToString());    //checking user inputs valid or not
+                    textBox22.Focus();
                 }
-                label56.Text = CalTotalLiabilities().ToString();
-
-                netWealthThisYear = totalAssets - totalLiabilities;
-                label86.Text = netWealthThisYear.ToString();
-
-                textBox22.Focus();
+            }
+            catch
+            {
+                textBox21.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox22_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox22.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox22.Text = "0";
+                    Convert.ToDecimal(textBox22.Text.ToString());    //checking user inputs valid or not
+                    textBox24.Focus();
                 }
-                //addind "0" to prevent program crash because of null character of textBox
-                netWealthPrevYear = Double.Parse("0" + textBox22.Text.ToString());
-                accretionInWealth = netWealthThisYear - netWealthPrevYear;
-
-                label82.Text = accretionInWealth.ToString();
-
-                textBox24.Focus();
+            }
+            catch
+            {
+                textBox22.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
 
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox24.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox24.Text = "0";
+                    adult = (int)Convert.ToDecimal(textBox24.Text.ToString()); //save and check user inputs valid or not 
+                    textBox25.Focus();
                 }
-                //addind "0" to prevent program crash because of null character of textBox
-                adult = int.Parse("0" + textBox24.Text.ToString());
-
-
-                textBox25.Focus();
             }
+            catch
+            {
+                textBox24.Text = "0"; //clear user input because of invaild inputs
+            }
+
         }
 
         private void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox25.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox25.Text = "0";
+                    child = (int)Convert.ToDecimal(textBox25.Text.ToString()); //save and check user inputs valid or not 
+                    textBox26.Focus();
                 }
-                //addind "0" to prevent program crash because of null character of textBox
-                child = int.Parse("0" + textBox25.Text.ToString());
-
-
-                textBox26.Focus();
+            }
+            catch
+            {
+                textBox25.Text = "0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox26_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox26.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox26.Text = "0";
+                    //textBox26 = other receipts
+                    Convert.ToDecimal(textBox26.Text.ToString()); //save and check user inputs valid or not 
                 }
-                totalSourcesOfFund = Double.Parse(textBox25.Text.ToString()) + shownReturnIncome + taxExempted;
-
-                label83.Text = totalSourcesOfFund.ToString();
-
-                label81.Text = (totalAccretionInWealth - totalSourcesOfFund).ToString();
-
+            }
+            catch
+            {
+                textBox26.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
@@ -627,7 +660,7 @@ namespace Tax_Calculator
             pdfInputs[16] = textBox16.Text.ToString();   // (c) Other deposits Tk
             pdfInputs[17] = label51.Text.ToString();    //total
 
-            pdfInputs[18] = ""+BalanceForward();    //return and save B/F result
+            pdfInputs[18] = B_F.ToString("N");    // save B/F result
 
             pdfInputs[19] = textBox17.Text.ToString();   //Any Other Assets
             pdfInputs[20] = label10.Text.ToString();    //total assets
@@ -656,24 +689,7 @@ namespace Tax_Calculator
 
             pdfInputs[37] = label81.Text.ToString();  //Difference (Between serial 16 and 17)
         }
-
-        private double BalanceForward()
-        {
-            double b_f = 0.0;
-            b_f +=double.Parse("0" + textBox1.Text.ToString() );   //Business Capital ( Closing Balance)
-            b_f += double.Parse("0" + textBox2.Text.ToString());   //Directors Shareholdings in Limited Companies (at cost) 
-            b_f += double.Parse("0" + textBox3.Text.ToString() );   //Non-Agricultural Property (at cost with legal expenses)
-            b_f += double.Parse("0" + textBox4.Text.ToString() );   //Agricultural Property (at cost with legal expenses)
-            b_f += double.Parse("0" + label11.Text.ToString() );   //total
-            b_f += double.Parse("0" + textBox10.Text.ToString() );   //Motor Vehicles (at cost)
-            b_f += double.Parse("0" + textBox11.Text.ToString() );   //Jewellery (quantity and cost)
-            b_f += double.Parse("0" + textBox12.Text.ToString() );   //Furniture (at cost)
-            b_f += double.Parse("0" + textBox13.Text.ToString() );   //Electronic Equipment (at cost)
-            b_f += double.Parse("0" + label51.Text.ToString() );    //total
-
-            return b_f;
-        }
-
+        
         private void Form6_AssentAndLiabilities_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -686,8 +702,8 @@ namespace Tax_Calculator
         //Back button click event
         private void button2_Click(object sender, EventArgs e)
         {
-            Form5_Expenses f = Form5_Expenses.GetInstance;
             this.Hide();
+            Form5_Expenses f = Form5_Expenses.GetInstance;
             f.Show();
         }
 
@@ -695,9 +711,45 @@ namespace Tax_Calculator
         //Home button click event
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Show();    //Hide curent window form
+            this.Hide();    //Hide curent window form
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
             f.Show();   //go to Home page
+        }
+
+        //for any assets textbox works for method: textBox1 to textBox17 
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {               
+                label11.Text =  CalTotalInvestments().ToString("N");
+                label51.Text = CalTotalCashAsset_OutsideBusiness().ToString("N");
+                label10.Text = CalTotalAssets().ToString("N");
+
+                label56.Text = CalTotalLiabilities().ToString("N");
+
+                //net wealth as on last date of this income year
+                double diff1 = CalTotalAssets() - CalTotalLiabilities();
+                label86.Text = diff1.ToString("N");
+                
+                //accretion in wealth
+                double diff2 = diff1 - (double)Convert.ToDecimal(textBox22.Text.ToString());
+                label82.Text = diff2.ToString("N");
+                
+                //total accretion fo wealth
+                double diff3 = diff2- (double)Convert.ToDecimal(label_totalExpense.Text.ToString());
+                label85.Text = diff3.ToString("N");
+
+                label83.Text = CalTotalSourceOfFund().ToString("N");    //return and save "total source of fund"
+
+                //Difference(Between serial 16-17)
+                double diff4 = diff3 - CalTotalSourceOfFund();
+                label81.Text = diff4.ToString("N");
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

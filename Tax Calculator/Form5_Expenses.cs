@@ -38,197 +38,219 @@ namespace Tax_Calculator
         }
         public void makeAllTextBoxZero()
         {
-            textBox1.Text = "0";
-            textBox2.Text = "0";
-            textBox3.Text = "0";
-            textBox4.Text = "0";
-            textBox5.Text = "0";
-            textBox6.Text = "0";
-            textBox7.Text = "0";
-            textBox8.Text = "0";
-            textBox9.Text = "0";
-            textBox10.Text = "0";
-            textBox11.Text = "0";
+            textBox1.Text = "0.0";
+            textBox2.Text = "0.0";
+            textBox3.Text = "0.0";
+            textBox4.Text = "0.0";
+            textBox5.Text = "0.0";
+            textBox6.Text = "0.0";
+            textBox7.Text = "0.0";
+            textBox8.Text = "0.0";
+            textBox9.Text = "0.0";
+            textBox10.Text = "0.0";
+            textBox11.Text = "0.0";
         }
         private double CalTotalExpense()
         {
-            //addind "0" to prevent program crash because of null character of textBox
-            totalExpense = Double.Parse("0"+ textBox1.Text.ToString()) +
-                            Double.Parse("0" + textBox2.Text.ToString()) +
-                            Double.Parse("0" + textBox3.Text.ToString()) +
-                            Double.Parse("0" + textBox4.Text.ToString()) +
-                            Double.Parse("0" + textBox5.Text.ToString()) +
-                            Double.Parse("0" + textBox6.Text.ToString()) +
-                            Double.Parse("0" + textBox7.Text.ToString()) +
-                            Double.Parse("0" + textBox8.Text.ToString()) +
-                            Double.Parse("0" + textBox9.Text.ToString()) +
-                            Double.Parse(textBox10.Text.ToString()) +
-                            Double.Parse("0" + textBox11.Text.ToString());
-                            
+            totalExpense = (double)Convert.ToDecimal(textBox1.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox2.Text.ToString()) +
+                           (double)Convert.ToDecimal(textBox3.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox4.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox5.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox6.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox7.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox8.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox9.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox10.Text.ToString()) +
+                            (double)Convert.ToDecimal(textBox11.Text.ToString());                           
 
             return totalExpense;
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox1.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox1.Text = "0";
+                   // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox1.Text.ToString());    //checking user input vaild or not
+                    textBox2.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox2.Focus();
+            }
+            catch
+            {
+                textBox1.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox2.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox2.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox2.Text.ToString());    //checking user input vaild or not
+                    textBox3.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox3.Focus();
+            }
+            catch
+            {
+                textBox2.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox3.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox3.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox3.Text.ToString());    //checking user input vaild or not
+                    textBox4.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox4.Focus();
+            }
+            catch
+            {
+                textBox3.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox4.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox4.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox4.Text.ToString());    //checking user input vaild or not
+                    textBox5.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox5.Focus();
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox5_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox5.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox5.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox5.Text.ToString());    //checking user input vaild or not
+                    textBox6.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox6.Focus();
+            }
+            catch
+            {
+                textBox5.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox6_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox6.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox6.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox6.Text.ToString());    //checking user input vaild or not
+                    textBox7.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox7.Focus();
+            }
+            catch
+            {
+                textBox6.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox7_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox7.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox7.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox7.Text.ToString());    //checking user input vaild or not
+                    textBox8.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox8.Focus();
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox8.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox8.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox8.Text.ToString());    //checking user input vaild or not
+                    textBox9.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox9.Focus();
+            }
+            catch
+            {
+                textBox8.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox9.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox9.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox9.Text.ToString());    //checking user input vaild or not
+                    textBox10.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox10.Focus();
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox10.Text.ToString());    //checking user input vaild or not
+                    textBox11.Focus();
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
-
-                textBox11.Focus();
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox11.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox11.Text = "0";
+                    // any string number(with comma or without comma) coverted to double
+                    Convert.ToDecimal(textBox11.Text.ToString());    //checking user input vaild or not
+                    button1.Focus();    //focus on "Next" button
                 }
-                totalExpense = CalTotalExpense();
-                label13.Text = totalExpense.ToString();
+            }
+            catch
+            {
+                textBox11.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
@@ -257,6 +279,7 @@ namespace Tax_Calculator
             f.Show();
         }
 
+        //
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -286,5 +309,196 @@ namespace Tax_Calculator
             this.Hide();
             f.Show();
         }
+
+        //
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                totalExpense = CalTotalExpense();
+                label13.Text = totalExpense.ToString("N");  //string formatting as currency number style
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text.ToString() == "") textBox1.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox1.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox1.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox2.Text.ToString() == "") textBox2.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox2.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox2.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox3.Text.ToString() == "") textBox3.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox3.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox3.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox4.Text.ToString() == "") textBox4.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox4.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox5.Text.ToString() == "") textBox5.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox5.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox5.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox6.Text.ToString() == "") textBox6.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox6.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox6.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox7.Text.ToString() == "") textBox7.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox7.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox8.Text.ToString() == "") textBox8.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox8.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox8.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox9.Text.ToString() == "") textBox9.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox9.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox10.Text.ToString() == "") textBox10.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox10.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+
+            if (textBox11.Text.ToString() == "") textBox11.Text = "0.0";  //if user try to input field empty then auto field it by "0.0"
+
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                Convert.ToDecimal(textBox11.Text.ToString());    //checking user input valid or not
+            }
+            catch
+            {
+                textBox11.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+       
     }
 }

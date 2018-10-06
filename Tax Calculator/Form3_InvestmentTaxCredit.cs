@@ -252,7 +252,7 @@ namespace Tax_Calculator
             try
             {
                 //show total "Investment tax credit"
-                label12.Text = (InvestmentTaxCalculate()).ToString("N");    //string formatting as a number;which has comma
+                label12.Text = InvestmentTaxCalculate().ToString("N");    //string formatting as a number;which has comma
             }
             catch
             {
@@ -544,6 +544,11 @@ namespace Tax_Calculator
             {
                 textBox10.Text = "0.0";  //clean user inputs because of invalid inputs
             }
+        }
+
+        private void textBox_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

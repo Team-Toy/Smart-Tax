@@ -48,91 +48,105 @@ namespace Tax_Calculator
         private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
         {
             //taking total taxable income from "salaries" form and showing in label51
-            label51.Text = Form2_Salaries.pdfInputs1[53];
+            label51.Text = ((double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[53])).ToString("N");    //making total taxable income as currency style
             //taking total taxable exempted income and showing in label52
-            label52.Text = Form2_Salaries.pdfInputs1[35];
+            label52.Text = ((double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[35])).ToString("N");     //making total taxable exempted income as currency style
             //taking value from NetHousePropertyIncome of Form2_Salaries
-            label_NetHousePropertyIncome.Text = Form2_Salaries.pdfInputs2[10]; 
+            label_NetHousePropertyIncome.Text = ((double)Convert.ToDecimal(Form2_Salaries.pdfInputs2[10])).ToString("N");   //making total NetHousePropertyIncome as currency style
 
             // showing total and total income
-            label39.Text = CalTotalTaxableIncome().ToString();
-            label40.Text = CalTotalTaxableIncome().ToString();
+            label39.Text = CalTotalTaxableIncome().ToString("N");
+            label40.Text = CalTotalTaxableIncome().ToString("N");
             //............................
 
             taxLeviable = Form_PayableTaxCalculator.taxLeviable;
-            label41.Text = taxLeviable.ToString();
+            label41.Text = taxLeviable.ToString("N");
 
-            taxPayable = Math.Abs(taxLeviable - taxRebate);
-            label43.Text = taxPayable.ToString();
+            taxPayable = taxLeviable - taxRebate;
+            if (taxLeviable <= taxRebate)
+            {
+                taxPayable = 0.0;
+            }
+                
+            label43.Text = taxPayable.ToString("N");
 
         }
         public void madeAllTextBoxZero()
         {
             
-            textBox2.Text = "0";
-            textBox4.Text = "0";
-            textBox5.Text = "0";
-            textBox6.Text = "0";
-            textBox7.Text = "0";
-            textBox8.Text = "0";
-            textBox9.Text = "0";
-            textBox10.Text = "0";
-            textBox11.Text = "0";
-            textBox12.Text = "0";
-            textBox13.Text = "0";
-            textBox14.Text = "0";
-            textBox15.Text = "0";
+            textBox2.Text = "0.0";
+            textBox4.Text = "0.0";
+            textBox5.Text = "0.0";
+            textBox6.Text = "0.0";
+            textBox7.Text = "0.0";
+            textBox8.Text = "0.0";
+            textBox9.Text = "0.0";
+            textBox10.Text = "0.0";
+            textBox11.Text = "0.0";
+            textBox12.Text = "0.0";
+            textBox13.Text = "0.0";
+            textBox14.Text = "0.0";
+            textBox15.Text = "0.0";
 
         }
         
         private double CalTotalTaxableIncome()
         {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalTaxableIncome = double.Parse(Form2_Salaries.pdfInputs1[53]) +   //net taxable income from salaries form
-                                        double.Parse("0"+ textBox2.Text.ToString()) +
-                                        double.Parse("0" + label_NetHousePropertyIncome.Text.ToString()) +
-                                        double.Parse("0" + textBox4.Text.ToString()) +
-                                        double.Parse("0" + textBox5.Text.ToString()) +
-                                        double.Parse("0" + textBox6.Text.ToString()) +
-                                        double.Parse("0" + textBox7.Text.ToString()) +
-                                        double.Parse("0" + textBox8.Text.ToString()) +
-                                        double.Parse("0" + textBox9.Text.ToString()) +
-                                        double.Parse("0" + textBox10.Text.ToString());
-
-
-            
+            totalTaxableIncome = (double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[53]) +   //net taxable income from salaries form
+                                  (double)Convert.ToDecimal(textBox2.Text.ToString()) +
+                                  (double)Convert.ToDecimal(label_NetHousePropertyIncome.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox4.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox5.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox6.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox7.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox8.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox9.Text.ToString());                          
+            return totalTaxableIncome;
         }
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+        {           
+            try
             {
-                if (textBox2.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox2.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                    textBox2.Text = value.ToString("N");    //string formatting as a number;which has comma
+                    //focusing "agricultural income" text field
+                    textBox4.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N"); //string formatting as a currency number   
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "agricultural income" text field
-                textBox4.Focus();
             }
+            catch
+            {
+                textBox2.Text = "0.0";  //clear user input because of invaild inputs
+            }
+
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox4.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox4.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                    textBox4.Text = value.ToString("N");    //string formatting as a number;which has comma
+                    //focusing "agricultural income" text field
+                    textBox5.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N"); //string formatting as a currency number   
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "Income from Business or profession" text field
-                textBox5.Focus();
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
@@ -140,121 +154,153 @@ namespace Tax_Calculator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (textBox5.Text.Length == 0)
+                try
                 {
-                    textBox5.Text = "0";
+                    if (e.KeyCode == Keys.Enter)
+                    {
+                        //any string number(with comma or without comma) coverted to double
+                        double value = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                        textBox5.Text = value.ToString("N");    //string formatting as a number;which has comma                                                               
+                        //focusing "Share of proft in a firm" text field
+                        textBox6.Focus();
+                        // calculate tax rebate
+                        taxRebate = CalTaxRebate();
+                        // showing tax rebate
+                        label42.Text = taxRebate.ToString("N"); //string formatting as a currency number   
+                    }
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "Share of proft in a firm" text field
-                textBox6.Focus();
+                catch
+                {
+                    textBox5.Text = "0.0";  //clear user input because of invaild inputs
+                }
+               
             }
         }
 
         private void textBox6_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox6.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox6.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                    textBox6.Text = value.ToString("N");    //string formatting as a number;which has comma
+                     //focusing "Income of spouse or minor child as applicable" text field
+                    textBox7.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N"); //string formatting as a currency number   
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "Income of spouse or minor child as applicable" text field
-                textBox7.Focus();
             }
+            catch
+            {
+                textBox6.Text = "0.0";  //clear user input because of invaild inputs
+            }
+                     
         }
 
         private void textBox7_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox7.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox7.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                    textBox7.Text = value.ToString("N");    //string formatting as a number;which has comma                                                          
+                    //focusing "Capital Gains" text field
+                    textBox8.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N"); //string formatting as a currency number   
                 }
-                double total = CalTotalTaxableIncome();
-                //
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "Capital Gains" text field
-                textBox8.Focus();
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox8.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox8.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                    textBox8.Text = value.ToString("N");    //string formatting as a number;which has comma                                                          
+                    //focusing "Income from other source" text field
+                    textBox9.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N");  //string formatting as a currency number  
                 }
-                double total = CalTotalTaxableIncome();
-
-                label39.Text = total.ToString();
-                label40.Text = total.ToString();
-                //focusing "Income from other source" text field
-                textBox9.Focus();
             }
+            catch
+            {
+                textBox8.Text = "0.0";  //clear user input because of invaild inputs
+            }
+
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox9.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox9.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                    textBox9.Text = value.ToString("N");    //string formatting as a number;which has comma                                                          
+                    //focusing "foreign income" text field
+                    textBox10.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N");  //string formatting as a currency number  
                 }
-                double totalIncome = CalTotalTaxableIncome();
-                //showing total income on label39 and labe40
-                label39.Text = totalIncome.ToString();
-                label40.Text = totalIncome.ToString();
-
-                // calculate tax rebate and show on label42
-                taxRebate = CalTaxRebate();
-                label42.Text = taxRebate.ToString();
-                //focusing "foreign income" text field
-                textBox10.Focus();
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                    textBox10.Text = value.ToString("N");    //string formatting as a number;which has comma                                                          
+                    //focusing "tax deducted at source" text field
+                    textBox11.Focus();
+                    // calculate tax rebate
+                    taxRebate = CalTaxRebate();
+                    // showing tax rebate
+                    label42.Text = taxRebate.ToString("N");  //string formatting as a currency number  
                 }
-
-                double totalIncome = CalTotalTaxableIncome();
-             
-                //showing total income in labe40
-                label40.Text = totalIncome.ToString();
-
-                // showing tax rebate
-                taxRebate = CalTaxRebate();
-                label42.Text = taxRebate.ToString();
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            double totalIncome = CalTotalTaxableIncome();
+        {                                                   //foregin income
+            totalTaxableIncome = CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString()); 
 
-            //showing total income in labe40
-            label40.Text = totalIncome.ToString();
-
+            taxRebate = CalTaxRebate(); // calculating tax rebate
             // showing tax rebate
-            taxRebate = CalTaxRebate();
-            label42.Text = taxRebate.ToString();
+            label42.Text = taxRebate.ToString("N");  //string formatting as a currency number  
 
             Form_PayableTaxCalculator f = new Form_PayableTaxCalculator();
             f.ShowDialog();
@@ -262,12 +308,13 @@ namespace Tax_Calculator
 
         public double CalTaxRebate()
         {
-            
+            //calculating total taxable income + foregin income
+           totalTaxableIncome = CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString());    
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
             double taxRebate = 0;
-
+            
             // see tax book page-29, assessment year(2018-2019)
-            if(totalTaxableIncome <= 1000000.00)
+            if (totalTaxableIncome <= 1000000.00)
             {
                 taxRebate = allowableInvestmentTaxCredit * 0.15;
             }
@@ -304,25 +351,28 @@ namespace Tax_Calculator
 
      
         private double totalTaxPayments()
-        {
-            //addind "0" to prevent program crash because of null character of textBox
-            return totalTaxPayment = Double.Parse("0"+ textBox11.Text.ToString()) +
-                                     Double.Parse("0" + textBox12.Text.ToString()) +
-                                     Double.Parse("0" + textBox13.Text.ToString()) +
-                                     Double.Parse("0" + textBox14.Text.ToString());
+        {           
+            return totalTaxPayment = (double)Convert.ToDecimal(textBox11.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox12.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox13.Text.ToString()) +
+                                     (double)Convert.ToDecimal(textBox14.Text.ToString());
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double value = (double)Convert.ToDecimal(textBox11.Text.ToString());
+                    textBox11.Text = value.ToString("N");   //string format as currency number style
+                    textBox12.Focus();
                 }
-                label55.Text = totalTaxPayments().ToString();
-
-                textBox12.Focus();
+            }
+            catch
+            {
+                textBox11.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
@@ -376,9 +426,18 @@ namespace Tax_Calculator
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
+            {              
+                if (e.KeyCode == Keys.Enter)
+                {
+                    taxPaidLastYear = (double)Convert.ToDecimal(textBox15.Text.ToString());
+                    button2.Focus();   //Next button
+                }
+                
+            }
+            catch
             {
-                taxPaidLastYear = Double.Parse(textBox15.Text.ToString());
+                textBox15.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
         private void UserInputs_StatementOfSalary()
@@ -422,8 +481,7 @@ namespace Tax_Calculator
 
         }
 
-
-
+        // for all texbox keypress method: works for invaild inputs restriction
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -452,6 +510,238 @@ namespace Tax_Calculator
             Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
             this.Hide();
             f.Show();
+        }
+
+        //
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double total = CalTotalTaxableIncome();
+                //
+                label39.Text = total.ToString("N"); //string formatting as a number;which has comma
+                label40.Text = total.ToString("N"); //string formatting as a number;which has comma
+                // calculate tax rebate and show on label42
+                taxRebate = CalTaxRebate();
+                label42.Text = taxRebate.ToString("N"); //string formatting as a number;which has comma
+            }
+            catch
+            {
+
+            }
+        }
+
+        //total income
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {         //total = total taxable income + foregin income
+                double total = CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString());
+                //
+                label40.Text = total.ToString("N"); //string formatting as a number;which has comma
+                // calculate tax rebate and show on label42
+                taxRebate = CalTaxRebate();
+                label42.Text = taxRebate.ToString("N"); //string formatting as a number;which has comma
+            }
+            catch
+            {
+
+            }
+        }
+        //
+        private void TaxPayments_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {             
+                label55.Text = totalTaxPayments().ToString("N");
+                double difference = taxPayable - totalTaxPayments();
+                label50.Text = difference.ToString("N");
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                taxPaidLastYear = (double)Convert.ToDecimal(textBox15.Text.ToString());
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text.ToString() == "") textBox2.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox2.Text.ToString());
+            }
+            catch
+            {
+                textBox2.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text.ToString() == "") textBox4.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox4.Text.ToString());
+            }
+            catch
+            {
+                textBox4.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text.ToString() == "") textBox5.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox5.Text.ToString());
+            }
+            catch
+            {
+                textBox5.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text.ToString() == "") textBox6.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox6.Text.ToString());
+            }
+            catch
+            {
+                textBox6.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text.ToString() == "") textBox7.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox7.Text.ToString());
+            }
+            catch
+            {
+                textBox7.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (textBox8.Text.ToString() == "") textBox8.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox8.Text.ToString());
+            }
+            catch
+            {
+                textBox8.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text.ToString() == "") textBox9.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox9.Text.ToString());
+            }
+            catch
+            {
+                textBox9.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (textBox10.Text.ToString() == "") textBox10.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox10.Text.ToString());
+            }
+            catch
+            {
+                textBox10.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+            if (textBox11.Text.ToString() == "") textBox11.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox11.Text.ToString());
+            }
+            catch
+            {
+                textBox11.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox12_Leave(object sender, EventArgs e)
+        {
+            if (textBox12.Text.ToString() == "") textBox12.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox12.Text.ToString());
+            }
+            catch
+            {
+                textBox12.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox13_Leave(object sender, EventArgs e)
+        {
+            if (textBox13.Text.ToString() == "") textBox13.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox13.Text.ToString());
+            }
+            catch
+            {
+                textBox13.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox14_Leave(object sender, EventArgs e)
+        {
+            if (textBox14.Text.ToString() == "") textBox14.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox14.Text.ToString());
+            }
+            catch
+            {
+                textBox14.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox15_Leave(object sender, EventArgs e)
+        {
+            if (textBox15.Text.ToString() == "") textBox15.Text = "0.0";  //if user clear input then auto copy "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox15.Text.ToString());
+            }
+            catch
+            {
+                textBox15.Text = "0.0";   //clear user input because of invaild inputs
+            }
         }
 
     }
