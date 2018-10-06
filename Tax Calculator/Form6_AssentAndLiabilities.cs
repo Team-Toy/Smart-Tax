@@ -47,19 +47,21 @@ namespace Tax_Calculator
         {
             InitializeComponent();
             pdfInputs = new string[38];
+            
+            //data collection from previous forms
+            shownReturnIncome = Form4_SatementOfSalary.totalTaxableIncome;
+            taxExempted = (double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[35]); //taking tax exempted from Salaries form
+
+            label35.Text = shownReturnIncome.ToString("N"); //string formatting as a currency number
+            label84.Text = taxExempted.ToString("N");       //string formatting as a currency number
+            label_totalExpense.Text = Form5_Expenses.totalExpense.ToString("N");    //string formatting as a currency number
         }
 
         //need to shift code
         private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
         {
             makeAlltextBoxZero();
-            shownReturnIncome = Form4_SatementOfSalary.totalTaxableIncome;
-            taxExempted = (double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[35] ); //taking tax exempted from Salaries form
-
-            label35.Text = shownReturnIncome.ToString("N"); //string formatting as a currency number
-            label84.Text = taxExempted.ToString("N");       //string formatting as a currency number
-            label_totalExpense.Text = Form5_Expenses.totalExpense.ToString("N");    //string formatting as a currency number
-
+           
         }
        
         private void makeAlltextBoxZero()
@@ -92,23 +94,6 @@ namespace Tax_Calculator
             textBox26.Text = "0.0";
         }
 
-        //need to remove
-        private double BalanceForward()
-        {
-            double b_f = 0.0;
-            b_f += double.Parse("0" + textBox1.Text.ToString());   
-            b_f += double.Parse("0" + textBox2.Text.ToString());   
-            b_f += double.Parse("0" + textBox3.Text.ToString());   
-            b_f += double.Parse("0" + textBox4.Text.ToString());   
-            b_f += double.Parse("0" + label11.Text.ToString());   //total
-            b_f += double.Parse("0" + textBox10.Text.ToString());  
-            b_f += double.Parse("0" + textBox11.Text.ToString());   
-            b_f += double.Parse("0" + textBox12.Text.ToString());   
-            b_f += double.Parse("0" + textBox13.Text.ToString());   
-            b_f += double.Parse("0" + label51.Text.ToString());    //total
-
-            return b_f;
-        }
         private double CalTotalAssets()
         {
             B_F = (double)Convert.ToDecimal(textBox1.Text.ToString()) + //Business Capital ( Closing Balance)
@@ -367,8 +352,7 @@ namespace Tax_Calculator
             {
                 textBox13.Text = "0.0";  //clear user input because of invaild inputs
             }
-        }
-       
+        }     
 
         private void textBox14_KeyDown(object sender, KeyEventArgs e)
         {
@@ -435,7 +419,6 @@ namespace Tax_Calculator
             }
         }
        
-        //need to start edit from now
         private void textBox18_KeyDown(object sender, KeyEventArgs e)
         {
             try
