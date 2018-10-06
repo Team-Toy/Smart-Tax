@@ -303,32 +303,8 @@ namespace Tax_Calculator
             float x = 71;
             float y = 593;
             string descriptionOfPerperty = Form2_Salaries.pdfInputs2[0];
-            int stringLength = descriptionOfPerperty.Length;
-            int endIndex = 23;
 
-            //string subString = descriptionOfPerperty.Substring(0, 23);
-            //WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);
-           // string subString2 = descriptionOfPerperty.Substring(24);
-           // y += 10;
-            //WriteStringOnPdf(ref canvas, ref reader, pageNo, subString2, x, y);
-            for (int startIndex=0; startIndex < stringLength; )
-            {
-                string subString;
-                if (endIndex < stringLength)
-                {
-                    subString = descriptionOfPerperty.Substring(startIndex, endIndex);
-                    WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);    //location and description of property
-                    y += 10;
-                    startIndex += ++endIndex;
-                    endIndex += endIndex;
-                }
-                else
-                {
-                    subString = descriptionOfPerperty.Substring(startIndex);
-                    WriteStringOnPdf(ref canvas, ref reader, pageNo, subString, x, y);
-                }
-                
-            }
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, descriptionOfPerperty, x, y);    //location and description of property
 
             //WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0]., 71, 593);    //location and description of property
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[1], 469, 593);   //print annual rental income
