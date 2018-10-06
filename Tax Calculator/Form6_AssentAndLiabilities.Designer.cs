@@ -1609,6 +1609,7 @@
             this.Name = "Form6_AssentAndLiabilities";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asset and Liabilities";
+            this.Activated += new System.EventHandler(this.Form6_AssentAndLiabilities_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form6_AssentAndLiabilities_FormClosing);
             this.Load += new System.EventHandler(this.Form6_AssentAndLiabilities_Load);
             this.panel1.ResumeLayout(false);

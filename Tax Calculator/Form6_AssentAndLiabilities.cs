@@ -47,7 +47,16 @@ namespace Tax_Calculator
         {
             InitializeComponent();
             pdfInputs = new string[38];
-            
+        }
+
+        //need to shift code
+        private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
+        {
+            makeAlltextBoxZero();           
+        }
+
+        private void Form6_AssentAndLiabilities_Activated(object sender, EventArgs e)
+        {
             //data collection from previous forms
             shownReturnIncome = Form4_SatementOfSalary.totalTaxableIncome;
             taxExempted = (double)Convert.ToDecimal(Form2_Salaries.pdfInputs1[35]); //taking tax exempted from Salaries form
@@ -56,14 +65,6 @@ namespace Tax_Calculator
             label84.Text = taxExempted.ToString("N");       //string formatting as a currency number
             label_totalExpense.Text = Form5_Expenses.totalExpense.ToString("N");    //string formatting as a currency number
         }
-
-        //need to shift code
-        private void Form6_AssentAndLiabilities_Load(object sender, EventArgs e)
-        {
-            makeAlltextBoxZero();
-           
-        }
-       
         private void makeAlltextBoxZero()
         {
             textBox1.Text = "0.0";
@@ -1059,5 +1060,7 @@ namespace Tax_Calculator
                 textBox26.Text = "0.0";   //clear user input because of invaild inputs
             }
         }
+
+        
     }
 }
