@@ -1863,125 +1863,316 @@ namespace Tax_Calculator
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "") textBox1.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox1.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox1.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text == "") textBox2.Text = "0.0";
+            if (textBox2.Text == "") textBox2.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox2.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox2.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox3_Leave(object sender, EventArgs e)
         {
-            if (textBox3.Text == "") textBox3.Text = "0.0";
+            if (textBox3.Text == "") textBox3.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox3.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox3.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox4_Leave(object sender, EventArgs e)
         {
-            if (textBox4.Text == "") textBox4.Text = "0.0";
+            if (textBox4.Text == "") textBox4.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox4.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox4.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox5_Leave(object sender, EventArgs e)
         {
-            if (textBox5.Text == "") textBox5.Text = "0.0";
+            if (textBox5.Text == "") textBox5.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox5.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox5.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox6_Leave(object sender, EventArgs e)
         {
-            if (textBox6.Text == "") textBox6.Text = "0.0";
+            if (textBox6.Text == "") textBox6.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox6.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox6.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox7_Leave(object sender, EventArgs e)
         {
-            if (textBox7.Text == "") textBox7.Text = "0.0";
+            if (textBox7.Text == "") textBox7.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox7.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox7.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox25_Leave(object sender, EventArgs e)
         {
-            if (textBox25.Text == "") textBox25.Text = "0.0";
+            if (textBox25.Text == "") textBox25.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox25.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox25.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox8_Leave(object sender, EventArgs e)
         {
-            if (textBox8.Text == "") textBox8.Text = "0.0";
+            if (textBox8.Text == "") textBox8.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox8.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox8.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox9_Leave(object sender, EventArgs e)
         {
-            if (textBox9.Text == "") textBox9.Text = "0.0";
+            if (textBox9.Text == "") textBox9.Text = "0.0"; //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox9.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox9.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox10_Leave(object sender, EventArgs e)
         {
-            if (textBox10.Text == "") textBox10.Text = "0.0";
+            if (textBox10.Text == "") textBox10.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox10.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox10.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox11_Leave(object sender, EventArgs e)
         {
-            if (textBox11.Text == "") textBox11.Text = "0.0";
+            if (textBox11.Text == "") textBox11.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox11.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox11.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox12_Leave(object sender, EventArgs e)
         {
-            if (textBox12.Text == "") textBox12.Text = "0.0";
+            if (textBox12.Text == "") textBox12.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox12.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox12.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox13_Leave(object sender, EventArgs e)
         {
-            if (textBox13.Text == "") textBox13.Text = "0.0";
+            if (textBox13.Text == "") textBox13.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox13.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox13.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox15_Leave(object sender, EventArgs e)
         {
-            if (textBox15.Text == "") textBox15.Text = "0.0";
+            if (textBox15.Text == "") textBox15.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox15.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox15.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox16_Leave(object sender, EventArgs e)
         {
-            if (textBox16.Text == "") textBox16.Text = "0.0";
+            if (textBox16.Text == "") textBox16.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox16.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox16.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
 
         private void textBox17_Leave(object sender, EventArgs e)
         {
-            if (textBox17.Text == "") textBox17.Text = "0.0";
+            if (textBox17.Text == "") textBox17.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox17.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox17.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox18_Leave(object sender, EventArgs e)
         {
-            if (textBox18.Text == "") textBox18.Text = "0.0";
+            if (textBox18.Text == "") textBox18.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox18.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox18.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox19_Leave(object sender, EventArgs e)
         {
-            if (textBox19.Text == "") textBox19.Text = "0.0";
+            if (textBox19.Text == "") textBox19.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox19.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox19.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox20_Leave(object sender, EventArgs e)
         {
-            if (textBox20.Text == "") textBox20.Text = "0.0";
+            if (textBox20.Text == "") textBox20.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox20.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox20.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox21_Leave(object sender, EventArgs e)
         {
-            if (textBox21.Text == "") textBox21.Text = "0.0";
+            if (textBox21.Text == "") textBox21.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox21.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox21.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox22_Leave(object sender, EventArgs e)
         {
-            if (textBox22.Text == "") textBox22.Text = "0.0";
+            if (textBox22.Text == "") textBox22.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox22.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox22.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox23_Leave(object sender, EventArgs e)
         {
-            if (textBox23.Text == "") textBox23.Text = "0.0";
+            if (textBox23.Text == "") textBox23.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox23.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox23.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
         private void textBox24_Leave(object sender, EventArgs e)
         {
-            if (textBox24.Text == "") textBox24.Text = "0.0";
+            if (textBox24.Text == "") textBox24.Text = "0.0";   //if user clean input field then replaced input by "0.0"
+            try
+            {
+                Convert.ToDecimal(textBox24.Text.ToString());    //if user copy-paste invaild(or number with characters)
+            }
+            catch
+            {
+                textBox24.Text = "0.0";      //Then make user inputs cleaned by "0.0"
+            }
         }
 
-      
 
         private void UserInputs_Salaries()
         {
