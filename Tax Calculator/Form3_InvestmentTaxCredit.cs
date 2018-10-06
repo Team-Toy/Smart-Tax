@@ -60,162 +60,203 @@ namespace Tax_Calculator
             textBox9.Text = "0";
             textBox10.Text = "0";
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //calling calculation method to show total investment result by label
-            label12.Text = InvestmentTaxCalculate().ToString();
-        }
-
+      
         private double InvestmentTaxCalculate()
         {
-            //addind "0" to prevent program crash because of null character of textBox
-            totalInvestment =   double.Parse("0"+ textBox1.Text.ToString()) +
-                                double.Parse("0" + textBox2.Text.ToString()) +
-                                double.Parse("0" + textBox3.Text.ToString()) +
-                                double.Parse("0" + textBox4.Text.ToString()) +
-                                double.Parse("0" + textBox5.Text.ToString()) +
-                                double.Parse("0" + textBox6.Text.ToString()) +
-                                double.Parse("0" + textBox7.Text.ToString()) +
-                                double.Parse("0" + textBox8.Text.ToString()) +
-                                double.Parse("0" + textBox9.Text.ToString()) +
-                                double.Parse("0" + textBox10.Text.ToString());
+            totalInvestment = (double)Convert.ToDecimal(textBox1.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox2.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox3.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox4.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox5.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox6.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox7.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox8.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox9.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox10.Text.ToString());
            
             return totalInvestment;
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox1.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox1.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                    textBox1.Text = value.ToString("N");
+                    textBox2.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox2.Focus();
+            }
+            catch
+            {
+                textBox1.Text = "0.0";  //clear user input because of invaild inputs
             }
             
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox2.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox2.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                    textBox2.Text = value.ToString("N");
+                    textBox3.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox3.Focus();
+            }
+            catch
+            {
+                textBox2.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox3.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox3.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                    textBox3.Text = value.ToString("N");
+                    textBox4.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox4.Focus();
+            }
+            catch
+            {
+                textBox3.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox4.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox4.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                    textBox4.Text = value.ToString("N");
+                    textBox5.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox5.Focus();
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox5_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox5.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox5.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                    textBox5.Text = value.ToString("N");
+                    textBox6.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox6.Focus();
+            }
+            catch
+            {
+                textBox5.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox6_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox6.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox6.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                    textBox6.Text = value.ToString("N");
+                    textBox7.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox7.Focus();
+            }
+            catch
+            {
+                textBox6.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox7_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox7.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox7.Text = "0";
+                    double value = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                    textBox7.Text = value.ToString("N");
+                    textBox8.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox8.Focus();
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox8.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox8.Text = "0";
+                    double value = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                    textBox8.Text = value.ToString("N");
+                    textBox9.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox9.Focus();
+            }
+            catch
+            {
+                textBox8.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox9.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox9.Text = "0";
+                    double value = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                    textBox9.Text = value.ToString("N");
+                    textBox10.Focus();
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
-                textBox10.Focus();
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
-
+                    double value = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                    textBox10.Text = value.ToString("N");
                 }
-                label12.Text = (InvestmentTaxCalculate()).ToString();
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clear user input because of invaild inputs
+            }
+        }
+
+        //textBox1 to textBox10
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //show total "Investment tax credit"
+                label12.Text = (InvestmentTaxCalculate()).ToString("N");    //string formatting as a number;which has comma
+            }
+            catch
+            {
+
             }
         }
 
@@ -230,6 +271,8 @@ namespace Tax_Calculator
             //showing "Satement Of Salary" form
             f.Show();        
         }
+
+        /*..............List of documents furnished.............*/
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
@@ -370,6 +413,136 @@ namespace Tax_Calculator
             {
                 //application Closing by cross cursor;
                 Application.Exit();
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text.ToString() == "") textBox1.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox1.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox1.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text.ToString() == "") textBox2.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox2.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox2.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text.ToString() == "") textBox3.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox3.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox3.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text.ToString() == "") textBox4.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox4.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox4.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text.ToString() == "") textBox5.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox5.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox5.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text.ToString() == "") textBox6.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox6.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox6.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text.ToString() == "") textBox7.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox7.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox7.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (textBox8.Text.ToString() == "") textBox8.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox8.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox8.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text.ToString() == "") textBox9.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox9.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox9.Text = "0.0";  //clean user inputs because of invalid inputs
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (textBox10.Text.ToString() == "") textBox10.Text = "0.0";  //copy "0.0" if user clears input field
+            try
+            {
+                Convert.ToDecimal(textBox10.Text.ToString());    //checking user inputs valid or not
+            }
+            catch
+            {
+                textBox10.Text = "0.0";  //clean user inputs because of invalid inputs
             }
         }
     }
