@@ -751,5 +751,330 @@ namespace Tax_Calculator
 
             }
         }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text.ToString() == "") textBox1.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox1.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox1.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text.ToString() == "") textBox2.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox2.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox2.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text.ToString() == "") textBox3.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox3.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox3.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text.ToString() == "") textBox4.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox4.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox4.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text.ToString() == "") textBox5.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox5.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox5.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text.ToString() == "") textBox6.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox6.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox6.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text.ToString() == "") textBox7.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox7.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox7.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (textBox8.Text.ToString() == "") textBox8.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox8.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox8.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text.ToString() == "") textBox9.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox9.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox9.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (textBox10.Text.ToString() == "") textBox10.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox10.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox10.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+            if (textBox11.Text.ToString() == "") textBox11.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox11.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox11.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox12_Leave(object sender, EventArgs e)
+        {
+            if (textBox12.Text.ToString() == "") textBox12.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox12.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox12.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox13_Leave(object sender, EventArgs e)
+        {
+            if (textBox13.Text.ToString() == "") textBox13.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox13.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox13.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox14_Leave(object sender, EventArgs e)
+        {
+            if (textBox14.Text.ToString() == "") textBox14.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox14.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox14.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox15_Leave(object sender, EventArgs e)
+        {
+            if (textBox15.Text.ToString() == "") textBox15.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox15.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox15.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox16_Leave(object sender, EventArgs e)
+        {
+            if (textBox16.Text.ToString() == "") textBox16.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox16.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox16.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox17_Leave(object sender, EventArgs e)
+        {
+            if (textBox17.Text.ToString() == "") textBox17.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox17.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox17.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox18_Leave(object sender, EventArgs e)
+        {
+            if (textBox18.Text.ToString() == "") textBox18.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox18.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox18.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox19_Leave(object sender, EventArgs e)
+        {
+            if (textBox19.Text.ToString() == "") textBox19.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox19.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox19.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox20_Leave(object sender, EventArgs e)
+        {
+            if (textBox20.Text.ToString() == "") textBox20.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox20.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox20.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox21_Leave(object sender, EventArgs e)
+        {
+            if (textBox21.Text.ToString() == "") textBox21.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox21.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox21.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox22_Leave(object sender, EventArgs e)
+        {
+            if (textBox22.Text.ToString() == "") textBox22.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox22.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox22.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox24_Leave(object sender, EventArgs e)
+        {
+            if (textBox24.Text.ToString() == "") textBox24.Text = "0";
+            try
+            {
+                Convert.ToDecimal(textBox24.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox24.Text = "0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox25_Leave(object sender, EventArgs e)
+        {
+            if (textBox25.Text.ToString() == "") textBox25.Text = "0";
+            try
+            {
+                Convert.ToDecimal(textBox25.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox25.Text = "0";   //clear user input because of invaild inputs
+            }
+        }
+
+        private void textBox26_Leave(object sender, EventArgs e)
+        {
+            if (textBox26.Text.ToString() == "") textBox26.Text = "0.0";
+            try
+            {
+                Convert.ToDecimal(textBox26.Text.ToString());    //checking using inputs vaild or not
+            }
+            catch
+            {
+                textBox26.Text = "0.0";   //clear user input because of invaild inputs
+            }
+        }
     }
 }

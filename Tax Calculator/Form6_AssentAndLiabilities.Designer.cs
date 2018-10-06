@@ -336,6 +336,7 @@
             this.textBox22.TabIndex = 515;
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
             this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox22.Leave += new System.EventHandler(this.textBox22_Leave);
             // 
             // label86
             // 
@@ -487,6 +488,7 @@
             this.textBox26.TabIndex = 501;
             this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             this.textBox26.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox26.Leave += new System.EventHandler(this.textBox26_Leave);
             // 
             // label69
             // 
@@ -602,6 +604,7 @@
             this.textBox24.TabIndex = 491;
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox24_KeyPress);
+            this.textBox24.Leave += new System.EventHandler(this.textBox24_Leave);
             // 
             // textBox21
             // 
@@ -611,6 +614,7 @@
             this.textBox21.TabIndex = 490;
             this.textBox21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox21_KeyDown);
             this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox21.Leave += new System.EventHandler(this.textBox21_Leave);
             // 
             // textBox20
             // 
@@ -620,6 +624,7 @@
             this.textBox20.TabIndex = 489;
             this.textBox20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox20_KeyDown);
             this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox20.Leave += new System.EventHandler(this.textBox20_Leave);
             // 
             // textBox19
             // 
@@ -629,6 +634,7 @@
             this.textBox19.TabIndex = 488;
             this.textBox19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox19_KeyDown);
             this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox19.Leave += new System.EventHandler(this.textBox19_Leave);
             // 
             // textBox18
             // 
@@ -638,6 +644,7 @@
             this.textBox18.TabIndex = 487;
             this.textBox18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox18_KeyDown);
             this.textBox18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox18.Leave += new System.EventHandler(this.textBox18_Leave);
             // 
             // textBox17
             // 
@@ -648,6 +655,7 @@
             this.textBox17.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox17_KeyDown);
             this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox17.Leave += new System.EventHandler(this.textBox17_Leave);
             // 
             // textBox16
             // 
@@ -658,6 +666,7 @@
             this.textBox16.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox16_KeyDown);
             this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox16.Leave += new System.EventHandler(this.textBox16_Leave);
             // 
             // label65
             // 
@@ -1009,6 +1018,7 @@
             this.textBox25.TabIndex = 455;
             this.textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
             this.textBox25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox25_KeyPress);
+            this.textBox25.Leave += new System.EventHandler(this.textBox25_Leave);
             // 
             // label40
             // 
@@ -1067,6 +1077,7 @@
             this.textBox15.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
             this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox15.Leave += new System.EventHandler(this.textBox15_Leave);
             // 
             // textBox14
             // 
@@ -1077,6 +1088,7 @@
             this.textBox14.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
             this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
             // 
             // textBox13
             // 
@@ -1087,6 +1099,7 @@
             this.textBox13.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
             this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox13.Leave += new System.EventHandler(this.textBox13_Leave);
             // 
             // textBox12
             // 
@@ -1097,6 +1110,7 @@
             this.textBox12.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
             this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox12.Leave += new System.EventHandler(this.textBox12_Leave);
             // 
             // label13
             // 
@@ -1137,6 +1151,7 @@
             this.textBox7.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox7.Leave += new System.EventHandler(this.textBox7_Leave);
             // 
             // textBox8
             // 
@@ -1147,6 +1162,7 @@
             this.textBox8.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox8.Leave += new System.EventHandler(this.textBox8_Leave);
             // 
             // textBox9
             // 
@@ -1157,6 +1173,7 @@
             this.textBox9.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox10
             // 
@@ -1167,6 +1184,7 @@
             this.textBox10.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox10.Leave += new System.EventHandler(this.textBox10_Leave);
             // 
             // textBox11
             // 
@@ -1177,6 +1195,7 @@
             this.textBox11.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox11.Leave += new System.EventHandler(this.textBox11_Leave);
             // 
             // textBox6
             // 
@@ -1187,6 +1206,7 @@
             this.textBox6.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // textBox5
             // 
@@ -1197,6 +1217,7 @@
             this.textBox5.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox4
             // 
@@ -1207,6 +1228,7 @@
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // textBox3
             // 
@@ -1217,6 +1239,7 @@
             this.textBox3.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
             // textBox2
             // 
@@ -1227,6 +1250,7 @@
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox1
             // 
@@ -1237,6 +1261,7 @@
             this.textBox1.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label34
             // 
