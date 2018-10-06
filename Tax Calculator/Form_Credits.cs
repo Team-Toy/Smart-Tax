@@ -12,14 +12,21 @@ namespace Tax_Calculator
 {
     public partial class Form_Credits : Form
     {
+        static Form_Credits _instance;
+        public static Form_Credits GetInstance  //making singleton instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form_Credits();
+                return _instance;
+            }
+
+        }
+
         public Form_Credits()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)

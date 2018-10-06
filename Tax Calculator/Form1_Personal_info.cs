@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tax_Calculator
@@ -27,10 +26,11 @@ namespace Tax_Calculator
         public static string[] pdfInputs;
         public Form1_Personal_info()
         {
+           
             InitializeComponent();
             pdfInputs = new string[17];
         }
-        
+
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
             //label8.Text = dateTimePicker1.Text.ToString();

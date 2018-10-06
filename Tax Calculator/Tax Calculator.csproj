@@ -93,6 +93,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1_login.Designer.cs">
+      <DependentUpon>Form1_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyPdfWriter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -156,6 +162,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1_login.resx">
+      <DependentUpon>Form1_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PayableTaxCalculator.resx">
       <DependentUpon>Form_PayableTaxCalculator.cs</DependentUpon>
     </EmbeddedResource>

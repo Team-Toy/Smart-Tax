@@ -205,45 +205,46 @@ namespace Tax_Calculator
         }
         private double TotalAmountOfIncome()
         {
-            //addind "0" to prevent program crash because of null character of textBox
-            totalAmountOfIncome =   double.Parse("0"+textBox1.Text.ToString() ) +
-                                    double.Parse("0"+textBox2.Text.ToString()) +
-                                    double.Parse("0" + textBox3.Text.ToString()) +
-                                    double.Parse("0" + textBox4.Text.ToString()) +
-                                    double.Parse("0" + textBox5.Text.ToString()) +
-                                    double.Parse("0" + textBox6.Text.ToString()) +
-                                    double.Parse("0" + textBox7.Text.ToString()) +
-                                    double.Parse("0" + textBox25.Text.ToString()) +  //Leave allowance
-                                    double.Parse("0" + textBox8.Text.ToString()) +
-                                    double.Parse("0" + textBox9.Text.ToString()) +
-                                    double.Parse("0" + textBox10.Text.ToString()) +
-                                    double.Parse("0" + textBox11.Text.ToString()) +
-                                    double.Parse("0" + textBox12.Text.ToString()) +
-                                    double.Parse("0" + textBox13.Text.ToString()) +                                                        
-                                    double.Parse("0" + textBox16.Text.ToString());
+                                //cleanning space,additional commas during copy-paste by user inputs
+            totalAmountOfIncome = (double)Convert.ToDecimal(textBox1.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox2.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox3.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox4.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox5.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox6.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox7.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox25.Text.ToString()) +  //Leave allowance
+                                  (double)Convert.ToDecimal(textBox8.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox9.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox10.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox11.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox12.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox13.Text.ToString()) +
+                                  (double)Convert.ToDecimal(textBox16.Text.ToString());
 
              
             return totalAmountOfIncome;
         }
         private double CalTotalTaxExempted()
         {
-            totalTaxExtempted = double.Parse(label40.Text.ToString()) +
-                                    double.Parse(label41.Text.ToString()) +
-                                    double.Parse(label42.Text.ToString()) +
-                                    double.Parse(label43.Text.ToString()) +
-                                    double.Parse(label44.Text.ToString()) +
-                                    double.Parse(label45.Text.ToString()) +
-                                    double.Parse(label46.Text.ToString()) +
-                                    double.Parse(label92.Text.ToString()) +     //Leave allowance
-                                    double.Parse(label47.Text.ToString()) +
-                                    double.Parse(label48.Text.ToString()) +
-                                    double.Parse(label49.Text.ToString()) +
-                                    double.Parse(label50.Text.ToString()) +
-                                    double.Parse(label51.Text.ToString()) +
-                                    double.Parse(label52.Text.ToString()) +
-                                    double.Parse(label53.Text.ToString()) +
-                                    double.Parse(label54.Text.ToString()) +
-                                    double.Parse(label55.Text.ToString());
+                             //cleanning space,additional commas during copy-paste by user inputs
+           totalTaxExtempted = (double)Convert.ToDecimal(label40.Text.ToString()) +
+                               (double)Convert.ToDecimal(label41.Text.ToString()) +
+                                (double)Convert.ToDecimal(label42.Text.ToString()) +
+                                (double)Convert.ToDecimal(label43.Text.ToString()) +
+                                (double)Convert.ToDecimal(label44.Text.ToString()) +
+                                (double)Convert.ToDecimal(label45.Text.ToString()) +
+                                (double)Convert.ToDecimal(label46.Text.ToString()) +
+                                (double)Convert.ToDecimal(label92.Text.ToString()) +     //Leave allowance
+                                (double)Convert.ToDecimal(label47.Text.ToString()) +
+                                (double)Convert.ToDecimal(label48.Text.ToString()) +
+                                (double)Convert.ToDecimal(label49.Text.ToString()) +
+                                (double)Convert.ToDecimal(label50.Text.ToString()) +
+                                (double)Convert.ToDecimal(label51.Text.ToString()) +
+                                (double)Convert.ToDecimal(label52.Text.ToString()) +
+                                (double)Convert.ToDecimal(label53.Text.ToString()) +
+                                (double)Convert.ToDecimal(label54.Text.ToString()) +
+                                (double)Convert.ToDecimal(label55.Text.ToString());
 
 
             return totalTaxExtempted;
@@ -251,533 +252,344 @@ namespace Tax_Calculator
         private double CalNetTaxableIncome()
         {
             double netTaxableIncome = 0.0;
-            netTaxableIncome = double.Parse(label57.Text.ToString()) +
-                               double.Parse(label58.Text.ToString()) +
-                                double.Parse(label59.Text.ToString()) +
-                                double.Parse(label60.Text.ToString()) +
-                                double.Parse(label61.Text.ToString()) +
-                                double.Parse(label62.Text.ToString()) +
-                                double.Parse(label63.Text.ToString()) +
-                                double.Parse(label93.Text.ToString()) +  //Leave allowance
-                                double.Parse(label64.Text.ToString()) +
-                                double.Parse(label65.Text.ToString()) +
-                                double.Parse(label66.Text.ToString()) +
-                                double.Parse(label67.Text.ToString()) +
-                                double.Parse(label68.Text.ToString()) +
-                                double.Parse(label69.Text.ToString()) +
-                                double.Parse(label70.Text.ToString()) +
-                                double.Parse(label71.Text.ToString()) +
-                                double.Parse(label72.Text.ToString());
+                                //cleanning space,additional commas during copy-paste by user inputs
+            netTaxableIncome = (double)Convert.ToDecimal(label57.Text.ToString()) +
+                               (double)Convert.ToDecimal(label58.Text.ToString()) +
+                                (double)Convert.ToDecimal(label59.Text.ToString()) +
+                               (double)Convert.ToDecimal(label60.Text.ToString()) +
+                                (double)Convert.ToDecimal(label61.Text.ToString()) +
+                                (double)Convert.ToDecimal(label62.Text.ToString()) +
+                                (double)Convert.ToDecimal(label63.Text.ToString()) +
+                                (double)Convert.ToDecimal(label93.Text.ToString()) +  //Leave allowance
+                                (double)Convert.ToDecimal(label64.Text.ToString()) +
+                                (double)Convert.ToDecimal(label65.Text.ToString()) +
+                                (double)Convert.ToDecimal(label66.Text.ToString()) +
+                                (double)Convert.ToDecimal(label67.Text.ToString()) +
+                                (double)Convert.ToDecimal(label68.Text.ToString()) +
+                                (double)Convert.ToDecimal(label69.Text.ToString()) +
+                                (double)Convert.ToDecimal(label70.Text.ToString()) +
+                                (double)Convert.ToDecimal(label71.Text.ToString()) +
+                                (double)Convert.ToDecimal(label72.Text.ToString());
 
             return netTaxableIncome;
         }
         private double CalTotalClaimedExpense()
         {
-           double totalClaimedExpense = double.Parse(textBox18.Text.ToString()) +
-                                        double.Parse(textBox19.Text.ToString()) +
-                                        double.Parse(textBox20.Text.ToString()) +
-                                        double.Parse(textBox21.Text.ToString()) +
-                                        double.Parse(textBox22.Text.ToString()) +
-                                        double.Parse(textBox23.Text.ToString()) +
-                                        double.Parse(textBox24.Text.ToString());
+           double totalClaimedExpense = 0.0;
+                                //cleanning space,additional commas during copy-paste by user inputs
+           totalClaimedExpense = (double)Convert.ToDecimal(textBox18.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox19.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox20.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox21.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox22.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox23.Text.ToString()) +
+                                (double)Convert.ToDecimal(textBox24.Text.ToString());
 
             return totalClaimedExpense;
         }
+        
+        //basic pay enter key event function
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {       
-            if (e.KeyCode == Keys.Enter)  
+        {                
+            try
             {
-                if(textBox1.Text.Length != 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    // textBox1.Text = "0";
-                    basicPay = double.Parse("0" + textBox1.Text.ToString());
-                    double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
-                    double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
-
-                    label40.ForeColor = Color.Black;
-                    label57.ForeColor = Color.Black;
-
-                    label40.Text = "" + taxExtempted;
-                    label57.Text = "" + taxableIncome;
-
-                    // net taxable income from salary
-                    label39.Text = TotalAmountOfIncome().ToString();
-                    label56.Text = CalTotalTaxExempted().ToString();
-                    //showing total taxable income
-                    label73.Text = CalNetTaxableIncome().ToString();
-
+                    //cleanning space,additional commas during copy-paste by user inputs
+                    basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                    textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
                     textBox2.Focus();
-
-                } 
-            
+                }
             }
-            else
+            catch (Exception ex)
             {
-                label40.ForeColor = Color.Red;
-                label57.ForeColor = Color.Red;
+               //clear user input because of invaild input
+               textBox1.Text = "0.0";    
+               label40.Text = "0.0";  
+               label57.Text = "0.0";  
             }
-           
+
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if(textBox2.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox2.Text = "0";
-                   
+                    //any string number(with comma or without comma) coverted to double
+                    double specialPay = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                    textBox2.Text = specialPay.ToString("N"); //making user inputs with comma after three digits
+                    textBox3.Focus();
                 }
-                double specialPay = double.Parse(textBox2.Text.ToString());
-                double taxableIncome = list[1].TaxableIncome(basicPay,specialPay, 0);
-                double taxExtempted = TaxExemptCal(specialPay, taxableIncome);
-
-                label41.ForeColor = Color.Black;
-                label58.ForeColor = Color.Black;
-
-                label41.Text = "" + taxExtempted;
-                label58.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox3.Focus();
             }
-            else
+            catch
             {
-                label41.ForeColor = Color.Red;
-                label58.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox2.Text = "0.0";
+                label41.Text = "0.0";
+                label58.Text = "0.0";
             }
         }
 
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox3.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox3.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double dearnessAllowance = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                    textBox3.Text = dearnessAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox4.Focus();
                 }
-                double dearnessAllowance = double.Parse(textBox3.Text.ToString());
-                double taxableIncome = list[2].TaxableIncome(basicPay,dearnessAllowance, 0);
-                double taxExtempted = TaxExemptCal(dearnessAllowance, taxableIncome);
-
-                label42.ForeColor = Color.Black;
-                label59.ForeColor = Color.Black;
-
-                label42.Text = "" + taxExtempted;
-                label59.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox4.Focus();
             }
-            else
+            catch
             {
-                label42.ForeColor = Color.Red;
-                label59.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox3.Text = "0.0";    
+                label42.Text = "0.0";
+                label59.Text = "0.0";
             }
+            
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox4.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox4.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double conveyanceAllowance = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                    textBox4.Text = conveyanceAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox5.Focus();
                 }
-                double conveyanceAllowance = double.Parse(textBox4.Text.ToString());
-                double taxableIncome = list[3].TaxableIncome(basicPay,conveyanceAllowance, 0);
-                double taxExtempted = TaxExemptCal(conveyanceAllowance, taxableIncome);
-
-                label43.ForeColor = Color.Black;
-                label60.ForeColor = Color.Black;
-
-                label43.Text = "" + taxExtempted;
-                label60.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox5.Focus();
             }
-            else
+            catch
             {
-                label43.ForeColor = Color.Red;
-                label60.ForeColor = Color.Red;
+                textBox4.Text = "0.0";    //clear user input because of invaild inputs
+                label43.Text = "0.0";
+                label60.Text = "0.0";
             }
+           
         }
 
         private void textBox5_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox5.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox5.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    double houseRentAllowance = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                    textBox5.Text = houseRentAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox6.Focus();
                 }
-                double houseRentAllowance = double.Parse(textBox5.Text.ToString());
-                double taxableIncome = list[4].TaxableIncome(basicPay,houseRentAllowance, 0);
-                double taxExtempted = TaxExemptCal(houseRentAllowance, taxableIncome);
-
-                label44.ForeColor = Color.Black;
-                label61.ForeColor = Color.Black;
-
-                label44.Text = "" + taxExtempted;
-                label61.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox6.Focus();
             }
-            else
+            catch
             {
-                label44.ForeColor = Color.Red;
-                label61.ForeColor = Color.Red;
+                //show crash issue to user
+                //clear user input because of invaild inputs
+                textBox5.Text = "0.0";   
+                label44.Text = "0.0";
+                label61.Text = "0.0";
             }
         }
 
         private void textBox6_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox6.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox6.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double medicalAllowance = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                    textBox6.Text = medicalAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox7.Focus();
                 }
-                double medicalAllowance = double.Parse(textBox6.Text.ToString());
-                double taxableIncome;
-                //double taxableIncome;
-                if (comboBox1.SelectedIndex == 0)
-                {
-                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 0);
-                    
-                }
-                    
-
-                else  
-                    taxableIncome = list[5].TaxableIncome(basicPay,medicalAllowance, 1);
-
-                double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
-
-                label45.ForeColor = Color.Black;
-                label62.ForeColor = Color.Black;
-
-                label45.Text = "" + taxExtempted;
-                label62.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox7.Focus();
             }
-            else
+            catch
             {
-                label45.ForeColor = Color.Red;
-                label62.ForeColor = Color.Red;
+                //show crash issue to user
+                //clear user input because of invaild inputs
+                textBox6.Text = "0.0";    
+                label45.Text = "0.0";
+                label62.Text = "0.0";
             }
+            
         }
 
         private void textBox7_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox7.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox7.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double serventAllowance = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                    textBox7.Text = serventAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox25.Focus();
                 }
-                double serventAllowance = double.Parse(textBox7.Text.ToString());
-                double taxableIncome = list[6].TaxableIncome(basicPay,serventAllowance, 0);
-                double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
-
-                label46.ForeColor = Color.Black;
-                label63.ForeColor = Color.Black;
-
-                label46.Text = "" + taxExtempted;
-                label63.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox25.Focus();
             }
-            else
+            catch
             {
-                label46.ForeColor = Color.Red;
-                label63.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox7.Text = "0.0";    
+                label46.Text = "0.0";
+                label63.Text = "0.0";
             }
         }
-
 
         // Leave allownace calculation result
         private void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
-
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox25.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox25.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double serventAllowance = (double)Convert.ToDecimal(textBox25.Text.ToString());
+                    textBox25.Text = serventAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox8.Focus();
                 }
-                double serventAllowance = double.Parse(textBox25.Text.ToString());
-                double taxableIncome = list[7].TaxableIncome(basicPay, serventAllowance, 0);
-                double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
-
-                label92.ForeColor = Color.Black;
-                label93.ForeColor = Color.Black;
-
-                label92.Text = "" + taxExtempted;
-                label93.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox8.Focus();
             }
-            else
+            catch
             {
-                label92.ForeColor = Color.Red;
-                label93.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox25.Text = "0.0";    
+                label92.Text = "0.0";
+                label93.Text = "0.0";
             }
         }
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox8.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox8.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double rewardSalary = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                    textBox8.Text = rewardSalary.ToString("N"); //making user inputs with comma after three digits
+                    textBox9.Focus();
                 }
-                double rewardSalary = double.Parse(textBox8.Text.ToString());
-                double taxableIncome = list[8].TaxableIncome(basicPay,rewardSalary, 0);
-                double taxExtempted = TaxExemptCal(rewardSalary, taxableIncome);
-
-                label47.ForeColor = Color.Black;
-                label64.ForeColor = Color.Black;
-
-                label47.Text = "" + taxExtempted;
-                label64.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox9.Focus();
             }
-            else
+            catch
             {
-                label47.ForeColor = Color.Red;
-                label64.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox8.Text = "0.0";    
+                label47.Text = "0.0";
+                label64.Text = "0.0";
             }
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox9.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox9.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double overtimeAllowance = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                    textBox9.Text = overtimeAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox10.Focus();
                 }
-                double overtimeAllowance = double.Parse(textBox9.Text.ToString());
-                double taxableIncome = list[9].TaxableIncome(basicPay,overtimeAllowance, 0);
-                double taxExtempted = TaxExemptCal(overtimeAllowance, taxableIncome);
-
-                label48.ForeColor = Color.Black;
-                label65.ForeColor = Color.Black;
-
-                label48.Text = "" + taxExtempted;
-                label65.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox10.Focus();
             }
-            else
+            catch
             {
-                label48.ForeColor = Color.Red;
-                label65.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox9.Text = "0.0";    
+                label48.Text = "0.0";
+                label65.Text = "0.0";
             }
+            
         }
 
         private void textBox10_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox10.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox10.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double bonusOrGratia = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                    textBox10.Text = bonusOrGratia.ToString("N"); //making user inputs with comma after three digits
+                    textBox11.Focus();
                 }
-                double bonusOrGratia = double.Parse(textBox10.Text.ToString());
-                double taxableIncome = list[10].TaxableIncome(basicPay,bonusOrGratia, 0);
-                double taxExtempted = TaxExemptCal(bonusOrGratia, taxableIncome);
-
-                label49.ForeColor = Color.Black;
-                label66.ForeColor = Color.Black;
-
-                label49.Text = "" + taxExtempted;
-                label66.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox11.Focus();
             }
-            else
+            catch
             {
-                label49.ForeColor = Color.Red;
-                label66.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox10.Text = "0.0";    
+                label49.Text = "0.0";
+                label66.Text = "0.0";
             }
+            
         }
 
         private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox11.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox11.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double otherAllowance = (double)Convert.ToDecimal(textBox11.Text.ToString());
+                    textBox11.Text = otherAllowance.ToString("N"); //making user inputs with comma after three digits
+                    textBox12.Focus();
                 }
-                double otherAllowance = double.Parse(textBox11.Text.ToString());
-                double taxableIncome = list[11].TaxableIncome(basicPay,otherAllowance, 0);
-                double taxExtempted = TaxExemptCal(otherAllowance, taxableIncome);
-
-                label50.ForeColor = Color.Black;
-                label67.ForeColor = Color.Black;
-
-                label50.Text = "" + taxExtempted;
-                label67.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox12.Focus();
             }
-            else
+            catch
             {
-                label50.ForeColor = Color.Red;
-                label67.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox11.Text = "0.0";    
+                label50.Text = "0.0";
+                label67.Text = "0.0";
             }
         }
 
         private void textBox12_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox12.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox12.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double providentFund = (double)Convert.ToDecimal(textBox12.Text.ToString());
+                    textBox12.Text = providentFund.ToString("N"); //making user inputs with comma after three digits
+                    textBox13.Focus();
                 }
-                double providentFund = double.Parse(textBox12.Text.ToString());
-                double taxableIncome = list[12].TaxableIncome(basicPay,providentFund, 0);
-                double taxExtempted = TaxExemptCal(providentFund, taxableIncome);
-
-                label51.ForeColor = Color.Black;
-                label68.ForeColor = Color.Black;
-
-                label51.Text = "" + taxExtempted;
-                label68.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox13.Focus();
             }
-            else
+            catch
             {
-                label51.ForeColor = Color.Red;
-                label68.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox12.Text = "0.0";    
+                label51.Text = "0.0";
+                label68.Text = "0.0";
             }
         }
 
         private void textBox13_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox13.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox13.Text = "0";
-
+                    //any string number(with comma or without comma) coverted to double
+                    double InterestOnprovidentFund = (double)Convert.ToDecimal(textBox13.Text.ToString());//saving "Interest accrued On provident Fund" user input
+                    textBox13.Text = InterestOnprovidentFund.ToString("N"); //making user inputs with comma after three digits
+                    comboBox3.Focus();
                 }
-                //sum = basic pay + Dearness Allowances
-                double sum = basicPay + double.Parse(textBox3.Text.ToString());
-
-                //set the maxNonTaxable value for "Interest accrued on Recognized provident fund"
-                list[12].setmaxNonTaxable(sum / 3.0);   
-                //saving "Interest accrued On provident Fund" user input
-                double InterestOnprovidentFund = double.Parse(textBox13.Text.ToString());
-                double taxableIncome = list[13].TaxableIncome(sum, InterestOnprovidentFund, 0);
-                double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
-
-                label52.ForeColor = Color.Black;
-                label69.ForeColor = Color.Black;
-
-                label52.Text = "" + taxExtempted;
-                label69.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();    //summing total "Net Taxable income"
-
-                comboBox3.Focus();
             }
-            else
+            catch
             {
-                label52.ForeColor = Color.Red;
-                label69.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox13.Text = "0.0";    
+                label52.Text = "0.0";
+                label69.Text = "0.0";
             }
+           
         }
 
 
@@ -791,83 +603,71 @@ namespace Tax_Calculator
                 label53.ForeColor = Color.Black;    //valid nontaxable income show as black color
                 label70.ForeColor = Color.Black;    //valid taxable income show as black color
 
-                label53.Text = "" + taxExtempted;   //show valid nontaxable income
-                label70.Text = "" + taxableIncome;  //show valid taxable income 
+                //show valid nontaxable income
+                label53.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma   
+                //show valid taxable income 
+                label70.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma   
 
-                // net TaxExempted income from salary
-                label56.Text = CalTotalTaxExempted().ToString();    //making sum of upto the Net-nontaxable income
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();    //making sum of upto the Net-taxable income
+                //making sum of upto the Net-nontaxable income and showing net TaxExempted income
+                label56.Text = CalTotalTaxExempted().ToString("N");    //string formatting as currency number
+                ////making sum of upto the Net-taxable income and showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");    //string formatting as currency number
             }
             else
             {
-                label53.Text = "0";   //select "No", nontaxable show as zero
-                label70.Text = "0";  //select "No", taxable show as zero
+                label53.Text = "0.0";   //select "No", nontaxable show as zero
+                label70.Text = "0.0";  //select "No", taxable show as zero
 
                 // net TaxExempted income from salary
-                label56.Text = CalTotalTaxExempted().ToString();
+                label56.Text = CalTotalTaxExempted().ToString("N");
                 //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
+                label73.Text = CalNetTaxableIncome().ToString("N");
             }
             comboBox2.Focus();
         }
 
         private void textBox15_KeyDown(object sender, KeyEventArgs e)
         {
-            double houseRentTax=0.0;
-
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox15.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox15.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    reducedHomeRent = (double)Convert.ToDecimal(textBox15.Text.ToString());
+                    textBox15.Text = reducedHomeRent.ToString("N"); //making user inputs with comma after three digits
+                    textBox16.Focus();
                 }
-               
-               reducedHomeRent = double.Parse("0" + textBox15.Text.ToString());
-               houseRentTax = (basicPay * 0.25) - reducedHomeRent;
-                if (houseRentTax > 0)
-                    label71.Text = houseRentTax.ToString();
-                else
-                    label71.Text = "0"; // if basic pay is zero , tax is zero
-
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();
-
-                textBox16.Focus();
-            }                               
+            }
+            catch
+            {
+                //clear user input because of invaild inputs
+                textBox15.Text = "0.0";    
+                label54.Text = "0.0";
+                label71.Text = "0.0";
+            }
         }
 
         private void textBox16_KeyDown(object sender, KeyEventArgs e)
         {
-            double other = 0.0, taxableIncome = 0.0, taxExtempted = 0.0;
+            double other = 0.0;
 
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (textBox16.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox16.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    other = (double)Convert.ToDecimal(textBox16.Text.ToString());
+                    textBox16.Text = other.ToString("N"); //making user inputs with comma after three digits
                 }
-                other = double.Parse(textBox16.Text.ToString());
-                taxableIncome = list[16].TaxableIncome(basicPay,other, 0);
-                taxExtempted = TaxExemptCal(other, taxableIncome);
-
-                label55.ForeColor = Color.Black;
-                label72.ForeColor = Color.Black;
-
-                label55.Text = "" + taxExtempted;
-                label72.Text = "" + taxableIncome;
-
-                // net taxable income from salary
-                label39.Text = TotalAmountOfIncome().ToString();
-                label56.Text = CalTotalTaxExempted().ToString();    // making sum of upto the Net-nontaxable income
-                //showing total taxable income
-                label73.Text = CalNetTaxableIncome().ToString();    // making sum of upto the Net-taxable income
             }
-            else
+            catch
             {
-                label55.ForeColor = Color.Red;
-                label72.ForeColor = Color.Red;
+                //clear user input because of invaild inputs
+                textBox16.Text = "0.0";    
+                label55.Text = "0.0";
+                label72.Text = "0.0";
             }
+           
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -880,167 +680,153 @@ namespace Tax_Calculator
 
         private void textBox17_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0;
-            if (e.KeyCode == Keys.Enter)
+            double annualRentalIncome = 0.0;
+            try
             {
-                if (textBox17.Text.Length == 0)
+               if (e.KeyCode == Keys.Enter)
                 {
-                    textBox17.Text = "0";
+                    //any string number(with comma or without comma) coverted to double
+                    annualRentalIncome = (double)Convert.ToDecimal(textBox17.Text.ToString());
+                    textBox17.Text = annualRentalIncome.ToString("N");  //string formatting as a currency number
+                    textBox18.Focus();
                 }
-
-                annualRentalIncome = Double.Parse(textBox17.Text.ToString());
-                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox18.Focus();
+            }
+            catch
+            {
+                //show crash issue to user
+                //clear user input because of invaild inputs
+                textBox17.Text = "0.0";
             }
         }
 
         private void textBox18_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-
-            if (e.KeyCode == Keys.Enter)
+            double repair = 0.0;
+            try
             {
-                if (textBox18.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox18.Text = "0";
+                    repair = (double)Convert.ToDecimal(textBox18.Text.ToString());
+                    textBox18.Text = repair.ToString("N");
+                    textBox19.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox19.Focus();
+            }
+            catch
+            {
+                textBox18.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox19_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-
-            if (e.KeyCode == Keys.Enter)
+            double localTax = 0.0;
+            try
             {
-                if (textBox19.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox19.Text = "0";
+
+                    localTax = (double)Convert.ToDecimal(textBox19.Text.ToString());
+                    textBox19.Text = localTax.ToString("N");    //string formatting as a currency number
+                    textBox20.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox20.Focus();
+            }
+            catch
+            {
+                textBox19.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox20_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-
-            if (e.KeyCode == Keys.Enter)
+            double landRevenue = 0.0; 
+            try
             {
-                if (textBox20.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox20.Text = "0";
+                    landRevenue = (double)Convert.ToDecimal(textBox20.Text.ToString());
+                    textBox20.Text = landRevenue.ToString("N");    //string formatting as a currency number
+                    textBox21.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox21.Focus();
+            }
+            catch
+            {
+                textBox20.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox21_KeyDown(object sender, KeyEventArgs e)
-        {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-
-            if (e.KeyCode == Keys.Enter)
+        {          
+            double interestOnLoan = 0.0;
+            try
             {
-                if (textBox21.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox21.Text = "0";
+                    interestOnLoan = (double)Convert.ToDecimal(textBox21.Text.ToString());
+                    textBox21.Text = interestOnLoan.ToString("N");    //string formatting as a currency number
+
+                    textBox22.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox22.Focus();
+            }
+            catch
+            {
+                textBox21.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox22_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-
-            if (e.KeyCode == Keys.Enter)
+            double insurancePremium = 0.0;
+            try
             {
-                if (textBox22.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox22.Text = "0";
+                    insurancePremium = (double)Convert.ToDecimal(textBox22.Text.ToString());
+                    textBox22.Text = insurancePremium.ToString("N");    //string formatting as a currency number
+                    textBox23.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox23.Focus();
+            }
+            catch
+            {
+                textBox22.Text = "0.0";
             }
         }
 
         private void textBox23_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-            if (e.KeyCode == Keys.Enter)
+            double vancancyAllowance = 0.0;
+            try
             {
-                if (textBox23.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox23.Text = "0";
+                    vancancyAllowance = (double)Convert.ToDecimal(textBox23.Text.ToString());
+                    textBox23.Text = vancancyAllowance.ToString("N");    //string formatting as a currency number
+                    textBox24.Focus();
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
-                textBox24.Focus();
+            }
+            catch
+            {
+                textBox23.Text = "0.0"; //clear user input because of invaild inputs
             }
         }
 
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
-            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
-            if (e.KeyCode == Keys.Enter)
+            double others = 0.0;
+            try
             {
-                if (textBox24.Text.Length == 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    textBox24.Text = "0";
+                    others = (double)Convert.ToDecimal(textBox24.Text.ToString());
+                    textBox24.Text = others.ToString("N");    //string formatting as a currency number
                 }
-
-                totalClaimedExpense = CalTotalClaimedExpense();
-                netRentalIncome = annualRentalIncome - totalClaimedExpense;
-
-                label90.Text = totalClaimedExpense.ToString();
-                label91.Text = netRentalIncome.ToString();
-
+            }
+            catch
+            {
+                textBox24.Text = "0.0";  //clear user input because of invaild inputs
             }
         }
 
-
+        //basic pay
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
            
@@ -1488,9 +1274,7 @@ namespace Tax_Calculator
             }
 
         }
-     
-               
-
+  
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -1552,30 +1336,652 @@ namespace Tax_Calculator
             }
         }
 
+
+        //basic pay calculation
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                //basicPay = double.Parse("0" + textBox1.Text.ToString());
+                double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
+                double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
-            basicPay = double.Parse("0" + textBox1.Text.ToString());
-            double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
-            double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
+                label40.ForeColor = Color.Black;
+                label57.ForeColor = Color.Black;
 
-            label40.ForeColor = Color.Black;
-            label57.ForeColor = Color.Black;
+                label40.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label57.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
 
-            label40.Text = "" + taxExtempted;
-            label57.Text = "" + taxableIncome;
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                                                                     //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch (Exception ex)
+            {
+                //show crash issue to user
+                //textBox1.Text = "";    //clear user input because of invaild inputs
+            }
 
-            // net taxable income from salary
-            label39.Text = TotalAmountOfIncome().ToString();
-            label56.Text = CalTotalTaxExempted().ToString();
-            //showing total taxable income
-            label73.Text = CalNetTaxableIncome().ToString();
         }
 
-        private void Form2_Salaries_Activated(object sender, EventArgs e)
+        //special pay calculation
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
-         }
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double specialPay = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                double taxableIncome = list[1].TaxableIncome(basicPay, specialPay, 0);
+                double taxExtempted = TaxExemptCal(specialPay, taxableIncome);
+
+                label41.ForeColor = Color.Black;
+                label58.ForeColor = Color.Black;
+
+                label41.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma;
+                label58.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                                                                     //showing total taxable income                                                   
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch (Exception ex)
+            {
+                //show crash issue to user
+               // textBox2.Text = "";    //clear user input because of invaild inputs
+            }
+
+        }
+
+        //Dearness allownace calculation
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double dearnessAllowance = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                double taxableIncome = list[2].TaxableIncome(basicPay, dearnessAllowance, 0);
+                double taxExtempted = TaxExemptCal(dearnessAllowance, taxableIncome);
+
+                label42.ForeColor = Color.Black;
+                label59.ForeColor = Color.Black;
+
+                label42.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label59.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch (Exception ex)
+            {
+                //show crash issue to user
+                //textBox3.Text = "";    //clear user input because of invaild inputs
+            }
+
+        }
+
+        //Conveyance allownace calculation
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double conveyanceAllowance = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                double taxableIncome = list[3].TaxableIncome(basicPay, conveyanceAllowance, 0);
+                double taxExtempted = TaxExemptCal(conveyanceAllowance, taxableIncome);
+
+                label43.ForeColor = Color.Black;
+                label60.ForeColor = Color.Black;
+
+                label43.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label60.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                 //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+               // textBox4.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //House rent calculation
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double houseRentAllowance = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                double taxableIncome = list[4].TaxableIncome(basicPay, houseRentAllowance, 0);
+                double taxExtempted = TaxExemptCal(houseRentAllowance, taxableIncome);
+
+                label44.ForeColor = Color.Black;
+                label61.ForeColor = Color.Black;
+
+                label44.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label61.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //textBox5.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Medical allowance calculation
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            double taxableIncome =0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double medicalAllowance = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 0);
+
+                }
+                else
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 1);
+
+                double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
+
+                label45.ForeColor = Color.Black;
+                label62.ForeColor = Color.Black;
+
+                label45.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label62.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox6.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Servant allowance calculation
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double serventAllowance = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                double taxableIncome = list[6].TaxableIncome(basicPay, serventAllowance, 0);
+                double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
+
+                label46.ForeColor = Color.Black;
+                label63.ForeColor = Color.Black;
+
+                label46.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label63.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox7.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Leave allowance calculation
+        private void textBox25_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double serventAllowance = (double)Convert.ToDecimal(textBox25.Text.ToString());
+                double taxableIncome = list[7].TaxableIncome(basicPay, serventAllowance, 0);
+                double taxExtempted = TaxExemptCal(serventAllowance, taxableIncome);
+
+                label92.ForeColor = Color.Black;
+                label93.ForeColor = Color.Black;
+
+                label92.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label93.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox25.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Honorarium/Reward /Fee calculation
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double rewardSalary = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                double taxableIncome = list[8].TaxableIncome(basicPay, rewardSalary, 0);
+                double taxExtempted = TaxExemptCal(rewardSalary, taxableIncome);
+
+                label47.ForeColor = Color.Black;
+                label64.ForeColor = Color.Black;
+
+                label47.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label64.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                 //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+
+            }
+            catch
+            {
+                //show crash issue to user
+               // textBox8.Text = "";    //clear user input because of invaild inputs
+            }
+
+        }
+
+        //Overtime allowance calculation
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double overtimeAllowance = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                double taxableIncome = list[9].TaxableIncome(basicPay, overtimeAllowance, 0);
+                double taxExtempted = TaxExemptCal(overtimeAllowance, taxableIncome);
+
+                label48.ForeColor = Color.Black;
+                label65.ForeColor = Color.Black;
+
+                label48.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label65.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox9.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Bonus /Ex-graria calculation
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double bonusOrGratia = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                double taxableIncome = list[10].TaxableIncome(basicPay, bonusOrGratia, 0);
+                double taxExtempted = TaxExemptCal(bonusOrGratia, taxableIncome);
+
+                label49.ForeColor = Color.Black;
+                label66.ForeColor = Color.Black;
+
+                label49.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label66.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                 //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox10.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Other allowance calculation
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double otherAllowance = (double)Convert.ToDecimal(textBox11.Text.ToString());
+                double taxableIncome = list[11].TaxableIncome(basicPay, otherAllowance, 0);
+                double taxExtempted = TaxExemptCal(otherAllowance, taxableIncome);
+
+                label50.ForeColor = Color.Black;
+                label67.ForeColor = Color.Black;
+
+                label50.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label67.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+
+            }
+            catch
+            {
+                //show crash issue to user
+               // textBox11.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Employer's contribution to Recognized provident fund calculation
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double providentFund = (double)Convert.ToDecimal(textBox12.Text.ToString());
+                double taxableIncome = list[12].TaxableIncome(basicPay, providentFund, 0);
+                double taxExtempted = TaxExemptCal(providentFund, taxableIncome);
+
+                label51.ForeColor = Color.Black;
+                label68.ForeColor = Color.Black;
+
+                label51.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label68.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                // show crash issue to user
+                //textBox12.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Interest accrued on Recognized Provident fund calculation
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //sum = basic pay + Dearness Allowances
+                double sum = basicPay + (double)Convert.ToDecimal(textBox3.Text.ToString()); //any string number(with comma or without comma) coverted to double
+                //set the maxNonTaxable value for "Interest accrued on Recognized provident fund"
+                list[12].setmaxNonTaxable(sum / 3.0);
+
+                //any string number(with comma or without comma) coverted to double
+                double InterestOnprovidentFund = (double)Convert.ToDecimal(textBox13.Text.ToString());//saving "Interest accrued On provident Fund" user input
+
+                double taxableIncome = list[13].TaxableIncome(sum, InterestOnprovidentFund, 0);
+                double taxExtempted = TaxExemptCal(InterestOnprovidentFund, taxableIncome);
+
+                label52.ForeColor = Color.Black;
+                label69.ForeColor = Color.Black;
+
+                label52.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label69.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //summing total "Net Taxable income" and show in label73
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma    
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox13.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Deemed incoem for transport facility calculation
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+            double houseRentTax = 0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                reducedHomeRent = (double)Convert.ToDecimal(textBox15.Text.ToString());
+                houseRentTax = (basicPay * 0.25) - reducedHomeRent;
+                if (houseRentTax > 0.0)
+                    label71.Text = houseRentTax.ToString("N");  //string formatting as a number;which has comma
+                else
+                    label71.Text = "0.0"; // if basic pay is zero , tax is zero
+
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox15.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
+        //Other, if any :calculation
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+            double other = 0.0, taxableIncome = 0.0, taxExtempted = 0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                other = (double)Convert.ToDecimal(textBox16.Text.ToString());
+                taxableIncome = list[16].TaxableIncome(basicPay, other, 0);
+                taxExtempted = TaxExemptCal(other, taxableIncome);
+
+                label55.ForeColor = Color.Black;
+                label72.ForeColor = Color.Black;
+
+                label55.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label72.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox16.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+       
+        /*............House property income calculation ...............*/
+        
+            //Annul Rental Income
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            double annualRentalIncome = 0.0, netRentalIncome = 0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                annualRentalIncome = (double)Convert.ToDecimal(textBox17.Text.ToString());
+                netRentalIncome = annualRentalIncome - CalTotalClaimedExpense();
+                label91.Text = netRentalIncome.ToString("N");   //string formatting as a currrency number "N";which makes comma
+            }
+            catch
+            {
+               
+            }
+        }
+
+        //textbox18 to textBox24 ; all house rent "Claim Expenses"
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            double annualRentalIncome = 0.0, netRentalIncome = 0.0, totalClaimedExpense = 0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                annualRentalIncome = (double)Convert.ToDecimal(textBox17.Text.ToString());
+                totalClaimedExpense = CalTotalClaimedExpense();
+                netRentalIncome = annualRentalIncome - totalClaimedExpense;
+
+                //show total "Clain Expenses"
+                label90.Text = totalClaimedExpense.ToString("N");   //string formatting as a currrency number "N";which makes comma
+                //show "Net income" from house property
+                label91.Text = netRentalIncome.ToString("N");   //string formatting as a currrency number "N";which makes comma
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "") textBox1.Text = "0.0";
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "") textBox2.Text = "0.0";
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "") textBox3.Text = "0.0";
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "") textBox4.Text = "0.0";
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "") textBox5.Text = "0.0";
+        }
+
+        private void textBox6_Leave(object sender, EventArgs e)
+        {
+            if (textBox6.Text == "") textBox6.Text = "0.0";
+        }
+
+        private void textBox7_Leave(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "") textBox7.Text = "0.0";
+        }
+
+        private void textBox25_Leave(object sender, EventArgs e)
+        {
+            if (textBox25.Text == "") textBox25.Text = "0.0";
+        }
+
+        private void textBox8_Leave(object sender, EventArgs e)
+        {
+            if (textBox8.Text == "") textBox8.Text = "0.0";
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "") textBox9.Text = "0.0";
+        }
+
+        private void textBox10_Leave(object sender, EventArgs e)
+        {
+            if (textBox10.Text == "") textBox10.Text = "0.0";
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+            if (textBox11.Text == "") textBox11.Text = "0.0";
+        }
+
+        private void textBox12_Leave(object sender, EventArgs e)
+        {
+            if (textBox12.Text == "") textBox12.Text = "0.0";
+        }
+
+        private void textBox13_Leave(object sender, EventArgs e)
+        {
+            if (textBox13.Text == "") textBox13.Text = "0.0";
+        }
+
+        private void textBox15_Leave(object sender, EventArgs e)
+        {
+            if (textBox15.Text == "") textBox15.Text = "0.0";
+        }
+
+        private void textBox16_Leave(object sender, EventArgs e)
+        {
+            if (textBox16.Text == "") textBox16.Text = "0.0";
+        }
+
+
+        private void textBox17_Leave(object sender, EventArgs e)
+        {
+            if (textBox17.Text == "") textBox17.Text = "0.0";
+        }
+
+        private void textBox18_Leave(object sender, EventArgs e)
+        {
+            if (textBox18.Text == "") textBox18.Text = "0.0";
+        }
+
+        private void textBox19_Leave(object sender, EventArgs e)
+        {
+            if (textBox19.Text == "") textBox19.Text = "0.0";
+        }
+
+        private void textBox20_Leave(object sender, EventArgs e)
+        {
+            if (textBox20.Text == "") textBox20.Text = "0.0";
+        }
+
+        private void textBox21_Leave(object sender, EventArgs e)
+        {
+            if (textBox21.Text == "") textBox21.Text = "0.0";
+        }
+
+        private void textBox22_Leave(object sender, EventArgs e)
+        {
+            if (textBox22.Text == "") textBox22.Text = "0.0";
+        }
+
+        private void textBox23_Leave(object sender, EventArgs e)
+        {
+            if (textBox23.Text == "") textBox23.Text = "0.0";
+        }
+
+        private void textBox24_Leave(object sender, EventArgs e)
+        {
+            if (textBox24.Text == "") textBox24.Text = "0.0";
+        }
+
+      
 
         private void UserInputs_Salaries()
         {
