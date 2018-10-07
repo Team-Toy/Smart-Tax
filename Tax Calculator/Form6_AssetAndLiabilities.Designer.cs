@@ -1,6 +1,6 @@
 ﻿namespace Tax_Calculator
 {
-    partial class Form6_AssentAndLiabilities
+    partial class Form6_AssetAndLiabilities
     {
         /// <summary>
         /// Required designer variable.

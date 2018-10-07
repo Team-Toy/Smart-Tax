@@ -285,7 +285,7 @@ namespace Tax_Calculator
         {
             //save data for pdf file
             UserInputs_Expenses();
-            Form6_AssentAndLiabilities f = Form6_AssentAndLiabilities.GetInstance;
+            Form6_AssetAndLiabilities f = Form6_AssetAndLiabilities.GetInstance;
             this.Hide();
             f.Show();
         }

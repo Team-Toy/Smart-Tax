@@ -173,7 +173,7 @@ namespace Tax_Calculator
             PdfContentByte canvas = stamper.GetOverContent(pageNo);
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[11], x, y);    //Print "Total income" from "Statement of Salary" form
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[19], 410, 648);   //print "Tax paid" from "Statement of Salary" form(serial no 16:"total")
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[26], x, 666);   //print "Net Wealth of Assessee" from "Assets and Liabilities" form(serial no 12)
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[26], x, 666);   //print "Net Wealth of Assessee" from "Assets and Liabilities" form(serial no 12)
                                                                                                               //.....................................................
         }
 
@@ -484,11 +484,11 @@ namespace Tax_Calculator
             float x = 401;   //by default x coordinate for "Asset and liabilities form"
             float y = 131;  //by default y increment top-down for "Asset and liabilities form"
             int pageNo = 5;
-            int length = Form6_AssentAndLiabilities.pdfInputs.Length;
+            int length = Form6_AssetAndLiabilities.pdfInputs.Length;
             //printing "Asset and Liabilities" form entry
             for (int i = 0; i < 2; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 //print "Business Capital" and "Directors Shareholdings"  on page 5
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   
                 y += 17;   // jump half line down with difference of y=17
@@ -497,7 +497,7 @@ namespace Tax_Calculator
             y = 232;    //set positions for "Non-agricultural property" and "Agicultral Property" 
             for (int i = 2; i < 4; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print "Non-agricultural property" and "Agicultral Property" 
                 y += 90;   // jump five lines down with difference of y=90
             }
@@ -506,37 +506,37 @@ namespace Tax_Calculator
             y = 429;    //set position y for "Investments"
             for (int i = 4; i < 9; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all "Investments" in "Asset and Liabilities" form
                 y += 19;   // jump one line down with difference of y=19
             }
             //........................
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[9], 397, 525);  //print "total investments"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[9], 397, 525);  //print "total investments"
 
             x = 320;    //set position x for "Motor vihicles"
             y = 566;    //set position y for "Motor vihicles"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[10], x, y);   //print "Motor vihicles"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[10], x, y);   //print "Motor vihicles"
             y = 586;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[11], x, y);   //print Jewellery
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[11], x, y);   //print Jewellery
             y = 612;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[12], x, y);   //print Furniture
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[12], x, y);   //print Furniture
             y = 626;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[13], x, y);   //print Electronic Equipment
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[13], x, y);   //print Electronic Equipment
 
 
             x = 320;    //set position x for "Cash Asset Outside Business"
             y = 669;    //set position y for "Cash Asset Outside Business"
             for (int i = 14; i < 17; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each of "Cash Asset Outside Business"
                 y += 19;   // jump one line down with difference of y=19
             }
 
             x = 397;    //set position x for "total" Cash Asset Outside Business
             y = 732;    //set position y for "total" Cash Asset Outside Business
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[17], x, y);   //print "total " Cash Asset Outside Business
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[17], x, y);   //print "total " Cash Asset Outside Business
 
         }
 
@@ -548,18 +548,18 @@ namespace Tax_Calculator
             float x = 452;   //by default x coordinate for "statement of income form"
             float y = 130;  //by default y increment top-down for "statement of income form"
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[18], x, 102);   //print "B/F" result
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[18], x, 102);   //print "B/F" result
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[19], x, y);   //print "Any other assets"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[19], x, y);   //print "Any other assets"
             y = 178;    //set position for "Less Liabilities"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[20], x, y);   //print "total assets"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[20], x, y);   //print "total assets"
 
             x = 308;    //set position x for "total assets"
             y = 203;    //set position y for "total assets"
                         //printing "Less Liabilities" form entry
             for (int i = 21; i < 25; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
 
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Less Liabilities"
                 y += 19;   // jump one line down with difference of x=19
@@ -567,33 +567,33 @@ namespace Tax_Calculator
 
             x = 452;    //position of x "total liabilties"
             y = 298;    //position of y "total liabilties"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[25], x, y);   //print "total liabilties"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[25], x, y);   //print "total liabilties"
 
             y = 343;    //position of y "Net wealth " and "Accretion in wealth"
                         //printing "Net wealth " and "Accretion in wealth"
             for (int i = 26; i < 29; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
 
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Less Liabilities"
                 y += 21;   // jump one line down with difference of x=19
             }
             x = 452;
             y = 409;    //set position of y  for "Family expenditure"  
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[29], x, y);   //print each entries of "Number of dependent children"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[29], x, y);   //print each entries of "Number of dependent children"
 
 
             x = 116;    //set position of x  for "adult:
             y = 448;    //set position of y  for "adult
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[30], x, y);   //print entry of "adult"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[30], x, y);   //print entry of "adult"
 
             x = 208;   //set position of x  for "child"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[31], x, y);   //print entry of "child"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[31], x, y);   //print entry of "child"
 
 
             x = 452;    //set position of x  for "total Accretion of wealth"
             y = 486;    //set position of y  for "total Accretion of wealth"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[32], x, y);   //print  "total Accretion of wealth"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[32], x, y);   //print  "total Accretion of wealth"
 
             x = 308;    //position of x "Sources of fund"
             y = 518;    //position of y "Sources of fund"
@@ -601,7 +601,7 @@ namespace Tax_Calculator
             //printing "Sources of fund"
             for (int i = 33; i < 36; i++)
             {
-                string s = Form6_AssentAndLiabilities.pdfInputs[i];
+                string s = Form6_AssetAndLiabilities.pdfInputs[i];
 
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Sources of fund"
                 y += 13;   // jump half line down with difference of y=13
@@ -610,9 +610,9 @@ namespace Tax_Calculator
 
             x = 452;    //set position of x  for "total source of fund"
             y = 563;    //set position of y  for "total source of fund"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[36], x, y);   //print "Total source of fund"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[36], x, y);   //print "Total source of fund"
             y += 25;    //set position of y  for "Difference"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssentAndLiabilities.pdfInputs[37], x, y);   //print "Difference"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[37], x, y);   //print "Difference"
         }
 
         //write a single string on existing pdf file 

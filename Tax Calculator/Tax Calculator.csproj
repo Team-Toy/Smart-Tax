@@ -142,11 +142,11 @@
     <Compile Include="Form3_InvestmentTaxCredit.Designer.cs">
       <DependentUpon>Form3_InvestmentTaxCredit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6_AssentAndLiabilities.cs">
+    <Compile Include="Form6_AssetAndLiabilities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6_AssentAndLiabilities.Designer.cs">
-      <DependentUpon>Form6_AssentAndLiabilities.cs</DependentUpon>
+    <Compile Include="Form6_AssetAndLiabilities.Designer.cs">
+      <DependentUpon>Form6_AssetAndLiabilities.cs</DependentUpon>
     </Compile>
     <Compile Include="Form5_Expenses.cs">
       <SubType>Form</SubType>
@@ -183,8 +183,8 @@
     <EmbeddedResource Include="Form3_InvestmentTaxCredit.resx">
       <DependentUpon>Form3_InvestmentTaxCredit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6_AssentAndLiabilities.resx">
-      <DependentUpon>Form6_AssentAndLiabilities.cs</DependentUpon>
+    <EmbeddedResource Include="Form6_AssetAndLiabilities.resx">
+      <DependentUpon>Form6_AssetAndLiabilities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5_Expenses.resx">
       <DependentUpon>Form5_Expenses.cs</DependentUpon>

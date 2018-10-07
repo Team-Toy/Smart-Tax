@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form6_AssentAndLiabilities : Form
+    public partial class Form6_AssetAndLiabilities : Form
     {
-        static Form6_AssentAndLiabilities _instance;
-        public static Form6_AssentAndLiabilities GetInstance
+        static Form6_AssetAndLiabilities _instance;
+        public static Form6_AssetAndLiabilities GetInstance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Form6_AssentAndLiabilities();
+                    _instance = new Form6_AssetAndLiabilities();
                 return _instance;
             }
 
@@ -43,7 +43,7 @@ namespace Tax_Calculator
         private double shownReturnIncome = 0;
         private double taxExempted = 0;
 
-        public Form6_AssentAndLiabilities()
+        public Form6_AssetAndLiabilities()
         {
             InitializeComponent();
             pdfInputs = new string[38];
