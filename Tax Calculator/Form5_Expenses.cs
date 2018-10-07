@@ -74,7 +74,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                    // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox1.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox1.Text.ToString());    //checking user input vaild or not
+                    textBox1.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox2.Focus();
                 }
             }
@@ -91,7 +92,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox2.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox2.Text.ToString());    //checking user input vaild or not
+                    textBox2.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox3.Focus();
                 }
             }
@@ -108,7 +110,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox3.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox3.Text.ToString());    //checking user input vaild or not
+                    textBox3.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox4.Focus();
                 }
             }
@@ -125,7 +128,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox4.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox4.Text.ToString());    //checking user input vaild or not
+                    textBox4.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox5.Focus();
                 }
             }
@@ -142,7 +146,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox5.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox5.Text.ToString());    //checking user input vaild or not
+                    textBox5.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox6.Focus();
                 }
             }
@@ -159,7 +164,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox6.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox6.Text.ToString());    //checking user input vaild or not
+                    textBox6.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox7.Focus();
                 }
             }
@@ -176,7 +182,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox7.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox7.Text.ToString());    //checking user input vaild or not
+                    textBox7.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox8.Focus();
                 }
             }
@@ -193,7 +200,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox8.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox8.Text.ToString());    //checking user input vaild or not
+                    textBox8.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox9.Focus();
                 }
             }
@@ -210,7 +218,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox9.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox9.Text.ToString());    //checking user input vaild or not
+                    textBox9.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox10.Focus();
                 }
             }
@@ -227,7 +236,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox10.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox10.Text.ToString());    //checking user input vaild or not
+                    textBox10.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox11.Focus();
                 }
             }
@@ -244,7 +254,8 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     // any string number(with comma or without comma) coverted to double
-                    Convert.ToDecimal(textBox11.Text.ToString());    //checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox11.Text.ToString());    //checking user input vaild or not
+                    textBox11.Text = tempValue.ToString("N");  //making user input as a currency style number
                     button1.Focus();    //focus on "Next" button
                 }
             }
