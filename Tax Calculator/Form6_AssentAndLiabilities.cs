@@ -152,7 +152,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox1.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox1.Text.ToString());    
+                    textBox1.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox2.Focus();
                 }
             }
@@ -169,7 +171,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox2.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                    textBox2.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox3.Focus();
                 }
             }
@@ -185,7 +189,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox3.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                    textBox3.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox4.Focus();
                 }
             }
@@ -201,7 +207,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox4.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                    textBox4.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox5.Focus();
                 }
             }
@@ -217,7 +225,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox5.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                    textBox5.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox6.Focus();
                 }
             }
@@ -233,7 +243,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox6.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                    textBox6.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox7.Focus();
                 }
             }
@@ -249,7 +261,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox7.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                    textBox7.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox8.Focus();
                 }
             }
@@ -265,7 +279,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox8.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                    textBox8.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox9.Focus();
                 }
             }
@@ -281,7 +297,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox9.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                    textBox9.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox10.Focus();
                 }
             }
@@ -297,7 +315,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox10.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                    textBox10.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox11.Focus();
                 }
             }
@@ -313,7 +333,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox11.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox11.Text.ToString());
+                    textBox11.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox12.Focus();
                 }
             }
@@ -329,7 +351,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox12.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox12.Text.ToString());
+                    textBox12.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox13.Focus();
                 }
             }
@@ -345,7 +369,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox13.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox13.Text.ToString());
+                    textBox13.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox14.Focus();
                 }
             }
@@ -361,7 +387,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox14.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox14.Text.ToString());
+                    textBox14.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox15.Focus();
                 }
             }
@@ -378,7 +406,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox15.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox15.Text.ToString());
+                    textBox15.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox16.Focus();
                 }
             }
@@ -394,7 +424,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox16.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox16.Text.ToString());
+                    textBox16.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox17.Focus();
                 }
             }
@@ -410,7 +442,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox17.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox17.Text.ToString());
+                    textBox17.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox18.Focus();
                 }
             }
@@ -426,7 +460,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox18.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox18.Text.ToString());
+                    textBox18.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox19.Focus();
                 }
             }
@@ -443,7 +479,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox19.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox19.Text.ToString());
+                    textBox19.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox20.Focus();
                 }
             }
@@ -459,7 +497,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox20.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox20.Text.ToString());
+                    textBox20.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox21.Focus();
                 }
             }
@@ -475,7 +515,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox21.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox21.Text.ToString());
+                    textBox21.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox22.Focus();
                 }
             }
@@ -491,7 +533,9 @@ namespace Tax_Calculator
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    Convert.ToDecimal(textBox22.Text.ToString());    //checking user inputs valid or not
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox22.Text.ToString());
+                    textBox22.Text = tempValue.ToString("N");  //making user input as a currency style number
                     textBox24.Focus();
                 }
             }
@@ -540,9 +584,10 @@ namespace Tax_Calculator
             try
             {
                 if (e.KeyCode == Keys.Enter)
-                {
-                    //textBox26 = other receipts
-                    Convert.ToDecimal(textBox26.Text.ToString()); //save and check user inputs valid or not 
+                {                  
+                    //saving and checking user input vaild or not
+                    double tempValue = (double)Convert.ToDecimal(textBox26.Text.ToString());  // textBox26 = other receipts
+                    textBox26.Text = tempValue.ToString("N");  //making user input as a currency style number
                 }
             }
             catch
