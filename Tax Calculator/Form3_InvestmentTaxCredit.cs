@@ -84,7 +84,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox1.Text.ToString());
-                    textBox1.Text = value.ToString("N");
+                    textBox1.Text = value.ToString("N");    //making user input as a currency style
                     textBox2.Focus();
                 }
             }
@@ -102,7 +102,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox2.Text.ToString());
-                    textBox2.Text = value.ToString("N");
+                    textBox2.Text = value.ToString("N");      //making user input as a currency style
                     textBox3.Focus();
                 }
             }
@@ -118,7 +118,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox3.Text.ToString());
-                    textBox3.Text = value.ToString("N");
+                    textBox3.Text = value.ToString("N");      //making user input as a currency style
                     textBox4.Focus();
                 }
             }
@@ -135,7 +135,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox4.Text.ToString());
-                    textBox4.Text = value.ToString("N");
+                    textBox4.Text = value.ToString("N");      //making user input as a currency style
                     textBox5.Focus();
                 }
             }
@@ -152,7 +152,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox5.Text.ToString());
-                    textBox5.Text = value.ToString("N");
+                    textBox5.Text = value.ToString("N");      //making user input as a currency style
                     textBox6.Focus();
                 }
             }
@@ -169,7 +169,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox6.Text.ToString());
-                    textBox6.Text = value.ToString("N");
+                    textBox6.Text = value.ToString("N");      //making user input as a currency style
                     textBox7.Focus();
                 }
             }
@@ -186,7 +186,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox7.Text.ToString());
-                    textBox7.Text = value.ToString("N");
+                    textBox7.Text = value.ToString("N");  //making user input as a currency style
                     textBox8.Focus();
                 }
             }
@@ -203,7 +203,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox8.Text.ToString());
-                    textBox8.Text = value.ToString("N");
+                    textBox8.Text = value.ToString("N");  //making user input as a currency style
                     textBox9.Focus();
                 }
             }
@@ -220,7 +220,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox9.Text.ToString());
-                    textBox9.Text = value.ToString("N");
+                    textBox9.Text = value.ToString("N");  //making user input as a currency style
                     textBox10.Focus();
                 }
             }
@@ -237,7 +237,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     double value = (double)Convert.ToDecimal(textBox10.Text.ToString());
-                    textBox10.Text = value.ToString("N");
+                    textBox10.Text = value.ToString("N");  //making user input as a currency style
                 }
             }
             catch

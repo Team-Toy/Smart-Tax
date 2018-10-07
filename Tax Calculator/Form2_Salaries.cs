@@ -297,7 +297,7 @@ namespace Tax_Calculator
                 {
                     //cleanning space,additional commas during copy-paste by user inputs
                     basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
-                    textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
+                    //textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
                     textBox2.Focus();
                 }
             }
@@ -1342,8 +1342,11 @@ namespace Tax_Calculator
         {
             try
             {
-                //any string number(with comma or without comma) coverted to double
+                //cleanning space,additional commas during copy-paste by user inputs
                 basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
+                //any string number(with comma or without comma) coverted to double
+                //basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
                 double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
