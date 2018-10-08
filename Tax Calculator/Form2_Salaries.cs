@@ -146,46 +146,46 @@ namespace Tax_Calculator
         }
         public void makeAllLabelZero()
         {
-            label40.Text = "0";
-            label41.Text = "0";
-            label42.Text = "0";
-            label43.Text = "0";
-            label44.Text = "0";
-            label45.Text = "0";
-            label46.Text = "0";
-            label92.Text = "0"; //Leave allowance (non-Taxable)
-            label47.Text = "0";
-            label48.Text = "0";
-            label49.Text = "0";
-            label50.Text = "0";
-            label51.Text = "0";
-            label52.Text = "0";
-            label52.Text = "0";
-            label53.Text = "0";
-            label54.Text = "0";
-            label55.Text = "0";
+            label40.Text = "0.0";
+            label41.Text = "0.0";
+            label42.Text = "0.0";
+            label43.Text = "0.0";
+            label44.Text = "0.0";
+            label45.Text = "0.0";
+            label46.Text = "0.0";
+            label92.Text = "0.0"; //Leave allowance (non-Taxable)
+            label47.Text = "0.0";
+            label48.Text = "0.0";
+            label49.Text = "0.0";
+            label50.Text = "0.0";
+            label51.Text = "0.0";
+            label52.Text = "0.0";
+            label52.Text = "0.0";
+            label53.Text = "0.0";
+            label54.Text = "0.0";
+            label55.Text = "0.0";
 
-            label57.Text = "0";
-            label58.Text = "0";
-            label59.Text = "0";
-            label60.Text = "0";
-            label61.Text = "0";
-            label62.Text = "0";
-            label63.Text = "0";
-            label93.Text = "0"; //Leave allowance (Taxable)
-            label64.Text = "0";
-            label65.Text = "0";
-            label66.Text = "0";
-            label67.Text = "0";
-            label68.Text = "0";
-            label69.Text = "0";
-            label70.Text = "0";
-            label71.Text = "0";
-            label72.Text = "0";
+            label57.Text = "0.0";
+            label58.Text = "0.0";
+            label59.Text = "0.0";
+            label60.Text = "0.0";
+            label61.Text = "0.0";
+            label62.Text = "0.0";
+            label63.Text = "0.0";
+            label93.Text = "0.0"; //Leave allowance (Taxable)
+            label64.Text = "0.0";
+            label65.Text = "0.0";
+            label66.Text = "0.0";
+            label67.Text = "0.0";
+            label68.Text = "0.0";
+            label69.Text = "0.0";
+            label70.Text = "0.0";
+            label71.Text = "0.0";
+            label72.Text = "0.0";
 
-            label39.Text = "0";
-            label56.Text = "0";
-            label73.Text = "0";
+            label39.Text = "0.0";
+            label56.Text = "0.0";
+            label73.Text = "0.0";
 
         }
 
@@ -297,7 +297,7 @@ namespace Tax_Calculator
                 {
                     //cleanning space,additional commas during copy-paste by user inputs
                     basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
-                    //textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
+                    textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
                     textBox2.Focus();
                 }
             }
@@ -1344,9 +1344,6 @@ namespace Tax_Calculator
             {
                 //cleanning space,additional commas during copy-paste by user inputs
                 basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
-                textBox1.Text = basicPay.ToString("N"); //making user inputs with comma after three digits
-                //any string number(with comma or without comma) coverted to double
-                //basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
                 double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 
