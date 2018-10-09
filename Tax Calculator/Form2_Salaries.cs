@@ -1430,11 +1430,12 @@ namespace Tax_Calculator
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "") textBox1.Text = "0.0";
-            try
+            try     //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox1.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString()); 
+                textBox1.Text = basicPay.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox1.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1443,11 +1444,12 @@ namespace Tax_Calculator
         private void textBox2_Leave(object sender, EventArgs e)
         {
             if (textBox2.Text == "") textBox2.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try     //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox2.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double specialPay = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                textBox2.Text = specialPay.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox2.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1456,11 +1458,12 @@ namespace Tax_Calculator
         private void textBox3_Leave(object sender, EventArgs e)
         {
             if (textBox3.Text == "") textBox3.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try     //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox3.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double dearness_allowance = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                textBox3.Text = dearness_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox3.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1469,11 +1472,12 @@ namespace Tax_Calculator
         private void textBox4_Leave(object sender, EventArgs e)
         {
             if (textBox4.Text == "") textBox4.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try     //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox4.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Conveyance_allowance = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                textBox4.Text = Conveyance_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox4.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1482,11 +1486,12 @@ namespace Tax_Calculator
         private void textBox5_Leave(object sender, EventArgs e)
         {
             if (textBox5.Text == "") textBox5.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox5.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double HouseRent_allowance = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                textBox5.Text = HouseRent_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox5.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1495,11 +1500,12 @@ namespace Tax_Calculator
         private void textBox6_Leave(object sender, EventArgs e)
         {
             if (textBox6.Text == "") textBox6.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try   //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox6.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Medical_allowance = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                textBox6.Text = Medical_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox6.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1508,11 +1514,12 @@ namespace Tax_Calculator
         private void textBox7_Leave(object sender, EventArgs e)
         {
             if (textBox7.Text == "") textBox7.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox7.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Servant_allownace = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                textBox7.Text = Servant_allownace.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox7.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1521,11 +1528,12 @@ namespace Tax_Calculator
         private void textBox25_Leave(object sender, EventArgs e)
         {
             if (textBox25.Text == "") textBox25.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox25.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Leave_allowance = (double)Convert.ToDecimal(textBox25.Text.ToString());
+                textBox25.Text = Leave_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox25.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1534,11 +1542,12 @@ namespace Tax_Calculator
         private void textBox8_Leave(object sender, EventArgs e)
         {
             if (textBox8.Text == "") textBox8.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox8.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Honorarium_Reward_Fee = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                textBox8.Text = Honorarium_Reward_Fee.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox8.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1547,11 +1556,12 @@ namespace Tax_Calculator
         private void textBox9_Leave(object sender, EventArgs e)
         {
             if (textBox9.Text == "") textBox9.Text = "0.0"; //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox9.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Overtime_allowance = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                textBox9.Text = Overtime_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox9.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1560,11 +1570,12 @@ namespace Tax_Calculator
         private void textBox10_Leave(object sender, EventArgs e)
         {
             if (textBox10.Text == "") textBox10.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox10.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double bonus_ExGratia = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                textBox10.Text = bonus_ExGratia.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox10.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1573,11 +1584,12 @@ namespace Tax_Calculator
         private void textBox11_Leave(object sender, EventArgs e)
         {
             if (textBox11.Text == "") textBox11.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox11.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double other_allowance = (double)Convert.ToDecimal(textBox11.Text.ToString());
+                textBox11.Text = other_allowance.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox11.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1586,11 +1598,12 @@ namespace Tax_Calculator
         private void textBox12_Leave(object sender, EventArgs e)
         {
             if (textBox12.Text == "") textBox12.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox12.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double contribute_provident_fund = (double)Convert.ToDecimal(textBox12.Text.ToString());
+                textBox12.Text = contribute_provident_fund.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox12.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1599,11 +1612,12 @@ namespace Tax_Calculator
         private void textBox13_Leave(object sender, EventArgs e)
         {
             if (textBox13.Text == "") textBox13.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox13.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double interest_accrued_contribute_provident_fund = (double)Convert.ToDecimal(textBox13.Text.ToString());
+                textBox13.Text = interest_accrued_contribute_provident_fund.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox13.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1612,11 +1626,12 @@ namespace Tax_Calculator
         private void textBox15_Leave(object sender, EventArgs e)
         {
             if (textBox15.Text == "") textBox15.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox15.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double transport_facility = (double)Convert.ToDecimal(textBox15.Text.ToString());
+                textBox15.Text = transport_facility.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox15.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1625,11 +1640,12 @@ namespace Tax_Calculator
         private void textBox16_Leave(object sender, EventArgs e)
         {
             if (textBox16.Text == "") textBox16.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox16.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double furnished_unfurnish_accommodation = (double)Convert.ToDecimal(textBox16.Text.ToString());
+                textBox16.Text = furnished_unfurnish_accommodation.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox16.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1639,11 +1655,12 @@ namespace Tax_Calculator
         private void textBox17_Leave(object sender, EventArgs e)
         {
             if (textBox17.Text == "") textBox17.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox17.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double Other = (double)Convert.ToDecimal(textBox17.Text.ToString());
+                textBox17.Text = Other.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox17.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1652,11 +1669,12 @@ namespace Tax_Calculator
         private void textBox18_Leave(object sender, EventArgs e)
         {
             if (textBox18.Text == "") textBox18.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox18.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox18.Text.ToString());
+                textBox18.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox18.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1665,11 +1683,12 @@ namespace Tax_Calculator
         private void textBox19_Leave(object sender, EventArgs e)
         {
             if (textBox19.Text == "") textBox19.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox19.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox19.Text.ToString());
+                textBox19.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox19.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1678,11 +1697,12 @@ namespace Tax_Calculator
         private void textBox20_Leave(object sender, EventArgs e)
         {
             if (textBox20.Text == "") textBox20.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox20.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox20.Text.ToString());
+                textBox20.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox20.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1691,11 +1711,12 @@ namespace Tax_Calculator
         private void textBox21_Leave(object sender, EventArgs e)
         {
             if (textBox21.Text == "") textBox21.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox21.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox21.Text.ToString());
+                textBox21.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox21.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1704,11 +1725,12 @@ namespace Tax_Calculator
         private void textBox22_Leave(object sender, EventArgs e)
         {
             if (textBox22.Text == "") textBox22.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox22.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox22.Text.ToString());
+                textBox22.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox22.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1717,11 +1739,12 @@ namespace Tax_Calculator
         private void textBox23_Leave(object sender, EventArgs e)
         {
             if (textBox23.Text == "") textBox23.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox23.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox23.Text.ToString());
+                textBox23.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox23.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
@@ -1730,11 +1753,12 @@ namespace Tax_Calculator
         private void textBox24_Leave(object sender, EventArgs e)
         {
             if (textBox24.Text == "") textBox24.Text = "0.0";   //if user clean input field then replaced input by "0.0"
-            try
+            try  //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox24.Text.ToString());    //if user copy-paste invaild(or number with characters)
+                double value = (double)Convert.ToDecimal(textBox24.Text.ToString());
+                textBox24.Text = value.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox24.Text = "0.0";      //Then make user inputs cleaned by "0.0"
             }
