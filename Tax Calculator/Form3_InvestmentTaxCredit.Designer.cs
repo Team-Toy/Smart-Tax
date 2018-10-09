@@ -210,7 +210,7 @@
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.textBox2.Leave += new System.EventHandler(this.textBox_Leave);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox1
             // 
@@ -769,7 +769,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(890, 620);
+            this.ClientSize = new System.Drawing.Size(907, 620);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);

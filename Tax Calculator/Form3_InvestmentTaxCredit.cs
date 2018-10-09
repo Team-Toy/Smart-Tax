@@ -419,11 +419,12 @@ namespace Tax_Calculator
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text.ToString() == "") textBox1.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox1.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                textBox1.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox1.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -432,11 +433,12 @@ namespace Tax_Calculator
         private void textBox2_Leave(object sender, EventArgs e)
         {
             if (textBox2.Text.ToString() == "") textBox2.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox2.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox2.Text.ToString());
+                textBox2.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox2.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -445,11 +447,12 @@ namespace Tax_Calculator
         private void textBox3_Leave(object sender, EventArgs e)
         {
             if (textBox3.Text.ToString() == "") textBox3.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox3.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox3.Text.ToString());
+                textBox3.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox3.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -458,11 +461,12 @@ namespace Tax_Calculator
         private void textBox4_Leave(object sender, EventArgs e)
         {
             if (textBox4.Text.ToString() == "") textBox4.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox4.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox4.Text.ToString());
+                textBox4.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox4.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -471,11 +475,12 @@ namespace Tax_Calculator
         private void textBox5_Leave(object sender, EventArgs e)
         {
             if (textBox5.Text.ToString() == "") textBox5.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox5.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox5.Text.ToString());
+                textBox5.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox5.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -484,11 +489,12 @@ namespace Tax_Calculator
         private void textBox6_Leave(object sender, EventArgs e)
         {
             if (textBox6.Text.ToString() == "") textBox6.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox6.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox6.Text.ToString());
+                textBox6.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox6.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -497,11 +503,12 @@ namespace Tax_Calculator
         private void textBox7_Leave(object sender, EventArgs e)
         {
             if (textBox7.Text.ToString() == "") textBox7.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox7.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox7.Text.ToString());
+                textBox7.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox7.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -510,11 +517,12 @@ namespace Tax_Calculator
         private void textBox8_Leave(object sender, EventArgs e)
         {
             if (textBox8.Text.ToString() == "") textBox8.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox8.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox8.Text.ToString());
+                textBox8.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox8.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -523,11 +531,12 @@ namespace Tax_Calculator
         private void textBox9_Leave(object sender, EventArgs e)
         {
             if (textBox9.Text.ToString() == "") textBox9.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox9.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox9.Text.ToString());
+                textBox9.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox9.Text = "0.0";  //clean user inputs because of invalid inputs
             }
@@ -536,19 +545,15 @@ namespace Tax_Calculator
         private void textBox10_Leave(object sender, EventArgs e)
         {
             if (textBox10.Text.ToString() == "") textBox10.Text = "0.0";  //copy "0.0" if user clears input field
-            try
+            try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                Convert.ToDecimal(textBox10.Text.ToString());    //checking user inputs valid or not
+                double tempValue = (double)Convert.ToDecimal(textBox10.Text.ToString());
+                textBox10.Text = tempValue.ToString("N"); //input auto convert as currency number style
             }
-            catch
+            catch  //if user copy-paste invaild(or number with characters)
             {
                 textBox10.Text = "0.0";  //clean user inputs because of invalid inputs
             }
-        }
-
-        private void textBox_Leave(object sender, EventArgs e)
-        {
-
         }
     }
 }
