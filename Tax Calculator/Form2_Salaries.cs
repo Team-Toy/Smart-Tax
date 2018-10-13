@@ -298,7 +298,7 @@ namespace Tax_Calculator
                     textBox2.Focus();
                 }
             }
-            catch (Exception ex)
+            catch
             {
                //clear user input because of invaild input
                textBox1.Text = "0.0";    
