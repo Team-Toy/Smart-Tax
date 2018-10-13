@@ -1108,8 +1108,7 @@ namespace Tax_Calculator
             if (textBox25.Text.ToString() == "") textBox25.Text = "0";
             try    //By clicking any other toolbox after copy-paste by user following code run
             {
-                double tempValue = (double)Convert.ToDecimal(textBox25.Text.ToString());
-                textBox25.Text = tempValue.ToString("N"); //input auto convert as currency number style
+                Convert.ToDecimal(textBox25.Text.ToString());
             }
             catch  //if user copy-paste invaild(or number with characters)
             {

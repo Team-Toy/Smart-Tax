@@ -472,7 +472,7 @@ namespace Tax_Calculator
             y += 17;    // jump one line down with difference of x=17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
             y += 19;    // jump one line down with difference of x=17
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[22], x, y);    //printing "Income tax paid in the last assessment year"
                                                                                                             //Verfication part print
             x = 127;
             y = 636;
@@ -531,27 +531,27 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[9], 397, 525);  //print "total investments"
 
             x = 320;    //set position x for "Motor vihicles"
-            y = 566;    //set position y for "Motor vihicles"
+            y = 552;    //set position y for "Motor vihicles"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[10], x, y);   //print "Motor vihicles"
-            y = 586;
+            y = 611;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[11], x, y);   //print Jewellery
-            y = 612;
+            y = 635;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[12], x, y);   //print Furniture
-            y = 626;
+            y = 655;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[13], x, y);   //print Electronic Equipment
 
 
             x = 320;    //set position x for "Cash Asset Outside Business"
-            y = 669;    //set position y for "Cash Asset Outside Business"
+            y = 688;    //set position y for "Cash Asset Outside Business"
             for (int i = 14; i < 17; i++)
             {
                 string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each of "Cash Asset Outside Business"
-                y += 19;   // jump one line down with difference of y=19
+                y += 16;   // jump one line down with difference of y=16
             }
 
             x = 397;    //set position x for "total" Cash Asset Outside Business
-            y = 732;    //set position y for "total" Cash Asset Outside Business
+            y = 763;    //set position y for "total" Cash Asset Outside Business
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[17], x, y);   //print "total " Cash Asset Outside Business
 
         }
