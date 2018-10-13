@@ -448,29 +448,33 @@ namespace Tax_Calculator
             //setting-up the X and Y coordinates of the document
             float x = 453;   //by default x coordinate for "statement of income form"
             float y = 116;  //by default y increment top-down for "statement of income form"
-
+            float tempX = x;
             // printing "statement of income" entry
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 19; i++)
             {
                 string s = Form4_SatementOfSalary.pdfInputs[i]; //getting each statement of salary info one by by
-                if (i == 15 || i == 16 || i == 17) //checking to jump down additionally
+                if (i == 15 || i == 16 || i == 17 || i == 18) //checking to jump down additionally
                 {
-                    y += 11;    // jump half line down with difference of x=11
+                    tempX = 340;
+                    y += 10;    // jump half line down with difference of x=11
+                    WriteStringOnPdf(ref canvas, ref reader, pageNo, s, tempX, y);
+                    y += 17;
+                    continue;
                 }
 
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print all entry "statement of income"
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, tempX, y);   //print all entry "statement of income"
                 y += 17;    // jump one line down with difference of x=17
             }
 
-            y += 8; // jump half line down with difference of x=8
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
-            y += 25;    // jump some lines down with difference of x=25
+           // y += 8; // jump half line down with difference of x=8
+           // WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
+             y += 7;    // jump some lines down with difference of x=25
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[19], x, y);     //printing "Advance o Tax Refund (if any)"
             y += 22;    // jump almost one line down with difference of x=22
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[20], x, y);     //printing "Difference between serial no.15 and 16 (if any)"
             y += 17;    // jump one line down with difference of x=17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
-            y += 17;    // jump one line down with difference of x=17
+            y += 19;    // jump one line down with difference of x=17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
                                                                                                              //...........................................................................................................
                                                                                                              //Verfication part print
