@@ -64,13 +64,13 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Tax_Calculator.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico</ApplicationIcon>
+    <ApplicationIcon>tax-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
@@ -197,6 +197,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Resources\File\income tax form.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,16 +225,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <FileAssociation Include=".ico">
       <Visible>False</Visible>
       <Description>application logo that resembles bangladesh%27s currency flow</Description>
       <Progid>1</Progid>
-      <DefaultIcon>flat_image_national_emblem_of_bangladesh_svg_HJ2_12.ico</DefaultIcon>
+      <DefaultIcon>tax-icon.ico</DefaultIcon>
     </FileAssociation>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\File\payable-tax-conf.txt" />
+    <Content Include="tax-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax-icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,20 +61,34 @@ namespace Tax_Calculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \File\payable-tax-conf.txt.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static string file1 {
+        internal static byte[] income_tax_form {
             get {
-                return ResourceManager.GetString("file1", resourceCulture);
+                object obj = ResourceManager.GetObject("income_tax_form", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \File\income tax form.pdf.
+        ///   Looks up a localized string similar to 250000
+        ///300000
+        ///400000
+        ///425000
+        ///400000
+        ///500000
+        ///600000
+        ///3000000
+        ///10
+        ///15
+        ///20
+        ///25
+        ///30
+        ///.
         /// </summary>
-        internal static string file2 {
+        internal static string payable_tax_conf {
             get {
-                return ResourceManager.GetString("file2", resourceCulture);
+                return ResourceManager.GetString("payable_tax_conf", resourceCulture);
             }
         }
     }
