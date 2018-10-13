@@ -457,7 +457,7 @@ namespace Tax_Calculator
                 {
                     tempX = 340;
                     y += 10;    // jump half line down with difference of x=11
-                    WriteStringOnPdf(ref canvas, ref reader, pageNo, s, tempX, y);
+                    WriteStringOnPdf(ref canvas, ref reader, pageNo, s, tempX, y);  //print "tex payments"
                     y += 17;
                     continue;
                 }
@@ -465,10 +465,7 @@ namespace Tax_Calculator
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, tempX, y);   //print all entry "statement of income"
                 y += 17;    // jump one line down with difference of x=17
             }
-
-           // y += 8; // jump half line down with difference of x=8
-           // WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[18], x, y);     //printing "Tax paid on the basis of this return (u/s 74)"
-             y += 7;    // jump some lines down with difference of x=25
+             y += 7;    // jump half line down with difference of x=7
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[19], x, y);     //printing "Advance o Tax Refund (if any)"
             y += 22;    // jump almost one line down with difference of x=22
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[20], x, y);     //printing "Difference between serial no.15 and 16 (if any)"
@@ -476,8 +473,7 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);     //printing "Tax exempted and Tax free income"
             y += 19;    // jump one line down with difference of x=17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form4_SatementOfSalary.pdfInputs[21], x, y);    //printing "Income tax paid in the last assessment year"
-                                                                                                             //...........................................................................................................
-                                                                                                             //Verfication part print
+                                                                                                            //Verfication part print
             x = 127;
             y = 636;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], x, y);   //print "Name of the Assessee" from "Personal info" form
