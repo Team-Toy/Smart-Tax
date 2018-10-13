@@ -334,6 +334,7 @@
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(183, 20);
             this.textBox22.TabIndex = 515;
+            this.textBox22.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
             this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox22.Leave += new System.EventHandler(this.textBox22_Leave);
@@ -486,6 +487,7 @@
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(183, 20);
             this.textBox26.TabIndex = 501;
+            this.textBox26.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             this.textBox26.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox26.Leave += new System.EventHandler(this.textBox26_Leave);
@@ -1598,7 +1600,7 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form6_AssentAndLiabilities
+            // Form6_AssetAndLiabilities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1606,7 +1608,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
-            this.Name = "Form6_AssentAndLiabilities";
+            this.Name = "Form6_AssetAndLiabilities";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asset and Liabilities";
             this.Activated += new System.EventHandler(this.Form6_AssentAndLiabilities_Activated);

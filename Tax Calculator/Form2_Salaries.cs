@@ -51,8 +51,6 @@ namespace Tax_Calculator
                                 };
         public static double reducedHomeRent = 0.0;
 
-
-
         public Form2_Salaries()
         {
             InitializeComponent();

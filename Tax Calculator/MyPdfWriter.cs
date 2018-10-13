@@ -15,8 +15,10 @@ namespace Tax_Calculator
     {
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
-        private const string myFont = "Arial";   //"Impact";    //Font name to print
-        private const int fontSize = 9;       //font size to print
+        private const string myFont = "Arial";   //text Font name to print
+        private const int fontSize = 9;       //text font size to print
+        private const string fontName2 = "ZAPFDINGBATS";    //tick-mark supported font
+        private const int fontSize2 = 11;       //tick-mark font size to print
 
         public MyPdfWriter()
         {
@@ -180,12 +182,26 @@ namespace Tax_Calculator
         private void Form1_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
             int pageNo = 1;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 202, 283);    //Print "Name of Assessee"
+           // string tickMark = "\u0033";
+
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[0], 414, 409); //print "Resident" tickmark sign on pdf
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[1], 488, 408); //print "Non-resident" tickmark sign on pdf
+            int x = 182;
+            int y = 436;
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[2], x, y); //print "Individual" tickmark sign on pdf
+            x = 224;
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[3], x, y); //print "Firm" tickmark sign on pdf
+            x = 347;
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[4], x, y); //print "Association of person" tickmark sign on pdf
+            x = 479;
+            WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[5], x, y); //print "Hindu undivied family" tickmark sign on pdf
+
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 200, 283);    //Print "Name of Assessee"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[1], 210, 303);   //print "National ID no"
                                                                                                             //.....................................................
                                                                                                             //setting x and y position for "UTIN" number
-            int x = 191;
-            int y = 325;
+            x = 191;
+            y = 325;
             string s = Form1_Personal_info.pdfInputs[2];    //taking "UTIN" number       
                                                             //printing UTIN number
             for (int i = 0; i < s.Length; i++)
@@ -624,6 +640,24 @@ namespace Tax_Calculator
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
               //creating default font with font name ,size and font type BOLD
             iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize,Font.BOLD);
+            Phrase p = new Phrase(s, font);
+
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "
+        }
+
+        private void WriteStringOnPdf(ref PdfContentByte canvas, ref PdfReader reader,string fontName, int pageNo, string s, float posX, float posY)
+        {
+            var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
+
+            //making the y to increment top-Down
+            posY = pageSize.Height - posY - 3;  //posY = position token from gimp
+                                                //creating default font with font name ,size and font type BOLD
+                                                // iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize, Font.BOLD);
+                                                // iTextSharp.text.Font font = myfont;
+
+            // Phrase p = new Phrase(new Chunk("\u0033", myfont));
+            iTextSharp.text.Font font = FontFactory.GetFont(fontName, fontSize2);
+
             Phrase p = new Phrase(s, font);
 
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "

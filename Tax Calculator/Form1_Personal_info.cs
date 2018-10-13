@@ -24,16 +24,19 @@ namespace Tax_Calculator
             
         }
         public static string[] pdfInputs;
+        public static string[] tickMarks;
         public Form1_Personal_info()
         {
            
             InitializeComponent();
             pdfInputs = new string[17];
+            tickMarks = new string[6];
         }
 
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
             //label8.Text = dateTimePicker1.Text.ToString();
+
         }
         private void UserInputs_PersonInformation()
         {
@@ -257,5 +260,101 @@ namespace Tax_Calculator
                 e.Handled = true;
             }
         }
+
+        private void cBox_Resident_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[0] = "";
+            tickMarks[1] = "";
+
+            if (cBox_Resident.Checked == true)
+            {
+                cBox_NonResident.Checked = false;
+                tickMarks[0] = "\u0033";
+            }
+
+
+        }
+
+        private void cBox_NonResident_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[0] = "";
+            tickMarks[1] = "";
+
+            if (cBox_NonResident.Checked == true)
+            {
+                cBox_Resident.Checked = false;
+                tickMarks[1] = "\u0033";
+            }
+        }
+
+        private void cBox_Individual_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[2] = "";
+            tickMarks[3] = "";
+            tickMarks[4] = "";
+            tickMarks[5] = "";
+
+            if (cBox_Individual.Checked == true)
+            {
+                cBox_Firm.Checked = false;
+                cBox_AssociationOfPersons.Checked = false;
+                cBoxHinduUndvidedFamily.Checked = false;
+
+                tickMarks[2] = "\u0033";
+            }
+        }
+
+        private void cBox_Firm_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[2] = "";
+            tickMarks[3] = "";
+            tickMarks[4] = "";
+            tickMarks[5] = "";
+
+            if (cBox_Firm.Checked == true)
+            {
+                cBox_Individual.Checked = false;
+                cBox_AssociationOfPersons.Checked = false;
+                cBoxHinduUndvidedFamily.Checked = false;
+
+                tickMarks[3] = "\u0033";
+            }
+        }
+
+        private void cBox_AssociationOfPersons_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[2] = "";
+            tickMarks[3] = "";
+            tickMarks[4] = "";
+            tickMarks[5] = "";
+
+            if (cBox_AssociationOfPersons.Checked == true)
+            {
+                cBox_Individual.Checked = false;
+                cBox_Firm.Checked = false;
+                cBoxHinduUndvidedFamily.Checked = false;
+
+                tickMarks[4] = "\u0033";
+            }
+        }
+
+        private void cBox_HinduUndvidedFamily_CheckedChanged(object sender, EventArgs e)
+        {
+            tickMarks[2] = "";
+            tickMarks[3] = "";
+            tickMarks[4] = "";
+            tickMarks[5] = "";
+
+            if (cBoxHinduUndvidedFamily.Checked == true)
+            {
+                cBox_Individual.Checked = false;
+                cBox_Firm.Checked = false;
+                cBox_AssociationOfPersons.Checked = false;
+
+                tickMarks[5] = "\u0033";
+            }
+        }
+
+      
     }
 }

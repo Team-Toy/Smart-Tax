@@ -141,8 +141,8 @@ namespace Tax_Calculator
    
         private double CalTotalSourceOfFund()
         {
-            totalSourcesOfFund = (double)Convert.ToDecimal(textBox25.Text.ToString()) + 
-                                  shownReturnIncome + taxExempted;
+            totalSourcesOfFund = shownReturnIncome + taxExempted +
+                                 (double)Convert.ToDecimal(textBox26.Text.ToString());
 
             return totalSourcesOfFund;
         }
@@ -761,11 +761,11 @@ namespace Tax_Calculator
                 label86.Text = diff1.ToString("N");
                 
                 //accretion in wealth
-                double diff2 = diff1 - (double)Convert.ToDecimal(textBox22.Text.ToString());
+                double diff2 = (diff1) - (double)Convert.ToDecimal(textBox22.Text.ToString());
                 label82.Text = diff2.ToString("N");
                 
                 //total accretion fo wealth
-                double diff3 = diff2- (double)Convert.ToDecimal(label_totalExpense.Text.ToString());
+                double diff3 = diff2+ (double)Convert.ToDecimal(label_totalExpense.Text.ToString());
                 label85.Text = diff3.ToString("N");
 
                 label83.Text = CalTotalSourceOfFund().ToString("N");    //return and save "total source of fund"
@@ -1095,7 +1095,7 @@ namespace Tax_Calculator
             try    //By clicking any other toolbox after copy-paste by user following code run
             {
                 double tempValue = (double)Convert.ToDecimal(textBox24.Text.ToString());
-                textBox24.Text = tempValue.ToString("N"); //input auto convert as currency number style
+                textBox24.Text = tempValue.ToString();
             }
             catch  //if user copy-paste invaild(or number with characters)
             {

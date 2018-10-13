@@ -20,9 +20,7 @@ namespace Tax_Calculator
             this.maxPercentOfNonTaxable = maxPercentOfNonTaxable;
             this.maxNonTaxable = maxNonTaxable;    
 
-        }
- 
-        
+        }  
         public void setmaxNonTaxable(double newMaxNonTaxable)
         {
             maxNonTaxable[0] = newMaxNonTaxable;         
