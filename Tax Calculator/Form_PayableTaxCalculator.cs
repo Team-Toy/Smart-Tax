@@ -284,13 +284,6 @@ namespace Tax_Calculator
                 VerifyAndTaxCal();
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form1_Personal_info f = new Form1_Personal_info();
-            f.Show();
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -308,6 +301,11 @@ namespace Tax_Calculator
                 //Close();
                 this.Hide();
             }
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

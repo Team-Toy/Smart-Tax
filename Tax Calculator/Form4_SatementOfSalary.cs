@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form4_SatementOfSalary : Form
+    public partial class Form4_SatementOfSalary : MetroFramework.Forms.MetroForm
     {
         static Form4_SatementOfSalary _instance;
         public static Form4_SatementOfSalary GetInstance
@@ -431,7 +431,7 @@ namespace Tax_Calculator
                 if (e.KeyCode == Keys.Enter)
                 {
                     taxPaidLastYear = (double)Convert.ToDecimal(textBox15.Text.ToString());
-                    button2.Focus();   //Next button
+                    btNext.Focus();   //Next button
                 }
                 
             }
@@ -475,8 +475,8 @@ namespace Tax_Calculator
         {
             //save data for pdf file
             UserInputs_StatementOfSalary();
-            Form5_Expenses f = Form5_Expenses.GetInstance;
             this.Hide();
+            Form5_Expenses f = Form5_Expenses.GetInstance; 
             f.Show();
 
         }
@@ -506,9 +506,9 @@ namespace Tax_Calculator
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {           
-            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
+        {
             this.Hide();
+            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
             f.Show();
         }
 
@@ -757,5 +757,11 @@ namespace Tax_Calculator
             }
         }
 
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();    //Hide curent window form
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();   //go to Home page
+        }
     }
 }

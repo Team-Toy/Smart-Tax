@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form5_Expenses : Form
+    public partial class Form5_Expenses : MetroFramework.Forms.MetroForm
     {
         static Form5_Expenses _instance;
         public static Form5_Expenses GetInstance
@@ -256,7 +256,7 @@ namespace Tax_Calculator
                     // any string number(with comma or without comma) coverted to double
                     double tempValue = (double)Convert.ToDecimal(textBox11.Text.ToString());    //checking user input vaild or not
                     textBox11.Text = tempValue.ToString("N");  //making user input as a currency style number
-                    button1.Focus();    //focus on "Next" button
+                    btNext.Focus();    //focus on "Next" button
                 }
             }
             catch
@@ -285,8 +285,8 @@ namespace Tax_Calculator
         {
             //save data for pdf file
             UserInputs_Expenses();
-            Form6_AssetAndLiabilities f = Form6_AssetAndLiabilities.GetInstance;
             this.Hide();
+            Form6_AssetAndLiabilities f = Form6_AssetAndLiabilities.GetInstance;
             f.Show();
         }
 
@@ -316,8 +316,8 @@ namespace Tax_Calculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;
             this.Hide();
+            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;          
             f.Show();
         }
 
@@ -510,6 +510,11 @@ namespace Tax_Calculator
             }
         }
 
-       
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();    //Hide curent window form
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();   //go to Home page
+        }
     }
 }

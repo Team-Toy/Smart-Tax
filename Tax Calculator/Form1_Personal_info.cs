@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace Tax_Calculator
 {
     
-    public partial class Form1_Personal_info : Form
+    public partial class Form1_Personal_info : MetroFramework.Forms.MetroForm
     {
         static Form1_Personal_info _instance;
         public static Form1_Personal_info GetInstance
@@ -61,9 +61,8 @@ namespace Tax_Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             UserInputs_PersonInformation();
-
-            Form2_Salaries f =  Form2_Salaries.GetInstance;
             this.Hide(); // form1 hide
+            Form2_Salaries f =  Form2_Salaries.GetInstance;
             f.Show();
             
         }
@@ -354,7 +353,5 @@ namespace Tax_Calculator
                 tickMarks[5] = "\u0033";
             }
         }
-
-      
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Tax_Calculator
 {
 
-    public partial class Form2_Salaries : Form
+    public partial class Form2_Salaries : MetroFramework.Forms.MetroForm
     {
         static Form2_Salaries _instance;
         public static Form2_Salaries GetInstance
@@ -189,10 +189,11 @@ namespace Tax_Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             //save data for pdf file
+            
             UserInputs_Salaries();
+            this.Hide(); // form1 hide
             //go to investment Tax Credit form
             Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
-            this.Hide(); // form1 hide
             f.Show();
         }
 
@@ -844,7 +845,8 @@ namespace Tax_Calculator
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1_Personal_info.GetInstance.Show();
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();
         }
 
         private void Form2_Salaries_FormClosing(object sender, FormClosingEventArgs e)
@@ -1762,6 +1764,12 @@ namespace Tax_Calculator
             }
         }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();    //Hide curent window form
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();   //go to Home page
+        }
 
         private void UserInputs_Salaries()
         {

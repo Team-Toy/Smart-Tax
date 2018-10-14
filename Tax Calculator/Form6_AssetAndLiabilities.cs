@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form6_AssetAndLiabilities : Form
+    public partial class Form6_AssetAndLiabilities : MetroFramework.Forms.MetroForm
     {
         static Form6_AssetAndLiabilities _instance;
         public static Form6_AssetAndLiabilities GetInstance
@@ -598,7 +598,7 @@ namespace Tax_Calculator
 
 
         //pdf creating button. print button
-        private void button1_Click(object sender, EventArgs e)
+        private void btPrint_Click(object sender, EventArgs e)
         {
             //taking all assets and liabilities info in a string
             UserInputs_AssetAndLiabilities();
