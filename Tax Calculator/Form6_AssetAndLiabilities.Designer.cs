@@ -593,7 +593,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(885, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(902, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel78);
             this.htmlPanel1.Controls.Add(this.label83);
@@ -711,7 +711,7 @@
             this.htmlPanel1.Controls.Add(this.label51);
             this.htmlPanel1.Location = new System.Drawing.Point(15, 124);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(902, 475);
+            this.htmlPanel1.Size = new System.Drawing.Size(902, 507);
             this.htmlPanel1.TabIndex = 524;
             // 
             // metroLabel78
@@ -1512,7 +1512,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 574);
+            this.ClientSize = new System.Drawing.Size(923, 616);
             this.Controls.Add(this.btPrint);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.label87);

@@ -63,29 +63,9 @@ namespace Tax_Calculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap if___house_home_flat_facilities_3668851 {
-            get {
-                object obj = ResourceManager.GetObject("if___house_home_flat_facilities_3668851", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap if_floppy_285657 {
             get {
                 object obj = ResourceManager.GetObject("if_floppy_285657", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap if_print_16_22615 {
-            get {
-                object obj = ResourceManager.GetObject("if_print_16_22615", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -531,27 +531,27 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[9], 397, 525);  //print "total investments"
 
             x = 320;    //set position x for "Motor vihicles"
-            y = 552;    //set position y for "Motor vihicles"
+            y = 566;    //set position y for "Motor vihicles"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[10], x, y);   //print "Motor vihicles"
-            y = 611;
+            y = 585;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[11], x, y);   //print Jewellery
-            y = 635;
+            y = 611;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[12], x, y);   //print Furniture
-            y = 655;
+            y = 626;
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[13], x, y);   //print Electronic Equipment
 
 
             x = 320;    //set position x for "Cash Asset Outside Business"
-            y = 688;    //set position y for "Cash Asset Outside Business"
+            y = 670;    //set position y for "Cash Asset Outside Business"
             for (int i = 14; i < 17; i++)
             {
                 string s = Form6_AssetAndLiabilities.pdfInputs[i];
                 WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each of "Cash Asset Outside Business"
-                y += 16;   // jump one line down with difference of y=16
+                y += 18;   // jump one line down with difference of y=16
             }
 
             x = 397;    //set position x for "total" Cash Asset Outside Business
-            y = 763;    //set position y for "total" Cash Asset Outside Business
+            y = 733;    //set position y for "total" Cash Asset Outside Business
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[17], x, y);   //print "total " Cash Asset Outside Business
 
         }
@@ -585,17 +585,17 @@ namespace Tax_Calculator
             y = 298;    //position of y "total liabilties"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[25], x, y);   //print "total liabilties"
 
-            y = 343;    //position of y "Net wealth " and "Accretion in wealth"
-                        //printing "Net wealth " and "Accretion in wealth"
+            y = 338;    //position of y "Net wealth " and "Accretion in wealth"
+                        
             for (int i = 26; i < 29; i++)
             {
                 string s = Form6_AssetAndLiabilities.pdfInputs[i];
 
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //print each entries of "Less Liabilities"
-                y += 21;   // jump one line down with difference of x=19
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);  //printing "Net wealth " and "Accretion in wealth"
+                y += 23;   // jump one line down with difference of x=19
             }
             x = 452;
-            y = 409;    //set position of y  for "Family expenditure"  
+            y = 411;    //set position of y  for "Family expenditure"  
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[29], x, y);   //print each entries of "Number of dependent children"
 
 
