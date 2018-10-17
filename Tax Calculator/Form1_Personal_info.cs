@@ -25,17 +25,20 @@ namespace Tax_Calculator
         }
         public static string[] pdfInputs;
         public static string[] tickMarks;
+        float X, Y;
         public Form1_Personal_info()
-        {
-           
+        {     
             InitializeComponent();
+
             pdfInputs = new string[17];
             tickMarks = new string[6];
+            
         }
 
         private void Form1_Personal_info_Load(object sender, EventArgs e)
         {
             //label8.Text = dateTimePicker1.Text.ToString();
+            //FormResize.setTag(this);
 
         }
         private void UserInputs_PersonInformation()
@@ -347,6 +350,10 @@ namespace Tax_Calculator
             }
         }
 
+        private void Form1_Personal_info_Resize(object sender, EventArgs e)
+        {
+        }
+
         private void btNext_Click(object sender, EventArgs e)
         {
             UserInputs_PersonInformation();
@@ -354,5 +361,7 @@ namespace Tax_Calculator
             f.Show();
             this.Hide(); // form1 hide
         }
+
+       
     }
 }
