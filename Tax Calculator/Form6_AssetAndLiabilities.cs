@@ -597,21 +597,6 @@ namespace Tax_Calculator
         }
 
 
-        //pdf creating button. print button
-        private void btPrint_Click(object sender, EventArgs e)
-        {
-            //taking all assets and liabilities info in a string
-            UserInputs_AssetAndLiabilities();
-
-            MyPdfWriter myPdfWriter = new MyPdfWriter();
-
-            MessageBox.Show("Print succeessfully");
-
-
-        }
-
-
-
         /* Function name: textBox_KeyPress()
          * ..................................
          * It works for textBox1 to textBox26; except textBox24 and textBox25
@@ -1125,6 +1110,17 @@ namespace Tax_Calculator
             Form5_Expenses f = Form5_Expenses.GetInstance;
             f.Show();
             this.Hide();
+        }
+
+        //pdf creating button. print button
+        private void btPrint_Click(object sender, EventArgs e)
+        {
+            //taking all assets and liabilities info in a string
+            UserInputs_AssetAndLiabilities();
+
+            MyPdfWriter myPdfWriter = new MyPdfWriter();
+
+
         }
     }
 }

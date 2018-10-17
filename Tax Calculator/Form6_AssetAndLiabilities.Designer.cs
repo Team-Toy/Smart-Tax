@@ -1119,7 +1119,6 @@
             this.btPrint.Name = "btPrint";
             this.btPrint.Size = new System.Drawing.Size(75, 68);
             this.btPrint.TabIndex = 563;
-            this.btPrint.Text = "Print";
             this.btPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btPrint.UseSelectable = true;
             this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
