@@ -1764,6 +1764,7 @@ namespace Tax_Calculator
 
         private void btNext_Click(object sender, EventArgs e)
         {
+            UserInputs_Salaries(); // pdf input copy
             Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
             f.Show();
             this.Hide();
@@ -1773,8 +1774,8 @@ namespace Tax_Calculator
         {
            
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
-            f.Show();   //go to Home page
-            this.Hide();    //Hide curent window form
+            f.Show();    //go to Home page
+            this.Hide(); //Hide curent window form
         }
 
       
