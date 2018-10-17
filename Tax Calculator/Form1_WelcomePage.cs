@@ -34,18 +34,16 @@ namespace Tax_Calculator
             Form_Credits f = Form_Credits.GetInstance;  //creating Form_Credits object
             f.Show();  //show Form_Credits window
         }
-
-        private void btSign_in_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1_Personal_info f = Form1_Personal_info.GetInstance;
-            f.Show();
-        }
-
         private void btAbout_Click(object sender, EventArgs e)
         {
             Form_Credits f = Form_Credits.GetInstance;  //creating Form_Credits object
-            f.Show();  //show Form_Credits window
+            f.ShowDialog();  //show Form_Credits window
+        }
+        private void btContinue_Click(object sender, EventArgs e)
+        {
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();
+            this.Hide();
         }
     }
 }
