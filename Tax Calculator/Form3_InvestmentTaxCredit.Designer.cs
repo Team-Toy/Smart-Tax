@@ -90,7 +90,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(561, 203);
+            this.textBox7.Location = new System.Drawing.Point(561, 204);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(185, 29);
             this.textBox7.TabIndex = 185;
@@ -102,7 +102,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(559, 236);
+            this.textBox8.Location = new System.Drawing.Point(561, 238);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(185, 29);
             this.textBox8.TabIndex = 184;
@@ -114,7 +114,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(559, 274);
+            this.textBox9.Location = new System.Drawing.Point(561, 272);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(185, 29);
             this.textBox9.TabIndex = 183;
@@ -126,7 +126,7 @@
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(559, 309);
+            this.textBox10.Location = new System.Drawing.Point(561, 306);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(185, 29);
             this.textBox10.TabIndex = 182;
@@ -138,7 +138,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(559, 170);
+            this.textBox6.Location = new System.Drawing.Point(561, 170);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(185, 29);
             this.textBox6.TabIndex = 180;
@@ -150,7 +150,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(561, 135);
+            this.textBox5.Location = new System.Drawing.Point(561, 136);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(183, 29);
             this.textBox5.TabIndex = 179;
@@ -511,10 +511,10 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.Location = new System.Drawing.Point(60, 282);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(482, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(490, 19);
             this.metroLabel7.TabIndex = 323;
-            this.metroLabel7.Text = "9.    Contribution to zaat fund.................................................." +
-    "..............Tk.";
+            this.metroLabel7.Text = "9.    Contribution to zakat fund................................................." +
+    "...............Tk.";
             // 
             // metroLabel8
             // 
@@ -629,6 +629,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
+            this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
             this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(864, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel5);

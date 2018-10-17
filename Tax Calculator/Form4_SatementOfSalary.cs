@@ -309,7 +309,7 @@ namespace Tax_Calculator
         public double CalTaxRebate()
         {
             //calculating total taxable income + foregin income
-           totalTaxableIncome = CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString());    
+            totalTaxableIncome = CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString());    
             double allowableInvestmentTaxCredit = CalAllowableInvestmentTaxCredit();
             double taxRebate = 0;
             

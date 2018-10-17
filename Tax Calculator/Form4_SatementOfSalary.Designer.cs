@@ -80,7 +80,6 @@
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.htmlPanel1 = new MetroFramework.Drawing.Html.HtmlPanel();
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.btNext = new MetroFramework.Controls.MetroButton();
             this.btBack = new MetroFramework.Controls.MetroButton();
             this.btHome = new MetroFramework.Controls.MetroButton();
@@ -232,7 +231,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(505, 477);
+            this.label41.Location = new System.Drawing.Point(505, 472);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(20, 22);
             this.label41.TabIndex = 52;
@@ -340,11 +339,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(370, 475);
+            this.button1.Location = new System.Drawing.Point(304, 471);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 26);
+            this.button1.Size = new System.Drawing.Size(189, 26);
             this.button1.TabIndex = 90;
-            this.button1.Text = "Tax Leviable";
+            this.button1.Text = "Calculate Tax Leviable";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -426,9 +425,9 @@
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel13.Location = new System.Drawing.Point(56, 474);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(242, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(239, 19);
             this.metroLabel13.TabIndex = 364;
-            this.metroLabel13.Text = "13.    TAX Leviable on Total Income";
+            this.metroLabel13.Text = "13.    Tax Leviable on Total Income";
             // 
             // metroLabel14
             // 
@@ -627,7 +626,8 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(880, 0);
+            this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(884, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel7);
             this.htmlPanel1.Controls.Add(this.metroLabel21);
@@ -694,17 +694,6 @@
             this.metroLabel24.Text = "1.    Salaries..................................................................." +
     "................Tk.";
             // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(109, 119);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(148, 25);
-            this.metroLabel25.TabIndex = 377;
-            this.metroLabel25.Text = "Head of Income";
-            // 
             // btNext
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
@@ -720,7 +709,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(23, 73);
+            this.btBack.Location = new System.Drawing.Point(23, 74);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 379;
@@ -731,7 +720,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(23, 21);
+            this.btHome.Location = new System.Drawing.Point(23, 22);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 378;
@@ -742,7 +731,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 33);
+            this.label2.Location = new System.Drawing.Point(315, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(267, 32);
             this.label2.TabIndex = 381;
@@ -757,7 +746,6 @@
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btBack);
             this.Controls.Add(this.btHome);
-            this.Controls.Add(this.metroLabel25);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.label61);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -825,7 +813,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel23;
         private MetroFramework.Drawing.Html.HtmlPanel htmlPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel24;
-        private MetroFramework.Controls.MetroLabel metroLabel25;
         private MetroFramework.Controls.MetroButton btNext;
         private MetroFramework.Controls.MetroButton btBack;
         private MetroFramework.Controls.MetroButton btHome;
