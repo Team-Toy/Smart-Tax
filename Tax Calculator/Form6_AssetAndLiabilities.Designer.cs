@@ -1113,7 +1113,7 @@
             // 
             // btPrint
             // 
-            this.btPrint.BackgroundImage = global::Tax_Calculator.Properties.Resources.if_floppy_285657;
+            this.btPrint.BackgroundImage = global::Tax_Calculator.Properties.Resources.save;
             this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btPrint.Location = new System.Drawing.Point(797, 50);
             this.btPrint.Name = "btPrint";

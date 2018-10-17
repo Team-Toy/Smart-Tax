@@ -243,17 +243,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\File\payable-tax-conf.txt" />
-    <None Include="Resources\if___house_home_flat_facilities_3668851.png" />
-    <None Include="Resources\if_print_16_22615.png" />
-    <None Include="Resources\if_floppy_285657.png" />
+    <None Include="Resources\save.png" />
     <None Include="Resources\smart-icon.png" />
     <None Include="Resources\continue.png" />
-    <None Include="Resources\continue1.png" />
     <None Include="Resources\about.png" />
     <Content Include="tax-icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tax-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
