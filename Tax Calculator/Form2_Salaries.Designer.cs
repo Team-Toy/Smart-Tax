@@ -857,7 +857,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(880, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(884, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel36);
             this.htmlPanel1.Controls.Add(this.textBox15);
@@ -959,9 +959,9 @@
             this.htmlPanel1.Controls.Add(this.label49);
             this.htmlPanel1.Controls.Add(this.label48);
             this.htmlPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlPanel1.Location = new System.Drawing.Point(9, 111);
+            this.htmlPanel1.Location = new System.Drawing.Point(24, 159);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(880, 499);
+            this.htmlPanel1.Size = new System.Drawing.Size(884, 499);
             this.htmlPanel1.TabIndex = 264;
             // 
             // metroLabel36
@@ -1287,7 +1287,7 @@
             // 
             this.metroLabel35.AutoSize = true;
             this.metroLabel35.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel35.Location = new System.Drawing.Point(683, 83);
+            this.metroLabel35.Location = new System.Drawing.Point(707, 134);
             this.metroLabel35.Name = "metroLabel35";
             this.metroLabel35.Size = new System.Drawing.Size(177, 19);
             this.metroLabel35.TabIndex = 375;
@@ -1296,7 +1296,7 @@
             // metroLabel34
             // 
             this.metroLabel34.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel34.Location = new System.Drawing.Point(516, 83);
+            this.metroLabel34.Location = new System.Drawing.Point(540, 134);
             this.metroLabel34.Name = "metroLabel34";
             this.metroLabel34.Size = new System.Drawing.Size(161, 19);
             this.metroLabel34.TabIndex = 374;
@@ -1306,7 +1306,7 @@
             // 
             this.metroLabel33.AutoSize = true;
             this.metroLabel33.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel33.Location = new System.Drawing.Point(327, 83);
+            this.metroLabel33.Location = new System.Drawing.Point(327, 134);
             this.metroLabel33.Name = "metroLabel33";
             this.metroLabel33.Size = new System.Drawing.Size(168, 19);
             this.metroLabel33.TabIndex = 373;
@@ -1316,7 +1316,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(9, 17);
+            this.btHome.Location = new System.Drawing.Point(23, 23);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 266;
@@ -1327,7 +1327,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(78, 17);
+            this.btBack.Location = new System.Drawing.Point(23, 77);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 267;
@@ -1338,7 +1338,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(823, 17);
+            this.btNext.Location = new System.Drawing.Point(813, 76);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 268;
@@ -1348,10 +1348,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(405, 27);
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(401, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 31);
+            this.label1.Size = new System.Drawing.Size(120, 32);
             this.label1.TabIndex = 376;
             this.label1.Text = "Salaries";
             // 

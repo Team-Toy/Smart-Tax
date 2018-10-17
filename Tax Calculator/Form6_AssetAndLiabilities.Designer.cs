@@ -550,7 +550,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(15, 62);
+            this.btBack.Location = new System.Drawing.Point(24, 79);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 522;
@@ -561,7 +561,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(16, 13);
+            this.btHome.Location = new System.Drawing.Point(25, 30);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 521;
@@ -572,11 +572,11 @@
             // 
             this.label87.AutoSize = true;
             this.label87.BackColor = System.Drawing.SystemColors.Window;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label87.Location = new System.Drawing.Point(232, 50);
+            this.label87.Location = new System.Drawing.Point(295, 42);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(278, 31);
+            this.label87.Size = new System.Drawing.Size(284, 32);
             this.label87.TabIndex = 523;
             this.label87.Text = "Asset And Liabilities";
             // 
@@ -1115,7 +1115,7 @@
             // 
             this.btPrint.BackgroundImage = global::Tax_Calculator.Properties.Resources.if_floppy_285657;
             this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btPrint.Location = new System.Drawing.Point(797, 33);
+            this.btPrint.Location = new System.Drawing.Point(797, 50);
             this.btPrint.Name = "btPrint";
             this.btPrint.Size = new System.Drawing.Size(75, 68);
             this.btPrint.TabIndex = 563;

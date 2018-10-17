@@ -293,14 +293,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(206, 466);
             this.dateTimePicker1.MaxDate = new System.DateTime(2018, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(129, 29);
             this.dateTimePicker1.TabIndex = 265;
             this.dateTimePicker1.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp);
@@ -311,7 +311,7 @@
             this.label18.BackColor = System.Drawing.SystemColors.Window;
             this.label18.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(257, 8);
+            this.label18.Location = new System.Drawing.Point(257, 41);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(326, 32);
             this.label18.TabIndex = 178;
@@ -320,7 +320,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(855, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(861, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel17);
             this.htmlPanel1.Controls.Add(this.textBox16);
@@ -372,9 +372,9 @@
             this.htmlPanel1.Controls.Add(this.textBox3);
             this.htmlPanel1.Controls.Add(this.textBox4);
             this.htmlPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlPanel1.Location = new System.Drawing.Point(23, 63);
+            this.htmlPanel1.Location = new System.Drawing.Point(6, 110);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(855, 534);
+            this.htmlPanel1.Size = new System.Drawing.Size(878, 534);
             this.htmlPanel1.TabIndex = 255;
             // 
             // metroLabel17
@@ -630,7 +630,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(808, 14);
+            this.btNext.Location = new System.Drawing.Point(755, 52);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 269;

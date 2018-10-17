@@ -41,7 +41,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
@@ -206,16 +205,6 @@
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(82, 128);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(229, 24);
-            this.label14.TabIndex = 180;
-            this.label14.Text = "Particulars of Expenditure ";
-            // 
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
@@ -344,7 +333,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(1338, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(784, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel9);
             this.htmlPanel1.Controls.Add(this.metroLabel18);
@@ -370,7 +359,7 @@
             this.htmlPanel1.Controls.Add(this.metroLabel17);
             this.htmlPanel1.Controls.Add(this.textBox8);
             this.htmlPanel1.Controls.Add(this.textBox9);
-            this.htmlPanel1.Location = new System.Drawing.Point(22, 122);
+            this.htmlPanel1.Location = new System.Drawing.Point(22, 164);
             this.htmlPanel1.Name = "htmlPanel1";
             this.htmlPanel1.Size = new System.Drawing.Size(784, 491);
             this.htmlPanel1.TabIndex = 357;
@@ -379,7 +368,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(740, 23);
+            this.btNext.Location = new System.Drawing.Point(738, 68);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 383;
@@ -390,7 +379,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(88, 23);
+            this.btBack.Location = new System.Drawing.Point(23, 68);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 382;
@@ -401,7 +390,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(23, 23);
+            this.btHome.Location = new System.Drawing.Point(23, 19);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 381;
@@ -411,10 +400,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 32);
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 31);
+            this.label1.Size = new System.Drawing.Size(142, 32);
             this.label1.TabIndex = 384;
             this.label1.Text = "Expenses";
             // 
@@ -422,7 +411,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 94);
+            this.label2.Location = new System.Drawing.Point(83, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 24);
             this.label2.TabIndex = 180;
@@ -432,7 +421,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(525, 94);
+            this.label3.Location = new System.Drawing.Point(525, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 24);
             this.label3.TabIndex = 181;
@@ -450,7 +439,6 @@
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label14);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form5_Expenses";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form5_Expenses_FormClosing);
@@ -476,7 +464,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label14;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroLabel metroLabel19;
         private MetroFramework.Controls.MetroLabel metroLabel18;

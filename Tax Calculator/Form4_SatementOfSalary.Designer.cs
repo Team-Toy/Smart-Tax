@@ -262,7 +262,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(526, 77);
+            this.label61.Location = new System.Drawing.Point(526, 119);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(107, 20);
             this.label61.TabIndex = 72;
@@ -678,9 +678,9 @@
             this.htmlPanel1.Controls.Add(this.label40);
             this.htmlPanel1.Controls.Add(this.label42);
             this.htmlPanel1.Controls.Add(this.label41);
-            this.htmlPanel1.Location = new System.Drawing.Point(4, 102);
+            this.htmlPanel1.Location = new System.Drawing.Point(4, 148);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(880, 411);
+            this.htmlPanel1.Size = new System.Drawing.Size(884, 457);
             this.htmlPanel1.TabIndex = 376;
             // 
             // metroLabel24
@@ -699,7 +699,7 @@
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(109, 79);
+            this.metroLabel25.Location = new System.Drawing.Point(109, 119);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(148, 25);
             this.metroLabel25.TabIndex = 377;
@@ -709,7 +709,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(779, 18);
+            this.btNext.Location = new System.Drawing.Point(779, 73);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 380;
@@ -720,7 +720,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(93, 18);
+            this.btBack.Location = new System.Drawing.Point(23, 73);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 379;
@@ -731,7 +731,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(23, 18);
+            this.btHome.Location = new System.Drawing.Point(23, 21);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 378;
@@ -741,10 +741,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 18);
+            this.label2.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 31);
+            this.label2.Size = new System.Drawing.Size(267, 32);
             this.label2.TabIndex = 381;
             this.label2.Text = "Satement Of Salary";
             // 
@@ -752,7 +752,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 576);
+            this.ClientSize = new System.Drawing.Size(895, 613);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btBack);

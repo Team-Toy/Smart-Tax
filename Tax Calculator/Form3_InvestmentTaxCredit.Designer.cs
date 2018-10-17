@@ -435,10 +435,11 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(291, 25);
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(291, 44);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(253, 35);
+            this.label17.Size = new System.Drawing.Size(303, 32);
             this.label17.TabIndex = 195;
             this.label17.Text = "Investment Tax Credit";
             // 
@@ -564,7 +565,7 @@
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.Location = new System.Drawing.Point(101, 111);
+            this.metroLabel12.Location = new System.Drawing.Point(101, 123);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(109, 25);
             this.metroLabel12.TabIndex = 326;
@@ -575,7 +576,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(588, 111);
+            this.metroLabel13.Location = new System.Drawing.Point(588, 123);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(128, 25);
             this.metroLabel13.TabIndex = 327;
@@ -596,7 +597,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(775, 17);
+            this.btNext.Location = new System.Drawing.Point(775, 71);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 331;
@@ -607,7 +608,7 @@
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(80, 17);
+            this.btBack.Location = new System.Drawing.Point(23, 72);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 330;
@@ -618,7 +619,7 @@
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(8, 17);
+            this.btHome.Location = new System.Drawing.Point(23, 18);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 329;
@@ -654,7 +655,7 @@
             this.htmlPanel1.Controls.Add(this.metroLabel2);
             this.htmlPanel1.Controls.Add(this.metroLabel4);
             this.htmlPanel1.Controls.Add(this.metroLabel6);
-            this.htmlPanel1.Location = new System.Drawing.Point(8, 152);
+            this.htmlPanel1.Location = new System.Drawing.Point(8, 156);
             this.htmlPanel1.Name = "htmlPanel1";
             this.htmlPanel1.Size = new System.Drawing.Size(864, 466);
             this.htmlPanel1.TabIndex = 332;
@@ -663,7 +664,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(879, 620);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.btNext);
