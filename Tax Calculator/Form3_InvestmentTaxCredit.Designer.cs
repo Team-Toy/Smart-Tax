@@ -76,9 +76,9 @@
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btNext = new MetroFramework.Controls.MetroButton();
+            this.btBack = new MetroFramework.Controls.MetroButton();
+            this.btHome = new MetroFramework.Controls.MetroButton();
             this.htmlPanel1 = new MetroFramework.Drawing.Html.HtmlPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -89,9 +89,10 @@
             // 
             // textBox7
             // 
+            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(561, 203);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 20);
+            this.textBox7.Size = new System.Drawing.Size(185, 29);
             this.textBox7.TabIndex = 185;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
@@ -100,9 +101,10 @@
             // 
             // textBox8
             // 
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(559, 236);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 20);
+            this.textBox8.Size = new System.Drawing.Size(185, 29);
             this.textBox8.TabIndex = 184;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
@@ -111,9 +113,10 @@
             // 
             // textBox9
             // 
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(559, 274);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 20);
+            this.textBox9.Size = new System.Drawing.Size(185, 29);
             this.textBox9.TabIndex = 183;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
@@ -122,9 +125,10 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(559, 304);
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(559, 309);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(185, 20);
+            this.textBox10.Size = new System.Drawing.Size(185, 29);
             this.textBox10.TabIndex = 182;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
@@ -133,9 +137,10 @@
             // 
             // textBox6
             // 
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(559, 170);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 20);
+            this.textBox6.Size = new System.Drawing.Size(185, 29);
             this.textBox6.TabIndex = 180;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -144,9 +149,10 @@
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(561, 135);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 20);
+            this.textBox5.Size = new System.Drawing.Size(183, 29);
             this.textBox5.TabIndex = 179;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -155,9 +161,10 @@
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(561, 102);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 20);
+            this.textBox4.Size = new System.Drawing.Size(183, 29);
             this.textBox4.TabIndex = 178;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
@@ -166,9 +173,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(561, 71);
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(561, 68);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 20);
+            this.textBox3.Size = new System.Drawing.Size(183, 29);
             this.textBox3.TabIndex = 177;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
@@ -177,9 +185,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(561, 37);
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(561, 34);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
+            this.textBox2.Size = new System.Drawing.Size(183, 29);
             this.textBox2.TabIndex = 176;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -188,9 +197,10 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(561, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
+            this.textBox1.Size = new System.Drawing.Size(183, 29);
             this.textBox1.TabIndex = 175;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -200,12 +210,12 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.Control;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.BackColor = System.Drawing.SystemColors.Window;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(565, 346);
+            this.label12.Location = new System.Drawing.Point(557, 346);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 18);
+            this.label12.Size = new System.Drawing.Size(20, 22);
             this.label12.TabIndex = 152;
             this.label12.Text = "0";
             // 
@@ -425,10 +435,10 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(313, 48);
+            this.label17.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(291, 25);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(186, 23);
+            this.label17.Size = new System.Drawing.Size(253, 35);
             this.label17.TabIndex = 195;
             this.label17.Text = "Investment Tax Credit";
             // 
@@ -436,106 +446,114 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(60, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(60, 6);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(181, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(482, 19);
             this.metroLabel5.TabIndex = 315;
-            this.metroLabel5.Text = "1. Life insurance premium";
+            this.metroLabel5.Text = "1.    Life insurance premium....................................................." +
+    "..............Tk.";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(60, 34);
+            this.metroLabel1.Location = new System.Drawing.Point(60, 37);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(242, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(482, 19);
             this.metroLabel1.TabIndex = 316;
-            this.metroLabel1.Text = "2. Contribution to deffered annuity";
+            this.metroLabel1.Text = "2.    Contribution to deffered annuity..........................................." +
+    ".........Tk.";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(60, 68);
+            this.metroLabel2.Location = new System.Drawing.Point(60, 71);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(231, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(480, 19);
             this.metroLabel2.TabIndex = 317;
-            this.metroLabel2.Text = "3. Contribution to provident fund";
+            this.metroLabel2.Text = "3.    Contribution to provident fund............................................." +
+    ".........Tk.";
             // 
             // metroLabel3
             // 
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(60, 167);
+            this.metroLabel3.Location = new System.Drawing.Point(60, 176);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(421, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(482, 19);
             this.metroLabel3.TabIndex = 320;
-            this.metroLabel3.Text = "6. investment in approved debebnture stock, stock, or shares";
+            this.metroLabel3.Text = "6.    investment in approved debebnture stock, stock, or shares.......Tk.";
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(60, 133);
+            this.metroLabel4.Location = new System.Drawing.Point(60, 141);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(309, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(478, 19);
             this.metroLabel4.TabIndex = 319;
-            this.metroLabel4.Text = "5. Contribution to super annuaton fund / DPS";
+            this.metroLabel4.Text = "5.    Contribution to super annuaton fund / DPS.................................." +
+    "Tk.";
             // 
             // metroLabel6
             // 
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(60, 99);
+            this.metroLabel6.Location = new System.Drawing.Point(60, 107);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(476, 19);
             this.metroLabel6.TabIndex = 318;
-            this.metroLabel6.Text = "4. Self contribution and employers contributon to recognized provident fund";
+            this.metroLabel6.Text = "4.    Self contribution and employers contributon to recognized provident fund";
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(60, 265);
+            this.metroLabel7.Location = new System.Drawing.Point(60, 282);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(193, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(482, 19);
             this.metroLabel7.TabIndex = 323;
-            this.metroLabel7.Text = "9. Contribution to zaat fund";
+            this.metroLabel7.Text = "9.    Contribution to zaat fund.................................................." +
+    "..............Tk.";
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(60, 232);
+            this.metroLabel8.Location = new System.Drawing.Point(60, 244);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(199, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(480, 19);
             this.metroLabel8.TabIndex = 322;
-            this.metroLabel8.Text = "8. Group insurance premium";
+            this.metroLabel8.Text = "8.    Group insurance premium...................................................." +
+    "..........Tk.";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(60, 199);
+            this.metroLabel9.Location = new System.Drawing.Point(60, 209);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(283, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(480, 19);
             this.metroLabel9.TabIndex = 321;
-            this.metroLabel9.Text = "7. Contributon to depost pension scheem";
+            this.metroLabel9.Text = "7.    Contributon to depost pension scheem......................................." +
+    "..Tk.";
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(60, 302);
+            this.metroLabel10.Location = new System.Drawing.Point(56, 313);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(122, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(483, 19);
             this.metroLabel10.TabIndex = 324;
-            this.metroLabel10.Text = "10. Other (if any)";
+            this.metroLabel10.Text = "10.    Other (if any)............................................................" +
+    "......................Tk.";
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(464, 341);
+            this.metroLabel11.Location = new System.Drawing.Point(473, 343);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(72, 25);
             this.metroLabel11.TabIndex = 325;
@@ -557,7 +575,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(592, 111);
+            this.metroLabel13.Location = new System.Drawing.Point(588, 111);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(128, 25);
             this.metroLabel13.TabIndex = 327;
@@ -574,38 +592,38 @@
             this.metroLabel14.TabIndex = 328;
             this.metroLabel14.Text = "List of Investment Documents";
             // 
-            // metroButton3
+            // btNext
             // 
-            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.metroButton3.Location = new System.Drawing.Point(64, 58);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(47, 40);
-            this.metroButton3.TabIndex = 331;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.button2_Click);
+            this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
+            this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNext.Location = new System.Drawing.Point(775, 17);
+            this.btNext.Name = "btNext";
+            this.btNext.Size = new System.Drawing.Size(47, 40);
+            this.btNext.TabIndex = 331;
+            this.btNext.UseSelectable = true;
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
             // 
-            // metroButton2
+            // btBack
             // 
-            this.metroButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton2.BackgroundImage")));
-            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.metroButton2.Location = new System.Drawing.Point(8, 58);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(46, 39);
-            this.metroButton2.TabIndex = 330;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.button3_Click);
+            this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
+            this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btBack.Location = new System.Drawing.Point(80, 17);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(46, 39);
+            this.btBack.TabIndex = 330;
+            this.btBack.UseSelectable = true;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
             // 
-            // metroButton1
+            // btHome
             // 
-            this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
-            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.metroButton1.Location = new System.Drawing.Point(8, 9);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(45, 43);
-            this.metroButton1.TabIndex = 329;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
+            this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btHome.Location = new System.Drawing.Point(8, 17);
+            this.btHome.Name = "btHome";
+            this.btHome.Size = new System.Drawing.Size(45, 43);
+            this.btHome.TabIndex = 329;
+            this.btHome.UseSelectable = true;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // htmlPanel1
             // 
@@ -648,9 +666,9 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(879, 620);
             this.Controls.Add(this.htmlPanel1);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btNext);
+            this.Controls.Add(this.btBack);
+            this.Controls.Add(this.btHome);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.label17);
@@ -719,9 +737,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroLabel metroLabel14;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btNext;
+        private MetroFramework.Controls.MetroButton btBack;
+        private MetroFramework.Controls.MetroButton btHome;
         private MetroFramework.Drawing.Html.HtmlPanel htmlPanel1;
     }
 }

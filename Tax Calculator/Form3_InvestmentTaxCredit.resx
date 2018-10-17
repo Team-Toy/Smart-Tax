@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btNext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
         CgAAjBkAAP0SAACBigAAfWgAAOm0AAA8+AAAGVs7nGx2AAABi2lDQ1BJQ0MgUHJvZmlsZQAAKM+tkk1L
@@ -209,7 +209,7 @@
         Ul9paf0bNnN22/opaCMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="metroButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btBack.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
         CgAAjBkAAP0SAACBigAAfWgAAOm0AAA8+AAAGVs7nGx2AAABi2lDQ1BJQ0MgUHJvZmlsZQAAKM+tkk1L
@@ -296,7 +296,7 @@
         RFdjFcKjoHRVXGWAh4eHh4eHh4eHh4eHh0d5o6b2v3FTYZUorgfzAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="metroButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btHome.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAJoJJREFUeF7tnQmYFNW1xztxj0uMu8Z9SaLRuC+Bp0afGmNckhc17sYFRYUoiCgi

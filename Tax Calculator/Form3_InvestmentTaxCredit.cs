@@ -260,16 +260,6 @@ namespace Tax_Calculator
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {   //save data for pdf file
-            UserInput_InvestmentTaxCredit();
-           
-            //hiding investment tex credit form
-            this.Hide();
-            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;  
-            //showing "Satement Of Salary" form
-            f.Show();        
-        }
 
         /*..............List of documents furnished.............*/
 
@@ -398,13 +388,6 @@ namespace Tax_Calculator
             {
                 e.Handled = true;
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2_Salaries f = Form2_Salaries.GetInstance;
-            f.Show();
         }
 
         private void Form3_InvestmentTaxCredit_FormClosing(object sender, FormClosingEventArgs e)
@@ -556,11 +539,30 @@ namespace Tax_Calculator
             }
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+
+        private void btHome_Click(object sender, EventArgs e)
         {
-            this.Hide();    //Hide curent window form
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
             f.Show();   //go to Home page
+            this.Hide();    //Hide curent window form
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            //save data for pdf file
+            UserInput_InvestmentTaxCredit();
+          
+            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;
+            f.Show();   //showing "Satement Of Salary" form
+            this.Hide();    //hiding investment tex credit form
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            
+            Form2_Salaries f = Form2_Salaries.GetInstance;
+            f.Show();
+            this.Hide();   //hiding investment tex credit form
         }
     }
 }

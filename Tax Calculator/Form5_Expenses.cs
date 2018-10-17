@@ -281,16 +281,6 @@ namespace Tax_Calculator
             pdfInputs[11] = label13.Text.ToString();    //Total Expenditure
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //save data for pdf file
-            UserInputs_Expenses();
-            this.Hide();
-            Form6_AssetAndLiabilities f = Form6_AssetAndLiabilities.GetInstance;
-            f.Show();
-        }
-
-        //
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -314,14 +304,6 @@ namespace Tax_Calculator
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;          
-            f.Show();
-        }
-
-        //
         private void textBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -512,9 +494,25 @@ namespace Tax_Calculator
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            this.Hide();    //Hide curent window form
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
             f.Show();   //go to Home page
+            this.Hide();    //Hide curent window form
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            //save data for pdf file
+            UserInputs_Expenses();
+            Form6_AssetAndLiabilities f = Form6_AssetAndLiabilities.GetInstance;
+            f.Show();
+            this.Hide();     //Hide curent window form
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            Form4_SatementOfSalary f = Form4_SatementOfSalary.GetInstance;
+            f.Show();
+            this.Hide();     //Hide curent window form
         }
     }
 }

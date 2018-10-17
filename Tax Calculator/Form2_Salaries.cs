@@ -57,8 +57,6 @@ namespace Tax_Calculator
             pdfInputs1 = new string[54];
             pdfInputs2 = new string[11];
 
-            //testing
-
             List<double> maxNonTaxable;
             for (int i = 0; i < data.Length; i++)
             {
@@ -79,7 +77,7 @@ namespace Tax_Calculator
             }
 
         }
-
+        
         private void Form5_Load(object sender, EventArgs e)
         {
             makeAllTextBoxZero();
@@ -841,13 +839,6 @@ namespace Tax_Calculator
 
         }
        
-  
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1_Personal_info f = Form1_Personal_info.GetInstance;
-            f.Show();
-        }
 
         private void Form2_Salaries_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1764,13 +1755,29 @@ namespace Tax_Calculator
             }
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btBack_Click(object sender, EventArgs e)
         {
-            this.Hide();    //Hide curent window form
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
-            f.Show();   //go to Home page
+            f.Show();
+            this.Hide();
         }
 
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
+            f.Show();
+            this.Hide();
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+           
+            Form1_Personal_info f = Form1_Personal_info.GetInstance;
+            f.Show();   //go to Home page
+            this.Hide();    //Hide curent window form
+        }
+
+      
         private void UserInputs_Salaries()
         {
             pdfInputs1[0] = textBox1.Text.ToString();    //salaries

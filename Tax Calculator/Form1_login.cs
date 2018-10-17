@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Tax_Calculator
 {
-    public partial class Form1_login : Form
+    public partial class Form1_login : MetroFramework.Forms.MetroForm
     {
         static Form1_login _instance;
         public static Form1_login GetInstance
@@ -35,7 +35,7 @@ namespace Tax_Calculator
             f.Show();  //show Form_Credits window
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btSign_in_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1_Personal_info f = Form1_Personal_info.GetInstance;

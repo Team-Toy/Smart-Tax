@@ -471,16 +471,6 @@ namespace Tax_Calculator
             pdfInputs[22] = textBox15.Text.ToString();  //Income tax paid in the last assesment year  
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //save data for pdf file
-            UserInputs_StatementOfSalary();
-            this.Hide();
-            Form5_Expenses f = Form5_Expenses.GetInstance; 
-            f.Show();
-
-        }
-
         // for all texbox keypress method: works for invaild inputs restriction
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -505,14 +495,6 @@ namespace Tax_Calculator
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
-            f.Show();
-        }
-
-        //
         private void textBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -759,9 +741,25 @@ namespace Tax_Calculator
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            this.Hide();    //Hide curent window form
             Form1_Personal_info f = Form1_Personal_info.GetInstance;
             f.Show();   //go to Home page
+            this.Hide();    //Hide curent window form
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            //save data for pdf file
+            UserInputs_StatementOfSalary();
+            Form5_Expenses f = Form5_Expenses.GetInstance;
+            f.Show();
+            this.Hide();     //Hide curent window form
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            Form3_InvestmentTaxCredit f = Form3_InvestmentTaxCredit.GetInstance;
+            f.Show();
+            this.Hide();     //Hide curent window form
         }
     }
 }

@@ -58,14 +58,7 @@ namespace Tax_Calculator
             pdfInputs[15] = textBox15.Text.ToString();  // Resident telephone
             pdfInputs[16] = textBox16.Text.ToString();  // VAT registration number
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UserInputs_PersonInformation();
-            this.Hide(); // form1 hide
-            Form2_Salaries f =  Form2_Salaries.GetInstance;
-            f.Show();
-            
-        }
+      
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -352,6 +345,14 @@ namespace Tax_Calculator
 
                 tickMarks[5] = "\u0033";
             }
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            UserInputs_PersonInformation();
+            Form2_Salaries f = Form2_Salaries.GetInstance;
+            f.Show();
+            this.Hide(); // form1 hide
         }
     }
 }

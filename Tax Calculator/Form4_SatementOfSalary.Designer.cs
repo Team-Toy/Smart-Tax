@@ -102,10 +102,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(502, 37);
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(510, 45);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 22);
+            this.textBox2.Size = new System.Drawing.Size(212, 29);
             this.textBox2.TabIndex = 39;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -114,10 +114,10 @@
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(502, 91);
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(510, 124);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 22);
+            this.textBox4.Size = new System.Drawing.Size(212, 29);
             this.textBox4.TabIndex = 41;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
@@ -126,10 +126,10 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(502, 118);
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(510, 161);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 22);
+            this.textBox5.Size = new System.Drawing.Size(212, 29);
             this.textBox5.TabIndex = 42;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -138,10 +138,10 @@
             // 
             // textBox6
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(502, 150);
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(510, 199);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 22);
+            this.textBox6.Size = new System.Drawing.Size(212, 29);
             this.textBox6.TabIndex = 43;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -150,10 +150,10 @@
             // 
             // textBox7
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(503, 182);
+            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(511, 238);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(183, 22);
+            this.textBox7.Size = new System.Drawing.Size(211, 29);
             this.textBox7.TabIndex = 49;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
@@ -162,10 +162,10 @@
             // 
             // textBox8
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(503, 217);
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(510, 277);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(183, 22);
+            this.textBox8.Size = new System.Drawing.Size(212, 29);
             this.textBox8.TabIndex = 48;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
@@ -174,10 +174,10 @@
             // 
             // textBox9
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(503, 250);
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(510, 318);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(183, 22);
+            this.textBox9.Size = new System.Drawing.Size(212, 29);
             this.textBox9.TabIndex = 47;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
@@ -186,10 +186,10 @@
             // 
             // textBox10
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(503, 310);
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(508, 389);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(183, 22);
+            this.textBox10.Size = new System.Drawing.Size(212, 29);
             this.textBox10.TabIndex = 46;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
@@ -198,10 +198,10 @@
             // 
             // textBox12
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(506, 517);
+            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(359, 665);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(183, 22);
+            this.textBox12.Size = new System.Drawing.Size(219, 29);
             this.textBox12.TabIndex = 44;
             this.textBox12.TextChanged += new System.EventHandler(this.TaxPayments_TextChanged);
             this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
@@ -211,50 +211,50 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(500, 279);
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(507, 359);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(15, 16);
+            this.label39.Size = new System.Drawing.Size(20, 22);
             this.label39.TabIndex = 50;
             this.label39.Text = "0";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(503, 344);
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(505, 431);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(15, 16);
+            this.label40.Size = new System.Drawing.Size(20, 22);
             this.label40.TabIndex = 51;
             this.label40.Text = "0";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(503, 377);
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(505, 477);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(15, 16);
+            this.label41.Size = new System.Drawing.Size(20, 22);
             this.label41.TabIndex = 52;
             this.label41.Text = "0";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(503, 401);
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(505, 512);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(15, 16);
+            this.label42.Size = new System.Drawing.Size(20, 22);
             this.label42.TabIndex = 53;
             this.label42.Text = "0";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(503, 430);
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(505, 548);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(15, 16);
+            this.label43.Size = new System.Drawing.Size(20, 22);
             this.label43.TabIndex = 54;
             this.label43.Text = "0";
             // 
@@ -262,7 +262,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(550, 110);
+            this.label61.Location = new System.Drawing.Point(526, 77);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(107, 20);
             this.label61.TabIndex = 72;
@@ -270,10 +270,10 @@
             // 
             // textBox11
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(506, 488);
+            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(359, 625);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(183, 22);
+            this.textBox11.Size = new System.Drawing.Size(219, 29);
             this.textBox11.TabIndex = 45;
             this.textBox11.TextChanged += new System.EventHandler(this.TaxPayments_TextChanged);
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
@@ -282,10 +282,10 @@
             // 
             // textBox13
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(506, 551);
+            this.textBox13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(359, 704);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(183, 22);
+            this.textBox13.Size = new System.Drawing.Size(219, 29);
             this.textBox13.TabIndex = 76;
             this.textBox13.TextChanged += new System.EventHandler(this.TaxPayments_TextChanged);
             this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
@@ -294,10 +294,10 @@
             // 
             // textBox14
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(504, 586);
+            this.textBox14.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(359, 743);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(183, 22);
+            this.textBox14.Size = new System.Drawing.Size(219, 29);
             this.textBox14.TabIndex = 78;
             this.textBox14.TextChanged += new System.EventHandler(this.TaxPayments_TextChanged);
             this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
@@ -307,30 +307,30 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(503, 666);
+            this.label50.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(608, 823);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(15, 16);
+            this.label50.Size = new System.Drawing.Size(20, 22);
             this.label50.TabIndex = 87;
             this.label50.Text = "0";
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(499, 16);
+            this.label51.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(507, 12);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(15, 16);
+            this.label51.Size = new System.Drawing.Size(20, 22);
             this.label51.TabIndex = 88;
             this.label51.Text = "0";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(503, 698);
+            this.label52.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(608, 859);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(15, 16);
+            this.label52.Size = new System.Drawing.Size(20, 22);
             this.label52.TabIndex = 89;
             this.label52.Text = "0";
             // 
@@ -340,9 +340,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(333, 371);
+            this.button1.Location = new System.Drawing.Point(370, 475);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 26);
+            this.button1.Size = new System.Drawing.Size(123, 26);
             this.button1.TabIndex = 90;
             this.button1.Text = "Tax Leviable";
             this.button1.UseVisualStyleBackColor = false;
@@ -351,19 +351,19 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(503, 629);
+            this.label55.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(607, 787);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(15, 16);
+            this.label55.Size = new System.Drawing.Size(20, 22);
             this.label55.TabIndex = 93;
             this.label55.Text = "0";
             // 
             // textBox15
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(506, 731);
+            this.textBox15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(610, 891);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(183, 22);
+            this.textBox15.Size = new System.Drawing.Size(231, 29);
             this.textBox15.TabIndex = 94;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
@@ -373,10 +373,10 @@
             // label_NetHousePropertyIncome
             // 
             this.label_NetHousePropertyIncome.AutoSize = true;
-            this.label_NetHousePropertyIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NetHousePropertyIncome.Location = new System.Drawing.Point(499, 66);
+            this.label_NetHousePropertyIncome.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NetHousePropertyIncome.Location = new System.Drawing.Point(507, 89);
             this.label_NetHousePropertyIncome.Name = "label_NetHousePropertyIncome";
-            this.label_NetHousePropertyIncome.Size = new System.Drawing.Size(15, 16);
+            this.label_NetHousePropertyIncome.Size = new System.Drawing.Size(20, 22);
             this.label_NetHousePropertyIncome.TabIndex = 97;
             this.label_NetHousePropertyIncome.Text = "0";
             // 
@@ -384,7 +384,7 @@
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(71, 517);
+            this.metroLabel8.Location = new System.Drawing.Point(97, 670);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(204, 19);
             this.metroLabel8.TabIndex = 369;
@@ -394,7 +394,7 @@
             // 
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(71, 488);
+            this.metroLabel10.Location = new System.Drawing.Point(97, 629);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(181, 19);
             this.metroLabel10.TabIndex = 367;
@@ -404,157 +404,167 @@
             // 
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(22, 458);
+            this.metroLabel11.Location = new System.Drawing.Point(59, 591);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(129, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(141, 19);
             this.metroLabel11.TabIndex = 368;
-            this.metroLabel11.Text = "16. Tax Payments:";
+            this.metroLabel11.Text = "16.    Tax Payments:";
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.Location = new System.Drawing.Point(17, 427);
+            this.metroLabel12.Location = new System.Drawing.Point(59, 549);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(367, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(440, 19);
             this.metroLabel12.TabIndex = 366;
-            this.metroLabel12.Text = "15. Tax Payable( Difference between serial 13 and 14)";
+            this.metroLabel12.Text = "15.    Tax Payable( Difference between serial 13 and 14)..........Tk.";
             // 
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(22, 371);
+            this.metroLabel13.Location = new System.Drawing.Point(56, 474);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(230, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(242, 19);
             this.metroLabel13.TabIndex = 364;
-            this.metroLabel13.Text = "13. TAX Leviable on Total Income";
+            this.metroLabel13.Text = "13.    TAX Leviable on Total Income";
             // 
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.Location = new System.Drawing.Point(22, 398);
+            this.metroLabel14.Location = new System.Drawing.Point(59, 513);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(440, 19);
             this.metroLabel14.TabIndex = 365;
-            this.metroLabel14.Text = "14. Tax Rebate";
+            this.metroLabel14.Text = "14.    Tax Rebate................................................................" +
+    "...........Tk.";
             // 
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel20.Location = new System.Drawing.Point(17, 40);
+            this.metroLabel20.Location = new System.Drawing.Point(56, 49);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(162, 19);
+            this.metroLabel20.Size = new System.Drawing.Size(443, 19);
             this.metroLabel20.TabIndex = 353;
-            this.metroLabel20.Text = "2. Interest on securities";
+            this.metroLabel20.Text = "2.    Interest on securities....................................................." +
+    ".........Tk.";
             // 
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.Location = new System.Drawing.Point(22, 344);
+            this.metroLabel15.Location = new System.Drawing.Point(56, 431);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(242, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(443, 19);
             this.metroLabel15.TabIndex = 362;
-            this.metroLabel15.Text = "12. Total income ( serial 10 and 11)";
+            this.metroLabel15.Text = "12.    Total income ( serial 10 and 11).........................................." +
+    "Tk.";
             // 
             // metroLabel19
             // 
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel19.Location = new System.Drawing.Point(17, 91);
+            this.metroLabel19.Location = new System.Drawing.Point(56, 125);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(157, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(446, 19);
             this.metroLabel19.TabIndex = 355;
-            this.metroLabel19.Text = "4. Agricultural Income";
+            this.metroLabel19.Text = "4.    Agricultural Income........................................................" +
+    "........Tk.";
             // 
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel18.Location = new System.Drawing.Point(17, 66);
+            this.metroLabel18.Location = new System.Drawing.Point(56, 91);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(218, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(446, 19);
             this.metroLabel18.TabIndex = 354;
-            this.metroLabel18.Text = "3. Income from house property";
+            this.metroLabel18.Text = "3.    Income from house property................................................." +
+    "Tk.";
             // 
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(22, 313);
+            this.metroLabel16.Location = new System.Drawing.Point(56, 394);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(141, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(442, 19);
             this.metroLabel16.TabIndex = 363;
-            this.metroLabel16.Text = "11. Foreign Income ";
+            this.metroLabel16.Text = "11.    Foreign Income ..........................................................." +
+    "........Tk.";
             // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.Location = new System.Drawing.Point(17, 121);
+            this.metroLabel17.Location = new System.Drawing.Point(56, 164);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(263, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(444, 19);
             this.metroLabel17.TabIndex = 356;
-            this.metroLabel17.Text = "5. Income from Business or profession";
+            this.metroLabel17.Text = "5.    Income from Business or profession.....................................Tk.";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(17, 276);
+            this.metroLabel1.Location = new System.Drawing.Point(56, 361);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(112, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(441, 19);
             this.metroLabel1.TabIndex = 361;
-            this.metroLabel1.Text = "10. Total ( 1--9)";
+            this.metroLabel1.Text = "10.    Total ( 1--9)............................................................." +
+    ".............Tk.";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(17, 150);
+            this.metroLabel6.Location = new System.Drawing.Point(56, 203);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(179, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(444, 19);
             this.metroLabel6.TabIndex = 358;
-            this.metroLabel6.Text = "6. Share of proft in a firm";
+            this.metroLabel6.Text = "6.    Share of proft in a firm..................................................." +
+    ".......Tk.";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(28, 220);
+            this.metroLabel2.Location = new System.Drawing.Point(58, 280);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(112, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(441, 19);
             this.metroLabel2.TabIndex = 359;
-            this.metroLabel2.Text = "8. Capital Gains";
+            this.metroLabel2.Text = "8.    Capital Gains.............................................................." +
+    "............Tk.";
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(22, 185);
+            this.metroLabel4.Location = new System.Drawing.Point(56, 242);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(333, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(446, 19);
             this.metroLabel4.TabIndex = 357;
-            this.metroLabel4.Text = "7. Income of spouse or minor child as applicable";
+            this.metroLabel4.Text = "7.    Income of spouse or minor child as applicable....................Tk.";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(22, 250);
+            this.metroLabel3.Location = new System.Drawing.Point(58, 321);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(199, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(440, 19);
             this.metroLabel3.TabIndex = 360;
-            this.metroLabel3.Text = "9. Income from other source";
+            this.metroLabel3.Text = "9.    Income from other source..................................................." +
+    ".Tk.";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(71, 551);
+            this.metroLabel5.Location = new System.Drawing.Point(97, 706);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(255, 19);
             this.metroLabel5.TabIndex = 370;
@@ -564,17 +574,18 @@
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(225, 626);
+            this.metroLabel7.Location = new System.Drawing.Point(203, 787);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(159, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(392, 19);
             this.metroLabel7.TabIndex = 372;
-            this.metroLabel7.Text = "Total ( a + b + c + d ) :";
+            this.metroLabel7.Text = "Total ( a + b + c + d ) :.....................................................Tk." +
+    "";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(71, 586);
+            this.metroLabel9.Location = new System.Drawing.Point(97, 744);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(245, 19);
             this.metroLabel9.TabIndex = 371;
@@ -584,36 +595,39 @@
             // 
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel21.Location = new System.Drawing.Point(33, 666);
+            this.metroLabel21.Location = new System.Drawing.Point(59, 823);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(283, 19);
+            this.metroLabel21.Size = new System.Drawing.Size(536, 19);
             this.metroLabel21.TabIndex = 373;
-            this.metroLabel21.Text = "17. Difference between 15 and 16 (if any)";
+            this.metroLabel21.Text = "17.    Difference between 15 and 16 (if any)....................................." +
+    "..................Tk.";
             // 
             // metroLabel22
             // 
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel22.Location = new System.Drawing.Point(33, 698);
+            this.metroLabel22.Location = new System.Drawing.Point(59, 859);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(266, 19);
+            this.metroLabel22.Size = new System.Drawing.Size(539, 19);
             this.metroLabel22.TabIndex = 375;
-            this.metroLabel22.Text = "18. Tax exempted and tax free income";
+            this.metroLabel22.Text = "18.    Tax exempted and tax free income.........................................." +
+    "..................Tk.";
             // 
             // metroLabel23
             // 
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel23.Location = new System.Drawing.Point(33, 734);
+            this.metroLabel23.Location = new System.Drawing.Point(59, 896);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(315, 19);
+            this.metroLabel23.Size = new System.Drawing.Size(539, 19);
             this.metroLabel23.TabIndex = 374;
-            this.metroLabel23.Text = "19. Income tax paid in the last assesment year";
+            this.metroLabel23.Text = "19.    Income tax paid in the last assesment year................................" +
+    "................Tk.";
             // 
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(850, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(880, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel7);
             this.htmlPanel1.Controls.Add(this.metroLabel21);
@@ -664,27 +678,28 @@
             this.htmlPanel1.Controls.Add(this.label40);
             this.htmlPanel1.Controls.Add(this.label42);
             this.htmlPanel1.Controls.Add(this.label41);
-            this.htmlPanel1.Location = new System.Drawing.Point(22, 137);
+            this.htmlPanel1.Location = new System.Drawing.Point(4, 102);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(850, 416);
+            this.htmlPanel1.Size = new System.Drawing.Size(880, 411);
             this.htmlPanel1.TabIndex = 376;
             // 
             // metroLabel24
             // 
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel24.Location = new System.Drawing.Point(17, 13);
+            this.metroLabel24.Location = new System.Drawing.Point(56, 12);
             this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(77, 19);
+            this.metroLabel24.Size = new System.Drawing.Size(442, 19);
             this.metroLabel24.TabIndex = 364;
-            this.metroLabel24.Text = "1. Salaries";
+            this.metroLabel24.Text = "1.    Salaries..................................................................." +
+    "................Tk.";
             // 
             // metroLabel25
             // 
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(109, 110);
+            this.metroLabel25.Location = new System.Drawing.Point(109, 79);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(148, 25);
             this.metroLabel25.TabIndex = 377;
@@ -694,29 +709,29 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(86, 63);
+            this.btNext.Location = new System.Drawing.Point(779, 18);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 380;
             this.btNext.UseSelectable = true;
-            this.btNext.Click += new System.EventHandler(this.button2_Click);
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
             // 
             // btBack
             // 
             this.btBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBack.BackgroundImage")));
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBack.Location = new System.Drawing.Point(22, 63);
+            this.btBack.Location = new System.Drawing.Point(93, 18);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(46, 39);
             this.btBack.TabIndex = 379;
             this.btBack.UseSelectable = true;
-            this.btBack.Click += new System.EventHandler(this.button3_Click);
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
             // 
             // btHome
             // 
             this.btHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHome.BackgroundImage")));
             this.btHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btHome.Location = new System.Drawing.Point(23, 14);
+            this.btHome.Location = new System.Drawing.Point(23, 18);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(45, 43);
             this.btHome.TabIndex = 378;
@@ -726,10 +741,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(288, 37);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.Size = new System.Drawing.Size(215, 31);
             this.label2.TabIndex = 381;
             this.label2.Text = "Satement Of Salary";
             // 

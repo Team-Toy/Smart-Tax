@@ -16,7 +16,8 @@ namespace Tax_Calculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(Form1_login.GetInstance);
+             Application.Run(Form1_login.GetInstance);
+           // Application.Run(new Form1());
         }
     }
 }
