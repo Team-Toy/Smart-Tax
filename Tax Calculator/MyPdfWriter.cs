@@ -537,7 +537,7 @@ namespace Tax_Calculator
             }
             //........................
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[9], 397, 525);  //print "total investments"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form6_AssetAndLiabilities.pdfInputs[9], 451, 527);  //print "total investments"
 
             x = 320;    //set position x for "Motor vihicles"
             y = 566;    //set position y for "Motor vihicles"
