@@ -88,10 +88,10 @@ namespace Tax_Calculator
                 else
                 {
                     // showing output result
-                    tax = TaxCal(double.Parse(label4.Text.ToString()));
-
+                    tax = TaxCal((double)Convert.ToDecimal(label4.Text.ToString()));
+                    
                     // added auto comma in currency style
-                    label3.Text = (String.Format("{0:n}", tax) + "  ৳");
+                    label3.Text = tax.ToString("N") + "  ৳";
                     label3.ForeColor = Color.Black;
                 }
             }
@@ -207,10 +207,10 @@ namespace Tax_Calculator
             {   // calculate tax from 2nd to upto Remaining slap
                 tax = Cal2ndTo5thSlab() + RemainingSlab();
                 //choose area by selecting combox2 to check minimum payable tax after 1st slab
-                if (tax < areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]) 
+                if (tax < areaWiseMinimumPayableTax[comboBox2.SelectedIndex - 1])
                 {
                     // selecting tax rate Area wise by combox2
-                    tax = areaWiseMinimumPayableTax[comboBox2.SelectedIndex-1]; 
+                    tax = areaWiseMinimumPayableTax[comboBox2.SelectedIndex - 1];
                 }
             }
 

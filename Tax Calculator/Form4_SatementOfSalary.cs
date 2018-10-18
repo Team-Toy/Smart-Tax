@@ -67,7 +67,8 @@ namespace Tax_Calculator
             label42.Text = taxRebate.ToString("N"); //string formatting as a number;which has comma
 
             taxPayable = taxLeviable - taxRebate;
-                
+            if (taxPayable < 0)
+                taxPayable = 0.0;
             label43.Text = taxPayable.ToString("N");
 
         }
