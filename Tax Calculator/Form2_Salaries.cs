@@ -901,8 +901,10 @@ namespace Tax_Calculator
         {
             try
             {
+                
                 //cleanning space,additional commas during copy-paste by user inputs
                 basicPay = (double)Convert.ToDecimal(textBox1.Text.ToString());
+                
                 double taxableIncome = list[0].TaxableIncome(basicPay, basicPay, 0);
                 double taxExtempted = TaxExemptCal(basicPay, taxableIncome);
 

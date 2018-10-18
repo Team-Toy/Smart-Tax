@@ -21,7 +21,6 @@ namespace Tax_Calculator
                     _instance = new Form4_SatementOfSalary();
                 return _instance;
             }
-
         }
         public static string[] pdfInputs;
 
@@ -35,7 +34,6 @@ namespace Tax_Calculator
      
         public Form4_SatementOfSalary()
         {
-           
             InitializeComponent();
             pdfInputs = new string[23];
         }
@@ -44,6 +42,8 @@ namespace Tax_Calculator
         {
             // make all text boxt zero
             madeAllTextBoxZero();
+            
+
         }
         private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
         {
@@ -56,17 +56,17 @@ namespace Tax_Calculator
 
             // showing total and total income
             label39.Text = CalTotalTaxableIncome().ToString("N");
-            label40.Text = CalTotalTaxableIncome().ToString("N");
+            label40.Text = (CalTotalTaxableIncome() + (double)Convert.ToDecimal(textBox10.Text.ToString())).ToString("N");
             //............................
 
             taxLeviable = Form_PayableTaxCalculator.taxLeviable;
             label41.Text = taxLeviable.ToString("N");
 
+            // calculate tax rebate and show on label42
+            taxRebate = CalTaxRebate();
+            label42.Text = taxRebate.ToString("N"); //string formatting as a number;which has comma
+
             taxPayable = taxLeviable - taxRebate;
-            if (taxLeviable <= taxRebate)
-            {
-                taxPayable = 0.0;
-            }
                 
             label43.Text = taxPayable.ToString("N");
 
