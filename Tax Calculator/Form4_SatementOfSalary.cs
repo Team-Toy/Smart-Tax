@@ -42,8 +42,6 @@ namespace Tax_Calculator
         {
             // make all text boxt zero
             madeAllTextBoxZero();
-            
-
         }
         private void Form4_SatementOfSalary_Activated(object sender, EventArgs e)
         {

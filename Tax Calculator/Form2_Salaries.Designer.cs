@@ -110,15 +110,11 @@
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel32 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
@@ -130,12 +126,16 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel34 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
             this.btHome = new MetroFramework.Controls.MetroButton();
             this.btBack = new MetroFramework.Controls.MetroButton();
             this.btNext = new MetroFramework.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.htmlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -243,7 +243,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(687, 543);
+            this.label68.Location = new System.Drawing.Point(687, 540);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(35, 22);
             this.label68.TabIndex = 241;
@@ -253,7 +253,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(687, 585);
+            this.label69.Location = new System.Drawing.Point(687, 584);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(35, 22);
             this.label69.TabIndex = 240;
@@ -263,7 +263,7 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(687, 629);
+            this.label70.Location = new System.Drawing.Point(687, 632);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(35, 22);
             this.label70.TabIndex = 239;
@@ -273,7 +273,7 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(687, 675);
+            this.label71.Location = new System.Drawing.Point(687, 710);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(35, 22);
             this.label71.TabIndex = 238;
@@ -281,7 +281,7 @@
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(308, 734);
+            this.textBox16.Location = new System.Drawing.Point(308, 778);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(198, 29);
             this.textBox16.TabIndex = 235;
@@ -293,7 +293,7 @@
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(308, 539);
+            this.textBox12.Location = new System.Drawing.Point(308, 536);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(197, 29);
             this.textBox12.TabIndex = 232;
@@ -316,7 +316,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(543, 775);
+            this.label56.Location = new System.Drawing.Point(543, 819);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(35, 22);
             this.label56.TabIndex = 224;
@@ -326,7 +326,7 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(543, 738);
+            this.label55.Location = new System.Drawing.Point(543, 782);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(35, 22);
             this.label55.TabIndex = 223;
@@ -336,7 +336,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(541, 672);
+            this.label54.Location = new System.Drawing.Point(541, 707);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(35, 22);
             this.label54.TabIndex = 222;
@@ -346,7 +346,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(541, 629);
+            this.label53.Location = new System.Drawing.Point(541, 632);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(35, 22);
             this.label53.TabIndex = 221;
@@ -356,7 +356,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(541, 585);
+            this.label52.Location = new System.Drawing.Point(541, 584);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(35, 22);
             this.label52.TabIndex = 220;
@@ -366,7 +366,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(541, 543);
+            this.label51.Location = new System.Drawing.Point(541, 540);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(35, 22);
             this.label51.TabIndex = 219;
@@ -486,7 +486,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(307, 775);
+            this.label39.Location = new System.Drawing.Point(307, 819);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(35, 22);
             this.label39.TabIndex = 207;
@@ -627,7 +627,7 @@
             // textBox15
             // 
             this.textBox15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(69, 692);
+            this.textBox15.Location = new System.Drawing.Point(54, 732);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(188, 29);
             this.textBox15.TabIndex = 294;
@@ -644,7 +644,7 @@
             this.comboBox3.Items.AddRange(new object[] {
             "No",
             "Yes"});
-            this.comboBox3.Location = new System.Drawing.Point(308, 626);
+            this.comboBox3.Location = new System.Drawing.Point(308, 629);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(200, 23);
             this.comboBox3.TabIndex = 293;
@@ -686,7 +686,7 @@
             // 
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(623, 1345);
+            this.label91.Location = new System.Drawing.Point(620, 1396);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(20, 22);
             this.label91.TabIndex = 287;
@@ -696,7 +696,7 @@
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(623, 1313);
+            this.label90.Location = new System.Drawing.Point(620, 1364);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(20, 22);
             this.label90.TabIndex = 286;
@@ -705,7 +705,7 @@
             // textBox24
             // 
             this.textBox24.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(372, 1272);
+            this.textBox24.Location = new System.Drawing.Point(369, 1323);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(246, 29);
             this.textBox24.TabIndex = 285;
@@ -717,7 +717,7 @@
             // textBox23
             // 
             this.textBox23.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(372, 1230);
+            this.textBox23.Location = new System.Drawing.Point(369, 1281);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(246, 29);
             this.textBox23.TabIndex = 284;
@@ -729,7 +729,7 @@
             // textBox22
             // 
             this.textBox22.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(372, 1189);
+            this.textBox22.Location = new System.Drawing.Point(369, 1240);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(246, 29);
             this.textBox22.TabIndex = 283;
@@ -741,7 +741,7 @@
             // textBox21
             // 
             this.textBox21.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(372, 1149);
+            this.textBox21.Location = new System.Drawing.Point(369, 1200);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(246, 29);
             this.textBox21.TabIndex = 282;
@@ -753,7 +753,7 @@
             // textBox20
             // 
             this.textBox20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(372, 1109);
+            this.textBox20.Location = new System.Drawing.Point(369, 1160);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(245, 29);
             this.textBox20.TabIndex = 281;
@@ -765,7 +765,7 @@
             // textBox19
             // 
             this.textBox19.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(371, 1072);
+            this.textBox19.Location = new System.Drawing.Point(368, 1123);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(246, 29);
             this.textBox19.TabIndex = 280;
@@ -777,7 +777,7 @@
             // textBox18
             // 
             this.textBox18.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(372, 1031);
+            this.textBox18.Location = new System.Drawing.Point(369, 1082);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(244, 29);
             this.textBox18.TabIndex = 279;
@@ -789,7 +789,7 @@
             // textBox17
             // 
             this.textBox17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(614, 982);
+            this.textBox17.Location = new System.Drawing.Point(611, 1033);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(246, 29);
             this.textBox17.TabIndex = 278;
@@ -800,7 +800,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(316, 863);
+            this.richTextBox1.Location = new System.Drawing.Point(313, 914);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(266, 113);
             this.richTextBox1.TabIndex = 264;
@@ -816,7 +816,7 @@
             "None",
             "Free Home",
             "Reduced Rent"});
-            this.comboBox2.Location = new System.Drawing.Point(308, 670);
+            this.comboBox2.Location = new System.Drawing.Point(308, 705);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(198, 23);
             this.comboBox2.TabIndex = 259;
@@ -826,7 +826,7 @@
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(687, 774);
+            this.label73.Location = new System.Drawing.Point(687, 818);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(35, 22);
             this.label73.TabIndex = 258;
@@ -836,7 +836,7 @@
             // 
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(687, 737);
+            this.label72.Location = new System.Drawing.Point(687, 781);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(35, 22);
             this.label72.TabIndex = 257;
@@ -845,7 +845,7 @@
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(308, 582);
+            this.textBox13.Location = new System.Drawing.Point(308, 581);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(197, 29);
             this.textBox13.TabIndex = 254;
@@ -859,12 +859,15 @@
             this.htmlPanel1.AutoScroll = true;
             this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(884, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
+            this.htmlPanel1.Controls.Add(this.label6);
+            this.htmlPanel1.Controls.Add(this.label5);
+            this.htmlPanel1.Controls.Add(this.label4);
+            this.htmlPanel1.Controls.Add(this.label3);
             this.htmlPanel1.Controls.Add(this.metroLabel36);
             this.htmlPanel1.Controls.Add(this.textBox15);
             this.htmlPanel1.Controls.Add(this.label91);
             this.htmlPanel1.Controls.Add(this.label90);
             this.htmlPanel1.Controls.Add(this.comboBox3);
-            this.htmlPanel1.Controls.Add(this.metroLabel28);
             this.htmlPanel1.Controls.Add(this.textBox24);
             this.htmlPanel1.Controls.Add(this.richTextBox1);
             this.htmlPanel1.Controls.Add(this.metroLabel27);
@@ -892,19 +895,15 @@
             this.htmlPanel1.Controls.Add(this.metroLabel17);
             this.htmlPanel1.Controls.Add(this.metroLabel18);
             this.htmlPanel1.Controls.Add(this.metroLabel19);
-            this.htmlPanel1.Controls.Add(this.metroLabel8);
             this.htmlPanel1.Controls.Add(this.metroLabel9);
             this.htmlPanel1.Controls.Add(this.metroLabel10);
             this.htmlPanel1.Controls.Add(this.metroLabel12);
-            this.htmlPanel1.Controls.Add(this.metroLabel13);
             this.htmlPanel1.Controls.Add(this.label73);
             this.htmlPanel1.Controls.Add(this.metroLabel32);
             this.htmlPanel1.Controls.Add(this.label72);
-            this.htmlPanel1.Controls.Add(this.metroLabel25);
             this.htmlPanel1.Controls.Add(this.comboBox2);
             this.htmlPanel1.Controls.Add(this.textBox16);
             this.htmlPanel1.Controls.Add(this.metroLabel29);
-            this.htmlPanel1.Controls.Add(this.metroLabel30);
             this.htmlPanel1.Controls.Add(this.metroLabel31);
             this.htmlPanel1.Controls.Add(this.label56);
             this.htmlPanel1.Controls.Add(this.label71);
@@ -968,7 +967,7 @@
             // 
             this.metroLabel36.AutoSize = true;
             this.metroLabel36.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel36.Location = new System.Drawing.Point(39, 1347);
+            this.metroLabel36.Location = new System.Drawing.Point(36, 1398);
             this.metroLabel36.Name = "metroLabel36";
             this.metroLabel36.Size = new System.Drawing.Size(577, 19);
             this.metroLabel36.TabIndex = 376;
@@ -979,7 +978,7 @@
             // 
             this.metroLabel28.AutoSize = true;
             this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel28.Location = new System.Drawing.Point(15, 4);
+            this.metroLabel28.Location = new System.Drawing.Point(67, 134);
             this.metroLabel28.Name = "metroLabel28";
             this.metroLabel28.Size = new System.Drawing.Size(136, 19);
             this.metroLabel28.TabIndex = 372;
@@ -989,7 +988,7 @@
             // 
             this.metroLabel27.AutoSize = true;
             this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel27.Location = new System.Drawing.Point(318, 1313);
+            this.metroLabel27.Location = new System.Drawing.Point(315, 1364);
             this.metroLabel27.Name = "metroLabel27";
             this.metroLabel27.Size = new System.Drawing.Size(297, 19);
             this.metroLabel27.TabIndex = 371;
@@ -1007,12 +1006,13 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(129, 23);
             this.comboBox1.TabIndex = 253;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // metroLabel23
             // 
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel23.Location = new System.Drawing.Point(69, 1279);
+            this.metroLabel23.Location = new System.Drawing.Point(66, 1330);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(106, 19);
             this.metroLabel23.TabIndex = 370;
@@ -1022,7 +1022,7 @@
             // 
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel26.Location = new System.Drawing.Point(69, 1237);
+            this.metroLabel26.Location = new System.Drawing.Point(66, 1288);
             this.metroLabel26.Name = "metroLabel26";
             this.metroLabel26.Size = new System.Drawing.Size(136, 19);
             this.metroLabel26.TabIndex = 368;
@@ -1032,7 +1032,7 @@
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel20.Location = new System.Drawing.Point(69, 1112);
+            this.metroLabel20.Location = new System.Drawing.Point(66, 1163);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(102, 19);
             this.metroLabel20.TabIndex = 367;
@@ -1041,7 +1041,7 @@
             // metroLabel21
             // 
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel21.Location = new System.Drawing.Point(69, 1191);
+            this.metroLabel21.Location = new System.Drawing.Point(66, 1242);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(148, 21);
             this.metroLabel21.TabIndex = 366;
@@ -1050,7 +1050,7 @@
             // metroLabel22
             // 
             this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel22.Location = new System.Drawing.Point(69, 1151);
+            this.metroLabel22.Location = new System.Drawing.Point(66, 1202);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(298, 19);
             this.metroLabel22.TabIndex = 365;
@@ -1060,7 +1060,7 @@
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.Location = new System.Drawing.Point(34, 986);
+            this.metroLabel14.Location = new System.Drawing.Point(31, 1037);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(571, 19);
             this.metroLabel14.TabIndex = 364;
@@ -1070,7 +1070,7 @@
             // metroLabel15
             // 
             this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.Location = new System.Drawing.Point(69, 1041);
+            this.metroLabel15.Location = new System.Drawing.Point(66, 1092);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(54, 19);
             this.metroLabel15.TabIndex = 362;
@@ -1080,7 +1080,7 @@
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.Location = new System.Drawing.Point(69, 1077);
+            this.metroLabel17.Location = new System.Drawing.Point(66, 1128);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(159, 19);
             this.metroLabel17.TabIndex = 363;
@@ -1089,7 +1089,7 @@
             // metroLabel18
             // 
             this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel18.Location = new System.Drawing.Point(35, 1019);
+            this.metroLabel18.Location = new System.Drawing.Point(32, 1070);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(175, 19);
             this.metroLabel18.TabIndex = 361;
@@ -1098,26 +1098,17 @@
             // metroLabel19
             // 
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel19.Location = new System.Drawing.Point(27, 879);
+            this.metroLabel19.Location = new System.Drawing.Point(24, 930);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(260, 19);
             this.metroLabel19.TabIndex = 360;
             this.metroLabel19.Text = "Location and description of property";
             // 
-            // metroLabel8
-            // 
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(27, 628);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(229, 19);
-            this.metroLabel8.TabIndex = 359;
-            this.metroLabel8.Text = "15.    Deemed income for transport facility";
-            // 
             // metroLabel9
             // 
             this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(306, 818);
+            this.metroLabel9.Location = new System.Drawing.Point(303, 869);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(222, 31);
             this.metroLabel9.TabIndex = 358;
@@ -1126,7 +1117,7 @@
             // metroLabel10
             // 
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(27, 738);
+            this.metroLabel10.Location = new System.Drawing.Point(27, 782);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(142, 19);
             this.metroLabel10.TabIndex = 356;
@@ -1136,20 +1127,11 @@
             // 
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.Location = new System.Drawing.Point(26, 774);
+            this.metroLabel12.Location = new System.Drawing.Point(26, 818);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(258, 19);
             this.metroLabel12.TabIndex = 357;
             this.metroLabel12.Text = "18.    Net taxable income from salary";
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(25, 670);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(265, 19);
-            this.metroLabel13.TabIndex = 355;
-            this.metroLabel13.Text = "16.    Deemed income for furnished /unfurnished accomodation";
             // 
             // metroLabel32
             // 
@@ -1161,15 +1143,6 @@
             this.metroLabel32.TabIndex = 354;
             this.metroLabel32.Text = "10.    Overtime allowance";
             // 
-            // metroLabel25
-            // 
-            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(24, 583);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(231, 19);
-            this.metroLabel25.TabIndex = 353;
-            this.metroLabel25.Text = "14.    Interest accrued on Recognized provident fund";
-            // 
             // metroLabel29
             // 
             this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
@@ -1179,21 +1152,13 @@
             this.metroLabel29.TabIndex = 351;
             this.metroLabel29.Text = "12.    Other Allowances";
             // 
-            // metroLabel30
-            // 
-            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel30.Location = new System.Drawing.Point(19, 542);
-            this.metroLabel30.Name = "metroLabel30";
-            this.metroLabel30.Size = new System.Drawing.Size(234, 18);
-            this.metroLabel30.TabIndex = 352;
-            this.metroLabel30.Text = "13.    Employees Contributions to Recognized Provident Fund";
-            // 
             // metroLabel31
             // 
+            this.metroLabel31.AutoSize = true;
             this.metroLabel31.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel31.Location = new System.Drawing.Point(18, 454);
             this.metroLabel31.Name = "metroLabel31";
-            this.metroLabel31.Size = new System.Drawing.Size(172, 19);
+            this.metroLabel31.Size = new System.Drawing.Size(178, 19);
             this.metroLabel31.TabIndex = 350;
             this.metroLabel31.Text = "11.    Bonus / Extra Gratia";
             // 
@@ -1210,12 +1175,13 @@
             // 
             this.metroLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(16, 362);
+            this.metroLabel16.Location = new System.Drawing.Point(17, 364);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(233, 36);
+            this.metroLabel16.Size = new System.Drawing.Size(205, 19);
             this.metroLabel16.TabIndex = 348;
-            this.metroLabel16.Text = "9.    Honorarum/reward/Arear salary";
+            this.metroLabel16.Text = "9.    Honorarium/Reward/Fee";
             // 
             // metroLabel5
             // 
@@ -1293,15 +1259,6 @@
             this.metroLabel35.TabIndex = 375;
             this.metroLabel35.Text = "Net Taxable Income (Tk.)";
             // 
-            // metroLabel34
-            // 
-            this.metroLabel34.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel34.Location = new System.Drawing.Point(540, 134);
-            this.metroLabel34.Name = "metroLabel34";
-            this.metroLabel34.Size = new System.Drawing.Size(161, 19);
-            this.metroLabel34.TabIndex = 374;
-            this.metroLabel34.Text = "Amount of exempted  income (TK.)";
-            // 
             // metroLabel33
             // 
             this.metroLabel33.AutoSize = true;
@@ -1310,7 +1267,7 @@
             this.metroLabel33.Name = "metroLabel33";
             this.metroLabel33.Size = new System.Drawing.Size(168, 19);
             this.metroLabel33.TabIndex = 373;
-            this.metroLabel33.Text = "Amount of income (TK.)";
+            this.metroLabel33.Text = "Amount of income (Tk.)";
             // 
             // btHome
             // 
@@ -1355,16 +1312,64 @@
             this.label1.TabIndex = 376;
             this.label1.Text = "Salaries";
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(544, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 42);
+            this.label2.TabIndex = 377;
+            this.label2.Text = "Amount of exempted  income (Tk.)";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 532);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(236, 43);
+            this.label3.TabIndex = 378;
+            this.label3.Text = "13.    Employer\'s Contributions to           Recognized Provident Fund";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 579);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(255, 43);
+            this.label4.TabIndex = 379;
+            this.label4.Text = "14.    Interest accrued on Recognized          Provident Fund";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(21, 625);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(255, 43);
+            this.label5.TabIndex = 380;
+            this.label5.Text = "15.    Deemed income for transport             facility";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 689);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(250, 43);
+            this.label6.TabIndex = 379;
+            this.label6.Text = "16.    Deemed income for furnished /          unfurnished accomodation";
+            // 
             // Form2_Salaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 624);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.metroLabel35);
             this.Controls.Add(this.btNext);
-            this.Controls.Add(this.metroLabel34);
             this.Controls.Add(this.btBack);
+            this.Controls.Add(this.metroLabel28);
             this.Controls.Add(this.btHome);
             this.Controls.Add(this.metroLabel33);
             this.Controls.Add(this.htmlPanel1);
@@ -1447,15 +1452,11 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox15;
         private MetroFramework.Drawing.Html.HtmlPanel htmlPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroLabel metroLabel32;
-        private MetroFramework.Controls.MetroLabel metroLabel25;
         private MetroFramework.Controls.MetroLabel metroLabel29;
-        private MetroFramework.Controls.MetroLabel metroLabel30;
         private MetroFramework.Controls.MetroLabel metroLabel31;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel16;
@@ -1467,7 +1468,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel35;
-        private MetroFramework.Controls.MetroLabel metroLabel34;
         private MetroFramework.Controls.MetroLabel metroLabel33;
         private MetroFramework.Controls.MetroLabel metroLabel28;
         private MetroFramework.Controls.MetroLabel metroLabel27;
@@ -1487,5 +1487,10 @@
         private MetroFramework.Controls.MetroButton btBack;
         private MetroFramework.Controls.MetroButton btNext;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

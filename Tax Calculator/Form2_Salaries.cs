@@ -1780,7 +1780,43 @@ namespace Tax_Calculator
             this.Hide(); //Hide curent window form
         }
 
-      
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double taxableIncome = 0.0;
+            try
+            {
+                //any string number(with comma or without comma) coverted to double
+                double medicalAllowance = (double)Convert.ToDecimal(textBox6.Text.ToString());
+
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 0);
+
+                }
+                else
+                    taxableIncome = list[5].TaxableIncome(basicPay, medicalAllowance, 1);
+
+                double taxExtempted = TaxExemptCal(medicalAllowance, taxableIncome);
+
+                label45.ForeColor = Color.Black;
+                label62.ForeColor = Color.Black;
+
+                label45.Text = taxExtempted.ToString("N");  //string formatting as a number;which has comma
+                label62.Text = taxableIncome.ToString("N");  //string formatting as a number;which has comma
+
+                // net taxable income from salary
+                label39.Text = TotalAmountOfIncome().ToString("N");  //string formatting as a number;which has comma
+                label56.Text = CalTotalTaxExempted().ToString("N");  //string formatting as a number;which has comma
+                //showing total taxable income
+                label73.Text = CalNetTaxableIncome().ToString("N");  //string formatting as a number;which has comma
+            }
+            catch
+            {
+                //show crash issue to user
+                //textBox6.Text = "";    //clear user input because of invaild inputs
+            }
+        }
+
         private void UserInputs_Salaries()
         {
             pdfInputs1[0] = textBox1.Text.ToString();    //salaries
