@@ -583,6 +583,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
+            this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
             this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(902, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.label1);
