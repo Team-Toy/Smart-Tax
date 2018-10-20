@@ -96,8 +96,11 @@
             this.label72 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.htmlPanel1 = new MetroFramework.Drawing.Html.HtmlPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.metroLabel36 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
@@ -125,6 +128,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel35 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel33 = new MetroFramework.Controls.MetroLabel();
             this.btHome = new MetroFramework.Controls.MetroButton();
@@ -132,10 +136,6 @@
             this.btNext = new MetroFramework.Controls.MetroButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.htmlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -857,6 +857,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
+            this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
             this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(884, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.label6);
@@ -963,6 +964,44 @@
             this.htmlPanel1.Size = new System.Drawing.Size(884, 499);
             this.htmlPanel1.TabIndex = 264;
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 689);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(250, 43);
+            this.label6.TabIndex = 379;
+            this.label6.Text = "16.    Deemed income for furnished /          unfurnished accomodation";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(21, 625);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(255, 43);
+            this.label5.TabIndex = 380;
+            this.label5.Text = "15.    Deemed income for transport             facility";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 579);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(255, 43);
+            this.label4.TabIndex = 379;
+            this.label4.Text = "14.    Interest accrued on Recognized          Provident Fund";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 532);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(236, 43);
+            this.label3.TabIndex = 378;
+            this.label3.Text = "13.    Employer\'s Contributions to           Recognized Provident Fund";
+            // 
             // metroLabel36
             // 
             this.metroLabel36.AutoSize = true;
@@ -973,16 +1012,6 @@
             this.metroLabel36.TabIndex = 376;
             this.metroLabel36.Text = "3.  Net Income ( difference between item 1 and 2 )..............................." +
     "......................Tk.";
-            // 
-            // metroLabel28
-            // 
-            this.metroLabel28.AutoSize = true;
-            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel28.Location = new System.Drawing.Point(67, 134);
-            this.metroLabel28.Name = "metroLabel28";
-            this.metroLabel28.Size = new System.Drawing.Size(136, 19);
-            this.metroLabel28.TabIndex = 372;
-            this.metroLabel28.Text = "Pay and Allowance";
             // 
             // metroLabel27
             // 
@@ -1249,6 +1278,16 @@
             this.metroLabel1.TabIndex = 342;
             this.metroLabel1.Text = "1.    Basic Pay";
             // 
+            // metroLabel28
+            // 
+            this.metroLabel28.AutoSize = true;
+            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel28.Location = new System.Drawing.Point(67, 134);
+            this.metroLabel28.Name = "metroLabel28";
+            this.metroLabel28.Size = new System.Drawing.Size(136, 19);
+            this.metroLabel28.TabIndex = 372;
+            this.metroLabel28.Text = "Pay and Allowance";
+            // 
             // metroLabel35
             // 
             this.metroLabel35.AutoSize = true;
@@ -1320,44 +1359,6 @@
             this.label2.Size = new System.Drawing.Size(149, 42);
             this.label2.TabIndex = 377;
             this.label2.Text = "Amount of exempted  income (Tk.)";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 532);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 43);
-            this.label3.TabIndex = 378;
-            this.label3.Text = "13.    Employer\'s Contributions to           Recognized Provident Fund";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(21, 579);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(255, 43);
-            this.label4.TabIndex = 379;
-            this.label4.Text = "14.    Interest accrued on Recognized          Provident Fund";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(21, 625);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 43);
-            this.label5.TabIndex = 380;
-            this.label5.Text = "15.    Deemed income for transport             facility";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 689);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(250, 43);
-            this.label6.TabIndex = 379;
-            this.label6.Text = "16.    Deemed income for furnished /          unfurnished accomodation";
             // 
             // Form2_Salaries
             // 
