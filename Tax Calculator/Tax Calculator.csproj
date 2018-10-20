@@ -247,6 +247,7 @@
     <None Include="Resources\smart-icon.png" />
     <None Include="Resources\continue.png" />
     <None Include="Resources\about.png" />
+    <None Include="Resources\pdf creator.png" />
     <Content Include="tax-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

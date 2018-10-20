@@ -69,6 +69,7 @@
             this.btHome = new MetroFramework.Controls.MetroButton();
             this.label87 = new System.Windows.Forms.Label();
             this.htmlPanel1 = new MetroFramework.Drawing.Html.HtmlPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.metroLabel57 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel42 = new MetroFramework.Controls.MetroLabel();
@@ -112,7 +113,6 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btPrint = new MetroFramework.Controls.MetroButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.htmlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -669,6 +669,15 @@
             this.htmlPanel1.Size = new System.Drawing.Size(902, 494);
             this.htmlPanel1.TabIndex = 524;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 60);
+            this.label1.TabIndex = 564;
+            this.label1.Text = "(b) Saving Certificate/       Unit Certificate/             Bond ";
+            // 
             // label83
             // 
             this.label83.AutoSize = true;
@@ -1104,24 +1113,15 @@
             // 
             // btPrint
             // 
-            this.btPrint.BackgroundImage = global::Tax_Calculator.Properties.Resources.save;
+            this.btPrint.BackgroundImage = global::Tax_Calculator.Properties.Resources.pdf_creator;
             this.btPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btPrint.Location = new System.Drawing.Point(797, 50);
+            this.btPrint.Location = new System.Drawing.Point(799, 39);
             this.btPrint.Name = "btPrint";
-            this.btPrint.Size = new System.Drawing.Size(75, 68);
+            this.btPrint.Size = new System.Drawing.Size(57, 68);
             this.btPrint.TabIndex = 563;
             this.btPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btPrint.UseSelectable = true;
             this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 224);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 60);
-            this.label1.TabIndex = 564;
-            this.label1.Text = "(b) Saving Certificate/       Unit Certificate/             Bond ";
             // 
             // Form6_AssetAndLiabilities
             // 
