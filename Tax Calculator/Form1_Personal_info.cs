@@ -61,7 +61,7 @@ namespace Tax_Calculator
             pdfInputs[15] = textBox15.Text.ToString();  // Resident telephone
             pdfInputs[16] = textBox16.Text.ToString();  // VAT registration number
         }
-      
+
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

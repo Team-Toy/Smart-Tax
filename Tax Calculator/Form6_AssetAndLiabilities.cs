@@ -1115,11 +1115,17 @@ namespace Tax_Calculator
         //pdf creating button. print button
         private void btPrint_Click(object sender, EventArgs e)
         {
-            //taking all assets and liabilities info in a string
-            UserInputs_AssetAndLiabilities();
+            /* 
+             //taking all assets and liabilities info in a string
+             UserInputs_AssetAndLiabilities();
+             MyPdfWriter myPdfWriter = new MyPdfWriter();
 
-            MyPdfWriter myPdfWriter = new MyPdfWriter();
+             */
 
+            MessageBox.Show("PDF print functionality is available only on PRO Version.",  //warnning message
+                                 "Notice",   //window title
+                                 MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation); //For cross Warning icon
 
         }
     }
