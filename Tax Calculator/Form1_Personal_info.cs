@@ -25,7 +25,7 @@ namespace Tax_Calculator
         }
         public static string[] pdfInputs;
         public static string[] tickMarks;
-        float X, Y;
+
         public Form1_Personal_info()
         {     
             InitializeComponent();
