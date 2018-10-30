@@ -92,7 +92,7 @@
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(561, 236);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 29);
+            this.textBox7.Size = new System.Drawing.Size(230, 29);
             this.textBox7.TabIndex = 185;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
@@ -104,7 +104,7 @@
             this.textBox8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(561, 270);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 29);
+            this.textBox8.Size = new System.Drawing.Size(230, 29);
             this.textBox8.TabIndex = 184;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
@@ -116,7 +116,7 @@
             this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(561, 304);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 29);
+            this.textBox9.Size = new System.Drawing.Size(230, 29);
             this.textBox9.TabIndex = 183;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
@@ -128,7 +128,7 @@
             this.textBox10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(561, 338);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(185, 29);
+            this.textBox10.Size = new System.Drawing.Size(230, 29);
             this.textBox10.TabIndex = 182;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
@@ -140,7 +140,7 @@
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(561, 202);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 29);
+            this.textBox6.Size = new System.Drawing.Size(230, 29);
             this.textBox6.TabIndex = 180;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -152,7 +152,7 @@
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(561, 168);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 29);
+            this.textBox5.Size = new System.Drawing.Size(228, 29);
             this.textBox5.TabIndex = 179;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -164,7 +164,7 @@
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(561, 114);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 29);
+            this.textBox4.Size = new System.Drawing.Size(228, 29);
             this.textBox4.TabIndex = 178;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
@@ -176,7 +176,7 @@
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(561, 68);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 29);
+            this.textBox3.Size = new System.Drawing.Size(228, 29);
             this.textBox3.TabIndex = 177;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
@@ -188,7 +188,7 @@
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(561, 34);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 29);
+            this.textBox2.Size = new System.Drawing.Size(228, 29);
             this.textBox2.TabIndex = 176;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -200,7 +200,7 @@
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(561, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 29);
+            this.textBox1.Size = new System.Drawing.Size(228, 29);
             this.textBox1.TabIndex = 175;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -249,8 +249,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.textBox19);
             this.splitContainer1.Panel2.Controls.Add(this.metroLabel18);
             this.splitContainer1.Panel2.Controls.Add(this.textBox18);
-            this.splitContainer1.Size = new System.Drawing.Size(696, 248);
-            this.splitContainer1.SplitterDistance = 345;
+            this.splitContainer1.Size = new System.Drawing.Size(719, 260);
+            this.splitContainer1.SplitterDistance = 355;
             this.splitContainer1.TabIndex = 193;
             // 
             // textBox15
@@ -588,7 +588,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(775, 71);
+            this.btNext.Location = new System.Drawing.Point(808, 71);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 331;
@@ -621,7 +621,7 @@
             // 
             this.htmlPanel1.AutoScroll = true;
             this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(864, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(914, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.label1);
             this.htmlPanel1.Controls.Add(this.metroLabel5);
@@ -649,7 +649,7 @@
             this.htmlPanel1.Controls.Add(this.metroLabel4);
             this.htmlPanel1.Location = new System.Drawing.Point(8, 156);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(864, 466);
+            this.htmlPanel1.Size = new System.Drawing.Size(914, 571);
             this.htmlPanel1.TabIndex = 332;
             // 
             // label1
@@ -666,7 +666,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 620);
+            this.ClientSize = new System.Drawing.Size(923, 730);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btBack);

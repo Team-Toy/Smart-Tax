@@ -67,7 +67,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(480, 463);
+            this.label13.Location = new System.Drawing.Point(540, 475);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(20, 22);
             this.label13.TabIndex = 179;
@@ -76,9 +76,9 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(474, 252);
+            this.textBox7.Location = new System.Drawing.Point(540, 252);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(211, 29);
+            this.textBox7.Size = new System.Drawing.Size(257, 29);
             this.textBox7.TabIndex = 178;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
@@ -88,9 +88,9 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(474, 292);
+            this.textBox8.Location = new System.Drawing.Point(540, 292);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(211, 29);
+            this.textBox8.Size = new System.Drawing.Size(257, 29);
             this.textBox8.TabIndex = 177;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
@@ -100,9 +100,9 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(474, 332);
+            this.textBox9.Location = new System.Drawing.Point(540, 332);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(211, 29);
+            this.textBox9.Size = new System.Drawing.Size(257, 29);
             this.textBox9.TabIndex = 176;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
@@ -112,9 +112,9 @@
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(474, 372);
+            this.textBox10.Location = new System.Drawing.Point(540, 372);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(211, 29);
+            this.textBox10.Size = new System.Drawing.Size(257, 29);
             this.textBox10.TabIndex = 175;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
@@ -124,9 +124,9 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(474, 411);
+            this.textBox11.Location = new System.Drawing.Point(540, 411);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(211, 29);
+            this.textBox11.Size = new System.Drawing.Size(257, 29);
             this.textBox11.TabIndex = 174;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
@@ -136,9 +136,9 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(474, 212);
+            this.textBox6.Location = new System.Drawing.Point(540, 212);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(211, 29);
+            this.textBox6.Size = new System.Drawing.Size(257, 29);
             this.textBox6.TabIndex = 173;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -148,9 +148,9 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(474, 174);
+            this.textBox5.Location = new System.Drawing.Point(540, 174);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 29);
+            this.textBox5.Size = new System.Drawing.Size(257, 29);
             this.textBox5.TabIndex = 172;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -160,9 +160,9 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(474, 136);
+            this.textBox4.Location = new System.Drawing.Point(540, 136);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 29);
+            this.textBox4.Size = new System.Drawing.Size(257, 29);
             this.textBox4.TabIndex = 171;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
@@ -172,9 +172,9 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(474, 100);
+            this.textBox3.Location = new System.Drawing.Point(540, 100);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 29);
+            this.textBox3.Size = new System.Drawing.Size(257, 29);
             this.textBox3.TabIndex = 170;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
@@ -184,9 +184,9 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(502, 59);
+            this.textBox2.Location = new System.Drawing.Point(540, 62);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 29);
+            this.textBox2.Size = new System.Drawing.Size(257, 29);
             this.textBox2.TabIndex = 169;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -196,9 +196,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(474, 18);
+            this.textBox1.Location = new System.Drawing.Point(540, 18);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 29);
+            this.textBox1.Size = new System.Drawing.Size(257, 29);
             this.textBox1.TabIndex = 168;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -211,9 +211,10 @@
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel20.Location = new System.Drawing.Point(37, 22);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(427, 19);
+            this.metroLabel20.Size = new System.Drawing.Size(495, 19);
             this.metroLabel20.TabIndex = 344;
-            this.metroLabel20.Text = "1.    Personal and fooding expenses........................................Tk.";
+            this.metroLabel20.Text = "1.    Personal and fooding expenses.............................................." +
+    "...........Tk.";
             // 
             // metroLabel19
             // 
@@ -221,9 +222,10 @@
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel19.Location = new System.Drawing.Point(37, 105);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(430, 19);
+            this.metroLabel19.Size = new System.Drawing.Size(494, 19);
             this.metroLabel19.TabIndex = 346;
-            this.metroLabel19.Text = "3.    Accommodation expenses.................................................Tk.";
+            this.metroLabel19.Text = "3.    Accommodation expenses....................................................." +
+    "............Tk.";
             // 
             // metroLabel18
             // 
@@ -231,9 +233,9 @@
             this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel18.Location = new System.Drawing.Point(37, 63);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(459, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(495, 19);
             this.metroLabel18.TabIndex = 345;
-            this.metroLabel18.Text = "2.    Tax paid including deduction at source of the last financial year";
+            this.metroLabel18.Text = "2.    Tax paid including deduction at source of the last financial year....Tk.";
             // 
             // metroLabel17
             // 
@@ -241,10 +243,10 @@
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel17.Location = new System.Drawing.Point(37, 142);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(427, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(495, 19);
             this.metroLabel17.TabIndex = 347;
             this.metroLabel17.Text = "4.    Transport expenses........................................................." +
-    "...Tk.";
+    "....................Tk.";
             // 
             // metroLabel6
             // 
@@ -252,10 +254,10 @@
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel6.Location = new System.Drawing.Point(37, 179);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(424, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(496, 19);
             this.metroLabel6.TabIndex = 349;
             this.metroLabel6.Text = "5.    Electricity Bill for residence............................................." +
-    ".Tk.";
+    "...................Tk.";
             // 
             // metroLabel2
             // 
@@ -263,10 +265,10 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.Location = new System.Drawing.Point(37, 258);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(427, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(495, 19);
             this.metroLabel2.TabIndex = 350;
             this.metroLabel2.Text = "7.    Gas Bill for residence....................................................." +
-    "....Tk.";
+    ".....................Tk.";
             // 
             // metroLabel4
             // 
@@ -274,10 +276,10 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.Location = new System.Drawing.Point(37, 218);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(426, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(494, 19);
             this.metroLabel4.TabIndex = 348;
             this.metroLabel4.Text = "6.    Wasa Bill for residence...................................................." +
-    "..Tk.";
+    "...................Tk.";
             // 
             // metroLabel3
             // 
@@ -285,10 +287,10 @@
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel3.Location = new System.Drawing.Point(37, 298);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(428, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(496, 19);
             this.metroLabel3.TabIndex = 351;
-            this.metroLabel3.Text = "8.    Telephone Bill for residence..............................................T" +
-    "k.";
+            this.metroLabel3.Text = "8.    Telephone Bill for residence..............................................." +
+    "................Tk.";
             // 
             // metroLabel1
             // 
@@ -296,9 +298,10 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.Location = new System.Drawing.Point(37, 336);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(426, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(494, 19);
             this.metroLabel1.TabIndex = 353;
-            this.metroLabel1.Text = "9.    Education expenses for children.......................................Tk.";
+            this.metroLabel1.Text = "9.    Education expenses for children............................................" +
+    "............Tk.";
             // 
             // metroLabel5
             // 
@@ -306,9 +309,10 @@
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.Location = new System.Drawing.Point(27, 417);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(436, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(504, 19);
             this.metroLabel5.TabIndex = 354;
-            this.metroLabel5.Text = "11.    Festival and other special expenses, if any.......................Tk.";
+            this.metroLabel5.Text = "11.    Festival and other special expenses, if any..............................." +
+    ".........Tk.";
             // 
             // metroLabel7
             // 
@@ -316,15 +320,16 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.Location = new System.Drawing.Point(27, 376);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(435, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(503, 19);
             this.metroLabel7.TabIndex = 352;
-            this.metroLabel7.Text = "10.    Personal expenses for Foreign travel...............................Tk.";
+            this.metroLabel7.Text = "10.    Personal expenses for Foreign travel......................................" +
+    "..........Tk.";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(303, 464);
+            this.metroLabel9.Location = new System.Drawing.Point(363, 476);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(171, 19);
             this.metroLabel9.TabIndex = 356;
@@ -333,7 +338,7 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(784, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(904, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel9);
             this.htmlPanel1.Controls.Add(this.metroLabel18);
@@ -361,14 +366,14 @@
             this.htmlPanel1.Controls.Add(this.textBox9);
             this.htmlPanel1.Location = new System.Drawing.Point(22, 164);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(784, 491);
+            this.htmlPanel1.Size = new System.Drawing.Size(904, 565);
             this.htmlPanel1.TabIndex = 357;
             // 
             // btNext
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(738, 68);
+            this.btNext.Location = new System.Drawing.Point(811, 68);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 383;
@@ -411,7 +416,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 134);
+            this.label2.Location = new System.Drawing.Point(91, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 24);
             this.label2.TabIndex = 180;
@@ -421,7 +426,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(525, 134);
+            this.label3.Location = new System.Drawing.Point(580, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 24);
             this.label3.TabIndex = 181;
@@ -431,7 +436,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 670);
+            this.ClientSize = new System.Drawing.Size(923, 730);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.btBack);

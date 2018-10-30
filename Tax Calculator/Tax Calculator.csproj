@@ -248,6 +248,9 @@
     <None Include="Resources\continue.png" />
     <None Include="Resources\about.png" />
     <None Include="Resources\pdf creator.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\if_Help_27853.png" />
+    <None Include="Resources\Help .png" />
     <Content Include="tax-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

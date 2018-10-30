@@ -667,7 +667,7 @@
             this.htmlPanel1.Controls.Add(this.label51);
             this.htmlPanel1.Location = new System.Drawing.Point(15, 124);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(902, 494);
+            this.htmlPanel1.Size = new System.Drawing.Size(909, 604);
             this.htmlPanel1.TabIndex = 524;
             // 
             // label1
@@ -1128,7 +1128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 616);
+            this.ClientSize = new System.Drawing.Size(923, 730);
             this.Controls.Add(this.btPrint);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.label87);

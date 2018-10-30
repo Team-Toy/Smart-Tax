@@ -321,7 +321,7 @@
             // 
             this.htmlPanel1.AutoScroll = true;
             this.htmlPanel1.AutoScrollMargin = new System.Drawing.Size(0, 15);
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(878, 0);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(898, 0);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlPanel1.Controls.Add(this.metroLabel17);
             this.htmlPanel1.Controls.Add(this.textBox16);
@@ -375,7 +375,7 @@
             this.htmlPanel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlPanel1.Location = new System.Drawing.Point(6, 110);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(878, 534);
+            this.htmlPanel1.Size = new System.Drawing.Size(913, 615);
             this.htmlPanel1.TabIndex = 255;
             // 
             // metroLabel17
@@ -631,7 +631,7 @@
             // 
             this.btNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btNext.BackgroundImage")));
             this.btNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNext.Location = new System.Drawing.Point(755, 52);
+            this.btNext.Location = new System.Drawing.Point(793, 50);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(47, 40);
             this.btNext.TabIndex = 269;
@@ -642,7 +642,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 620);
+            this.ClientSize = new System.Drawing.Size(923, 730);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.htmlPanel1);
             this.Controls.Add(this.label18);

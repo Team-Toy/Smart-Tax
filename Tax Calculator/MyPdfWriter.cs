@@ -15,7 +15,7 @@ namespace Tax_Calculator
     {
         /** The original PDF file. */
         public static string oldFile = Application.StartupPath + @"\File\income tax form.pdf";
-        private const string myFont = "Arial";   //text Font name to print
+        private const string defaultFont = "Arial";   //text Font name to print
         private const int fontSize = 9;       //text font size to print
         private const string fontName2 = "ZAPFDINGBATS";    //tick-mark supported font
         private const int fontSize2 = 11;       //tick-mark font size to print
@@ -188,11 +188,23 @@ namespace Tax_Calculator
                                                                                                               //.....................................................
         }
 
+        private void SubSectionPdfWriter(ref PdfContentByte canvas, ref PdfReader reader,int pageNo,string s, float leftPosX, float rightPosX, float topPosY, float downPosY)
+        {
+            var pageSize = reader.GetPageSize(pageNo);  //"pageSize" = giving "pageNo"
+            //string marign on top-side = 10
+            topPosY = pageSize.Height - (topPosY - 10);  //topPosY = position token from gimp-software
+            //string marign on down-side = 10
+            downPosY = pageSize.Height - (downPosY + 10) ;  //downPosY = position token from gimp-software
+            iTextSharp.text.Font font = FontFactory.GetFont(defaultFont, fontSize, Font.BOLD);
+            Phrase p = new Phrase(s,font);
+            ColumnText c = new ColumnText(canvas);
+            c.SetSimpleColumn(leftPosX, topPosY, rightPosX, downPosY);
+            c.AddElement(p);
+            c.Go(false);
+        }
         private void Form1_HelperFunction(ref PdfContentByte canvas, ref PdfReader reader)
         {
             int pageNo = 1;
-           // string tickMark = "\u0033";
-
             WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[0], 414, 409); //print "Resident" tickmark sign on pdf
             WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[1], 488, 408); //print "Non-resident" tickmark sign on pdf
             int x = 182;
@@ -204,11 +216,11 @@ namespace Tax_Calculator
             WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[4], x, y); //print "Association of person" tickmark sign on pdf
             x = 479;
             WriteStringOnPdf(ref canvas, ref reader, fontName2, pageNo, Form1_Personal_info.tickMarks[5], x, y); //print "Hindu undivied family" tickmark sign on pdf
-
+        
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[0], 200, 283);    //Print "Name of Assessee"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[1], 210, 303);   //print "National ID no"
-                                                                                                            //.....................................................
-                                                                                                            //setting x and y position for "UTIN" number
+             //.....................................................
+            //setting x and y position for "UTIN" number
             x = 191;
             y = 325;
             string s = Form1_Personal_info.pdfInputs[2];    //taking "UTIN" number       
@@ -238,12 +250,18 @@ namespace Tax_Calculator
                 x += 22;
             }
             //...............................................
-
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[4], 147, 381);   //print "Circle"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[5], 350, 381);   //print "Taxes Zone"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[6], 181, 410);   //print "Assessment Year"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[7], 328, 460);   //print "Name of employer/Business"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[8], 353, 483);   //print "Wife of Husband name"
+
+            float leftPosX = 353;
+            float rightPosX = 523;
+            float topPosY = 483;
+            float downPosY = 495;
+            //print "Wife or Husband name"
+            SubSectionPdfWriter(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[8], leftPosX, rightPosX, topPosY, downPosY);
+            
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[9], 171, 508);   //print "Father name"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[10], 176, 532);   //print "Mother name"
 
@@ -261,9 +279,19 @@ namespace Tax_Calculator
                 x += 29;
             }
             //...............................................................
+            leftPosX = 199;
+            rightPosX = 510;
+            topPosY = 603;
+            downPosY = 650;
+            //print "Present address"
+            SubSectionPdfWriter(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[12], leftPosX, rightPosX, topPosY ,downPosY);   
+            leftPosX = 211;
+            rightPosX = 510;
+            topPosY = 666;
+            downPosY = 713;
+            //print "Permanent address"
+            SubSectionPdfWriter(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[13], leftPosX, rightPosX, topPosY, downPosY); 
 
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[12], 199, 602);   //print "Present address"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[13], 225, 665);   //print "Permanent address"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[14], 225, 726);   //print "Telephone"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[15], 388, 726);   //print "Resident"
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form1_Personal_info.pdfInputs[16], 266, 748);   //print "VAT Registration" number
@@ -302,7 +330,6 @@ namespace Tax_Calculator
             //print each "amount of income" in "salaried" form(page 3)
             Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex);  
             
-
             //print amount of reduced house rent
             WriteStringOnPdf(ref canvas, ref reader, pageNo,Form2_Salaries.reducedHomeRent + "", 276, 476);    //print amount of reduced house rent
 
@@ -312,7 +339,6 @@ namespace Tax_Calculator
             //print each of "Exempted income" in "salaried" form(page 3)
             Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex);
 
-
             x += 103;   //x coordinate right shift(column)
             startIndex = 36;
             endIndex = 54;
@@ -320,39 +346,6 @@ namespace Tax_Calculator
             Form2_HelperFunction1(ref canvas, ref reader, x, y, startIndex, endIndex); 
             Form2_HelperFunction2(ref canvas, ref reader);  //print "House property income"
 
-        }
-
-        private void Form2_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
-        {
-            int pageNo = 3;
-            float x = 71;
-            float y = 593;
-            string descriptionOfPerperty = Form2_Salaries.pdfInputs2[0];
-
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, descriptionOfPerperty, x, y);    //location and description of property
-
-            //WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0]., 71, 593);    //location and description of property
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[1], 469, 593);   //print annual rental income
-
-            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3   
-            //set x and y position
-            x = 374;
-            y = 627;
-            //printing House property income under "salaries" form 
-            for (int i = 2; i < 9; i++)
-            {
-                string s = Form2_Salaries.pdfInputs2[i];
-                if (i == 6)  //checking to jump down additionally
-                {
-                    y += 8;   // jump half line down with difference of x=8 
-                }
-                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //printing "House property income" from "annual rental income" to "others, if any"
-                y += 17;    // jump one line down with difference of x=17 .          
-            }
-
-            x = 469;
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[9], x, y);  //printing total "House property income"
-            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], x, y + 17); //printing "Net income" from house
         }
 
         private void Form2_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader, float x, float y, int startIndex, int endIndex)
@@ -379,6 +372,42 @@ namespace Tax_Calculator
             tempY += 17;    //jump one line shift down using difference of y =17
             WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs1[++startIndex], x, tempY);  //print net taxable income from salary
 
+        }
+
+        private void Form2_HelperFunction2(ref PdfContentByte canvas, ref PdfReader reader)
+        {
+            int pageNo = 3;
+            
+            float leftPosX = 71;
+            float rightPosX = 182;
+            float topPosY = 594;
+            float downPosY = 774;
+            //location and description of property
+            SubSectionPdfWriter(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[0], leftPosX, rightPosX, topPosY, downPosY);
+          
+            float x = 469;
+            float y = 593;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[1], x, y);   //print annual rental income
+
+            var pageSize3 = reader.GetPageSize(pageNo);   //getting page size by giving page number=3   
+            //set x and y position
+            x = 374;
+            y = 627;
+            //printing House property income under "salaries" form 
+            for (int i = 2; i < 9; i++)
+            {
+                string s = Form2_Salaries.pdfInputs2[i];
+                if (i == 6)  //checking to jump down additionally
+                {
+                    y += 8;   // jump half line down with difference of x=8 
+                }
+                WriteStringOnPdf(ref canvas, ref reader, pageNo, s, x, y);   //printing "House property income" from "annual rental income" to "others, if any"
+                y += 17;    // jump one line down with difference of x=17 .          
+            }
+
+            x = 469;
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[9], x, y);  //printing total "House property income"
+            WriteStringOnPdf(ref canvas, ref reader, pageNo, Form2_Salaries.pdfInputs2[10], x, y + 17); //printing "Net income" from house
         }
 
         private void Form3_HelperFunction1(ref PdfContentByte canvas, ref PdfReader reader)
@@ -410,27 +439,37 @@ namespace Tax_Calculator
         {
             //setting-up the X and Y coordinates of the document
             float x = 78;   //by default x coordinate for "investment form"
-            float y = 437;  //by default y increment top-down for "investment form"
-
+            float y = 433;  //by default y increment top-down for "investment form"
+            float leftPosX = x;
+            float rightPosX = 301;
+            float topPosY = y;
+            float downPosY = 476;
             // printing "list of document furnished" from 1-5
             for (int i = 11; i < 16; i++)
             {
-                string s = Form3_InvestmentTaxCredit.pdfInputs[i];
-
-                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 1-5"
-                y += 66;    // jump three lines down with difference of x=66
+                string document = Form3_InvestmentTaxCredit.pdfInputs[i];
+                //print from "document 1-5"
+                SubSectionPdfWriter(ref canvas, ref reader, 4, document, leftPosX,rightPosX,topPosY,downPosY);   
+                topPosY += 66;    // jump three lines down with difference of x=66
+                downPosY += 66;
             }
 
             //setting x and y positions
             x = 321;
             y = 435;
+            leftPosX = x;
+            rightPosX = 553;
+            topPosY = y;
+            downPosY = 476;
             int length = Form3_InvestmentTaxCredit.pdfInputs.Length;
             //print from "document 6-10" in "investment tax credit" form
             for (int i = 16; i < length; i++)
             {
-                string s = Form3_InvestmentTaxCredit.pdfInputs[i];
-                WriteStringOnPdf(ref canvas, ref reader, 4, s, x, y);   //print from "document 6-7"
-                y += 66;  // jump three lines down with difference of x=66
+                string document = Form3_InvestmentTaxCredit.pdfInputs[i];
+                //print from "document 1-5"
+                SubSectionPdfWriter(ref canvas, ref reader, 4, document, leftPosX, rightPosX, topPosY, downPosY);
+                topPosY += 66;    // jump three lines down with difference of x=66
+                downPosY += 66;
             }
         }
 
@@ -646,7 +685,7 @@ namespace Tax_Calculator
             //making the y to increment top-Down
             posY = pageSize.Height - posY - 3;  //posY = position token from gimp
               //creating default font with font name ,size and font type BOLD
-            iTextSharp.text.Font font = FontFactory.GetFont(myFont, fontSize,Font.BOLD);
+            iTextSharp.text.Font font = FontFactory.GetFont(defaultFont, fontSize,Font.BOLD);
             Phrase p = new Phrase(s, font);
 
             ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT, p, posX, posY, 0);       //Here zero means "Rotation = 0" or  "no Rotation "

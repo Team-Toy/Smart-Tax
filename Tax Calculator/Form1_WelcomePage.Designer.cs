@@ -63,7 +63,7 @@
             this.btContinue.Click += new System.EventHandler(this.btContinue_Click);
             // 
             // btAbout
-            // 
+            //            
             this.btAbout.BackgroundImage = global::Tax_Calculator.Properties.Resources.about;
             this.btAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btAbout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;

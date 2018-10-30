@@ -65,7 +65,7 @@ namespace Tax_Calculator.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _continue {
             get {
-                object obj = ResourceManager.GetObject("continue", resourceCulture);
+                object obj = ResourceManager.GetObject("_continue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +76,16 @@ namespace Tax_Calculator.Properties {
         internal static System.Drawing.Bitmap about {
             get {
                 object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Help {
+            get {
+                object obj = ResourceManager.GetObject("Help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -117,7 +127,7 @@ namespace Tax_Calculator.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap pdf_creator {
             get {
-                object obj = ResourceManager.GetObject("pdf creator", resourceCulture);
+                object obj = ResourceManager.GetObject("pdf_creator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -137,7 +147,7 @@ namespace Tax_Calculator.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap smart_icon {
             get {
-                object obj = ResourceManager.GetObject("smart-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("smart_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
