@@ -22,38 +22,55 @@ namespace Tax_Calculator
 
         public MyPdfWriter()
         {
-
+            string file_name = "";
             SaveFileDialog svg = new SaveFileDialog();  //show dialgue box to take a location with file name
             svg.ShowDialog();   //getting new pdf file location and file name given by user
-            // size = reader.GetPageSizeWithRotation(1); 
-            try
+           // size = reader.GetPageSizeWithRotation(1); 
+
+           file_name = Path.GetFileName(svg.FileName);   //getting file_name given by user
+            if (file_name.Length > 0)    //checking user valid file_name input
             {
-                using (var outputPdfStream = new FileStream(svg.FileName + ".pdf", FileMode.Create, FileAccess.Write))
+                try
                 {
-                    //open the reader
-                    PdfReader reader = new PdfReader(oldFile);
+                    using (var outputPdfStream = new FileStream(svg.FileName + ".pdf", FileMode.Create, FileAccess.Write))
+                    {
+                        //open the reader
+                        PdfReader reader = new PdfReader(oldFile);
 
-                    PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
-                    var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
+                        PdfStamper stamper = new PdfStamper(reader, outputPdfStream);
+                        var pageSize = reader.GetPageSize(1);   //getting page size by giving page number=1
 
-                    pdfWrite_Form1(ref stamper, ref reader);    //Personal_info form print
-                    pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
-                    pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
-                    pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
-                    pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
-                    pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
-                    pdfWrite_Page8(ref stamper, ref reader);    //last page of tex return form
-                    stamper.Close();
-                    MessageBox.Show("Print successfully");
+                        pdfWrite_Form1(ref stamper, ref reader);    //Personal_info form print
+                        pdfWrite_Form2(ref stamper, ref reader);    //salaries form print
+                        pdfWrite_Form3(ref stamper, ref reader);    //Investment-tax-credit form print
+                        pdfWrite_Form5(ref stamper, ref reader);    //statement-of-salary form print
+                        pdfWrite_Form4(ref stamper, ref reader);    //Expenses form print
+                        pdfWrite_Form6(ref stamper, ref reader);    //Asset and Liabilities form print
+                        pdfWrite_Page8(ref stamper, ref reader);    //last page of tex return form
+                        stamper.Close();
+                        MessageBox.Show("Print successfully " +
+                                        "\n File Name : " + file_name +
+                                        "\n File location: " + svg.FileName.ToString() ,  // messages
+                                        "Congratulation",   //window title
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information); //For cross Warning icon
+                    }
+                }
+                catch   //if file is opened
+                {
+                    MessageBox.Show("Please close your pdf file first.\n Or try different file name",  //warnning message
+                                     svg.FileName.ToString() + " is already open",   //window title
+                                     MessageBoxButtons.OK,
+                                    MessageBoxIcon.Hand); //For cross Warning icon
                 }
             }
-            catch
-            {
-                MessageBox.Show("Please close your pdf file first.\n Or try different file name",  //warnning message
-                                 svg.FileName.ToString() + " is already open",   //window title
+            // if invalid file name given
+            else
+                MessageBox.Show("Please give a proper file name",  //warnning message
+                                 "Warning",   //window title
                                  MessageBoxButtons.OK,
-                                MessageBoxIcon.Hand); //For cross Warning icon
-            }
+                                 MessageBoxIcon.Warning); //For exclaimatory icon in trangle shape
+
         }
 
         private void pdfWrite_Form1(ref PdfStamper stamper, ref PdfReader reader)
